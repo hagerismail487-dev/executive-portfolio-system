@@ -2,12 +2,14 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 interface ServiceCardProps {
+    slug: string;
   icon: React.ElementType;
   title: string;
   description: string;
 }
 
 export default function ServiceCard({
+    slug,
   icon: Icon,
   title,
   description,
@@ -16,42 +18,53 @@ export default function ServiceCard({
     <article
       className="
         group
-        rounded-3xl
+        flex
+        h-full
+        flex-col
+        rounded-[24px]
         border
         border-slate-200
         bg-white
-        p-10
+        p-8
         shadow-sm
         transition-all
         duration-300
         hover:-translate-y-1
-        hover:shadow-xl
+        hover:border-slate-300
+        hover:shadow-md
       "
     >
-      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-100">
-        <Icon className="h-7 w-7 text-[#123A63]" />
+      {/* Icon */}
+      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50">
+        <Icon className="h-5 w-5 text-[#123A63]" />
       </div>
 
-      <h3 className="mt-7 text-xl font-semibold text-slate-900">
+      {/* Title */}
+      <h3 className="mt-8 text-[30px] font-bold leading-tight tracking-[-0.02em] text-[#102A56]">
         {title}
       </h3>
 
-      <div className="my-6 h-px bg-slate-200" />
+      {/* Divider */}
+      <div className="my-6 h-px w-full bg-slate-200" />
 
-      <p className="leading-8 text-slate-600">
+      {/* Description */}
+      <p className="flex-1 text-[16px] leading-8 text-slate-600">
         {description}
       </p>
 
+      {/* CTA */}
       <Link
-        href="#"
+        href={`/services/${slug}`}
         className="
-          mt-10
+          mt-8
           inline-flex
           items-center
           gap-2
-          font-medium
+          text-sm
+          font-semibold
           text-[#123A63]
           transition-all
+          duration-300
           group-hover:gap-3
         "
       >
