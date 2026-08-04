@@ -3,6 +3,7 @@ import Hero from "../components/sections/Hero";
 import CreatingBusinessValue from "../components/sections/CreatingBusinessValue";
 import CoreExpertise from "../components/sections/CoreExpertise";
 import CaseStudies from "../components/sections/CaseStudies";
+import ProfessionalServices from "../components/sections/ProfessionalServices";
 
 
 export default function Home() {
@@ -11,9 +12,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <CreatingBusinessValue />
-       <CoreExpertise />
-       <CaseStudies />
-      
+      <CoreExpertise />
+     < CaseStudies />
+     <ProfessionalServices />
     </>
   );
 }

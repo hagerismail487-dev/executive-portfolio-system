@@ -37,7 +37,7 @@ const values = [
 export default function CreatingBusinessValue() {
   return (
     <Section
-      id="business-value"
+      id="about"
       className="bg-white py-28"
     >
       {/* Header */}
