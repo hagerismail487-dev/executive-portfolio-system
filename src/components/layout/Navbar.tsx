@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import Container from "../ui/Container";
 
@@ -7,7 +8,7 @@ export default function Navbar() {
       <Container>
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <a
+          <Link
             href="/"
             className="flex items-center transition-opacity duration-300 hover:opacity-90"
           >
@@ -19,44 +20,44 @@ export default function Navbar() {
               priority
               className="h-12 w-auto"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-10">
-            <a
-              href="#about"
+            <Link
+              href="/#about"
               className="text-[15px] font-medium text-slate-600 transition-colors duration-300 hover:text-[#123A67]"
             >
               About
-            </a>
+            </Link>
 
-            <a
-              href="#expertise"
+            <Link
+              href="/#expertise"
               className="text-[15px] font-medium text-slate-600 transition-colors duration-300 hover:text-[#123A67]"
             >
               Expertise
-            </a>
+            </Link>
 
-            <a
-              href="#projects"
+            <Link
+              href="/#projects"
               className="text-[15px] font-medium text-slate-600 transition-colors duration-300 hover:text-[#123A67]"
             >
               Case Studies
-            </a>
+            </Link>
 
-            <a
-              href="#services"
+            <Link
+              href="/#services"
               className="text-[15px] font-medium text-slate-600 transition-colors duration-300 hover:text-[#123A67]"
             >
               Services
-            </a>
+            </Link>
 
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               className="text-[15px] font-medium text-slate-600 transition-colors duration-300 hover:text-[#123A67]"
             >
               Contact
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile Menu */}
