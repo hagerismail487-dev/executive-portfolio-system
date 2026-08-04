@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-plus-jakarta",
 });
 
 export const metadata: Metadata = {
   title: "Hager Ismail | Executive Portfolio",
   description:
-    "Executive Portfolio of Hager Ismail — Senior Data Analyst & MIS Specialist specializing in Executive Reporting, Business Intelligence, and MIS Frameworks.",
+    "Senior Data Analyst & MIS Specialist transforming business data into executive decisions.",
 };
 
 export default function RootLayout({
@@ -20,8 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={plusJakarta.className}>
+        <Navbar />
+
         {children}
+
+        <Footer />
       </body>
     </html>
   );
