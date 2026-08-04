@@ -51,7 +51,7 @@ useEffect(() => {
             className="flex items-center transition-opacity duration-300 hover:opacity-90"
           >
             <Image
-              src="/logo.png"
+              src="/.png"
               alt="Hager Ismail"
               width={300}
               height={64}
