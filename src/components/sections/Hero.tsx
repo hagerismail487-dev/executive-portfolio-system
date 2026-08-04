@@ -16,7 +16,7 @@ export default function Hero() {
             </span>
 
             {/* Heading */}
-            <h1 className="text-[54px] lg:text-[66px] leading-[0.98] font-bold tracking-[-0.04em] text-[#102A56]">
+            <h1 className="text-[54px] lg:text-[64px] leading-[0.98] font-bold tracking-[-0.04em] text-[#102A56]">
               Transforming
               <br />
               Business Data
@@ -30,7 +30,7 @@ export default function Hero() {
             <div className="mt-5 mb-8 h-[4px] w-36 rounded-full bg-[#2E63D3]" />
 
             {/* Description */}
-            <p className="max-w-[500px] text-[20px] leading-[1.85] text-slate-600">
+            <p className="max-w-[500px] text-[20px] leading-[1.85] text-slate-500">
               Transforming business data into executive clarity through
               strategic reporting, performance intelligence, and MIS
               frameworks that support confident decision-making.
@@ -58,7 +58,7 @@ export default function Hero() {
           </div>
 
           {/* Portrait */}
-          <div className="flex justify-center lg:justify-center lg:justify-center">
+          <div className="flex justify-center lg:justify-center">
 
             <div className="relative flex h-[550px] w-[440px] items-center justify-center rounded-[42px] border border-slate-200 bg-white shadow-[0_25px_70px_rgba(15,23,42,0.10)]">
 
