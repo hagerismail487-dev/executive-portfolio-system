@@ -5,7 +5,7 @@ import Workflow from "@/components/services/shared/Workflow";
 import Technologies from "@/components/services/shared/Technologies";
 import CTA from "@/components/services/shared/CTA";
 
-import data from "./data.ts";
+import data from "./data";
 
 export default function BusinessIntelligence() {
   return (

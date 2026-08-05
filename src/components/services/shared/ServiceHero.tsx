@@ -10,7 +10,7 @@ export default function ServiceHero({
   hero,
 }: ServiceHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-[#FBFCFE] py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-[#FBFCFE] py-16 lg:py-20">
       {/* Background */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -right-28 -top-28 h-[420px] w-[420px] rounded-full bg-[#EEF5FF] opacity-60 blur-3xl" />
@@ -44,7 +44,7 @@ export default function ServiceHero({
               {hero.description}
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-6 flex flex-wrap gap-4">
               <Link
                 href="/contact"
                 className="rounded-xl bg-[#123A63] px-7 py-4 font-semibold text-white transition hover:bg-[#0f3154]"
@@ -53,7 +53,7 @@ export default function ServiceHero({
               </Link>
 
               <Link
-                href="/case-studies"
+                href="/contact"
                 className="rounded-xl border border-slate-300 bg-white px-7 py-4 font-semibold text-[#123A63] transition hover:border-[#123A63]"
               >
                 View Case Studies
