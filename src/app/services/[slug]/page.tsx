@@ -5,8 +5,6 @@ import MISReportingSystems from "@/components/services/mis-reporting-systems/MIS
 import BusinessIntelligence from "@/components/services/business-intelligence/BusinessIntelligence";
 import PerformanceAnalytics from "@/components/services/performance-analytics/PerformanceAnalytics";
 
-console.log("BusinessIntelligence =", BusinessIntelligence);
-
 interface ServicePageProps {
   params: Promise<{
     slug: string;
@@ -28,8 +26,8 @@ export default async function ServicePage({
     case "business-intelligence":
       return <BusinessIntelligence />;
 
-       case "performance-analytics":
-      return <PerformanceAnalytics/>;
+    case "performance-analytics":
+      return <PerformanceAnalytics />;
 
     default:
       notFound();
