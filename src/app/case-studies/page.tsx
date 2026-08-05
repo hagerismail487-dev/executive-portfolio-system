@@ -1,52 +1,57 @@
-import { notFound } from "next/navigation";
-
+import Container from "@/components/ui/Container";
+import SectionTitle from "@/components/ui/SectionTitle";
+import CaseStudyCard from "@/components/ui/CaseStudyCard";
 import { caseStudies } from "@/data/case-studies";
-
-import CaseStudyHero from "@/components/case-studies/CaseStudyHero";
-import CaseStudyOverview from "@/components/case-studies/CaseStudyOverview";
-import CaseStudyChallenge from "@/components/case-studies/CaseStudyChallenge";
-import CaseStudySolution from "@/components/case-studies/CaseStudySolution";
-import CaseStudyResults from "@/components/case-studies/CaseStudyResults";
-import BusinessImpact from "@/components/case-studies/BusinessImpact";
-import RelatedProjects from "@/components/case-studies/RelatedProjects";
-
-interface PageProps {
-  params: Promise<{
-    slug: string;
-  }>;
-}
-
-export default async function CaseStudyPage({
-  params,
-}: PageProps) {
-  const { slug } = await params;
-
-  const project = caseStudies.find(
-    (item) => item.slug === slug
-  );
-
-  if (!project) {
-    notFound();
-  }
-
+export default function CaseStudiesPage() {
   return (
     <main className="bg-[#FBFCFE]">
 
-      <CaseStudyHero project={project} />
+      {/* ================================= */}
+      {/* Hero */}
+      {/* ================================= */}
 
-      <CaseStudyOverview project={project} />
+      <section className="py-24 lg:py-32">
 
-      <CaseStudyChallenge project={project} />
+        <Container>
 
-      <CaseStudySolution project={project} />
+          <SectionTitle
+            eyebrow="Portfolio"
+            title="Case Studies"
+            description="Explore a collection of executive dashboards, business intelligence solutions, MIS reporting systems, and performance analytics projects."
+          />
 
-      <CaseStudyResults project={project} />
+        </Container>
 
-      <BusinessImpact project={project} />
+      </section>
 
-      <RelatedProjects
-        currentSlug={project.slug}
-      />
+      {/* ================================= */}
+      {/* Projects */}
+      {/* ================================= */}
+
+      <section className="pb-24 lg:pb-32">
+
+        <Container>
+
+          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+
+            {caseStudies.map((project) => (
+
+              <CaseStudyCard
+                key={project.id}
+                slug={project.slug}
+                title={project.title}
+                excerpt={project.excerpt}
+                category={project.category}
+                image={project.images.cover}
+              />
+
+            ))}
+
+          </div>
+
+        </Container>
+
+      </section>
 
     </main>
   );

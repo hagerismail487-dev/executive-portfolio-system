@@ -31,12 +31,12 @@ export default function WhyWorkWithMe({
           <div className="mt-6 h-1 w-20 rounded-full bg-[#2563EB]" />
 
           {/* Description */}
-          <p className="mt-10 text-lg leading-9 text-slate-600 lg:text-xl">
+          <p className="mt-6 text-lg leading-9 text-slate-600 lg:text-xl">
             {description}
           </p>
 
           {/* Highlights */}
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
             <div className="rounded-2xl bg-white p-6 text-center shadow-sm">
               <div className="text-3xl font-bold text-[#2563EB]">Data</div>
 
