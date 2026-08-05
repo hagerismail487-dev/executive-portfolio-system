@@ -45,13 +45,13 @@ useEffect(() => {
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur-md">
       <Container>
         <div className="flex h-20 items-center justify-between">
-          {/* Logo */}
+          {/*  */}
           <Link
             href="/"
             className="flex items-center transition-opacity duration-300 hover:opacity-90"
           >
             <Image
-              src="/.png"
+              src="/logo.png"
               alt="Hager Ismail"
               width={300}
               height={64}

@@ -1,0 +1,32 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="120"
+  height="120"
+  viewBox="0 0 120 120"
+  fill="none"
+>
+  <defs>
+    <pattern
+      id="executiveDots"
+      x="0"
+      y="0"
+      width="24"
+      height="24"
+      patternUnits="userSpaceOnUse"
+    >
+      <circle
+        cx="12"
+        cy="12"
+        r="1.2"
+        fill="#123A63"
+        opacity="0.10"
+      />
+    </pattern>
+  </defs>
+
+  <rect
+    width="120"
+    height="120"
+    fill="url(#executiveDots)"
+  />
+</svg>

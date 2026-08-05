@@ -2,14 +2,14 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 interface ServiceCardProps {
-    slug: string;
+  slug: string;
   icon: React.ElementType;
   title: string;
   description: string;
 }
 
 export default function ServiceCard({
-    slug,
+  slug,
   icon: Icon,
   title,
   description,
@@ -18,58 +18,86 @@ export default function ServiceCard({
     <article
       className="
         group
+        relative
         flex
         h-full
         flex-col
-        rounded-[24px]
+        overflow-hidden
+        rounded-[28px]
         border
         border-slate-200
         bg-white
-        p-8
-        shadow-sm
+        p-9
+        shadow-none
         transition-all
-        duration-300
-        hover:-translate-y-1
-        hover:border-slate-300
-        hover:shadow-md
+        duration-500
+        hover:-translate-y-2
+        hover:border-[#D6E5FB]
+        hover:bg-[#FCFDFF]
+        hover:shadow-[0_20px_60px_rgba(18,58,99,0.08)]
       "
     >
+      {/* ================================= */}
+      {/* Background Glow */}
+      {/* ================================= */}
+
+      <div className="absolute right-0 top-0 h-36 w-36 rounded-full bg-[#EEF5FF] opacity-0 blur-3xl transition-all duration-500 group-hover:opacity-100" />
+
+      {/* ================================= */}
       {/* Icon */}
-      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50">
-        <Icon className="h-5 w-5 text-[#123A63]" />
+      {/* ================================= */}
+
+      <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F8FBFF] transition-all duration-300 group-hover:bg-[#EAF3FF]">
+
+        <Icon className="h-6 w-6 text-[#123A63]" />
+
       </div>
 
+      {/* ================================= */}
       {/* Title */}
-      <h3 className="mt-8 text-[30px] font-bold leading-tight tracking-[-0.02em] text-[#102A56]">
+      {/* ================================= */}
+
+      <h3 className="mt-8 text-[30px] font-bold leading-tight tracking-[-0.03em] text-[#102A56]">
         {title}
       </h3>
 
-      {/* Divider */}
-      <div className="my-6 h-px w-full bg-slate-200" />
+      {/* ================================= */}
+      {/* Accent Line */}
+      {/* ================================= */}
 
+      <div className="mt-5 h-[3px] w-14 rounded-full bg-[#2563EB] transition-all duration-300 group-hover:w-24" />
+
+      {/* ================================= */}
       {/* Description */}
-      <p className="flex-1 text-[16px] leading-8 text-slate-600">
+      {/* ================================= */}
+
+      <p className="mt-7 flex-1 text-[17px] leading-8 text-slate-600">
         {description}
       </p>
 
+      {/* ================================= */}
       {/* CTA */}
+      {/* ================================= */}
+
       <Link
         href={`/services/${slug}`}
         className="
-          mt-8
+          mt-10
           inline-flex
           items-center
-          gap-2
-          text-sm
+          gap-3
           font-semibold
           text-[#123A63]
           transition-all
           duration-300
-          group-hover:gap-3
+          group-hover:gap-4
+          group-hover:text-[#2563EB]
         "
       >
         Learn More
-        <ArrowRight className="h-4 w-4" />
+
+        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-2" />
+
       </Link>
     </article>
   );

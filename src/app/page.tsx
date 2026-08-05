@@ -1,9 +1,11 @@
 import Hero from "@/components/sections/Hero";
 import CreatingBusinessValue from "@/components/sections/CreatingBusinessValue";
 import CoreExpertise from "@/components/sections/CoreExpertise";
-import CaseStudies from "@/components/sections/CaseStudies";
 import ProfessionalServices from "@/components/sections/ProfessionalServices";
+import CaseStudies from "@/components/sections/FeaturedCaseStudies";
+import FeaturedCaseStudies from "@/components/sections/FeaturedCaseStudies";
 import Contact from "@/components/sections/Contact";
+
 
 export default function Home() {
   return (
@@ -13,6 +15,7 @@ export default function Home() {
       <CoreExpertise />
       <CaseStudies />
       <ProfessionalServices />
+      <FeaturedCaseStudies />
       <Contact />
     </>
   );
