@@ -15,7 +15,6 @@ export default function Home() {
       <CoreExpertise />
       <CaseStudies />
       <ProfessionalServices />
-      <FeaturedCaseStudies />
       <Contact />
     </>
   );
