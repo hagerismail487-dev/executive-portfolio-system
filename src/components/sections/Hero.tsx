@@ -61,7 +61,7 @@ export default function Hero() {
                 size="lg"
                 className="min-w-[220px]"
               >
-                View Portfolio
+                About Me
               </Button>
 
               <Button
@@ -69,7 +69,7 @@ export default function Hero() {
                 size="lg"
                 className="min-w-[220px]"
               >
-                Download CV
+                Download Resume
               </Button>
 
             </div>
