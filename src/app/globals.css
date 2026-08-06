@@ -1,1 +1,262 @@
 @import "tailwindcss";
+
+/* ==========================================================
+   Executive Portfolio System
+   Global Styles
+   Version 1.0
+   ========================================================== */
+
+
+/* ==========================================================
+   Root
+   ========================================================== */
+
+:root {
+  color-scheme: light;
+
+  --background: #fafbfd;
+  --foreground: #102a56;
+
+  --selection-bg: #2563eb;
+  --selection-text: #ffffff;
+}
+
+
+/* ==========================================================
+   Global Box Model
+   ========================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   HTML
+   ========================================================== */
+
+html {
+  scroll-behavior: smooth;
+
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+/* ==========================================================
+   Body
+   ========================================================== */
+
+body {
+  min-height: 100vh;
+
+  background: var(--background);
+  color: var(--foreground);
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: clip;
+}
+
+
+/* ==========================================================
+   Typography
+   ========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
+
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.03em;
+}
+
+p {
+  color: inherit;
+
+  line-height: 1.8;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+
+/* ==========================================================
+   Images
+   ========================================================== */
+
+img,
+picture,
+svg,
+video,
+canvas {
+  display: block;
+
+  max-width: 100%;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+
+/* ==========================================================
+   Links
+   ========================================================== */
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+
+  transition:
+    color 300ms ease,
+    opacity 300ms ease;
+}
+
+a:hover {
+  opacity: .9;
+}
+
+
+/* ==========================================================
+   Buttons
+   ========================================================== */
+
+button {
+  cursor: pointer;
+
+  transition:
+    background-color 300ms ease,
+    color 300ms ease,
+    border-color 300ms ease,
+    transform 300ms ease,
+    box-shadow 300ms ease;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+
+/* ==========================================================
+   Form Elements
+   ========================================================== */
+
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+
+
+/* ==========================================================
+   Sections
+   ========================================================== */
+
+section {
+  position: relative;
+}
+
+
+/* ==========================================================
+   Text Selection
+   ========================================================== */
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+
+/* ==========================================================
+   Scrollbar
+   ========================================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f7fb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9d8f2;
+
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+
+/* ==========================================================
+   Utilities
+   ========================================================== */
+
+.container-padding {
+  padding-inline: clamp(20px, 4vw, 64px);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ==========================================================
+   Accessibility
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation-duration: 0ms !important;
+    transition-duration: 0ms !important;
+  }
+
+}

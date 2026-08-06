@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+
 import "./globals.css";
 
 import Navbar from "@/components/layout/Navbar";
@@ -12,9 +13,44 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Hager Ismail | Executive Portfolio",
+  title: {
+    default: "Hager Ismail | Executive Portfolio",
+    template: "%s | Hager Ismail",
+  },
+
   description:
-    "Senior Data Analyst & MIS Specialist transforming business data into executive decisions.",
+    "Business Intelligence & MIS Reporting Specialist transforming business data into executive decisions through Executive Reporting, Performance Analytics, and Business Intelligence.",
+
+  keywords: [
+    "Business Intelligence",
+    "MIS Reporting",
+    "Executive Reporting",
+    "Power BI",
+    "Performance Analytics",
+    "Dashboard Design",
+    "Data Analytics",
+    "Business Reporting",
+    "Hager Ismail",
+  ],
+
+  authors: [
+    {
+      name: "Hager Ismail",
+    },
+  ],
+
+  creator: "Hager Ismail",
+
+  openGraph: {
+    title: "Hager Ismail | Executive Portfolio",
+
+    description:
+      "Business Intelligence & MIS Reporting Specialist transforming business data into executive decisions.",
+
+    type: "website",
+
+    locale: "en_US",
+  },
 };
 
 export default function RootLayout({
@@ -23,11 +59,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={plusJakarta.className}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+    >
+      <body
+        className={`
+          ${plusJakarta.className}
+          bg-[#FAFBFD]
+          text-[#102A56]
+          antialiased
+        `}
+      >
         <Navbar />
 
-        {children}
+        <main>{children}</main>
+
         <Footer />
       </body>
     </html>

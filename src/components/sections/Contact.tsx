@@ -1,37 +1,51 @@
 import {
-  Mail,
   CalendarDays,
+  Mail,
 } from "lucide-react";
 
+import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
-import ExecutiveButton from "@/components/ui/ExecutiveButton";
 
 export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-[#FBFCFE] py-24 lg:py-32"
+      className="relative overflow-hidden bg-[#FBFCFE] py-20 lg:py-24"
     >
       <Container>
 
-        <div className="relative overflow-hidden rounded-[40px] border border-[#E8EEF7] bg-white shadow-[0_40px_100px_rgba(18,58,99,0.10)]">
+        {/* ================================================= */}
+        {/* Executive Contact Card */}
+        {/* ================================================= */}
 
-          {/* ================================= */}
+        <div
+          className="
+            relative
+            overflow-hidden
+            rounded-[40px]
+            border
+            border-[#E8EEF7]
+            bg-white
+            shadow-[0_40px_100px_rgba(18,58,99,0.10)]
+          "
+        >
+
+          {/* ============================================== */}
           {/* Decorative Background */}
-          {/* ================================= */}
+          {/* ============================================== */}
 
           <div className="pointer-events-none absolute inset-0 overflow-hidden">
 
-            {/* Top Left Dots */}
+            {/* Top Left Dot Pattern */}
 
             <div className="absolute left-8 top-8 opacity-20">
 
               <div className="grid grid-cols-7 gap-4">
 
-                {Array.from({ length: 49 }).map((_, i) => (
+                {Array.from({ length: 49 }).map((_, index) => (
 
                   <div
-                    key={i}
+                    key={index}
                     className="h-1.5 w-1.5 rounded-full bg-[#C8DBFF]"
                   />
 
@@ -41,15 +55,39 @@ export default function Contact() {
 
             </div>
 
-            {/* Top Right Glow */}
+            {/* Top Glow */}
 
-            <div className="absolute -right-24 -top-24 h-[420px] w-[420px] rounded-full bg-[#EEF5FF] opacity-50 blur-3xl" />
+            <div
+              className="
+                absolute
+                -right-24
+                -top-24
+                h-[420px]
+                w-[420px]
+                rounded-full
+                bg-[#EEF5FF]
+                opacity-60
+                blur-3xl
+              "
+            />
 
-            {/* Bottom Left Glow */}
+            {/* Bottom Glow */}
 
-            <div className="absolute -bottom-16 -left-16 h-80 w-80 rounded-full bg-[#F4F8FF] opacity-80 blur-3xl" />
+            <div
+              className="
+                absolute
+                -bottom-20
+                -left-20
+                h-80
+                w-80
+                rounded-full
+                bg-[#F4F8FF]
+                opacity-80
+                blur-3xl
+              "
+            />
 
-            {/* Bottom Wave */}
+            {/* Bottom Waves */}
 
             <svg
               className="absolute bottom-0 left-0 w-full opacity-80"
@@ -57,6 +95,7 @@ export default function Contact() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
+
               <path
                 d="M0 120C220 210 420 210 720 150C980 100 1180 130 1440 60V220H0Z"
                 fill="#F7FAFF"
@@ -73,15 +112,16 @@ export default function Contact() {
                 stroke="#EDF4FF"
                 strokeWidth="2"
               />
+
             </svg>
 
           </div>
 
-          {/* ================================= */}
+          {/* ============================================== */}
           {/* Content */}
-          {/* ================================= */}
+          {/* ============================================== */}
 
-          <div className="relative z-10 px-8 py-16 sm:px-10 lg:px-20 lg:py-20">
+          <div className="relative z-10 px-8 py-14 sm:px-10 lg:px-16 lg:py-18">
 
             {/* Section Header */}
 
@@ -97,71 +137,91 @@ export default function Contact() {
 
             </div>
 
-            {/* Main Layout */}
+            {/* Main Grid */}
 
-            <div className="mt-20 grid items-center gap-20 xl:grid-cols-[1.45fr_1fr]">
+            <div className="mt-16 grid items-center gap-20 xl:grid-cols-[1.45fr_1fr]">
 
-              {/* ================================= */}
               {/* Left Side */}
-              {/* ================================= */}
+                            <div className="max-w-[640px]">
 
-              <div>
+                {/* Heading */}
 
-                <h2 className="max-w-3xl text-[42px] font-bold leading-[1.02] tracking-[-0.05em] text-[#102A56] lg:text-[64px]">
-
+                <h2
+                  className="
+                    text-[42px]
+                    font-bold
+                    leading-[1.02]
+                    tracking-[-0.05em]
+                    text-[#102A56]
+                    lg:text-[64px]
+                  "
+                >
                   Let's Build Something
 
                   <br />
 
                   Great Together
-
                 </h2>
+
+                {/* Accent Line */}
 
                 <div className="mt-7 h-1 w-24 rounded-full bg-[#2563EB]" />
 
-                <p className="mt-10 max-w-xl text-xl leading-[1.9] text-slate-600">
+                {/* Description */}
 
+                <p
+                  className="
+                    mt-10
+                    max-w-[560px]
+                    text-[20px]
+                    leading-[1.9]
+                    text-slate-600
+                  "
+                >
                   Have a project in mind?
 
                   <br />
 
                   Let's discuss how executive reporting,
-                  dashboards,
                   business intelligence,
-                  and performance analytics can help your
-                  organization make better business decisions.
-
+                  performance analytics,
+                  and dashboards can help your
+                  organization make faster,
+                  smarter,
+                  and more confident business decisions.
                 </p>
 
-                {/* Buttons */}
+                {/* Actions */}
 
                 <div className="mt-14 flex flex-wrap gap-5">
 
-                  <ExecutiveButton
+                  <Button
                     href="mailto:hagerismail487@gmail.com"
                     external
-                    icon={<Mail className="h-5 w-5" />}
+                    size="md"
+                    iconLeft={<Mail className="h-5 w-5" />}
                   >
                     Email Me
-                  </ExecutiveButton>
+                  </Button>
 
-                  <ExecutiveButton
+                  <Button
                     href="https://www.linkedin.com/in/hagerismail1"
                     external
                     variant="secondary"
-                    icon={<CalendarDays className="h-5 w-5" />}
+                    size="lg"
+                    iconLeft={<CalendarDays className="h-5 w-5" />}
                   >
                     Book a Consultation
-                  </ExecutiveButton>
+                  </Button>
 
                 </div>
 
               </div>
-                            {/* ================================= */}
-              {/* Right Side */}
-              {/* ================================= */}
 
-              <div className="relative">
+              {/* ============================================== */}
+              {/* Right Side */}
+              {/* ============================================== */}
+                            <div className="relative">
 
                 {/* Vertical Divider */}
 
@@ -169,11 +229,15 @@ export default function Contact() {
 
                 <div className="xl:pl-16">
 
+                  {/* Title */}
+
                   <h3 className="text-[40px] font-bold tracking-[-0.03em] text-[#102A56]">
                     Contact
                   </h3>
 
                   <div className="mt-4 h-[3px] w-20 rounded-full bg-[#2563EB]" />
+
+                  {/* Contact List */}
 
                   <div className="mt-12 flex flex-col gap-9">
 
@@ -195,7 +259,7 @@ export default function Contact() {
 
                         <a
                           href="mailto:hagerismail487@gmail.com"
-                          className="mt-1 block text-lg text-[#102A56] transition duration-300 hover:text-[#2563EB]"
+                          className="mt-1 block text-lg text-[#102A56] transition-colors duration-300 hover:text-[#2563EB]"
                         >
                           hagerismail487@gmail.com
                         </a>
@@ -233,7 +297,7 @@ export default function Contact() {
                           href="https://www.linkedin.com/in/hagerismail1"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mt-1 block text-lg font-medium text-[#0A66C2] transition duration-300 hover:underline"
+                          className="mt-1 block text-lg font-medium text-[#0A66C2] transition-colors duration-300 hover:underline"
                         >
                           linkedin.com/in/hagerismail1
                         </a>
@@ -291,8 +355,7 @@ export default function Contact() {
                 </div>
 
               </div>
-
-            </div>
+                          </div>
 
           </div>
 

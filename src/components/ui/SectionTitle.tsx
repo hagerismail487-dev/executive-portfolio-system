@@ -1,55 +1,70 @@
+import { ReactNode } from "react";
+
 interface SectionTitleProps {
-  eyebrow: string;
-  title: string;
-  description?: string;
+  children: ReactNode;
+
+  as?: "h1" | "h2" | "h3";
+
   align?: "left" | "center";
+
+  size?: "lg" | "md" | "sm";
+
+  className?: string;
 }
 
 export default function SectionTitle({
-  eyebrow,
-  title,
-  description,
-  align = "center",
+  children,
+  as = "h2",
+  align = "left",
+  size = "lg",
+  className = "",
 }: SectionTitleProps) {
-  const isCenter = align === "center";
+  const Component = as;
+
+  const sizes = {
+    lg: `
+      text-[44px]
+      leading-[1.02]
+
+      md:text-[56px]
+      xl:text-[68px]
+    `,
+
+    md: `
+      text-[36px]
+      leading-[1.05]
+
+      md:text-[46px]
+      xl:text-[56px]
+    `,
+
+    sm: `
+      text-[30px]
+      leading-[1.08]
+
+      md:text-[36px]
+      xl:text-[42px]
+    `,
+  };
+
+  const alignment = {
+    left: "text-left",
+    center: "text-center",
+  };
 
   return (
-    <div
-      className={
-        isCenter
-          ? "mx-auto max-w-3xl text-center"
-          : "max-w-3xl text-left"
-      }
+    <Component
+      className={`
+        font-bold
+        tracking-[-0.05em]
+        text-[#102A56]
+
+        ${sizes[size]}
+        ${alignment[align]}
+        ${className}
+      `}
     >
-      {/* Eyebrow */}
-
-      <div
-        className={`flex items-center gap-5 ${
-          isCenter ? "justify-center" : "justify-start"
-        }`}
-      >
-        <div className="h-px w-20 bg-[#123A63]" />
-
-        <span className="text-sm font-semibold uppercase tracking-[0.45em] text-[#123A63]">
-          {eyebrow}
-        </span>
-
-        <div className="h-px w-20 bg-[#123A63]" />
-      </div>
-
-      {/* Title */}
-
-      <h2 className="mt-8 text-5xl font-bold tracking-[-0.04em] text-[#102A56] lg:text-6xl">
-        {title}
-      </h2>
-
-      {/* Description */}
-
-      {description && (
-        <p className="mt-8 text-xl leading-9 text-slate-600">
-          {description}
-        </p>
-      )}
-    </div>
+      {children}
+    </Component>
   );
 }

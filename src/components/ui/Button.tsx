@@ -1,56 +1,174 @@
+import Link from "next/link";
 import { ButtonHTMLAttributes, ReactNode } from "react";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  variant?: "primary" | "secondary";
+
+  href?: string;
+
+  external?: boolean;
+
+  variant?: "primary" | "secondary" | "outline";
+
   size?: "sm" | "md" | "lg";
+
+  iconLeft?: ReactNode;
+
+  iconRight?: ReactNode;
+
+  fullWidth?: boolean;
+
+  className?: string;
 }
 
 export default function Button({
   children,
+  href,
+  external = false,
   variant = "primary",
   size = "md",
+  iconLeft,
+  iconRight,
+  fullWidth = false,
   className = "",
   ...props
 }: ButtonProps) {
-  const variants = {
-    primary:
-      "bg-[#07111F] text-white border border-[#07111F] hover:bg-[#102544] hover:border-[#102544] shadow-sm hover:shadow-xl",
+  const baseClass = `
+    inline-flex
+    items-center
+    justify-center
+    gap-3
 
-    secondary:
-      "bg-white text-[#07111F] border border-slate-300 hover:border-[#07111F] hover:bg-slate-50",
+    rounded-2xl
+
+    font-semibold
+    tracking-wide
+
+    transition-all
+    duration-300
+
+    hover:-translate-y-1
+
+    active:translate-y-0
+
+    focus:outline-none
+    focus-visible:ring-2
+    focus-visible:ring-[#2563EB]
+    focus-visible:ring-offset-2
+
+    disabled:pointer-events-none
+    disabled:opacity-60
+  `;
+
+  const variants = {
+    primary: `
+      bg-[#123A63]
+      text-white
+
+      border
+      border-[#123A63]
+
+      shadow-md
+
+      hover:bg-[#0F2F52]
+      hover:border-[#0F2F52]
+
+      hover:shadow-xl
+    `,
+
+    secondary: `
+      bg-[#EEF5FF]
+      text-[#123A63]
+
+      border
+      border-[#EEF5FF]
+
+      hover:bg-[#DCEBFF]
+    `,
+
+    outline: `
+      bg-transparent
+
+      text-[#123A63]
+
+      border-2
+      border-[#123A63]
+
+      hover:bg-[#123A63]
+      hover:text-white
+    `,
   };
 
   const sizes = {
-    sm: "px-4 py-2 text-sm",
-    md: "px-6 py-3 text-base",
-    lg: "px-8 py-4 text-base",
+    sm: `
+      px-5
+      py-3
+      text-sm
+    `,
+
+    md: `
+      px-8
+      py-4
+      text-base
+    `,
+
+    lg: `
+      px-10
+      py-5
+      text-lg
+    `,
   };
 
+  const classes = `
+    ${baseClass}
+    ${variants[variant]}
+    ${sizes[size]}
+    ${fullWidth ? "w-full" : ""}
+    ${className}
+  `;
+
+  const content = (
+    <>
+      {iconLeft && (
+        <span className="flex items-center">
+          {iconLeft}
+        </span>
+      )}
+
+      <span>{children}</span>
+
+      {iconRight && (
+        <span className="flex items-center">
+          {iconRight}
+        </span>
+      )}
+    </>
+  );
+
+  if (href && external) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={classes}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  if (href) {
+    return (
+      <Link href={href} className={classes}>
+        {content}
+      </Link>
+    );
+  }
+
   return (
-    <button
-      className={`
-        inline-flex
-        items-center
-        justify-center
-        rounded-full
-        font-semibold
-        tracking-wide
-        transition-all
-        duration-300
-        ease-out
-        hover:-translate-y-0.5
-        active:translate-y-0
-        focus:outline-none
-        focus:ring-2
-        focus:ring-[#07111F]/20
-        ${variants[variant]}
-        ${sizes[size]}
-        ${className}
-      `}
-      {...props}
-    >
-      {children}
+    <button className={classes} {...props}>
+      {content}
     </button>
   );
 }

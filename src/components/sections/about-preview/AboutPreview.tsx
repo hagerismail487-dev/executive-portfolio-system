@@ -1,8 +1,7 @@
 import Image from "next/image";
 
 import Container from "@/components/ui/Container";
-import ExecutiveButton from "@/components/ui/ExecutiveButton";
-
+import Button from "@/components/ui/Button";
 import data from "./data";
 
 export default function AboutPreview() {
@@ -156,11 +155,11 @@ export default function AboutPreview() {
 
             <div className="mt-14">
 
-              <ExecutiveButton href={data.cta.href}>
+              <Button href={data.cta.href}>
 
                 {data.cta.text}
 
-              </ExecutiveButton>
+              </Button>
 
             </div>
 
