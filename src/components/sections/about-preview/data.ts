@@ -13,9 +13,9 @@ const data = {
     story: [
       "Business Intelligence is more than dashboards and reports.",
 
-      "I help organizations transform complex business data into clear, actionable insights through Executive Dashboards, MIS Reporting Systems, Business Intelligence, and Performance Analytics—enabling leaders to make faster, evidence-based decisions with confidence.",
+      "I design Executive Dashboards, MIS Reporting Systems, and Business Intelligence solutions that transform complex business data into clear, actionable insights for executive decision-making.",
 
-      "Every reporting solution I design is built to improve visibility, strengthen performance management, and turn business information into strategic advantage.",
+      "Every reporting solution is built to improve visibility, strengthen performance management, and create measurable business value.",
     ],
 
     closingLine:
@@ -27,7 +27,7 @@ const data = {
       title: "Business Intelligence",
 
       description:
-        "Transforming business data into strategic insights.",
+        "Transforming business data into decisions.",
     },
 
     {
@@ -56,34 +56,27 @@ const data = {
     {
       value: "5+",
 
-      label: "Years Experience",
+      label: "Years\nExperience",
     },
 
     {
       value: "100+",
 
-      label: "Executive Reports",
+      label: "Executive\nReports",
     },
 
     {
       value: "15+",
 
-      label: "Executive Dashboards",
+      label: "Executive\nDashboards",
     },
 
     {
       value: "4",
 
-      label: "Core Specializations",
+      label: "Core\nSpecializations",
     },
   ],
-
-  profile: {
-    name: "Hager Ismail",
-
-    title:
-      "Business Intelligence & MIS Reporting Specialist",
-  },
 
   cta: {
     text: "About Me",
