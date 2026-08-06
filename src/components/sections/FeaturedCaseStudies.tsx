@@ -24,9 +24,9 @@ export default function FeaturedCaseStudies() {
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
 
-        <div className="absolute -right-32 -top-32 h-[420px] w-[420px] rounded-full bg-[#EEF5FF] opacity-60 blur-3xl" />
+        <div className="absolute -right-24 -top-24 h-[320px] w-[320px] rounded-full bg-[#EEF5FF] opacity-60 blur-3xl" />
 
-        <div className="absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-[#F4F8FF] opacity-80 blur-3xl" />
+        <div className="absolute -bottom-20 -left-20 h-60 w-60 rounded-full bg-[#F4F8FF] opacity-80 blur-3xl" />
 
       </div>
 
@@ -39,120 +39,142 @@ export default function FeaturedCaseStudies() {
             title="Featured Projects"
             description="A selection of executive dashboards and business intelligence solutions designed to transform data into strategic business decisions."
             align="center"
-            className="mx-auto mb-20 max-w-3xl"
+            className="mx-auto mb-14 max-w-[760px]"
           />
 
-          {/* ========================================= */}
-          {/* Project Cards */}
-          {/* ========================================= */}
+          <div className="grid gap-6 lg:grid-cols-3">
+                      {featuredProjects.map((project) => (
 
-          <div className="grid gap-8 lg:grid-cols-3">
-                        {featuredProjects.map((project) => (
+            <Link
+              key={project.id}
+              href={`/case-studies/${project.slug}`}
+              className="group block"
+            >
 
-              <Link
-                key={project.id}
-                href={`/case-studies/${project.slug}`}
-                className="group block"
-              >
+             <ExecutiveCard
+  className="
+    h-full
+    rounded-[22px]
 
-                <ExecutiveCard
-                  className="rounded-[28px] h-full"
+    flex
+    flex-col
+  "
+>
+
+                {/* Preview */}
+
+                <div
+                  className="
+                    aspect-[16/10]
+
+                    rounded-xl
+
+                    border
+                    border-dashed
+                    border-[#D7E5FB]
+
+                    bg-[#F8FBFF]
+                  "
+                />
+
+                {/* Category */}
+
+                <span
+                  className="
+                    mt-5
+                    inline-flex
+
+                    rounded-full
+
+                    bg-[#EEF5FF]
+
+                    px-3
+                    py-1
+
+                    text-[10px]
+                    font-semibold
+                    uppercase
+                    tracking-[0.20em]
+
+                    text-[#123A63]
+                  "
                 >
+                  {project.category}
+                </span>
 
-                  {/* Preview */}
+                {/* Title */}
 
-                  <div
-                    className="
-                      aspect-[16/10]
-                      rounded-2xl
-                      border-2
-                      border-dashed
-                      border-[#D7E5FB]
-                      bg-[#F8FBFF]
-                    "
-                  />
+                <h3
+                  className="
+                    mt-5
 
-                  {/* Category */}
+                    text-[22px]
+                    font-bold
+                    leading-tight
+                    tracking-[-0.02em]
 
-                  <span
-                    className="
-                      mt-6
-                      inline-flex
-                      rounded-full
-                      bg-[#EEF5FF]
-                      px-4
-                      py-1
-                      text-xs
-                      font-semibold
-                      uppercase
-                      tracking-[0.25em]
-                      text-[#123A63]
-                    "
-                  >
-                    {project.category}
-                  </span>
+                    text-[#102A56]
+                  "
+                >
+                  {project.title}
+                </h3>
+{/* Description */}
 
-                  {/* Title */}
+<p
+  className="
+    mt-4
+    flex-1
 
-                  <h3
-                    className="
-                      mt-6
-                      text-[28px]
-                      font-bold
-                      tracking-[-0.03em]
-                      text-[#102A56]
-                    "
-                  >
-                    {project.title}
-                  </h3>
+    text-[15px]
+    leading-7
 
-                  {/* Description */}
+    text-slate-600
+  "
+>
+  {project.excerpt}
+</p>
 
-                  <p
-                    className="
-                      mt-5
-                      text-[17px]
-                      leading-8
-                      text-slate-600
-                    "
-                  >
-                    {project.excerpt}
-                  </p>
+{/* CTA */}
 
-                  {/* CTA */}
+<span
+  className="
+    mt-6
 
-                  <span
-                    className="
-                      mt-8
-                      inline-flex
-                      items-center
-                      font-semibold
-                      text-[#123A63]
-                      transition-colors
-                      duration-300
-                      group-hover:text-[#2563EB]
-                    "
-                  >
-                    View Project →
-                  </span>
+    inline-flex
+    items-center
 
-                </ExecutiveCard>
+    text-[15px]
+    font-semibold
 
-              </Link>
+    text-[#123A63]
 
-            ))}
+    transition-colors
+    duration-300
 
-          </div>
+    group-hover:text-[#2563EB]
+  "
+>
+  View Project →
+</span>
 
-          {/* ========================================= */}
+              </ExecutiveCard>
+
+            </Link>
+
+          ))}
+
+        </div>
+                  {/* ========================================= */}
           {/* Bottom CTA */}
           {/* ========================================= */}
-                    <div className="mt-20 text-center">
+
+          <div className="mt-14 text-center">
 
             <Button
               href="/case-studies"
               variant="outline"
               size="lg"
+              className="min-w-[190px]"
             >
               View All Projects
             </Button>

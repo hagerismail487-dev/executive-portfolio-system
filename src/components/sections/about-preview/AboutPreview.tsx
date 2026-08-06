@@ -19,26 +19,20 @@ export default function AboutPreview() {
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
 
-        {/* Left Glow */}
+        <div className="absolute -left-28 top-8 h-[380px] w-[380px] rounded-full bg-[#EEF5FF] blur-[140px]" />
 
-        <div className="absolute -left-40 top-10 h-[520px] w-[520px] rounded-full bg-[#EEF5FF] blur-[170px]" />
-
-        {/* Right Glow */}
-
-        <div className="absolute -right-44 top-20 h-[560px] w-[560px] rounded-full bg-[#F5F9FF] blur-[180px]" />
-
-        {/* Dot Pattern */}
+        <div className="absolute -right-32 top-12 h-[420px] w-[420px] rounded-full bg-[#F5F9FF] blur-[150px]" />
 
         <div
           className="
             absolute
-            right-10
-            top-8
-            h-44
-            w-44
-            opacity-[0.16]
-            [background-image:radial-gradient(#2563EB_1.6px,transparent_1.6px)]
-            [background-size:18px_18px]
+            right-8
+            top-6
+            h-32
+            w-32
+            opacity-[0.14]
+            [background-image:radial-gradient(#2563EB_1.4px,transparent_1.4px)]
+            [background-size:16px_16px]
           "
         />
 
@@ -48,37 +42,30 @@ export default function AboutPreview() {
 
         <div className="relative z-10">
 
-          {/* ========================================= */}
-          {/* Section Header */}
-          {/* ========================================= */}
-
-          <SectionHeader className="mb-20">
+          <SectionHeader className="mb-14">
             {data.hero.label}
           </SectionHeader>
 
-          {/* ========================================= */}
-          {/* Main Layout */}
-          {/* ========================================= */}
-
-          <div className="grid items-center gap-24 lg:grid-cols-2">
+          <div className="grid items-center gap-16 lg:grid-cols-2">
                         {/* ========================================= */}
             {/* Left Side */}
             {/* ========================================= */}
 
-            <div className="max-w-[620px]">
+            <div className="max-w-[520px]">
 
               {/* Heading */}
 
               <h2
                 className="
-                  max-w-[700px]
-                  text-[48px]
+                  max-w-[560px]
+                  text-[34px]
                   font-bold
-                  leading-[1]
-                  tracking-[-0.05em]
+                  leading-[1.08]
+                  tracking-[-0.04em]
                   text-[#102A56]
-                  md:text-[56px]
-                  lg:text-[64px]
+
+                  md:text-[40px]
+                  lg:text-[46px]
                 "
               >
                 {data.hero.headline}
@@ -86,19 +73,20 @@ export default function AboutPreview() {
 
               {/* Accent */}
 
-              <div className="mt-8 h-1 w-24 rounded-full bg-[#2563EB]" />
+              <div className="mt-5 h-1 w-20 rounded-full bg-[#2563EB]" />
 
               {/* Quote */}
 
-              <blockquote className="mt-10 border-l-[3px] border-[#2563EB] pl-6">
+              <blockquote className="mt-8 border-l-[3px] border-[#2563EB] pl-5">
 
                 <p
                   className="
-                    text-[26px]
+                    text-[20px]
                     italic
-                    leading-[1.7]
+                    leading-8
                     text-slate-600
-                    lg:text-[28px]
+
+                    lg:text-[22px]
                   "
                 >
                   "{data.quote.text}"
@@ -106,8 +94,8 @@ export default function AboutPreview() {
 
                 <footer
                   className="
-                    mt-4
-                    text-lg
+                    mt-3
+                    text-[16px]
                     font-semibold
                     text-[#102A56]
                   "
@@ -119,15 +107,15 @@ export default function AboutPreview() {
 
               {/* Story */}
 
-              <div className="mt-12 space-y-8">
+              <div className="mt-10 space-y-6">
 
                 {data.hero.story.map((paragraph) => (
 
                   <p
                     key={paragraph}
                     className="
-                      text-[19px]
-                      leading-9
+                      text-[16px]
+                      leading-8
                       text-slate-600
                     "
                   >
@@ -142,10 +130,10 @@ export default function AboutPreview() {
 
               <p
                 className="
-                  mt-10
-                  text-[26px]
+                  mt-8
+                  text-[21px]
                   font-semibold
-                  leading-10
+                  leading-8
                   text-[#123A63]
                 "
               >
@@ -154,12 +142,12 @@ export default function AboutPreview() {
 
               {/* CTA */}
 
-              <div className="mt-14">
+              <div className="mt-10">
 
                 <Button
                   href={data.cta.href}
                   size="lg"
-                  className="min-w-[220px]"
+                  className="min-w-[190px]"
                 >
                   {data.cta.text}
                 </Button>
@@ -167,26 +155,24 @@ export default function AboutPreview() {
               </div>
 
             </div>
-
-            {/* ========================================= */}
+                        {/* ========================================= */}
             {/* Right Side */}
             {/* ========================================= */}
-                        <div className="relative flex justify-center lg:justify-end">
 
-              {/* ========================================= */}
+            <div className="relative flex justify-center lg:justify-end">
+
               {/* Soft Glow */}
-              {/* ========================================= */}
 
               <div
                 className="
                   absolute
                   top-1/2
-                  h-[520px]
-                  w-[520px]
+                  h-[400px]
+                  w-[400px]
                   -translate-y-1/2
                   rounded-full
                   bg-[#2563EB]/8
-                  blur-[120px]
+                  blur-[100px]
                 "
               />
 
@@ -195,37 +181,43 @@ export default function AboutPreview() {
               <div
                 className="
                   absolute
-                  bottom-8
-                  left-8
-                  h-48
-                  w-48
+                  bottom-6
+                  left-6
+                  h-36
+                  w-36
                   rounded-full
                   bg-[#DCEBFF]
                   opacity-70
-                  blur-[90px]
+                  blur-[70px]
                 "
               />
 
-              {/* ========================================= */}
               {/* Portrait */}
-              {/* ========================================= */}
 
               <div
                 className="
                   relative
-                  h-[620px]
-                  w-[430px]
+                  h-[520px]
+                  w-[360px]
+
                   overflow-hidden
-                  rounded-[32px]
+
+                  rounded-[26px]
+
                   border
                   border-[#D8E5FA]
+
                   bg-gradient-to-b
                   from-[#FDFEFF]
                   to-[#F7FAFF]
-                  shadow-[0_30px_80px_rgba(18,58,99,0.08)]
+
+                  shadow-[0_24px_60px_rgba(18,58,99,0.08)]
+
                   transition-all
                   duration-500
-                  hover:shadow-[0_40px_90px_rgba(18,58,99,0.12)]
+
+                  hover:-translate-y-2
+                  hover:shadow-[0_34px_70px_rgba(18,58,99,0.12)]
                 "
               >
 
@@ -237,46 +229,51 @@ export default function AboutPreview() {
                   className="
                     object-contain
                     object-bottom
-                    scale-[1.06]
+
+                    scale-[1.02]
+
                     transition-transform
                     duration-500
-                    hover:scale-[1.04]
+
+                    hover:scale-[1.01]
                   "
                 />
 
               </div>
 
-              {/* ========================================= */}
               {/* Top Decoration */}
-              {/* ========================================= */}
 
               <div
                 className="
                   absolute
-                  -right-6
+                  -right-5
                   top-2
-                  h-32
-                  w-32
-                  opacity-25
-                  [background-image:radial-gradient(#2563EB_1.6px,transparent_1.6px)]
-                  [background-size:16px_16px]
+
+                  h-24
+                  w-24
+
+                  opacity-20
+
+                  [background-image:radial-gradient(#2563EB_1.4px,transparent_1.4px)]
+                  [background-size:14px_14px]
                 "
               />
 
-              {/* ========================================= */}
               {/* Bottom Decoration */}
-              {/* ========================================= */}
 
               <div
                 className="
                   absolute
-                  -left-4
-                  bottom-8
-                  h-36
-                  w-36
-                  opacity-20
-                  [background-image:radial-gradient(#2563EB_1.6px,transparent_1.6px)]
-                  [background-size:16px_16px]
+                  -left-3
+                  bottom-6
+
+                  h-28
+                  w-28
+
+                  opacity-18
+
+                  [background-image:radial-gradient(#2563EB_1.4px,transparent_1.4px)]
+                  [background-size:14px_14px]
                 "
               />
 

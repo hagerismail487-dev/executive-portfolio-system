@@ -1,5 +1,7 @@
-import Button from "@/components/ui/Button";
+import Image from "next/image";
+
 import Badge from "@/components/ui/Badge";
+import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import SectionTitle from "@/components/ui/SectionTitle";
@@ -7,21 +9,25 @@ import SectionTitle from "@/components/ui/SectionTitle";
 export default function Hero() {
   return (
     <Section
-      className="relative overflow-hidden bg-[#FBFCFE] pt-24 lg:pt-28"
+      className="relative overflow-hidden bg-[#FBFCFE] pt-10 lg:pt-14"
     >
-      {/* Background Glow */}
+      {/* ========================================= */}
+      {/* Background */}
+      {/* ========================================= */}
 
-      <div className="pointer-events-none absolute right-[-220px] top-[-180px] h-[620px] w-[620px] rounded-full bg-[#2E63D3]/10 blur-[140px]" />
+      <div className="pointer-events-none absolute right-[-140px] top-[-120px] h-[420px] w-[420px] rounded-full bg-[#2E63D3]/8 blur-[100px]" />
+
+      <div className="pointer-events-none absolute -left-24 bottom-0 h-[300px] w-[300px] rounded-full bg-[#EEF5FF] blur-[100px]" />
 
       <Container>
 
-        <div className="relative z-10 grid items-center gap-16 lg:grid-cols-2 xl:gap-24">
+        <div className="relative z-10 grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
 
           {/* ========================================= */}
           {/* Left Content */}
           {/* ========================================= */}
 
-          <div className="max-w-[560px]">
+          <div className="max-w-[470px]">
 
             <Badge>
               Senior Data Analyst | MIS Specialist
@@ -29,7 +35,7 @@ export default function Hero() {
 
             <SectionTitle
               as="h1"
-              className="mt-8"
+              className="mt-4"
             >
               <>
                 Transforming
@@ -42,37 +48,36 @@ export default function Hero() {
               </>
             </SectionTitle>
 
-            {/* Accent */}
+            <div className="mt-4 h-1 w-20 rounded-full bg-[#2563EB]" />
 
-            <div className="mt-6 h-1 w-36 rounded-full bg-[#2563EB]" />
-
-            {/* Description */}
-
-            <p className="mt-10 max-w-[520px] text-lg leading-9 text-slate-600">
-
+            <p
+              className="
+                mt-6
+                max-w-[470px]
+                text-[16px]
+                leading-7
+                text-slate-600
+              "
+            >
               Transforming business data into executive clarity through
               strategic reporting, performance intelligence, and MIS
               frameworks that support confident decision-making.
-
             </p>
 
-            {/* Actions */}
-
-            <div className="mt-14 flex flex-wrap gap-5">
-
-              <Button
-                size="lg"
+            <div className="mt-8 flex flex-wrap gap-3">
+                            <Button
                 href="#about"
-                className="min-w-[220px]"
+                size="lg"
+                className="min-w-[185px]"
               >
                 About Me
               </Button>
 
               <Button
                 variant="secondary"
-                size="lg"
                 href="/resume.pdf"
-                className="min-w-[220px]"
+                size="lg"
+                className="min-w-[185px]"
               >
                 Download Resume
               </Button>
@@ -82,92 +87,113 @@ export default function Hero() {
           </div>
 
           {/* ========================================= */}
-          {/* Portrait */}
+          {/* Right Side */}
           {/* ========================================= */}
-                    <div className="relative flex justify-center">
+
+          <div className="relative flex justify-center lg:justify-end">
 
             {/* Background Glow */}
 
             <div
               className="
                 absolute
-                h-[520px]
-                w-[520px]
+                h-[360px]
+                w-[360px]
                 rounded-full
-                bg-[#2563EB]/10
-                blur-[120px]
+                bg-[#2563EB]/8
+                blur-[90px]
               "
             />
 
-            {/* Portrait Card */}
+            {/* Dashboard Card */}
 
             <div
               className="
                 relative
 
-                flex
-                h-[560px]
-                w-[440px]
-
-                items-center
-                justify-center
-
                 overflow-hidden
 
-                rounded-[42px]
+                rounded-[26px]
 
                 border
                 border-[#E7EEF8]
 
                 bg-white
 
-                shadow-[0_40px_100px_rgba(18,58,99,0.10)]
+                shadow-[0_24px_60px_rgba(18,58,99,0.10)]
+
+                transition-all
+                duration-500
+
+                hover:-translate-y-2
+                hover:shadow-[0_34px_70px_rgba(18,58,99,0.14)]
               "
             >
+                            {/* Dashboard Image */}
 
-              {/* Inner Border */}
-
-              <div
+              <Image
+                src="/images/hero/executive-dashboard-preview.webp"
+                alt="Executive Dashboard Preview"
+                width={500}
+                height={320}
+                priority
                 className="
-                  absolute
-                  inset-5
-
-                  rounded-[34px]
-
-                  border
-                  border-[#EEF3FA]
+                  block
+                  w-full
+                  max-w-[500px]
+                  h-auto
+                  object-cover
                 "
               />
 
-              {/* Portrait Placeholder */}
+              {/* Bottom Caption */}
 
-              <div className="relative z-10 text-center">
+              <div
+                className="
+                  border-t
+                  border-[#EEF3FA]
 
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={1.5}
-                  className="mx-auto mb-8 h-24 w-24 text-[#123A63]/50"
+                  bg-white
+
+                  px-5
+                  py-4
+                "
+              >
+
+                <span
+                  className="
+                    text-[10px]
+                    font-semibold
+                    uppercase
+                    tracking-[0.22em]
+                    text-[#2563EB]
+                  "
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 20.118a7.5 7.5 0 0115 0"
-                  />
-                </svg>
+                  Featured Dashboard
+                </span>
+
+                <h3
+                  className="
+                    mt-2
+                    text-[19px]
+                    font-bold
+                    tracking-[-0.02em]
+                    text-[#102A56]
+                  "
+                >
+                  Executive Performance Dashboard
+                </h3>
 
                 <p
                   className="
-                    text-lg
-                    font-medium
-                    uppercase
-                    tracking-[0.15em]
-                    text-slate-500
+                    mt-2
+                    text-[14px]
+                    leading-6
+                    text-slate-600
                   "
                 >
-                  Professional Portrait
+                  Interactive executive reporting designed to transform
+                  operational data into strategic business decisions.
                 </p>
 
               </div>
@@ -175,8 +201,7 @@ export default function Hero() {
             </div>
 
           </div>
-
-        </div>
+                  </div>
 
       </Container>
 

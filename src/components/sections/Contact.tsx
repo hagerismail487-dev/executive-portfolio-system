@@ -20,11 +20,15 @@ export default function Contact() {
           className="
             relative
             overflow-hidden
-            rounded-[40px]
+
+            rounded-[30px]
+
             border
             border-[#E8EEF7]
+
             bg-white
-            shadow-[0_40px_100px_rgba(18,58,99,0.10)]
+
+            shadow-[0_24px_60px_rgba(18,58,99,0.08)]
           "
         >
 
@@ -36,15 +40,15 @@ export default function Contact() {
 
             {/* Top Left Dots */}
 
-            <div className="absolute left-8 top-8 opacity-20">
+            <div className="absolute left-6 top-6 opacity-15">
 
-              <div className="grid grid-cols-7 gap-4">
+              <div className="grid grid-cols-7 gap-3">
 
                 {Array.from({ length: 49 }).map((_, index) => (
 
                   <div
                     key={index}
-                    className="h-1.5 w-1.5 rounded-full bg-[#C8DBFF]"
+                    className="h-1 w-1 rounded-full bg-[#C8DBFF]"
                   />
 
                 ))}
@@ -55,16 +59,16 @@ export default function Contact() {
 
             {/* Top Right Glow */}
 
-            <div className="absolute -right-24 -top-24 h-[420px] w-[420px] rounded-full bg-[#EEF5FF] opacity-60 blur-3xl" />
+            <div className="absolute -right-20 -top-20 h-[320px] w-[320px] rounded-full bg-[#EEF5FF] opacity-60 blur-3xl" />
 
             {/* Bottom Left Glow */}
 
-            <div className="absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-[#F4F8FF] opacity-80 blur-3xl" />
+            <div className="absolute -bottom-14 -left-14 h-60 w-60 rounded-full bg-[#F4F8FF] opacity-80 blur-3xl" />
 
             {/* Bottom Waves */}
 
             <svg
-              className="absolute bottom-0 left-0 w-full opacity-80"
+              className="absolute bottom-0 left-0 w-full opacity-70"
               viewBox="0 0 1440 220"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -95,36 +99,31 @@ export default function Contact() {
           {/* Content */}
           {/* ========================================= */}
 
-          <div className="relative z-10 px-8 py-16 sm:px-10 lg:px-20 lg:py-20">
+          <div className="relative z-10 px-6 py-10 sm:px-8 lg:px-14 lg:py-14">
 
-            {/* ========================================= */}
-            {/* Section Header */}
-            {/* ========================================= */}
-<SectionHeader>
-  Contact
-</SectionHeader>
+            <SectionHeader>
+              Contact
+            </SectionHeader>
 
-            {/* ========================================= */}
-            {/* Main Layout */}
-            {/* ========================================= */}
-
-            <div className="mt-20 grid items-center gap-20 xl:grid-cols-[1.45fr_1fr]">
+            <div className="mt-14 grid items-center gap-14 xl:grid-cols-[1.35fr_1fr]">
                               {/* ========================================= */}
               {/* Left Side */}
               {/* ========================================= */}
 
-              <div className="max-w-[640px]">
+              <div className="max-w-[520px]">
 
                 {/* Heading */}
 
                 <h2
                   className="
-                    text-[42px]
+                    text-[34px]
                     font-bold
-                    leading-[1.02]
-                    tracking-[-0.05em]
+                    leading-[1.08]
+                    tracking-[-0.04em]
                     text-[#102A56]
-                    lg:text-[64px]
+
+                    md:text-[42px]
+                    lg:text-[48px]
                   "
                 >
                   Let's Build Something
@@ -137,16 +136,18 @@ export default function Contact() {
 
                 {/* Accent Line */}
 
-                <div className="mt-7 h-1 w-24 rounded-full bg-[#2563EB]" />
+                <div className="mt-5 h-1 w-20 rounded-full bg-[#2563EB]" />
 
                 {/* Description */}
 
                 <p
                   className="
-                    mt-10
-                    max-w-[560px]
-                    text-[20px]
-                    leading-[1.9]
+                    mt-7
+                    max-w-[500px]
+
+                    text-[17px]
+                    leading-8
+
                     text-slate-600
                   "
                 >
@@ -166,7 +167,7 @@ export default function Contact() {
 
                 {/* Actions */}
 
-                <div className="mt-14 flex flex-wrap gap-5">
+                <div className="mt-10 flex flex-wrap gap-4">
 
                   <Button
                     href="mailto:hagerismail487@gmail.com"
@@ -194,52 +195,52 @@ export default function Contact() {
               {/* ========================================= */}
               {/* Right Side */}
               {/* ========================================= */}
-                            <div className="relative">
+
+              <div className="relative">
 
                 {/* Vertical Divider */}
 
-                <div className="absolute left-0 top-8 hidden h-[78%] w-px bg-[#E5EDF8] xl:block" />
+                <div className="absolute left-0 top-6 hidden h-[80%] w-px bg-[#E5EDF8] xl:block" />
 
-                <div className="xl:pl-16">
+                <div className="xl:pl-12">
 
                   {/* Title */}
 
                   <h3
                     className="
-                      text-[40px]
+                      text-[30px]
                       font-bold
-                      tracking-[-0.03em]
+                      tracking-[-0.02em]
                       text-[#102A56]
                     "
                   >
                     Contact
                   </h3>
 
-                  <div className="mt-4 h-[3px] w-20 rounded-full bg-[#2563EB]" />
+                  <div className="mt-3 h-[3px] w-16 rounded-full bg-[#2563EB]" />
 
                   {/* Contact Information */}
 
-                  <div className="mt-12 flex flex-col gap-9">
+                  <div className="mt-8 flex flex-col gap-6">
+                                        {/* Email */}
 
-                    {/* Email */}
+                    <div className="flex items-center gap-4">
 
-                    <div className="flex items-center gap-6">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#EAF3FF]">
 
-                      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#EAF3FF]">
-
-                        <Mail className="h-7 w-7 text-[#123A63]" />
+                        <Mail className="h-6 w-6 text-[#123A63]" />
 
                       </div>
 
                       <div>
 
-                        <p className="text-lg font-bold text-[#102A56]">
+                        <p className="text-[15px] font-bold text-[#102A56]">
                           Email
                         </p>
 
                         <a
                           href="mailto:hagerismail487@gmail.com"
-                          className="mt-1 block text-lg text-[#102A56] transition-all duration-300 hover:text-[#2563EB]"
+                          className="mt-1 block text-[15px] text-[#102A56] transition-all duration-300 hover:text-[#2563EB]"
                         >
                           hagerismail487@gmail.com
                         </a>
@@ -248,19 +249,19 @@ export default function Contact() {
 
                     </div>
 
-                    <div className="ml-[84px] border-b border-slate-200/70" />
+                    <div className="ml-[68px] border-b border-slate-200/70" />
 
                     {/* LinkedIn */}
 
-                    <div className="flex items-center gap-6">
+                    <div className="flex items-center gap-4">
 
-                      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#EAF3FF]">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#EAF3FF]">
 
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 24 24"
                           fill="currentColor"
-                          className="h-7 w-7 text-[#0A66C2]"
+                          className="h-6 w-6 text-[#0A66C2]"
                         >
                           <path d="M4.98 3.5C4.98 4.604 4.104 5.5 3 5.5S1.02 4.604 1.02 3.5 1.896 1.5 3 1.5s1.98.896 1.98 2zm.02 3.5H1v16h4V7zm6.5 0h-4v16h4v-8.4c0-4.67 6-5.05 6 0V23h4v-9.8c0-7.64-8.72-7.36-10-3.6V7z" />
                         </svg>
@@ -269,7 +270,7 @@ export default function Contact() {
 
                       <div>
 
-                        <p className="text-lg font-bold text-[#102A56]">
+                        <p className="text-[15px] font-bold text-[#102A56]">
                           LinkedIn
                         </p>
 
@@ -277,7 +278,7 @@ export default function Contact() {
                           href="https://www.linkedin.com/in/hagerismail1"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mt-1 block text-lg font-medium text-[#0A66C2] transition-all duration-300 hover:underline"
+                          className="mt-1 block text-[15px] font-medium text-[#0A66C2] transition-all duration-300 hover:underline"
                         >
                           linkedin.com/in/hagerismail1
                         </a>
@@ -286,13 +287,13 @@ export default function Contact() {
 
                     </div>
 
-                    <div className="ml-[84px] border-b border-slate-200/70" />
+                    <div className="ml-[68px] border-b border-slate-200/70" />
 
                     {/* Location */}
 
-                    <div className="flex items-center gap-6">
+                    <div className="flex items-center gap-4">
 
-                      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#EAF3FF]">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#EAF3FF]">
 
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -300,7 +301,7 @@ export default function Contact() {
                           viewBox="0 0 24 24"
                           stroke="currentColor"
                           strokeWidth={2}
-                          className="h-7 w-7 text-[#123A63]"
+                          className="h-6 w-6 text-[#123A63]"
                         >
                           <path
                             strokeLinecap="round"
@@ -318,11 +319,11 @@ export default function Contact() {
 
                       <div>
 
-                        <p className="text-lg font-bold text-[#102A56]">
+                        <p className="text-[15px] font-bold text-[#102A56]">
                           Location
                         </p>
 
-                        <p className="mt-1 text-lg text-[#102A56]">
+                        <p className="mt-1 text-[15px] text-[#102A56]">
                           Cairo, Egypt
                         </p>
 
@@ -331,11 +332,11 @@ export default function Contact() {
                     </div>
 
                   </div>
-
-                </div>
+            </div>
 
               </div>
-                          </div>
+
+            </div>
 
           </div>
 

@@ -17,11 +17,15 @@ export default function ProfessionalServices() {
           className="
             relative
             overflow-hidden
-            rounded-[40px]
+
+            rounded-[30px]
+
             border
             border-[#E8EEF7]
+
             bg-white
-            shadow-[0_40px_100px_rgba(18,58,99,0.10)]
+
+            shadow-[0_24px_60px_rgba(18,58,99,0.08)]
           "
         >
 
@@ -33,15 +37,15 @@ export default function ProfessionalServices() {
 
             {/* Top Left Dots */}
 
-            <div className="absolute left-8 top-8 opacity-20">
+            <div className="absolute left-6 top-6 opacity-15">
 
-              <div className="grid grid-cols-7 gap-4">
+              <div className="grid grid-cols-7 gap-3">
 
                 {Array.from({ length: 49 }).map((_, i) => (
 
                   <div
                     key={i}
-                    className="h-1.5 w-1.5 rounded-full bg-[#C8DBFF]"
+                    className="h-1 w-1 rounded-full bg-[#C8DBFF]"
                   />
 
                 ))}
@@ -52,11 +56,11 @@ export default function ProfessionalServices() {
 
             {/* Top Right Glow */}
 
-            <div className="absolute -right-24 -top-24 h-[420px] w-[420px] rounded-full bg-[#EEF5FF] opacity-40 blur-3xl" />
+            <div className="absolute -right-20 -top-20 h-[320px] w-[320px] rounded-full bg-[#EEF5FF] opacity-40 blur-3xl" />
 
             {/* Bottom Left Glow */}
 
-            <div className="absolute -bottom-16 -left-16 h-80 w-80 rounded-full bg-[#F4F8FF] opacity-80 blur-3xl" />
+            <div className="absolute -bottom-12 -left-12 h-60 w-60 rounded-full bg-[#F4F8FF] opacity-80 blur-3xl" />
 
           </div>
 
@@ -64,21 +68,17 @@ export default function ProfessionalServices() {
           {/* Content */}
           {/* ========================================= */}
 
-          <div className="relative z-10 px-8 py-16 sm:px-10 lg:px-20 lg:py-20">
+          <div className="relative z-10 px-6 py-10 sm:px-8 lg:px-14 lg:py-14">
 
             <SectionIntro
               eyebrow="Services"
               title="Professional Services"
               description="Professional services that help organizations transform business data into executive insights, strategic reporting, and confident business decisions."
               align="center"
-              className="mx-auto mb-20 max-w-3xl"
+              className="mx-auto mb-14 max-w-[760px]"
             />
 
-            {/* ========================================= */}
-            {/* Services Grid */}
-            {/* ========================================= */}
-
-            <div className="grid gap-8 md:grid-cols-2">
+            <div className="grid gap-6 md:grid-cols-2">
                           {services.map((service) => (
 
               <div
@@ -94,13 +94,12 @@ export default function ProfessionalServices() {
 
             ))}
 
+            </div>
+
           </div>
 
         </div>
-
-        </div>
-
-      </Container>
+              </Container>
 
     </Section>
   );

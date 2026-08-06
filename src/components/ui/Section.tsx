@@ -33,15 +33,19 @@ export default function Section({
         relative
         overflow-hidden
 
-        py-20
-        lg:py-24
+        py-14
+        md:py-16
+        lg:py-18
+        xl:py-20
 
         ${backgrounds[background]}
 
         ${className}
       `}
     >
-      <Container>{children}</Container>
+      <Container>
+        {children}
+      </Container>
     </section>
   );
 }

@@ -48,12 +48,11 @@ export default function CreatingBusinessValue() {
         title="Creating Business Value"
         description="Helping organizations transform business data into strategic value through executive reporting, business intelligence, and performance management."
         align="center"
-        className="mx-auto mb-20 max-w-3xl"
+        className="mx-auto mb-14 max-w-[760px]"
       />
 
-      <div className="grid gap-8 md:grid-cols-2">
-
-        {values.map((item) => {
+      <div className="grid gap-6 md:grid-cols-2">
+                {values.map((item) => {
 
           const Icon = item.icon;
 
@@ -61,12 +60,12 @@ export default function CreatingBusinessValue() {
 
             <ExecutiveCard
               key={item.title}
-              className="min-h-[235px]"
+              className="min-h-[200px]"
             >
 
               {/* Header */}
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-3">
 
                 <IconContainer
                   size="sm"
@@ -74,11 +73,20 @@ export default function CreatingBusinessValue() {
                   className="bg-[#F6F9FD] text-[#123A67]"
                 >
                   <Icon
-                    strokeWidth={2}
+                    size={22}
+                    strokeWidth={1.9}
                   />
                 </IconContainer>
 
-                <h3 className="text-[26px] font-semibold tracking-[-0.025em] leading-none text-[#102A56]">
+                <h3
+                  className="
+                    text-[22px]
+                    font-semibold
+                    leading-tight
+                    tracking-[-0.02em]
+                    text-[#102A56]
+                  "
+                >
                   {item.title}
                 </h3>
 
@@ -86,11 +94,17 @@ export default function CreatingBusinessValue() {
 
               {/* Divider */}
 
-              <div className="my-6 h-px w-full bg-slate-100" />
+              <div className="my-5 h-px w-full bg-slate-100" />
 
               {/* Description */}
 
-              <p className="text-[17px] leading-[1.9] text-slate-600">
+              <p
+                className="
+                  text-[15px]
+                  leading-7
+                  text-slate-600
+                "
+              >
                 {item.description}
               </p>
 
@@ -101,7 +115,6 @@ export default function CreatingBusinessValue() {
         })}
 
       </div>
-
-    </Section>
+          </Section>
   );
 }

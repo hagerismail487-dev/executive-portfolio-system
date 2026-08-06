@@ -7,7 +7,7 @@ import {
   Target,
 } from "lucide-react";
 
-import ExecutiveCard from "@/components/ui/ExecutiveCard";
+import ExecutiveCard from "@/components/design-system/ExecutiveCard";
 import IconContainer from "@/components/ui/IconContainer";
 import Section from "@/components/ui/Section";
 import SectionIntro from "@/components/ui/SectionIntro";
@@ -62,14 +62,10 @@ export default function CoreExpertise() {
         title="Core Expertise"
         description="A blend of analytical thinking, technical expertise, and business understanding to deliver data solutions that drive strategic impact."
         align="center"
-        className="mx-auto mb-16 max-w-3xl"
+        className="mx-auto mb-14 max-w-[760px]"
       />
 
-      {/* ========================================= */}
-      {/* Expertise Cards */}
-      {/* ========================================= */}
-
-      <div className="grid gap-8 lg:grid-cols-3">
+      <div className="grid gap-6 lg:grid-cols-3">
                 {expertise.map((item) => {
 
           const Icon = item.icon;
@@ -78,7 +74,7 @@ export default function CoreExpertise() {
 
             <ExecutiveCard
               key={item.title}
-              className="rounded-[26px]"
+              className="rounded-[22px]"
             >
 
               {/* Icon */}
@@ -89,7 +85,7 @@ export default function CoreExpertise() {
                 className="bg-[#F6F9FD] text-[#123A67]"
               >
                 <Icon
-                  size={34}
+                  size={28}
                   strokeWidth={1.8}
                 />
               </IconContainer>
@@ -98,11 +94,11 @@ export default function CoreExpertise() {
 
               <h3
                 className="
-                  mt-8
-                  text-[28px]
+                  mt-6
+                  text-[22px]
                   font-semibold
                   leading-tight
-                  tracking-[-0.03em]
+                  tracking-[-0.02em]
                   text-[#102A56]
                 "
               >
@@ -111,14 +107,14 @@ export default function CoreExpertise() {
 
               {/* Divider */}
 
-              <div className="my-7 h-px w-full bg-[#E8EDF5]" />
+              <div className="my-5 h-px w-full bg-[#E8EDF5]" />
 
               {/* Description */}
 
               <p
                 className="
-                  text-[17px]
-                  leading-[1.95]
+                  text-[15px]
+                  leading-7
                   text-slate-600
                 "
               >
@@ -136,15 +132,12 @@ export default function CoreExpertise() {
       {/* ========================================= */}
       {/* Quote */}
       {/* ========================================= */}
-            {/* ========================================= */}
-      {/* Quote */}
-      {/* ========================================= */}
 
-      <div className="mt-24 text-center">
+      <div className="mt-16 text-center">
 
         <p
           className="
-            text-[22px]
+            text-[18px]
             font-medium
             tracking-[-0.02em]
             text-[#102A56]
@@ -153,10 +146,9 @@ export default function CoreExpertise() {
           Turning data into strategic advantage.
         </p>
 
-        <div className="mx-auto mt-6 h-[3px] w-20 rounded-full bg-[#2E63D3]" />
+        <div className="mx-auto mt-4 h-[3px] w-16 rounded-full bg-[#2E63D3]" />
 
       </div>
-
-    </Section>
+          </Section>
   );
 }

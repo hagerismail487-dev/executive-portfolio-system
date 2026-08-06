@@ -19,14 +19,14 @@ export default function Badge({
   const variants = {
     primary: `
       border
-      border-[#D8E6FF]
-      bg-[#F5F9FF]
+      border-[#DCE8FB]
+      bg-[#F7FAFF]
       text-[#2563EB]
     `,
 
     secondary: `
       border
-      border-[#EEF3FA]
+      border-[#E8EEF7]
       bg-white
       text-[#123A63]
     `,
@@ -41,24 +41,27 @@ export default function Badge({
 
   const sizes = {
     sm: `
-      px-3
-      py-1.5
-      text-[11px]
-      tracking-[0.22em]
+      px-2.5
+      py-1
+
+      text-[10px]
+      tracking-[0.14em]
     `,
 
     md: `
-      px-5
-      py-2
-      text-[13px]
-      tracking-[0.32em]
+      px-3.5
+      py-1.5
+
+      text-[11px]
+      tracking-[0.18em]
     `,
 
     lg: `
-      px-6
-      py-2.5
-      text-[14px]
-      tracking-[0.35em]
+      px-4
+      py-2
+
+      text-[12px]
+      tracking-[0.22em]
     `,
   };
 

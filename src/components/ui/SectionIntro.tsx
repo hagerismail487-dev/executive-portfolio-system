@@ -29,32 +29,39 @@ export default function SectionIntro({
         flex
         flex-col
 
-        ${align === "center" ? "items-center text-center" : "items-start text-left"}
+        ${
+          align === "center"
+            ? "items-center text-center"
+            : "items-start text-left"
+        }
 
         ${className}
       `}
     >
-      <SectionHeader align={align}>
+      <SectionHeader
+        align={align}
+        variant="lines"
+      >
         {eyebrow}
       </SectionHeader>
 
       <SectionTitle
         size={titleSize}
         align={align}
-        className="mt-6"
+        className="mt-5"
       >
         {title}
       </SectionTitle>
 
       {description && (
         <p
-          className={`
-            mt-8
-            max-w-2xl
-            text-lg
-            leading-9
+          className="
+            mt-6
+            max-w-[700px]
+            text-[18px]
+            leading-8
             text-slate-600
-          `}
+          "
         >
           {description}
         </p>

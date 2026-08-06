@@ -14,13 +14,14 @@ export default function Container({
       className={`
         mx-auto
         w-full
-        max-w-[1320px]
 
-        px-5
-        sm:px-6
-        md:px-8
-        lg:px-10
-        xl:px-12
+        max-w-[1180px]
+
+        px-4
+        sm:px-5
+        md:px-6
+        lg:px-8
+        xl:px-10
 
         ${className}
       `}
