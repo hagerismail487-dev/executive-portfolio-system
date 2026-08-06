@@ -33,16 +33,19 @@ export default function Button({
   className = "",
   ...props
 }: ButtonProps) {
+
   const baseClass = `
     inline-flex
+
     items-center
     justify-center
-    gap-3
+    gap-2
 
-    rounded-2xl
+rounded-lg
 
     font-semibold
-    tracking-wide
+
+    tracking-[0.01em]
 
     transition-all
     duration-300
@@ -62,62 +65,66 @@ export default function Button({
 
   const variants = {
     primary: `
-      bg-[#123A63]
-      text-white
-
       border
       border-[#123A63]
 
+      bg-[#123A63]
+
+      text-white
+
       shadow-md
 
-      hover:bg-[#0F2F52]
       hover:border-[#0F2F52]
+      hover:bg-[#0F2F52]
 
-      hover:shadow-xl
+      hover:shadow-lg
     `,
 
     secondary: `
-      bg-[#EEF5FF]
-      text-[#123A63]
-
       border
       border-[#EEF5FF]
+
+      bg-[#EEF5FF]
+
+      text-[#123A63]
 
       hover:bg-[#DCEBFF]
     `,
 
     outline: `
+      border
+      border-[#123A63]
+
       bg-transparent
 
       text-[#123A63]
-
-      border-2
-      border-[#123A63]
 
       hover:bg-[#123A63]
       hover:text-white
     `,
   };
+const sizes = {
+  sm: `
+    px-3.5
+    py-2
 
-  const sizes = {
-    sm: `
-      px-5
-      py-3
-      text-sm
-    `,
+    text-[12px]
+  `,
 
-    md: `
-      px-8
-      py-4
-      text-base
-    `,
+  md: `
+    px-5
+    py-3
 
-    lg: `
-      px-10
-      py-5
-      text-lg
-    `,
-  };
+    text-[14px]
+  `,
+
+  lg: `
+    px-7
+    py-3.5
+
+    text-[15px]
+  `,
+};
 
   const classes = `
     ${baseClass}
@@ -126,46 +133,49 @@ export default function Button({
     ${fullWidth ? "w-full" : ""}
     ${className}
   `;
-
-  const content = (
+    const content = (
     <>
+
       {iconLeft && (
+
         <span
-  className={
-    variant === "primary"
-      ? "flex items-center text-white"
-      : "flex items-center text-current"
-  }
->
-  {iconLeft}
-</span>
+          className={
+            variant === "primary"
+              ? "flex items-center text-white"
+              : "flex items-center text-current"
+          }
+        >
+          {iconLeft}
+        </span>
+
       )}
 
       <span
-  className={
-    variant === "primary"
-      ? "text-white"
-      : variant === "outline"
-        ? "text-[#123A63]"
-        : "text-[#123A63]"
-  }
->
-  {children}
-</span>
-
+        className={
+          variant === "primary"
+            ? "text-white"
+            : variant === "outline"
+              ? "text-[#123A63] transition-colors duration-300 group-hover:text-white"
+              : "text-[#123A63]"
+        }
+      >
+        {children}
+      </span>
 
       {iconRight && (
+
         <span
-  className={
-    variant === "primary"
-      ? "flex items-center text-white"
-      : "flex items-center text-current"
-  }
->
-  {iconRight}
-</span>
-         
+          className={
+            variant === "primary"
+              ? "flex items-center text-white"
+              : "flex items-center text-current"
+          }
+        >
+          {iconRight}
+        </span>
+
       )}
+
     </>
   );
 
@@ -184,15 +194,21 @@ export default function Button({
 
   if (href) {
     return (
-      <Link href={href} className={classes}>
+      <Link
+        href={href}
+        className={classes}
+      >
         {content}
       </Link>
     );
   }
 
   return (
-    <button className={classes} {...props}>
-      {content}
-    </button>
+      <button
+        className={classes}
+        {...props}
+      >
+        {content}
+      </button>
   );
 }

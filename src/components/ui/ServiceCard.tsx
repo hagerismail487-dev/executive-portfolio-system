@@ -19,59 +19,137 @@ export default function ServiceCard({
       className="
         group
         relative
+
         flex
         h-full
         flex-col
+
         overflow-hidden
-        rounded-[28px]
+
+        rounded-[22px]
+
         border
         border-slate-200
+
         bg-white
-        p-9
-        shadow-none
+
+        p-7
+
         transition-all
         duration-500
+
         hover:-translate-y-2
         hover:border-[#D6E5FB]
         hover:bg-[#FCFDFF]
-        hover:shadow-[0_20px_60px_rgba(18,58,99,0.08)]
+        hover:shadow-[0_18px_50px_rgba(18,58,99,0.08)]
       "
     >
+
       {/* ================================= */}
       {/* Background Glow */}
       {/* ================================= */}
 
-      <div className="absolute right-0 top-0 h-36 w-36 rounded-full bg-[#EEF5FF] opacity-0 blur-3xl transition-all duration-500 group-hover:opacity-100" />
+      <div
+        className="
+          absolute
+          right-0
+          top-0
 
+          h-28
+          w-28
+
+          rounded-full
+
+          bg-[#EEF5FF]
+
+          opacity-0
+
+          blur-3xl
+
+          transition-all
+          duration-500
+
+          group-hover:opacity-100
+        "
+      />
       {/* ================================= */}
-      {/* Icon */}
+      {/* Header */}
       {/* ================================= */}
 
-      <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-[#F8FBFF] transition-all duration-300 group-hover:bg-[#EAF3FF]">
+      <div className="flex items-center gap-4">
 
-        <Icon className="h-6 w-6 text-[#123A63]" />
+        <div
+          className="
+            flex
+            h-10
+            w-10
+            shrink-0
+            items-center
+            justify-center
+
+            rounded-lg
+
+            bg-[#F6F9FD]
+
+            transition-all
+            duration-300
+
+            group-hover:bg-[#EAF3FF]
+          "
+        >
+
+          <Icon
+            className="h-5 w-5 text-[#123A63]"
+          />
+
+        </div>
+
+        <h3
+          className="
+            text-[20px]
+            font-semibold
+
+            leading-tight
+
+            tracking-[-0.02em]
+
+            text-[#102A56]
+          "
+        >
+          {title}
+        </h3>
 
       </div>
 
       {/* ================================= */}
-      {/* Title */}
+      {/* Divider */}
       {/* ================================= */}
 
-      <h3 className="mt-8 text-[30px] font-bold leading-tight tracking-[-0.03em] text-[#102A56]">
-        {title}
-      </h3>
+      <div
+        className="
+          mt-3
+          mb-3
 
-      {/* ================================= */}
-      {/* Accent Line */}
-      {/* ================================= */}
+          h-px
+          w-full
 
-      <div className="mt-5 h-[3px] w-14 rounded-full bg-[#2563EB] transition-all duration-300 group-hover:w-24" />
-
-      {/* ================================= */}
+          bg-[#E8EDF5]
+        "
+      />
+            {/* ================================= */}
       {/* Description */}
       {/* ================================= */}
 
-      <p className="mt-7 flex-1 text-[17px] leading-8 text-slate-600">
+      <p
+        className="
+          flex-1
+
+          text-[14px]
+          leading-6
+
+          text-slate-600
+        "
+      >
         {description}
       </p>
 
@@ -82,23 +160,39 @@ export default function ServiceCard({
       <Link
         href={`/services/${slug}`}
         className="
-          mt-10
+          mt-6
+
           inline-flex
           items-center
-          gap-3
+          gap-2
+
+          text-[14px]
           font-semibold
+
           text-[#123A63]
+
           transition-all
           duration-300
-          group-hover:gap-4
+
+          group-hover:gap-3
           group-hover:text-[#2563EB]
         "
       >
         Learn More
 
-        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-2" />
+        <ArrowRight
+          className="
+            h-4
+            w-4
+
+            transition-transform
+            duration-300
+
+            group-hover:translate-x-1.5
+          "
+        />
 
       </Link>
-    </article>
+          </article>
   );
 }

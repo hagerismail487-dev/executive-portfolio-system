@@ -9,8 +9,7 @@ import SectionTitle from "@/components/ui/SectionTitle";
 export default function Hero() {
   return (
     <Section
-      className="relative overflow-hidden bg-[#FBFCFE] pt-10 lg:pt-14"
-    >
+className="relative overflow-hidden bg-[#FBFCFE] pt-14 lg:pt-18"    >
       {/* ========================================= */}
       {/* Background */}
       {/* ========================================= */}
@@ -21,7 +20,7 @@ export default function Hero() {
 
       <Container>
 
-        <div className="relative z-10 grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+        <div className="relative z-10 grid items-center gap-8 lg:grid-cols-2 lg:gap-10">
 
           {/* ========================================= */}
           {/* Left Content */}
@@ -30,12 +29,12 @@ export default function Hero() {
           <div className="max-w-[470px]">
 
             <Badge>
-              Senior Data Analyst | MIS Specialist
+             Senior Data Analyst | MIS & Business Intelligence Specialist
             </Badge>
 
             <SectionTitle
               as="h1"
-              className="mt-4"
+              className="mt-3"
             >
               <>
                 Transforming
@@ -48,11 +47,11 @@ export default function Hero() {
               </>
             </SectionTitle>
 
-            <div className="mt-4 h-1 w-20 rounded-full bg-[#2563EB]" />
+<div className="mt-3 h-[3px] w-16 rounded-full bg-[#2563EB]" />
 
             <p
               className="
-                mt-6
+                mt-5
                 max-w-[470px]
                 text-[16px]
                 leading-7
@@ -64,8 +63,7 @@ export default function Hero() {
               frameworks that support confident decision-making.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-                            <Button
+<div className="mt-6 flex flex-wrap gap-3">                            <Button
                 href="#about"
                 size="lg"
                 className="min-w-[185px]"
@@ -125,7 +123,7 @@ export default function Hero() {
                 transition-all
                 duration-500
 
-                hover:-translate-y-2
+                hover:-translate-y-1
                 hover:shadow-[0_34px_70px_rgba(18,58,99,0.14)]
               "
             >

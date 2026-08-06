@@ -21,14 +21,14 @@ export default function Contact() {
             relative
             overflow-hidden
 
-            rounded-[30px]
+            rounded-[24px]
 
             border
             border-[#E8EEF7]
 
             bg-white
 
-            shadow-[0_24px_60px_rgba(18,58,99,0.08)]
+           shadow-[0_18px_45px_rgba(18,58,99,0.08)]
           "
         >
 
@@ -99,13 +99,13 @@ export default function Contact() {
           {/* Content */}
           {/* ========================================= */}
 
-          <div className="relative z-10 px-6 py-10 sm:px-8 lg:px-14 lg:py-14">
+          <div className="relative z-10 px-6 py-8 sm:px-8 lg:px-12 lg:py-12">
 
             <SectionHeader>
               Contact
             </SectionHeader>
 
-            <div className="mt-14 grid items-center gap-14 xl:grid-cols-[1.35fr_1fr]">
+            <div className="mt-10 grid items-center gap-10 xl:grid-cols-[1.35fr_1fr]">
                               {/* ========================================= */}
               {/* Left Side */}
               {/* ========================================= */}
@@ -116,14 +116,14 @@ export default function Contact() {
 
                 <h2
                   className="
-                    text-[34px]
+                    text-[32px]
                     font-bold
                     leading-[1.08]
                     tracking-[-0.04em]
                     text-[#102A56]
 
-                    md:text-[42px]
-                    lg:text-[48px]
+                    md:text-[38px]
+                    lg:text-[44px]
                   "
                 >
                   Let's Build Something
@@ -136,17 +136,17 @@ export default function Contact() {
 
                 {/* Accent Line */}
 
-                <div className="mt-5 h-1 w-20 rounded-full bg-[#2563EB]" />
+                <div className="mt-4 h-[3px] w-16 mt-5 h-1 w-20 rounded-full bg-[#2563EB]" />
 
                 {/* Description */}
 
                 <p
                   className="
-                    mt-7
+                    mt-5
                     max-w-[500px]
 
-                    text-[17px]
-                    leading-8
+                    text-[16px]
+                    leading-7
 
                     text-slate-600
                   "
@@ -167,7 +167,7 @@ export default function Contact() {
 
                 {/* Actions */}
 
-                <div className="mt-10 flex flex-wrap gap-4">
+                <div className="mt-7 flex flex-wrap gap-3">
 
                   <Button
                     href="mailto:hagerismail487@gmail.com"
@@ -202,13 +202,13 @@ export default function Contact() {
 
                 <div className="absolute left-0 top-6 hidden h-[80%] w-px bg-[#E5EDF8] xl:block" />
 
-                <div className="xl:pl-12">
+                <div className="xl:pl-10">
 
                   {/* Title */}
 
                   <h3
                     className="
-                      text-[30px]
+                      text-[24px]
                       font-bold
                       tracking-[-0.02em]
                       text-[#102A56]
@@ -221,14 +221,14 @@ export default function Contact() {
 
                   {/* Contact Information */}
 
-                  <div className="mt-8 flex flex-col gap-6">
+                  <div className="mt-6 flex flex-col gap-5">
                                         {/* Email */}
 
                     <div className="flex items-center gap-4">
 
-                      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#EAF3FF]">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#EAF3FF]">
 
-                        <Mail className="h-6 w-6 text-[#123A63]" />
+                        <Mail className="h-5 w-5 text-[#123A63]" />
 
                       </div>
 

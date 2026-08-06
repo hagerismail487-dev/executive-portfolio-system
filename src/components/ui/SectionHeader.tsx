@@ -37,10 +37,10 @@ export default function SectionHeader({
 
         <span
           className="
-            text-[12px]
+            text-[11px]
             font-bold
             uppercase
-            tracking-[0.28em]
+            tracking-[0.24em]
             text-[#2563EB]
           "
         >
@@ -55,13 +55,13 @@ export default function SectionHeader({
       className={`
         flex
         items-center
-        gap-5
+        gap-4
 
         ${alignment[align]}
         ${className}
       `}
     >
-      <div className="h-px w-12 bg-[#2563EB]" />
+      <div className="h-px w-10 bg-[#2563EB]" />
 
       <span
         className="
@@ -75,7 +75,7 @@ export default function SectionHeader({
         {children}
       </span>
 
-      <div className="h-px w-12 bg-[#2563EB]" />
+      <div className="h-px w-10 bg-[#2563EB]" />
     </div>
   );
 }

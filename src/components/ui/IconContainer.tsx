@@ -19,6 +19,7 @@ export default function IconContainer({
   rounded = "2xl",
   className = "",
 }: IconContainerProps) {
+
   const variants = {
     primary: `
       bg-[#EEF5FF]
@@ -33,41 +34,48 @@ export default function IconContainer({
     `,
 
     glass: `
-      bg-white/70
-      backdrop-blur-md
       border
       border-white/50
+
+      bg-white/70
+
+      backdrop-blur-md
+
       text-[#123A63]
     `,
   };
 
   const sizes = {
     sm: `
-      h-10
-      w-10
+      h-9
+      w-9
+
+      [&>svg]:h-4
+      [&>svg]:w-4
+    `,
+
+    md: `
+      h-12
+      w-12
+
       [&>svg]:h-5
       [&>svg]:w-5
     `,
 
-    md: `
+    lg: `
       h-14
       w-14
-      [&>svg]:h-7
-      [&>svg]:w-7
-    `,
 
-    lg: `
-      h-16
-      w-16
-      [&>svg]:h-8
-      [&>svg]:w-8
+      [&>svg]:h-6
+      [&>svg]:w-6
     `,
 
     xl: `
-      h-20
-      w-20
-      [&>svg]:h-10
-      [&>svg]:w-10
+      h-16
+      w-16
+
+      [&>svg]:h-7
+      [&>svg]:w-7
     `,
   };
 
@@ -81,12 +89,16 @@ export default function IconContainer({
     <div
       className={`
         inline-flex
+
         shrink-0
+
         items-center
         justify-center
 
         transition-all
         duration-300
+
+        group-hover:scale-105
 
         ${variants[variant]}
         ${sizes[size]}
@@ -95,7 +107,8 @@ export default function IconContainer({
         ${className}
       `}
     >
-      {children}
+              {children}
+
     </div>
   );
 }

@@ -22,35 +22,101 @@ export default function CaseStudyCard({
 }: CaseStudyCardProps) {
   return (
     <Link
-    href={`/case-studies/${slug}`}
-    className="block h-full"
-    aria-label={`View ${title}`}
->
-      <ExecutiveCard className="h-full">
+      href={`/case-studies/${slug}`}
+      className="group block h-full"
+      aria-label={`View ${title}`}
+    >
+
+      <ExecutiveCard
+        className="
+          h-full
+          rounded-[20px]
+
+          flex
+          flex-col
+        "
+      >
 
         {/* ================================= */}
         {/* Project Cover */}
         {/* ================================= */}
 
-        <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-[#E7EEF8] bg-[#F8FBFF]">
+        <div
+          className="
+            relative
+
+            aspect-[16/10]
+
+            overflow-hidden
+
+            rounded-xl
+
+            border
+            border-[#E7EEF8]
+
+            bg-[#F8FBFF]
+          "
+        >
 
           {/* Placeholder */}
 
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div
+            className="
+              absolute
+              inset-0
+
+              flex
+              items-center
+              justify-center
+            "
+          >
 
             <div className="text-center">
 
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-3xl bg-[#EEF5FF]">
+              <div
+                className="
+                  mx-auto
 
-                <LayoutDashboard className="h-10 w-10 text-[#123A63]" />
+                  flex
+                  h-16
+                  w-16
+
+                  items-center
+                  justify-center
+
+                  rounded-2xl
+
+                  bg-[#EEF5FF]
+                "
+              >
+
+                <LayoutDashboard
+                  className="h-8 w-8 text-[#123A63]"
+                />
 
               </div>
+                            <h4
+                className="
+                  mt-4
 
-              <h4 className="mt-5 text-lg font-semibold text-[#102A56]">
+                  text-[16px]
+                  font-semibold
+
+                  text-[#102A56]
+                "
+              >
                 Dashboard Preview
               </h4>
 
-              <p className="mt-2 text-sm text-slate-400">
+              <p
+                className="
+                  mt-1
+
+                  text-[13px]
+
+                  text-slate-400
+                "
+              >
                 Coming Soon
               </p>
 
@@ -59,16 +125,22 @@ export default function CaseStudyCard({
           </div>
 
           {/* TODO:
-    Replace placeholder with the actual project cover image
-    after dashboard assets are finalized.
-*/}
+              Replace placeholder with the actual dashboard preview.
+          */}
 
           {/*
           <Image
             src={image}
             alt={title}
             fill
-            className="object-cover transition duration-500 group-hover:scale-105"
+            className="
+              object-cover
+
+              transition-transform
+              duration-500
+
+              group-hover:scale-105
+            "
           />
           */}
 
@@ -78,22 +150,54 @@ export default function CaseStudyCard({
         {/* Content */}
         {/* ================================= */}
 
-        <div className="mt-8">
+        <div
+          className="
+            mt-6
+
+            flex
+            flex-1
+            flex-col
+          "
+        >
 
           <ExecutiveBadge>
             {category}
           </ExecutiveBadge>
 
-          <h3 className="mt-6 text-[30px] font-bold leading-tight tracking-[-0.03em] text-[#102A56]">
+          <h3
+            className="
+              mt-5
+
+              text-[22px]
+              font-bold
+
+              leading-tight
+
+              tracking-[-0.02em]
+
+              text-[#102A56]
+            "
+          >
             {title}
           </h3>
 
           <SectionDivider />
-          {/* ================================= */}
+                    {/* ================================= */}
           {/* Description */}
           {/* ================================= */}
 
-          <p className="mt-6 text-[17px] leading-8 text-slate-600">
+          <p
+            className="
+              mt-5
+
+              flex-1
+
+              text-[15px]
+              leading-7
+
+              text-slate-600
+            "
+          >
             {excerpt}
           </p>
 
@@ -101,9 +205,28 @@ export default function CaseStudyCard({
           {/* CTA */}
           {/* ================================= */}
 
-          <div className="mt-10 flex items-center justify-between">
+          <div
+            className="
+              mt-7
 
-            <span className="text-sm font-medium uppercase tracking-[0.2em] text-slate-400">
+              flex
+              items-center
+              justify-between
+            "
+          >
+
+            <span
+              className="
+                text-[11px]
+                font-semibold
+
+                uppercase
+
+                tracking-[0.18em]
+
+                text-slate-400
+              "
+            >
               Business Intelligence Project
             </span>
 
@@ -111,12 +234,18 @@ export default function CaseStudyCard({
               className="
                 inline-flex
                 items-center
-                gap-3
+
+                gap-2
+
+                text-[15px]
                 font-semibold
+
                 text-[#123A63]
+
                 transition-all
                 duration-300
-                group-hover:gap-4
+
+                group-hover:gap-3
                 group-hover:text-[#2563EB]
               "
             >
@@ -124,11 +253,13 @@ export default function CaseStudyCard({
 
               <ArrowRight
                 className="
-                  h-5
-                  w-5
+                  h-4
+                  w-4
+
                   transition-transform
                   duration-300
-                  group-hover:translate-x-2
+
+                  group-hover:translate-x-1.5
                 "
               />
 
@@ -137,8 +268,7 @@ export default function CaseStudyCard({
           </div>
 
         </div>
-
-      </ExecutiveCard>
+              </ExecutiveCard>
 
     </Link>
   );

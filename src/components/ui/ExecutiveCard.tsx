@@ -1,8 +1,12 @@
-import { PropsWithChildren } from "react";
+import { ReactNode } from "react";
 
-interface ExecutiveCardProps extends PropsWithChildren {
+interface ExecutiveCardProps {
+  children: ReactNode;
+
   className?: string;
+
   hover?: boolean;
+
   padding?: "none" | "sm" | "md" | "lg";
 }
 
@@ -12,25 +16,32 @@ export default function ExecutiveCard({
   hover = true,
   padding = "md",
 }: ExecutiveCardProps) {
-    
+
   const paddings = {
     none: "",
 
-    sm: "p-5",
+    sm: "p-4",
 
-    md: "p-8",
+    md: "p-6",
 
-    lg: "p-10",
+    lg: "p-8",
   };
 
   return (
     <div
       className={`
+        group
+
         relative
+
+        flex
+        flex-col
+
+        h-full
 
         overflow-hidden
 
-        rounded-[22px]
+        rounded-[20px]
 
         border
         border-[#E6EDF8]
@@ -43,9 +54,9 @@ export default function ExecutiveCard({
         ${
           hover
             ? `
-              hover:-translate-y-1
+              hover:-translate-y-1.5
               hover:border-[#D6E5FB]
-              hover:shadow-[0_18px_45px_rgba(18,58,99,0.08)]
+              hover:shadow-[0_16px_40px_rgba(18,58,99,0.08)]
             `
             : ""
         }
@@ -55,7 +66,8 @@ export default function ExecutiveCard({
         ${className}
       `}
     >
-      {children}
+              {children}
+
     </div>
   );
 }

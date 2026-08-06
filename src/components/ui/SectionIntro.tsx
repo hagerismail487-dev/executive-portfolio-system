@@ -48,7 +48,7 @@ export default function SectionIntro({
       <SectionTitle
         size={titleSize}
         align={align}
-        className="mt-5"
+        className="mt-3"
       >
         {title}
       </SectionTitle>
@@ -56,10 +56,15 @@ export default function SectionIntro({
       {description && (
         <p
           className="
-            mt-6
-            max-w-[700px]
-            text-[18px]
-            leading-8
+            mt-4
+            max-w-[600px]
+
+            text-[15px]
+            leading-7
+
+            md:text-[16px]
+            md:leading-8
+
             text-slate-600
           "
         >

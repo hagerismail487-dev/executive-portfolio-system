@@ -25,6 +25,7 @@ export default function StatisticCard({
   align = "center",
   size = "md",
 }: StatisticCardProps) {
+
   const alignment = {
     left: "items-start text-left",
     center: "items-center text-center",
@@ -32,24 +33,24 @@ export default function StatisticCard({
 
   const sizes = {
     sm: {
-      value: "text-[42px]",
-      label: "text-[15px]",
-      icon: "h-9 w-9",
-      padding: "px-6 py-8",
+      value: "text-[32px]",
+      label: "text-[13px]",
+      icon: "h-8 w-8",
+      padding: "px-5 py-6",
     },
 
     md: {
-      value: "text-[56px]",
-      label: "text-[17px]",
-      icon: "h-11 w-11",
-      padding: "px-8 py-10",
+      value: "text-[42px]",
+      label: "text-[15px]",
+      icon: "h-9 w-9",
+      padding: "px-6 py-7",
     },
 
     lg: {
-      value: "text-[64px]",
-      label: "text-[18px]",
-      icon: "h-12 w-12",
-      padding: "px-10 py-12",
+      value: "text-[50px]",
+      label: "text-[16px]",
+      icon: "h-10 w-10",
+      padding: "px-7 py-8",
     },
   };
 
@@ -59,6 +60,16 @@ export default function StatisticCard({
         flex
         flex-col
         justify-center
+
+        rounded-[20px]
+
+        bg-white
+
+        transition-all
+        duration-300
+
+        hover:-translate-y-1
+        hover:shadow-[0_16px_40px_rgba(18,58,99,0.06)]
 
         ${alignment[align]}
         ${sizes[size].padding}
@@ -72,12 +83,20 @@ export default function StatisticCard({
         ${className}
       `}
     >
+              {/* ================================= */}
       {/* Icon */}
+      {/* ================================= */}
 
       {icon && (
+
         <div
           className={`
-            mb-6
+            mb-5
+
+            flex
+            items-center
+            justify-center
+
             text-[#2563EB]
 
             ${sizes[size].icon}
@@ -85,14 +104,21 @@ export default function StatisticCard({
         >
           {icon}
         </div>
+
       )}
 
+      {/* ================================= */}
       {/* Value */}
+      {/* ================================= */}
 
       <span
         className={`
           font-bold
+
           leading-none
+
+          tracking-[-0.03em]
+
           text-[#102A56]
 
           ${sizes[size].value}
@@ -101,13 +127,18 @@ export default function StatisticCard({
         {value}
       </span>
 
+      {/* ================================= */}
       {/* Label */}
+      {/* ================================= */}
 
       <p
         className={`
-          mt-4
+          mt-3
+
           font-medium
-          leading-8
+
+          leading-7
+
           text-slate-600
 
           ${sizes[size].label}
@@ -115,6 +146,6 @@ export default function StatisticCard({
       >
         {label}
       </p>
-    </div>
+          </div>
   );
 }

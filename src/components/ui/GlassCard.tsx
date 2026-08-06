@@ -22,28 +22,23 @@ export default function GlassCard({
   radius = "2xl",
   bordered = true,
 }: GlassCardProps) {
+
   const paddings = {
     none: "",
 
-    sm: `
-      p-4
-    `,
+    sm: "p-3",
 
-    md: `
-      p-6
-    `,
+    md: "p-5",
 
-    lg: `
-      p-8
-    `,
+    lg: "p-6",
   };
 
   const radii = {
-    lg: "rounded-2xl",
+    lg: "rounded-xl",
 
-    xl: "rounded-[28px]",
+    xl: "rounded-[18px]",
 
-    "2xl": "rounded-[40px]",
+    "2xl": "rounded-[22px]",
   };
 
   return (
@@ -61,14 +56,17 @@ export default function GlassCard({
             : ""
         }
 
-        shadow-[0_35px_90px_rgba(18,58,99,0.08)]
+        shadow-[0_16px_40px_rgba(18,58,99,0.06)]
 
         transition-all
         duration-300
 
         ${
           hover
-            ? "hover:-translate-y-1 hover:shadow-[0_45px_100px_rgba(18,58,99,0.12)]"
+            ? `
+              hover:-translate-y-1
+              hover:shadow-[0_20px_45px_rgba(18,58,99,0.08)]
+            `
             : ""
         }
 
@@ -79,7 +77,8 @@ export default function GlassCard({
         ${className}
       `}
     >
-      {children}
+              {children}
+
     </div>
   );
 }

@@ -34,9 +34,8 @@ export default function Section({
         overflow-hidden
 
         py-14
-        md:py-16
         lg:py-18
-        xl:py-20
+
 
         ${backgrounds[background]}
 

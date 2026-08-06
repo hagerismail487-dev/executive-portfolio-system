@@ -7,9 +7,10 @@ const data = {
   hero: {
     label: "About",
 
-    headline:
-      "Turning Business Complexity Into Executive Clarity.",
-
+    headline: [
+  "From Data",
+  "to Executive Decisions.",
+],
     story: [
       "Business Intelligence is more than dashboards and reports.",
 
@@ -27,7 +28,7 @@ const data = {
       title: "Business Intelligence",
 
       description:
-        "Transforming business data into decisions.",
+        "Transforming business data into strategic insights.",
     },
 
     {

@@ -23,33 +23,33 @@ export default function SectionTitle({
 
   const sizes = {
     lg: `
-      text-[30px]
-      leading-[1.1]
+      text-[28px]
+      leading-[1.08]
 
-      sm:text-[34px]
-      md:text-[40px]
-      lg:text-[44px]
-      xl:text-[48px]
+      sm:text-[32px]
+      md:text-[36px]
+      lg:text-[40px]
+      xl:text-[44px]
     `,
 
     md: `
-      text-[26px]
-      leading-[1.12]
+      text-[24px]
+      leading-[1.1]
 
-      sm:text-[30px]
-      md:text-[34px]
-      lg:text-[38px]
-      xl:text-[42px]
+      sm:text-[28px]
+      md:text-[31px]
+      lg:text-[34px]
+      xl:text-[38px]
     `,
 
     sm: `
-      text-[22px]
+      text-[20px]
       leading-[1.15]
 
-      sm:text-[24px]
-      md:text-[27px]
-      lg:text-[30px]
-      xl:text-[32px]
+      sm:text-[22px]
+      md:text-[24px]
+      lg:text-[27px]
+      xl:text-[30px]
     `,
   };
 
@@ -62,7 +62,7 @@ export default function SectionTitle({
     <Component
       className={`
         font-bold
-        tracking-[-0.035em]
+        tracking-[-0.03em]
         text-[#102A56]
         text-balance
 

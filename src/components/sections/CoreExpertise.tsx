@@ -8,7 +8,6 @@ import {
 } from "lucide-react";
 
 import ExecutiveCard from "@/components/design-system/ExecutiveCard";
-import IconContainer from "@/components/ui/IconContainer";
 import Section from "@/components/ui/Section";
 import SectionIntro from "@/components/ui/SectionIntro";
 
@@ -62,66 +61,96 @@ export default function CoreExpertise() {
         title="Core Expertise"
         description="A blend of analytical thinking, technical expertise, and business understanding to deliver data solutions that drive strategic impact."
         align="center"
-        className="mx-auto mb-14 max-w-[760px]"
+        className="mx-auto mb-6 max-w-[680px]"
       />
 
-      <div className="grid gap-6 lg:grid-cols-3">
-                {expertise.map((item) => {
+      <div className="grid gap-5 lg:grid-cols-3">
 
-          const Icon = item.icon;
+        {expertise.map((item, index) => {
+
 
           return (
 
-            <ExecutiveCard
-              key={item.title}
-              className="rounded-[22px]"
-            >
+           <ExecutiveCard
+  key={item.title}
+  padding="sm"
+  className="rounded-[22px]"
+>
+                   {/* ========================================= */}
+{/* Header */}
+{/* ========================================= */}
 
-              {/* Icon */}
+<div className="flex items-center gap-4">
+<span
+  className="
+    flex
+    h-8
+    w-8
+    shrink-0
+    items-center
+    justify-center
 
-              <IconContainer
-                size="md"
-                rounded="xl"
-                className="bg-[#F6F9FD] text-[#123A67]"
-              >
-                <Icon
-                  size={28}
-                  strokeWidth={1.8}
-                />
-              </IconContainer>
+    rounded-lg
 
-              {/* Title */}
+    border
+    border-[#DCEBFF]
 
-              <h3
-                className="
-                  mt-6
-                  text-[22px]
-                  font-semibold
-                  leading-tight
-                  tracking-[-0.02em]
-                  text-[#102A56]
-                "
-              >
-                {item.title}
-              </h3>
+    bg-[#EEF5FF]
 
+    text-[13px]
+    font-bold
+
+    text-[#2563EB]
+  "
+>
+  {(index + 1).toString().padStart(2, "0")}
+</span>
+  <h3
+    className="
+      text-[20px]
+      font-semibold
+      leading-tight
+      tracking-[-0.02em]
+      text-[#102A56]
+    "
+  >
+    {item.title}
+  </h3>
+
+</div>
+
+              {/* ========================================= */}
               {/* Divider */}
+              {/* ========================================= */}
 
-              <div className="my-5 h-px w-full bg-[#E8EDF5]" />
+              <div
+  className="
+    mt-3
+    mb-2
 
+    h-px
+    w-full
+
+    bg-gradient-to-r
+    from-[#2563EB]
+    to-transparent
+  "
+/>
+
+              {/* ========================================= */}
               {/* Description */}
+              {/* ========================================= */}
 
               <p
                 className="
-                  text-[15px]
-                  leading-7
-                  text-slate-600
+                  text-[14px]
+                  leading-6
+                  text-[#123A63]/35
                 "
               >
                 {item.description}
               </p>
-
-            </ExecutiveCard>
+                          </ExecutiveCard>
 
           );
 
@@ -130,14 +159,14 @@ export default function CoreExpertise() {
       </div>
 
       {/* ========================================= */}
-      {/* Quote */}
+      {/* Closing Statement */}
       {/* ========================================= */}
 
-      <div className="mt-16 text-center">
+      <div className="mt-12 text-center">
 
         <p
           className="
-            text-[18px]
+            text-[17px]
             font-medium
             tracking-[-0.02em]
             text-[#102A56]
@@ -146,9 +175,22 @@ export default function CoreExpertise() {
           Turning data into strategic advantage.
         </p>
 
-        <div className="mx-auto mt-4 h-[3px] w-16 rounded-full bg-[#2E63D3]" />
+        <div
+          className="
+            mx-auto
+            mt-3
+
+            h-[3px]
+            w-14
+
+            rounded-full
+
+            bg-[#2E63D3]
+          "
+        />
 
       </div>
-          </Section>
+
+    </Section>
   );
 }

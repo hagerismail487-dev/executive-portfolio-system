@@ -25,6 +25,7 @@ export default function KPICard({
   icon,
   className = "",
 }: KPICardProps) {
+
   const trendStyles = {
     positive: `
       bg-[#ECFDF3]
@@ -49,27 +50,28 @@ export default function KPICard({
 
         overflow-hidden
 
-        rounded-[28px]
+        rounded-[20px]
 
         border
         border-[#E8EEF8]
 
         bg-white
 
-        p-6
+        p-5
 
-        shadow-[0_18px_45px_rgba(18,58,99,0.06)]
+        shadow-[0_16px_40px_rgba(18,58,99,0.06)]
 
         transition-all
         duration-300
 
         hover:-translate-y-1
         hover:border-[#D7E6FB]
-        hover:shadow-[0_24px_55px_rgba(18,58,99,0.10)]
+        hover:shadow-[0_18px_45px_rgba(18,58,99,0.08)]
 
         ${className}
       `}
     >
+
       {/* Header */}
 
       <div className="flex items-start justify-between">
@@ -78,10 +80,13 @@ export default function KPICard({
 
           <p
             className="
-              text-sm
+              text-[11px]
               font-semibold
+
               uppercase
+
               tracking-[0.18em]
+
               text-slate-500
             "
           >
@@ -90,11 +95,15 @@ export default function KPICard({
 
           <h3
             className="
-              mt-3
-              text-[44px]
+              mt-2
+
+              text-[36px]
               font-bold
+
               leading-none
-              tracking-[-0.04em]
+
+              tracking-[-0.03em]
+
               text-[#102A56]
             "
           >
@@ -108,12 +117,14 @@ export default function KPICard({
           <div
             className="
               flex
-              h-14
-              w-14
+
+              h-12
+              w-12
+
               items-center
               justify-center
 
-              rounded-2xl
+              rounded-xl
 
               bg-[#EEF5FF]
 
@@ -126,17 +137,29 @@ export default function KPICard({
         )}
 
       </div>
-
+            {/* ================================= */}
       {/* Footer */}
+      {/* ================================= */}
 
       {(subtitle || trend) && (
 
-        <div className="mt-6 flex items-center justify-between gap-4">
+        <div
+          className="
+            mt-5
+
+            flex
+            items-center
+            justify-between
+
+            gap-3
+          "
+        >
 
           <p
             className="
-              text-sm
-              leading-6
+              text-[13px]
+              leading-5
+
               text-slate-500
             "
           >
@@ -149,11 +172,13 @@ export default function KPICard({
               className={`
                 rounded-full
 
-                px-3
-                py-1.5
+                px-2.5
+                py-1
 
-                text-xs
+                text-[11px]
                 font-semibold
+
+                whitespace-nowrap
 
                 ${trendStyles[trendType]}
               `}
@@ -166,7 +191,6 @@ export default function KPICard({
         </div>
 
       )}
-
-    </div>
+          </div>
   );
 }

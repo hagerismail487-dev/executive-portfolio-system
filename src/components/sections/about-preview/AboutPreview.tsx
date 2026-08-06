@@ -42,35 +42,38 @@ export default function AboutPreview() {
 
         <div className="relative z-10">
 
-          <SectionHeader className="mb-14">
+          <SectionHeader className="mb-10">
             {data.hero.label}
           </SectionHeader>
 
-          <div className="grid items-center gap-16 lg:grid-cols-2">
+          <div className="grid items-center gap-110 lg:gap-10 lg:grid-cols-2">
                         {/* ========================================= */}
             {/* Left Side */}
             {/* ========================================= */}
 
-            <div className="max-w-[520px]">
+            <div className="max-w-[560px]">
 
               {/* Heading */}
 
-              <h2
-                className="
-                  max-w-[560px]
-                  text-[34px]
-                  font-bold
-                  leading-[1.08]
-                  tracking-[-0.04em]
-                  text-[#102A56]
+             <h2
+  className="
+    max-w-[560px]
+    text-[34px]
+    font-bold
+    leading-[1.08]
+    tracking-[-0.04em]
+    text-[#102A56]
 
-                  md:text-[40px]
-                  lg:text-[46px]
-                "
-              >
-                {data.hero.headline}
-              </h2>
-
+    md:text-[40px]
+    lg:text-[46px]
+  "
+>
+  {data.hero.headline.map((line, index) => (
+    <span key={index} className="block">
+      {line}
+    </span>
+  ))}
+</h2>
               {/* Accent */}
 
               <div className="mt-5 h-1 w-20 rounded-full bg-[#2563EB]" />
@@ -107,7 +110,7 @@ export default function AboutPreview() {
 
               {/* Story */}
 
-              <div className="mt-10 space-y-6">
+             <div className="mt-8 space-y-5">
 
                 {data.hero.story.map((paragraph) => (
 
@@ -142,7 +145,7 @@ export default function AboutPreview() {
 
               {/* CTA */}
 
-              <div className="mt-10">
+              <div className="mt-8">
 
                 <Button
                   href={data.cta.href}
@@ -216,7 +219,7 @@ export default function AboutPreview() {
                   transition-all
                   duration-500
 
-                  hover:-translate-y-2
+                  hover:-translate-y-1
                   hover:shadow-[0_34px_70px_rgba(18,58,99,0.12)]
                 "
               >

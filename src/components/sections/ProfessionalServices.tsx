@@ -68,17 +68,30 @@ export default function ProfessionalServices() {
           {/* Content */}
           {/* ========================================= */}
 
-          <div className="relative z-10 px-6 py-10 sm:px-8 lg:px-14 lg:py-14">
+          <div
+  className="
+    relative
+    z-10
+
+    px-6
+    py-8
+
+    sm:px-8
+
+    lg:px-12
+    lg:py-10
+  "
+>
 
             <SectionIntro
               eyebrow="Services"
               title="Professional Services"
               description="Professional services that help organizations transform business data into executive insights, strategic reporting, and confident business decisions."
               align="center"
-              className="mx-auto mb-14 max-w-[760px]"
+              className="mx-auto mb-8 max-w-[700px]"
             />
 
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-5 md:grid-cols-2">
                           {services.map((service) => (
 
               <div

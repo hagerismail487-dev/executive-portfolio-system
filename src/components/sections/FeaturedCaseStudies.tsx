@@ -39,10 +39,10 @@ export default function FeaturedCaseStudies() {
             title="Featured Projects"
             description="A selection of executive dashboards and business intelligence solutions designed to transform data into strategic business decisions."
             align="center"
-            className="mx-auto mb-14 max-w-[760px]"
+            className="mx-auto mb-8 max-w-[700px]"
           />
 
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-5 lg:grid-cols-3">
                       {featuredProjects.map((project) => (
 
             <Link
@@ -52,6 +52,7 @@ export default function FeaturedCaseStudies() {
             >
 
              <ExecutiveCard
+  padding="sm"
   className="
     h-full
     rounded-[22px]
@@ -67,7 +68,7 @@ export default function FeaturedCaseStudies() {
                   className="
                     aspect-[16/10]
 
-                    rounded-xl
+                    rounded-lg
 
                     border
                     border-dashed
@@ -81,7 +82,7 @@ export default function FeaturedCaseStudies() {
 
                 <span
                   className="
-                    mt-5
+                    mt-4
                     inline-flex
 
                     rounded-full
@@ -106,10 +107,10 @@ export default function FeaturedCaseStudies() {
 
                 <h3
                   className="
-                    mt-5
+                    mt-4
 
-                    text-[22px]
-                    font-bold
+                    text-[20px]
+                    font-semibold
                     leading-tight
                     tracking-[-0.02em]
 
@@ -118,15 +119,26 @@ export default function FeaturedCaseStudies() {
                 >
                   {project.title}
                 </h3>
-{/* Description */}
+                {/* Divider */}
 
+<div
+  className="
+    mt-3
+    mb-3
+
+    h-px
+    w-full
+
+    bg-[#E8EDF5]
+  "
+/>
+{/* Description */}
 <p
   className="
-    mt-4
     flex-1
 
-    text-[15px]
-    leading-7
+    text-[14px]
+    leading-6
 
     text-slate-600
   "
@@ -142,19 +154,33 @@ export default function FeaturedCaseStudies() {
 
     inline-flex
     items-center
+    gap-2
 
-    text-[15px]
+    text-[14px]
     font-semibold
 
     text-[#123A63]
 
-    transition-colors
+    transition-all
     duration-300
 
+    group-hover:gap-3
     group-hover:text-[#2563EB]
   "
 >
-  View Project →
+  View Project
+
+  <span
+    className="
+      transition-transform
+      duration-300
+
+      group-hover:translate-x-1
+    "
+  >
+    →
+  </span>
+
 </span>
 
               </ExecutiveCard>
@@ -168,13 +194,13 @@ export default function FeaturedCaseStudies() {
           {/* Bottom CTA */}
           {/* ========================================= */}
 
-          <div className="mt-14 text-center">
+          <div className="mt-10 text-center">
 
             <Button
               href="/case-studies"
               variant="outline"
               size="lg"
-              className="min-w-[190px]"
+              className="min-w-[170px]"
             >
               View All Projects
             </Button>

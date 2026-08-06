@@ -48,10 +48,10 @@ export default function CreatingBusinessValue() {
         title="Creating Business Value"
         description="Helping organizations transform business data into strategic value through executive reporting, business intelligence, and performance management."
         align="center"
-        className="mx-auto mb-14 max-w-[760px]"
+        className="mx-auto mb-4 max-w-[720px]"
       />
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-3 md:grid-cols-2">
                 {values.map((item) => {
 
           const Icon = item.icon;
@@ -60,12 +60,12 @@ export default function CreatingBusinessValue() {
 
             <ExecutiveCard
               key={item.title}
-              className="min-h-[200px]"
+              className="min-h-[130 px]"
             >
 
               {/* Header */}
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2.5">
 
                 <IconContainer
                   size="sm"
@@ -80,7 +80,7 @@ export default function CreatingBusinessValue() {
 
                 <h3
                   className="
-                    text-[22px]
+                    text-[20px]
                     font-semibold
                     leading-tight
                     tracking-[-0.02em]
@@ -94,14 +94,14 @@ export default function CreatingBusinessValue() {
 
               {/* Divider */}
 
-              <div className="my-5 h-px w-full bg-slate-100" />
+<div className="my-2.5 h-px w-full bg-slate-100" />
 
               {/* Description */}
 
               <p
                 className="
-                  text-[15px]
-                  leading-7
+                  text-[14px]
+                  leading-6
                   text-slate-600
                 "
               >
