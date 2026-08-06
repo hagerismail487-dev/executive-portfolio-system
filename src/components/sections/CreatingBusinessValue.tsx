@@ -1,11 +1,14 @@
 import {
-  Target,
-  Monitor,
   Database,
+  Monitor,
+  Target,
   TrendingUp,
 } from "lucide-react";
 
-import Section from "../ui/Section";
+import ExecutiveCard from "@/components/ui/ExecutiveCard";
+import IconContainer from "@/components/ui/IconContainer";
+import Section from "@/components/ui/Section";
+import SectionIntro from "@/components/ui/SectionIntro";
 
 const values = [
   {
@@ -37,26 +40,16 @@ const values = [
 export default function CreatingBusinessValue() {
   return (
     <Section
-      id="about"
-      className="bg-white py-28"
+      id="business-value"
+      className="bg-white"
     >
-      {/* Header */}
-
-      <div className="mx-auto mb-20 max-w-3xl text-center">
-
-        <h2 className="text-[42px] md:text-[48px] font-bold tracking-[-0.03em] text-[#102A56]">
-          Creating Business Value
-        </h2>
-
-        <p className="mx-auto mt-6 max-w-2xl text-[19px] leading-9 text-slate-500">
-          Helping organizations transform business data into
-          strategic value through executive reporting,
-          business intelligence, and performance management.
-        </p>
-
-      </div>
-
-      {/* Cards */}
+      <SectionIntro
+        eyebrow="Business Value"
+        title="Creating Business Value"
+        description="Helping organizations transform business data into strategic value through executive reporting, business intelligence, and performance management."
+        align="center"
+        className="mx-auto mb-20 max-w-3xl"
+      />
 
       <div className="grid gap-8 md:grid-cols-2">
 
@@ -66,36 +59,24 @@ export default function CreatingBusinessValue() {
 
           return (
 
-            <div
+            <ExecutiveCard
               key={item.title}
-              className="
-                rounded-[22px]
-                border
-                border-slate-200
-                bg-white
-                p-8
-                min-h-[235px]
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:border-[#D8E4F5]
-                hover:shadow-[0_15px_40px_rgba(15,23,42,0.05)]
-              "
+              className="min-h-[235px]"
             >
 
-              {/* Title */}
+              {/* Header */}
 
               <div className="flex items-center gap-4">
 
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F6F9FD]">
-
+                <IconContainer
+                  size="sm"
+                  rounded="xl"
+                  className="bg-[#F6F9FD] text-[#123A67]"
+                >
                   <Icon
-                    size={22}
                     strokeWidth={2}
-                    className="text-[#123A67]"
                   />
-
-                </div>
+                </IconContainer>
 
                 <h3 className="text-[26px] font-semibold tracking-[-0.025em] leading-none text-[#102A56]">
                   {item.title}
@@ -105,7 +86,7 @@ export default function CreatingBusinessValue() {
 
               {/* Divider */}
 
-              <div className="mt-6 mb-6 h-px w-full bg-slate-100" />
+              <div className="my-6 h-px w-full bg-slate-100" />
 
               {/* Description */}
 
@@ -113,7 +94,7 @@ export default function CreatingBusinessValue() {
                 {item.description}
               </p>
 
-            </div>
+            </ExecutiveCard>
 
           );
 

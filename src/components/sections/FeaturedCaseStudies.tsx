@@ -1,7 +1,10 @@
 import Link from "next/link";
 
+import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
-import SectionTitle from "@/components/ui/SectionTitle";
+import ExecutiveCard from "@/components/ui/ExecutiveCard";
+import Section from "@/components/ui/Section";
+import SectionIntro from "@/components/ui/SectionIntro";
 
 import { caseStudies } from "@/data/case-studies";
 
@@ -11,11 +14,13 @@ export default function FeaturedCaseStudies() {
   );
 
   return (
-    <section
+    <Section
       id="projects"
-      className="relative overflow-hidden bg-[#FBFCFE] py-24 lg:py-32"
+      className="relative overflow-hidden bg-[#FBFCFE]"
     >
+      {/* ========================================= */}
       {/* Background */}
+      {/* ========================================= */}
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
 
@@ -29,55 +34,109 @@ export default function FeaturedCaseStudies() {
 
         <div className="relative z-10">
 
-          <SectionTitle
+          <SectionIntro
             eyebrow="Case Studies"
             title="Featured Projects"
             description="A selection of executive dashboards and business intelligence solutions designed to transform data into strategic business decisions."
+            align="center"
+            className="mx-auto mb-20 max-w-3xl"
           />
 
-          {/* Cards */}
+          {/* ========================================= */}
+          {/* Project Cards */}
+          {/* ========================================= */}
 
-          <div className="mt-20 grid gap-8 lg:grid-cols-3">
-
-            {featuredProjects.map((project) => (
+          <div className="grid gap-8 lg:grid-cols-3">
+                        {featuredProjects.map((project) => (
 
               <Link
                 key={project.id}
                 href={`/case-studies/${project.slug}`}
-                className="
-                  group
-                  block
-                  overflow-hidden
-                  rounded-[28px]
-                  border
-                  border-[#E7EEF8]
-                  bg-white
-                  p-8
-                  transition-all
-                  duration-300
-                  hover:-translate-y-2
-                  hover:border-[#D6E5FB]
-                  hover:shadow-[0_25px_60px_rgba(18,58,99,0.08)]
-                "
+                className="group block"
               >
 
-                <div className="aspect-[16/10] rounded-2xl border-2 border-dashed border-[#D7E5FB] bg-[#F8FBFF]" />
+                <ExecutiveCard
+                  className="rounded-[28px] h-full"
+                >
 
-                <span className="mt-6 inline-block rounded-full bg-[#EEF5FF] px-4 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-[#123A63]">
-                  {project.category}
-                </span>
+                  {/* Preview */}
 
-                <h3 className="mt-6 text-[28px] font-bold tracking-[-0.03em] text-[#102A56]">
-                  {project.title}
-                </h3>
+                  <div
+                    className="
+                      aspect-[16/10]
+                      rounded-2xl
+                      border-2
+                      border-dashed
+                      border-[#D7E5FB]
+                      bg-[#F8FBFF]
+                    "
+                  />
 
-                <p className="mt-5 text-[17px] leading-8 text-slate-600">
-                  {project.excerpt}
-                </p>
+                  {/* Category */}
 
-                <span className="mt-8 inline-flex items-center font-semibold text-[#123A63] transition-all duration-300 group-hover:text-[#2563EB]">
-                  View Project →
-                </span>
+                  <span
+                    className="
+                      mt-6
+                      inline-flex
+                      rounded-full
+                      bg-[#EEF5FF]
+                      px-4
+                      py-1
+                      text-xs
+                      font-semibold
+                      uppercase
+                      tracking-[0.25em]
+                      text-[#123A63]
+                    "
+                  >
+                    {project.category}
+                  </span>
+
+                  {/* Title */}
+
+                  <h3
+                    className="
+                      mt-6
+                      text-[28px]
+                      font-bold
+                      tracking-[-0.03em]
+                      text-[#102A56]
+                    "
+                  >
+                    {project.title}
+                  </h3>
+
+                  {/* Description */}
+
+                  <p
+                    className="
+                      mt-5
+                      text-[17px]
+                      leading-8
+                      text-slate-600
+                    "
+                  >
+                    {project.excerpt}
+                  </p>
+
+                  {/* CTA */}
+
+                  <span
+                    className="
+                      mt-8
+                      inline-flex
+                      items-center
+                      font-semibold
+                      text-[#123A63]
+                      transition-colors
+                      duration-300
+                      group-hover:text-[#2563EB]
+                    "
+                  >
+                    View Project →
+                  </span>
+
+                </ExecutiveCard>
 
               </Link>
 
@@ -85,31 +144,18 @@ export default function FeaturedCaseStudies() {
 
           </div>
 
-          {/* Bottom */}
+          {/* ========================================= */}
+          {/* Bottom CTA */}
+          {/* ========================================= */}
+                    <div className="mt-20 text-center">
 
-          <div className="mt-20 text-center">
-
-            <Link
+            <Button
               href="/case-studies"
-              className="
-                inline-flex
-                items-center
-                justify-center
-                rounded-xl
-                border-2
-                border-[#123A63]
-                px-8
-                py-4
-                font-semibold
-                text-[#123A63]
-                transition-all
-                duration-300
-                hover:bg-[#123A63]
-                hover:text-white
-              "
+              variant="outline"
+              size="lg"
             >
               View All Projects
-            </Link>
+            </Button>
 
           </div>
 
@@ -117,6 +163,6 @@ export default function FeaturedCaseStudies() {
 
       </Container>
 
-    </section>
+    </Section>
   );
 }

@@ -130,17 +130,41 @@ export default function Button({
   const content = (
     <>
       {iconLeft && (
-        <span className="flex items-center">
-          {iconLeft}
-        </span>
+        <span
+  className={
+    variant === "primary"
+      ? "flex items-center text-white"
+      : "flex items-center text-current"
+  }
+>
+  {iconLeft}
+</span>
       )}
 
-      <span>{children}</span>
+      <span
+  className={
+    variant === "primary"
+      ? "text-white"
+      : variant === "outline"
+        ? "text-[#123A63]"
+        : "text-[#123A63]"
+  }
+>
+  {children}
+</span>
+
 
       {iconRight && (
-        <span className="flex items-center">
-          {iconRight}
-        </span>
+        <span
+  className={
+    variant === "primary"
+      ? "flex items-center text-white"
+      : "flex items-center text-current"
+  }
+>
+  {iconRight}
+</span>
+         
       )}
     </>
   );

@@ -1,38 +1,41 @@
-import { ReactNode } from "react";
+import { PropsWithChildren } from "react";
 
-interface ExecutiveCardProps {
-  title: string;
-
-  description: string;
-
-  icon?: ReactNode;
-
-  children?: ReactNode;
-
+interface ExecutiveCardProps extends PropsWithChildren {
   className?: string;
-
   hover?: boolean;
+  padding?: "none" | "sm" | "md" | "lg";
 }
 
 export default function ExecutiveCard({
-  title,
-  description,
-  icon,
   children,
   className = "",
   hover = true,
+  padding = "md",
 }: ExecutiveCardProps) {
+    
+  const paddings = {
+    none: "",
+
+    sm: "p-5",
+
+    md: "p-8",
+
+    lg: "p-10",
+  };
+
   return (
     <div
       className={`
+        relative
+
+        overflow-hidden
+
         rounded-[22px]
 
         border
         border-[#E6EDF8]
 
         bg-white
-
-        p-6
 
         transition-all
         duration-300
@@ -47,69 +50,12 @@ export default function ExecutiveCard({
             : ""
         }
 
+        ${paddings[padding]}
+
         ${className}
       `}
     >
-      <div className="flex items-start gap-5">
-
-        {/* Icon */}
-
-        {icon && (
-          <div
-            className="
-              flex
-              h-14
-              w-14
-              shrink-0
-              items-center
-              justify-center
-
-              rounded-2xl
-
-              bg-[#EEF5FF]
-
-              text-[#2563EB]
-            "
-          >
-            {icon}
-          </div>
-        )}
-
-        {/* Content */}
-
-        <div className="flex-1">
-
-          <h3
-            className="
-              text-[22px]
-              font-bold
-              leading-8
-              text-[#102A56]
-            "
-          >
-            {title}
-          </h3>
-
-          <p
-            className="
-              mt-3
-              text-[16px]
-              leading-8
-              text-slate-600
-            "
-          >
-            {description}
-          </p>
-
-          {children && (
-            <div className="mt-5">
-              {children}
-            </div>
-          )}
-
-        </div>
-
-      </div>
+      {children}
     </div>
   );
 }

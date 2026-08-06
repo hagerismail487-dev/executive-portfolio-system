@@ -1,50 +1,54 @@
-import Button from "../ui/Button";
-import Container from "../ui/Container";
-import SectionBackground from "../ui/SectionBackground";
+import Button from "@/components/ui/Button";
+import Badge from "@/components/ui/Badge";
+import Container from "@/components/ui/Container";
+import Section from "@/components/ui/Section";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#FBFCFE] pt-32 pb-24 lg:pt-36 lg:pb-28">
+    <Section
+      className="relative overflow-hidden bg-[#FBFCFE] pt-24 lg:pt-28"
+    >
+      {/* Background Glow */}
 
-      <SectionBackground />
+      <div className="pointer-events-none absolute right-[-220px] top-[-180px] h-[620px] w-[620px] rounded-full bg-[#2E63D3]/10 blur-[140px]" />
 
       <Container>
 
         <div className="relative z-10 grid items-center gap-16 lg:grid-cols-2 xl:gap-24">
 
-          {/* ========================= */}
+          {/* ========================================= */}
           {/* Left Content */}
-          {/* ========================= */}
+          {/* ========================================= */}
 
           <div className="max-w-[560px]">
 
-            {/* Badge */}
-
-            <span className="inline-flex items-center rounded-full border border-[#D9E7FF] bg-[#F5F9FF] px-5 py-2 text-[13px] font-semibold uppercase tracking-[0.32em] text-[#2E63D3]">
+            <Badge>
               Senior Data Analyst | MIS Specialist
-            </span>
+            </Badge>
 
-            {/* Heading */}
-
-            <h1 className="mt-8 text-[54px] font-bold leading-[0.95] tracking-[-0.05em] text-[#102A56] lg:text-[68px]">
-
-              Transforming
-              <br />
-              Business Data
-              <br />
-              into Executive
-              <br />
-              Decisions.
-
-            </h1>
+            <SectionTitle
+              as="h1"
+              className="mt-8"
+            >
+              <>
+                Transforming
+                <br />
+                Business Data
+                <br />
+                into Executive
+                <br />
+                Decisions.
+              </>
+            </SectionTitle>
 
             {/* Accent */}
 
-            <div className="mt-6 h-[4px] w-36 rounded-full bg-[#2E63D3]" />
+            <div className="mt-6 h-1 w-36 rounded-full bg-[#2563EB]" />
 
             {/* Description */}
 
-            <p className="mt-10 max-w-[500px] text-[20px] leading-9 text-slate-600">
+            <p className="mt-10 max-w-[520px] text-lg leading-9 text-slate-600">
 
               Transforming business data into executive clarity through
               strategic reporting, performance intelligence, and MIS
@@ -52,13 +56,13 @@ export default function Hero() {
 
             </p>
 
-            {/* Buttons */}
+            {/* Actions */}
 
             <div className="mt-14 flex flex-wrap gap-5">
 
               <Button
-                variant="primary"
                 size="lg"
+                href="#about"
                 className="min-w-[220px]"
               >
                 About Me
@@ -67,6 +71,7 @@ export default function Hero() {
               <Button
                 variant="secondary"
                 size="lg"
+                href="/resume.pdf"
                 className="min-w-[220px]"
               >
                 Download Resume
@@ -75,33 +80,76 @@ export default function Hero() {
             </div>
 
           </div>
-                    {/* ========================= */}
+
+          {/* ========================================= */}
           {/* Portrait */}
-          {/* ========================= */}
+          {/* ========================================= */}
+                    <div className="relative flex justify-center">
 
-          <div className="relative flex justify-center">
+            {/* Background Glow */}
 
-            {/* Blue Glow */}
+            <div
+              className="
+                absolute
+                h-[520px]
+                w-[520px]
+                rounded-full
+                bg-[#2563EB]/10
+                blur-[120px]
+              "
+            />
 
-            <div className="absolute h-[520px] w-[520px] rounded-full bg-[#2E63D3]/10 blur-[120px]" />
+            {/* Portrait Card */}
 
-            {/* Card */}
+            <div
+              className="
+                relative
 
-            <div className="relative flex h-[560px] w-[440px] items-center justify-center overflow-hidden rounded-[42px] border border-[#E7EEF8] bg-white shadow-[0_40px_100px_rgba(18,58,99,0.10)]">
+                flex
+                h-[560px]
+                w-[440px]
+
+                items-center
+                justify-center
+
+                overflow-hidden
+
+                rounded-[42px]
+
+                border
+                border-[#E7EEF8]
+
+                bg-white
+
+                shadow-[0_40px_100px_rgba(18,58,99,0.10)]
+              "
+            >
 
               {/* Inner Border */}
 
-              <div className="absolute inset-5 rounded-[34px] border border-[#EEF3FA]" />
+              <div
+                className="
+                  absolute
+                  inset-5
+
+                  rounded-[34px]
+
+                  border
+                  border-[#EEF3FA]
+                "
+              />
+
+              {/* Portrait Placeholder */}
 
               <div className="relative z-10 text-center">
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="mx-auto mb-8 h-24 w-24 text-[#123A67]/55"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   strokeWidth={1.5}
+                  className="mx-auto mb-8 h-24 w-24 text-[#123A63]/50"
                 >
                   <path
                     strokeLinecap="round"
@@ -110,7 +158,15 @@ export default function Hero() {
                   />
                 </svg>
 
-                <p className="text-lg font-medium uppercase tracking-[0.15em] text-slate-500">
+                <p
+                  className="
+                    text-lg
+                    font-medium
+                    uppercase
+                    tracking-[0.15em]
+                    text-slate-500
+                  "
+                >
                   Professional Portrait
                 </p>
 
@@ -124,6 +180,6 @@ export default function Hero() {
 
       </Container>
 
-    </section>
+    </Section>
   );
 }

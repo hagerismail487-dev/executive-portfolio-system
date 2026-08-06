@@ -5,18 +5,16 @@ import {
 
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
+import Section from "@/components/ui/Section";
+import SectionHeader from "@/components/ui/SectionHeader";
 
 export default function Contact() {
   return (
-    <section
+    <Section
       id="contact"
-      className="relative overflow-hidden bg-[#FBFCFE] py-20 lg:py-24"
+      className="relative overflow-hidden bg-[#FBFCFE]"
     >
       <Container>
-
-        {/* ================================================= */}
-        {/* Executive Contact Card */}
-        {/* ================================================= */}
 
         <div
           className="
@@ -30,13 +28,13 @@ export default function Contact() {
           "
         >
 
-          {/* ============================================== */}
+          {/* ========================================= */}
           {/* Decorative Background */}
-          {/* ============================================== */}
+          {/* ========================================= */}
 
           <div className="pointer-events-none absolute inset-0 overflow-hidden">
 
-            {/* Top Left Dot Pattern */}
+            {/* Top Left Dots */}
 
             <div className="absolute left-8 top-8 opacity-20">
 
@@ -55,37 +53,13 @@ export default function Contact() {
 
             </div>
 
-            {/* Top Glow */}
+            {/* Top Right Glow */}
 
-            <div
-              className="
-                absolute
-                -right-24
-                -top-24
-                h-[420px]
-                w-[420px]
-                rounded-full
-                bg-[#EEF5FF]
-                opacity-60
-                blur-3xl
-              "
-            />
+            <div className="absolute -right-24 -top-24 h-[420px] w-[420px] rounded-full bg-[#EEF5FF] opacity-60 blur-3xl" />
 
-            {/* Bottom Glow */}
+            {/* Bottom Left Glow */}
 
-            <div
-              className="
-                absolute
-                -bottom-20
-                -left-20
-                h-80
-                w-80
-                rounded-full
-                bg-[#F4F8FF]
-                opacity-80
-                blur-3xl
-              "
-            />
+            <div className="absolute -bottom-20 -left-20 h-80 w-80 rounded-full bg-[#F4F8FF] opacity-80 blur-3xl" />
 
             {/* Bottom Waves */}
 
@@ -117,32 +91,29 @@ export default function Contact() {
 
           </div>
 
-          {/* ============================================== */}
+          {/* ========================================= */}
           {/* Content */}
-          {/* ============================================== */}
+          {/* ========================================= */}
 
-          <div className="relative z-10 px-8 py-14 sm:px-10 lg:px-16 lg:py-18">
+          <div className="relative z-10 px-8 py-16 sm:px-10 lg:px-20 lg:py-20">
 
+            {/* ========================================= */}
             {/* Section Header */}
+            {/* ========================================= */}
+<SectionHeader>
+  Contact
+</SectionHeader>
 
-            <div className="flex items-center justify-center gap-8">
+            {/* ========================================= */}
+            {/* Main Layout */}
+            {/* ========================================= */}
 
-              <div className="h-px w-20 bg-[#123A63]" />
-
-              <span className="text-sm font-semibold uppercase tracking-[0.45em] text-[#123A63]">
-                Contact
-              </span>
-
-              <div className="h-px w-20 bg-[#123A63]" />
-
-            </div>
-
-            {/* Main Grid */}
-
-            <div className="mt-16 grid items-center gap-20 xl:grid-cols-[1.45fr_1fr]">
-
+            <div className="mt-20 grid items-center gap-20 xl:grid-cols-[1.45fr_1fr]">
+                              {/* ========================================= */}
               {/* Left Side */}
-                            <div className="max-w-[640px]">
+              {/* ========================================= */}
+
+              <div className="max-w-[640px]">
 
                 {/* Heading */}
 
@@ -161,6 +132,7 @@ export default function Contact() {
                   <br />
 
                   Great Together
+
                 </h2>
 
                 {/* Accent Line */}
@@ -189,6 +161,7 @@ export default function Contact() {
                   organization make faster,
                   smarter,
                   and more confident business decisions.
+
                 </p>
 
                 {/* Actions */}
@@ -198,7 +171,7 @@ export default function Contact() {
                   <Button
                     href="mailto:hagerismail487@gmail.com"
                     external
-                    size="md"
+                    size="lg"
                     iconLeft={<Mail className="h-5 w-5" />}
                   >
                     Email Me
@@ -218,9 +191,9 @@ export default function Contact() {
 
               </div>
 
-              {/* ============================================== */}
+              {/* ========================================= */}
               {/* Right Side */}
-              {/* ============================================== */}
+              {/* ========================================= */}
                             <div className="relative">
 
                 {/* Vertical Divider */}
@@ -231,17 +204,24 @@ export default function Contact() {
 
                   {/* Title */}
 
-                  <h3 className="text-[40px] font-bold tracking-[-0.03em] text-[#102A56]">
+                  <h3
+                    className="
+                      text-[40px]
+                      font-bold
+                      tracking-[-0.03em]
+                      text-[#102A56]
+                    "
+                  >
                     Contact
                   </h3>
 
                   <div className="mt-4 h-[3px] w-20 rounded-full bg-[#2563EB]" />
 
-                  {/* Contact List */}
+                  {/* Contact Information */}
 
                   <div className="mt-12 flex flex-col gap-9">
 
-                    {/* ================= Email ================= */}
+                    {/* Email */}
 
                     <div className="flex items-center gap-6">
 
@@ -259,7 +239,7 @@ export default function Contact() {
 
                         <a
                           href="mailto:hagerismail487@gmail.com"
-                          className="mt-1 block text-lg text-[#102A56] transition-colors duration-300 hover:text-[#2563EB]"
+                          className="mt-1 block text-lg text-[#102A56] transition-all duration-300 hover:text-[#2563EB]"
                         >
                           hagerismail487@gmail.com
                         </a>
@@ -270,7 +250,7 @@ export default function Contact() {
 
                     <div className="ml-[84px] border-b border-slate-200/70" />
 
-                    {/* ================= LinkedIn ================= */}
+                    {/* LinkedIn */}
 
                     <div className="flex items-center gap-6">
 
@@ -282,7 +262,7 @@ export default function Contact() {
                           fill="currentColor"
                           className="h-7 w-7 text-[#0A66C2]"
                         >
-                          <path d="M4.98 3.5C4.98 4.604 4.104 5.5 3 5.5S1.02 4.604 1.02 3.5 1.896 1.5 3 1.5s1.98.896 1.98 2zm.02 3.5H1v16h4V7zm6.5 0h-4v16h4v-8.4c0-4.67 6-5.05 6 0V23h4v-9.8c0-7.64-8.72-7.36-10-3.6V7z"/>
+                          <path d="M4.98 3.5C4.98 4.604 4.104 5.5 3 5.5S1.02 4.604 1.02 3.5 1.896 1.5 3 1.5s1.98.896 1.98 2zm.02 3.5H1v16h4V7zm6.5 0h-4v16h4v-8.4c0-4.67 6-5.05 6 0V23h4v-9.8c0-7.64-8.72-7.36-10-3.6V7z" />
                         </svg>
 
                       </div>
@@ -297,7 +277,7 @@ export default function Contact() {
                           href="https://www.linkedin.com/in/hagerismail1"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mt-1 block text-lg font-medium text-[#0A66C2] transition-colors duration-300 hover:underline"
+                          className="mt-1 block text-lg font-medium text-[#0A66C2] transition-all duration-300 hover:underline"
                         >
                           linkedin.com/in/hagerismail1
                         </a>
@@ -308,7 +288,7 @@ export default function Contact() {
 
                     <div className="ml-[84px] border-b border-slate-200/70" />
 
-                    {/* ================= Location ================= */}
+                    {/* Location */}
 
                     <div className="flex items-center gap-6">
 
@@ -363,6 +343,6 @@ export default function Contact() {
 
       </Container>
 
-    </section>
+    </Section>
   );
 }

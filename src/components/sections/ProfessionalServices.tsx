@@ -1,20 +1,33 @@
 import Container from "@/components/ui/Container";
+import Section from "@/components/ui/Section";
+import SectionIntro from "@/components/ui/SectionIntro";
 import ServiceCard from "@/components/ui/ServiceCard";
+
 import { services } from "@/data/services";
 
 export default function ProfessionalServices() {
   return (
-    <section
+    <Section
       id="services"
-      className="relative overflow-hidden bg-[#FBFCFE] py-24 lg:py-32"
+      className="relative overflow-hidden bg-[#FBFCFE]"
     >
       <Container>
 
-        <div className="relative overflow-hidden rounded-[40px] border border-[#E8EEF7] bg-white shadow-[0_40px_100px_rgba(18,58,99,0.10)]">
+        <div
+          className="
+            relative
+            overflow-hidden
+            rounded-[40px]
+            border
+            border-[#E8EEF7]
+            bg-white
+            shadow-[0_40px_100px_rgba(18,58,99,0.10)]
+          "
+        >
 
-          {/* ================================= */}
-          {/* Decorative Background */}
-          {/* ================================= */}
+          {/* ========================================= */}
+          {/* Background */}
+          {/* ========================================= */}
 
           <div className="pointer-events-none absolute inset-0 overflow-hidden">
 
@@ -47,52 +60,29 @@ export default function ProfessionalServices() {
 
           </div>
 
-          {/* ================================= */}
+          {/* ========================================= */}
           {/* Content */}
-          {/* ================================= */}
+          {/* ========================================= */}
 
           <div className="relative z-10 px-8 py-16 sm:px-10 lg:px-20 lg:py-20">
 
-            {/* ================================= */}
-            {/* Section Header */}
-            {/* ================================= */}
+            <SectionIntro
+              eyebrow="Services"
+              title="Professional Services"
+              description="Professional services that help organizations transform business data into executive insights, strategic reporting, and confident business decisions."
+              align="center"
+              className="mx-auto mb-20 max-w-3xl"
+            />
 
-            <div className="mx-auto max-w-3xl text-center">
+            {/* ========================================= */}
+            {/* Services Grid */}
+            {/* ========================================= */}
 
-              <div className="flex items-center justify-center gap-8">
-
-                <div className="h-px w-20 bg-[#123A63]" />
-
-                <span className="text-sm font-semibold uppercase tracking-[0.45em] text-[#123A63]">
-                  Services
-                </span>
-
-                <div className="h-px w-20 bg-[#123A63]" />
-
-              </div>
-
-              <h2 className="mt-8 text-[42px] font-bold tracking-[-0.04em] text-[#102A56] lg:text-[60px]">
-                Professional Services
-              </h2>
-
-              <p className="mx-auto mt-8 max-w-2xl text-xl leading-[1.9] text-slate-600">
-                Professional services that help organizations transform
-                business data into executive insights,
-                strategic reporting,
-                and confident business decisions.
-              </p>
-
-            </div>
-                      {/* ================================= */}
-          {/* Services Grid */}
-          {/* ================================= */}
-
-          <div className="mt-20 grid gap-8 md:grid-cols-2">
-
-            {services.map((service) => (
+            <div className="grid gap-8 md:grid-cols-2">
+                          {services.map((service) => (
 
               <div
-                key={service.title}
+                key={service.slug}
                 className="group"
               >
 
@@ -108,10 +98,10 @@ export default function ProfessionalServices() {
 
         </div>
 
-      </div>
+        </div>
 
-    </Container>
+      </Container>
 
-  </section>
+    </Section>
   );
 }

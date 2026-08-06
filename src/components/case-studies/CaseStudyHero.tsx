@@ -1,5 +1,5 @@
 import Container from "@/components/ui/Container";
-import ExecutiveButton from "@/components/ui/ExecutiveButton";
+import ExecutiveButton from "@/components/ui/Button";
 import type { CaseStudy } from "@/data/case-studies";
 
 interface CaseStudyHeroProps {

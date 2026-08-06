@@ -1,13 +1,16 @@
 import {
   BarChart3,
   Database,
-  Network,
-  Target,
   LineChart,
+  Network,
   ShieldCheck,
+  Target,
 } from "lucide-react";
 
-import Section from "../ui/Section";
+import ExecutiveCard from "@/components/ui/ExecutiveCard";
+import IconContainer from "@/components/ui/IconContainer";
+import Section from "@/components/ui/Section";
+import SectionIntro from "@/components/ui/SectionIntro";
 
 const expertise = [
   {
@@ -52,71 +55,77 @@ export default function CoreExpertise() {
   return (
     <Section
       id="expertise"
-      className="bg-white py-24"
+      className="bg-white"
     >
-      {/* Header */}
+      <SectionIntro
+        eyebrow="Expertise"
+        title="Core Expertise"
+        description="A blend of analytical thinking, technical expertise, and business understanding to deliver data solutions that drive strategic impact."
+        align="center"
+        className="mx-auto mb-16 max-w-3xl"
+      />
 
-      <div className="mx-auto mb-16 max-w-3xl text-center">
-
-        <span className="text-[14px] font-semibold uppercase tracking-[0.35em] text-[#2E63D3]">
-          Expertise
-        </span>
-
-        <h2 className="mt-5 text-[46px] md:text-[54px] font-bold tracking-[-0.04em] text-[#102A56]">
-          Core Expertise
-        </h2>
-
-        <p className="mx-auto mt-8 max-w-3xl text-[20px] leading-9 text-slate-500">
-          A blend of analytical thinking, technical expertise,
-          and business understanding to deliver data solutions
-          that drive strategic impact.
-        </p>
-
-      </div>
-
-      {/* Cards */}
+      {/* ========================================= */}
+      {/* Expertise Cards */}
+      {/* ========================================= */}
 
       <div className="grid gap-8 lg:grid-cols-3">
-
-        {expertise.map((item) => {
+                {expertise.map((item) => {
 
           const Icon = item.icon;
 
           return (
 
-            <div
+            <ExecutiveCard
               key={item.title}
-              className="
-                rounded-[26px]
-                border
-                border-[#E8EDF5]
-                bg-white
-                p-8
-                transition-all
-                duration-300
-                hover:-translate-y-2
-                hover:border-[#D7E3F6]
-                hover:shadow-[0_20px_50px_rgba(15,23,42,0.06)]
-              "
+              className="rounded-[26px]"
             >
 
-              <Icon
-                size={34}
-                strokeWidth={1.8}
-                className="text-[#123A67]"
-              />
+              {/* Icon */}
 
-              <h3 className="mt-8 text-[28px] leading-tight font-semibold tracking-[-0.03em] text-[#102A56]">
+              <IconContainer
+                size="md"
+                rounded="xl"
+                className="bg-[#F6F9FD] text-[#123A67]"
+              >
+                <Icon
+                  size={34}
+                  strokeWidth={1.8}
+                />
+              </IconContainer>
+
+              {/* Title */}
+
+              <h3
+                className="
+                  mt-8
+                  text-[28px]
+                  font-semibold
+                  leading-tight
+                  tracking-[-0.03em]
+                  text-[#102A56]
+                "
+              >
                 {item.title}
               </h3>
 
-              <div className="mt-6 mb-7 h-px w-full bg-[#E8EDF5]" />
+              {/* Divider */}
 
-              <p className="text-[17px] leading-[1.95] text-slate-600">
+              <div className="my-7 h-px w-full bg-[#E8EDF5]" />
+
+              {/* Description */}
+
+              <p
+                className="
+                  text-[17px]
+                  leading-[1.95]
+                  text-slate-600
+                "
+              >
                 {item.description}
               </p>
 
-            </div>
+            </ExecutiveCard>
 
           );
 
@@ -124,11 +133,23 @@ export default function CoreExpertise() {
 
       </div>
 
+      {/* ========================================= */}
       {/* Quote */}
+      {/* ========================================= */}
+            {/* ========================================= */}
+      {/* Quote */}
+      {/* ========================================= */}
 
       <div className="mt-24 text-center">
 
-        <p className="text-[22px] font-medium tracking-[-0.02em] text-[#102A56]">
+        <p
+          className="
+            text-[22px]
+            font-medium
+            tracking-[-0.02em]
+            text-[#102A56]
+          "
+        >
           Turning data into strategic advantage.
         </p>
 
