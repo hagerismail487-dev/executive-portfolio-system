@@ -4,6 +4,7 @@ const about = {
      ========================================================== */
 
   hero: {
+    
     badge: "Executive Profile",
 
     executiveTitle:
@@ -12,6 +13,9 @@ const about = {
     headline:
       "Building Structured Business Systems That Transform Operational Complexity Into Confident Executive Decisions",
 
+      signature:
+  "I don't just build reports. I build business systems that enable better decisions.",
+  
     introduction: `Business performance is rarely limited by the amount of available data.
 
 More often, it is limited by fragmented processes, inconsistent reporting, and the absence of structured systems that leadership can trust.

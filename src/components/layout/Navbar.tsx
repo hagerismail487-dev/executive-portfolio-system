@@ -12,7 +12,7 @@ export default function Navbar() {
   useEffect(() => {
     const sections = [
       "home",
-      "about",
+      "profile",
       "business-value",
       "expertise",
       "projects",
@@ -70,27 +70,26 @@ export default function Navbar() {
 
           <nav className="hidden items-center gap-8 lg:flex">
 
-            {/* About */}
+           {/* Profile */}
 
-            <Link
-              href="/#about"
-              className={`relative pb-1.5 text-[14px] transition-all duration-300 ${
-                activeSection === "about"
-                  ? "font-semibold text-[#123A63]"
-                  : "font-medium text-slate-600 hover:text-[#123A63]"
-              }`}
-            >
-              About
+<Link
+  href="/#profile"
+  className={`relative pb-1.5 text-[14px] transition-all duration-300 ${
+    activeSection === "profile"
+      ? "font-semibold text-[#123A63]"
+      : "font-medium text-slate-600 hover:text-[#123A63]"
+  }`}
+>
+  Profile
 
-              <span
-                className={`absolute bottom-0 left-0 h-[2px] rounded-full bg-[#2563EB] transition-all duration-300 ${
-                  activeSection === "about"
-                    ? "w-full opacity-100"
-                    : "w-0 opacity-0"
-                }`}
-              />
-            </Link>
-
+  <span
+    className={`absolute bottom-0 left-0 h-[2px] rounded-full bg-[#2563EB] transition-all duration-300 ${
+      activeSection === "profile"
+        ? "w-full opacity-100"
+        : "w-0 opacity-0"
+    }`}
+  />
+</Link>
             {/* Business Value */}
 
             <Link

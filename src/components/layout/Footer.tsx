@@ -50,7 +50,7 @@ export default function Footer() {
 
               <nav className="flex items-center justify-center gap-4">
                 <Link
-                  href="/#about"
+                  href="/#Profile"
                  className="
   relative
 
@@ -76,7 +76,7 @@ export default function Footer() {
   hover:after:w-full
 "
                 >
-                  About
+                  Profile
                 </Link>
 
                 <div className="h-3 w-px bg-white/15" />

@@ -5,7 +5,7 @@ const data = {
   },
 
   hero: {
-    label: "About",
+    label: "Profile",
 
     headline: [
   "From Data",
@@ -80,9 +80,9 @@ const data = {
   ],
 
   cta: {
-    text: "About Me",
+    text: "Profile",
 
-    href: "/about",
+    href: "/profile",
   },
 };
 

@@ -7,10 +7,10 @@ import SectionHeader from "@/components/ui/SectionHeader";
 
 import data from "./data";
 
-export default function AboutPreview() {
+export default function ProfilePreview() {
   return (
     <Section
-      id="about"
+      id="profile"
       className="relative overflow-hidden bg-white"
     >
       {/* ========================================= */}
