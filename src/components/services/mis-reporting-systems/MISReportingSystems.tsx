@@ -1,14 +1,12 @@
-import {
-  BusinessValue,
-  // CTA,
-  Deliverables,
-  ServiceHero,
-  Technologies,
-  Workflow,
-} from "@/components/services/shared";
+import ServiceHero from "@/components/services/shared/ServiceHero";
+import BusinessValue from "@/components/services/shared/BusinessValue";
+import Deliverables from "@/components/services/shared/Deliverables";
+import Workflow from "@/components/services/shared/Workflow";
+import Technologies from "@/components/services/shared/Technologies";
+import CTA from "@/components/services/shared/CTA";
 
 import data from "./data";
-console.log(data);
+
 export default function MISReportingSystems() {
   return (
     <>
@@ -31,12 +29,12 @@ export default function MISReportingSystems() {
         technologies={data.technologies}
       />
 
-        {/* <CTA
+      <CTA
         title={data.cta.title}
         description={data.cta.description}
         buttonText={data.cta.buttonText}
         buttonHref={data.cta.buttonHref}
-      />*/}
+      />
     </>
   );
 }

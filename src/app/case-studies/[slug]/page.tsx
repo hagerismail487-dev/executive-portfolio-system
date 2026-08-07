@@ -27,7 +27,8 @@ export default async function CaseStudyPage({
   return (
     <main className="bg-[#FBFCFE]">
 
-      <CaseStudyContent project={project} />
+      <CaseStudyHero project={project} />
+
       
 
     </main>
