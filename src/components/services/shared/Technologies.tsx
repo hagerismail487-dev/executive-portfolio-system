@@ -1,4 +1,6 @@
 import Container from "@/components/ui/Container";
+import Section from "@/components/ui/Section";
+import SectionIntro from "@/components/ui/SectionIntro";
 
 interface TechnologiesProps {
   title?: string;
@@ -10,39 +12,89 @@ export default function Technologies({
   technologies,
 }: TechnologiesProps) {
   return (
-    <section className="bg-slate-50 py-24 lg:py-32">
+    <Section className="bg-[#FBFCFE]">
+
       <Container>
-        <div className="mx-auto max-w-7xl">
-          {/* Section Header */}
-          <div className="flex items-center gap-5">
-            <div className="h-px w-16 bg-[#123A63]" />
 
-            <span className="text-xs font-semibold uppercase tracking-[0.45em] text-[#123A63]">
-              Technical Stack
-            </span>
-          </div>
+        <div className="mx-auto max-w-[1200px]">
 
-          {/* Title */}
-          <h2 className="mt-8 text-4xl font-bold tracking-[-0.03em] text-[#102A56] lg:text-5xl">
-            {title}
-          </h2>
+          <SectionIntro
+            eyebrow="Technology"
+            title={title}
+            description="Modern business intelligence technologies and reporting tools used to build reliable, scalable, and executive-ready analytical solutions."
+            align="center"
+            className="mx-auto mb-10 max-w-[720px]"
+          />
 
-          {/* Accent */}
-          <div className="mt-6 h-1 w-20 rounded-full bg-[#2563EB]" />
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                        {technologies.map((technology, index) => (
 
-          {/* Technologies */}
-          <div className="mt-14 flex flex-wrap gap-4">
-            {technologies.map((technology) => (
-              <span
+              <div
                 key={technology}
-                className="rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold tracking-wide text-[#102A56] transition-all duration-300 hover:border-[#2563EB] hover:bg-[#EEF5FF] hover:text-[#2563EB]"
+                className="
+                  group
+
+                  rounded-[20px]
+
+                  border
+                  border-[#E8EEF7]
+
+                  bg-white
+
+                  px-5
+                  py-5
+
+                  transition-all
+                  duration-300
+
+                  hover:-translate-y-1
+                  hover:border-[#D6E5FB]
+                  hover:shadow-[0_16px_36px_rgba(18,58,99,0.08)]
+                "
               >
-                {technology}
-              </span>
+
+                {/* ========================================= */}
+                {/* Header */}
+                {/* ========================================= */}
+<div className="flex items-center gap-4">
+
+  <span
+    className="
+      text-[13px]
+      font-semibold
+
+      tracking-[0.18em]
+
+      text-[#2563EB]
+    "
+  >
+    {(index + 1).toString().padStart(2, "0")}
+  </span>
+
+  <h3
+    className="
+      text-[17px]
+      font-semibold
+
+      tracking-[-0.01em]
+
+      text-[#102A56]
+    "
+  >
+    {technology}
+  </h3>
+
+</div>
+              </div>
+
             ))}
+
           </div>
+
         </div>
+
       </Container>
-    </section>
+
+    </Section>
   );
 }

@@ -8,82 +8,75 @@ const data = {
     title: "MIS Reporting Systems",
 
     headline:
-      "Structured MIS Reporting Systems That Create Consistency, Visibility, and Better Business Decisions",
+      "MIS Reporting Systems That Standardize Business Reporting Across the Organization",
 
-    description: `An effective Management Information System (MIS) is more than a collection of reports—it's the foundation for consistent business communication and informed decision-making.
+    description: `Consistent reporting is the foundation of effective business management. Without standardized reporting processes, leaders often rely on fragmented information that makes performance difficult to monitor and decisions harder to trust.
 
-I design structured MIS reporting systems that transform operational data into standardized reporting frameworks, helping organizations improve visibility, monitor performance, and deliver reliable information to leadership. Every reporting system is built to support operational efficiency, reporting consistency, and long-term business growth.`,
+I design Management Information System (MIS) reporting frameworks that organize business data into structured reporting processes, ensuring departments report consistently, executives receive reliable information, and organizations gain complete visibility into business performance.`,
+
+    executiveTitle: "Reporting Governance",
+
+    executiveDescription: `Designed to establish reporting consistency across the organization by creating structured reporting frameworks, standardized KPIs, and reliable executive reporting processes.`,
+
+    highlights: [
+      "Standardized Reporting",
+      "Executive MIS Reports",
+      "Cross-Department Visibility",
+      "Reporting Governance",
+    ],
   } satisfies HeroSection,
 
   businessValue: {
-    description: `Reliable decisions depend on reliable reporting. Without standardized reporting processes, organizations often spend more time collecting and validating data than analyzing it.
+    description: `A well-designed MIS reporting system creates a single reporting language across the organization.
 
-This service helps businesses establish a structured reporting environment that improves visibility, standardizes reporting across departments, and delivers accurate business information for management and executive decision-making.`,
+Instead of disconnected spreadsheets and inconsistent reporting formats, leadership teams receive structured, accurate, and repeatable reports that improve visibility, strengthen operational control, and support confident decision-making at every level.`,
 
     benefits: [
-      "Standardized reporting across departments",
-      "Improved operational visibility",
-      "Consistent KPI measurement",
-      "Reduced reporting inconsistencies",
-      "Faster executive reporting",
-      "Improved cross-functional communication",
-      "Reduced manual reporting effort",
-      "Reliable business information",
-      "Scalable reporting framework",
+      "Consistent reporting standards",
+      "Improved reporting accuracy",
+      "Centralized business visibility",
+      "Reduced reporting duplication",
+      "Reliable executive reporting",
+      "Better reporting governance",
     ],
   },
 
   deliverables: [
-    "Complete MIS Reporting Framework",
-    "Daily, Weekly & Monthly Reporting Templates",
+    "MIS Reporting Framework",
     "Executive MIS Reports",
-    "Department Performance Reports",
+    "Department Reporting Templates",
+    "Daily, Weekly & Monthly Reports",
     "KPI Reporting Structure",
     "Reporting Calendar",
     "Standardized Report Templates",
-    "Data Validation Rules",
     "Reporting Documentation",
-    "Reporting Process Mapping",
-    "Automated Reporting Workflows",
-    "Executive Summary Reports",
-    "User Guide",
   ],
 
   workflow: [
     {
-      title: "Business & Reporting Assessment",
+      title: "Reporting Assessment",
       description:
-        "Review business objectives, reporting challenges, existing reports, and available data sources to establish a clear reporting strategy.",
+        "Evaluate current reporting practices, business objectives, reporting gaps, and management information requirements.",
     },
     {
-      title: "Reporting Framework Design",
+      title: "Framework Design",
       description:
-        "Define reporting hierarchy, KPIs, reporting frequency, ownership, and reporting standards to build a consistent MIS framework.",
+        "Define reporting standards, KPIs, reporting frequency, ownership, and reporting structure across departments.",
     },
     {
-      title: "Data Preparation",
+      title: "Data Standardization",
       description:
-        "Clean, organize, and structure business data to ensure reliable reporting and consistent performance metrics.",
+        "Prepare, organize, and validate business data to establish reliable reporting processes and consistent business metrics.",
     },
     {
-      title: "Report Development",
+      title: "MIS Report Development",
       description:
-        "Develop standardized reports that deliver clear operational insights while maintaining consistency across business functions.",
+        "Build standardized management reports that provide accurate operational visibility and executive-level insights.",
     },
     {
-      title: "Validation & Review",
+      title: "Deployment & Governance",
       description:
-        "Validate business logic, KPI calculations, and reporting accuracy before deployment.",
-    },
-    {
-      title: "Implementation",
-      description:
-        "Deploy the reporting system and establish reporting routines aligned with business operations.",
-    },
-    {
-      title: "Documentation & Handover",
-      description:
-        "Provide documentation and user guidance to support long-term adoption and future maintenance.",
+        "Implement the reporting system, establish reporting routines, and provide documentation that supports long-term reporting consistency.",
     },
   ] satisfies WorkflowStep[],
 
@@ -92,25 +85,49 @@ This service helps businesses establish a structured reporting environment that 
     "Microsoft Excel",
     "Power Query",
     "DAX",
-    "Power Pivot",
-    "Microsoft 365",
     "Data Modeling",
-    "Data Visualization",
-    "Business Process Analysis",
     "Reporting Automation",
-    "KPI Framework Design",
     "Executive Reporting",
+    "MIS Framework Design",
   ],
 
+  whyWorkWithMe: {
+    description:
+      "I believe MIS reporting is not about producing more reports—it's about building reporting systems that create consistency, accountability, and reliable business communication.",
+
+    strengths: [
+      {
+        title: "Reporting Before Visualization",
+        description:
+          "I focus on establishing structured reporting processes before designing reports, ensuring every report serves a clear business purpose.",
+      },
+      {
+        title: "Consistency Across Departments",
+        description:
+          "Every reporting framework is designed to create a unified reporting standard that improves communication across the organization.",
+      },
+      {
+        title: "Reliable Management Information",
+        description:
+          "I prioritize reporting accuracy, KPI consistency, and data reliability so leadership can make decisions with confidence.",
+      },
+      {
+        title: "Built for Long-Term Adoption",
+        description:
+          "The goal isn't simply delivering reports—it's creating reporting systems that remain organized, scalable, and sustainable as the business grows.",
+      },
+    ],
+  },
+
   cta: {
-    title: "Ready to Build a Reliable MIS Reporting System?",
+    title: "Ready to Standardize Your Business Reporting?",
 
     description:
-      "Let's create a structured reporting framework that improves reporting consistency, strengthens business visibility, and supports confident executive decision-making.",
+      "Let's build a structured MIS reporting system that improves reporting consistency, strengthens operational visibility, and supports better business decisions.",
 
     buttonText: "Let's Talk",
 
-    buttonHref: "/contact",
+    buttonHref: "https://www.linkedin.com/in/hagerismail1/",
   },
 };
 

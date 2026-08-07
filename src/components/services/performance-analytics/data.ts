@@ -8,83 +8,75 @@ const data = {
     title: "Performance Analytics",
 
     headline:
-      "Performance Analytics That Turn KPIs Into Actionable Business Decisions",
+      "Performance Analytics That Measure Business Success and Drive Continuous Improvement",
 
-    description: `Performance Analytics goes beyond reporting numbers—it helps organizations understand business performance, identify trends, and make continuous improvements based on measurable insights.
+    description: `Business performance should be measured with purpose, not simply reported. Effective Performance Analytics helps organizations understand how well they are achieving their objectives, where performance gaps exist, and which actions create measurable business improvement.
 
-I design performance analytics solutions that transform operational data into meaningful KPIs, executive scorecards, and interactive dashboards. Every solution is built to improve visibility, strengthen accountability, and support smarter business decisions through reliable performance measurement.`,
+I design performance analytics solutions that combine KPI frameworks, operational metrics, and executive reporting to help organizations monitor progress, strengthen accountability, and support continuous performance improvement across every level of the business.`,
+
+    executiveTitle: "Performance Management",
+
+    executiveDescription: `Designed to help leadership teams measure organizational performance through meaningful KPIs, operational scorecards, and continuous performance monitoring that supports better business outcomes.`,
+
+    highlights: [
+      "Performance Measurement",
+      "Executive KPI Scorecards",
+      "Operational Monitoring",
+      "Continuous Improvement",
+    ],
   } satisfies HeroSection,
 
   businessValue: {
-    description: `Organizations achieve better results when performance is measured consistently and communicated effectively.
+    description: `Sustainable business growth depends on the ability to measure performance consistently and respond to change quickly.
 
-This service helps businesses establish a structured performance measurement framework where executives and department managers can monitor KPIs, evaluate progress, identify performance gaps, and make informed decisions that drive continuous improvement.`,
+Performance Analytics creates a structured measurement framework that enables executives and department leaders to monitor KPIs, evaluate operational effectiveness, identify improvement opportunities, and continuously enhance business performance.`,
 
     benefits: [
-      "Consistent KPI monitoring",
-      "Improved performance visibility",
-      "Executive performance tracking",
-      "Early identification of performance gaps",
-      "Data-driven business decisions",
-      "Performance trend analysis",
-      "Improved operational accountability",
-      "Standardized performance reporting",
+      "Continuous KPI monitoring",
+      "Improved operational performance",
+      "Executive performance visibility",
+      "Early performance gap detection",
+      "Greater organizational accountability",
       "Continuous business improvement",
     ],
   },
 
   deliverables: [
-    "Performance Analytics Dashboards",
+    "Performance Analytics Framework",
     "Executive KPI Scorecards",
+    "Performance Dashboards",
     "Department Performance Reports",
-    "Performance Monitoring Framework",
-    "Interactive KPI Tracking",
+    "Operational KPI Tracking",
     "Trend & Variance Analysis",
-    "Performance Reporting Templates",
-    "Business Performance Metrics",
-    "Advanced DAX Measures",
-    "Optimized Data Model",
-    "Power Query Data Transformation",
-    "Reporting Documentation",
-    "Performance Analytics User Guide",
-    "Recommendations for Performance Improvement",
+    "Performance Monitoring Model",
+    "Performance Documentation",
   ],
 
   workflow: [
     {
-      title: "Business Performance Assessment",
+      title: "Performance Assessment",
       description:
-        "Review business objectives, existing KPIs, operational processes, and reporting requirements to establish a structured performance measurement strategy.",
+        "Understand business objectives, operational priorities, existing KPIs, and the performance indicators that matter most to leadership.",
     },
     {
       title: "KPI Framework Design",
       description:
-        "Define performance indicators, measurement methods, reporting frequency, and executive scorecards aligned with business objectives.",
+        "Design a structured performance measurement framework that aligns KPIs with strategic goals and operational success.",
     },
     {
       title: "Data Preparation",
       description:
-        "Prepare, clean, transform, and organize business data to ensure accurate and consistent performance analysis.",
+        "Prepare, validate, and organize business data to establish an accurate foundation for performance analysis.",
     },
     {
-      title: "Analytics Design",
+      title: "Performance Analytics",
       description:
-        "Design executive-focused performance dashboards that clearly communicate KPIs, trends, and business outcomes.",
+        "Develop interactive performance dashboards, executive scorecards, and analytical models that provide continuous visibility into organizational performance.",
     },
     {
-      title: "Development",
+      title: "Review & Continuous Improvement",
       description:
-        "Develop Power BI dashboards, KPI calculations, analytical models, and interactive reporting experiences for continuous monitoring.",
-    },
-    {
-      title: "Validation",
-      description:
-        "Validate business rules, KPI calculations, and reporting accuracy before deployment.",
-    },
-    {
-      title: "Deployment & Continuous Improvement",
-      description:
-        "Deploy the final solution, provide documentation, and recommend ongoing improvements to strengthen long-term performance management.",
+        "Deliver the final solution with documentation and recommendations that support ongoing performance monitoring and long-term business improvement.",
     },
   ] satisfies WorkflowStep[],
 
@@ -93,25 +85,49 @@ This service helps businesses establish a structured performance measurement fra
     "Microsoft Excel",
     "Power Query",
     "DAX",
-    "Power Pivot",
-    "Microsoft 365",
     "Data Modeling",
-    "Data Visualization",
-    "Business Process Analysis",
-    "Reporting Automation",
+    "Performance Analytics",
     "KPI Framework Design",
-    "Executive Reporting",
+    "Executive Scorecards",
   ],
+
+  whyWorkWithMe: {
+    description:
+      "Performance Analytics is most valuable when it helps leaders improve results—not simply monitor numbers. I focus on designing measurement systems that create visibility, accountability, and continuous business improvement.",
+
+    strengths: [
+      {
+        title: "Performance Before Metrics",
+        description:
+          "I begin by understanding business objectives and success criteria before selecting KPIs or designing analytical reports.",
+      },
+      {
+        title: "Meaningful KPI Frameworks",
+        description:
+          "Every KPI is designed to measure business performance in a way that supports practical decision-making rather than simply tracking activity.",
+      },
+      {
+        title: "Continuous Improvement Mindset",
+        description:
+          "My reporting solutions help organizations identify trends, measure progress, and continuously improve operational performance over time.",
+      },
+      {
+        title: "Executive Performance Visibility",
+        description:
+          "I design executive reporting experiences that provide leadership with clear performance insights while keeping complex operational data easy to understand.",
+      },
+    ],
+  },
 
   cta: {
     title: "Ready to Improve Business Performance?",
 
     description:
-      "Let's build a performance analytics solution that helps your organization monitor KPIs, strengthen performance management, and make confident data-driven decisions.",
+      "Let's build a performance analytics solution that helps your organization measure success, strengthen accountability, and continuously improve business performance.",
 
     buttonText: "Let's Talk",
 
-    buttonHref: "/contact",
+    buttonHref: "https://www.linkedin.com/in/hagerismail1/",
   },
 };
 

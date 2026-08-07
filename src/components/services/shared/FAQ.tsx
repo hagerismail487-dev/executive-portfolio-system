@@ -1,7 +1,12 @@
 "use client";
 
 import { useState } from "react";
+
+import Section from "@/components/ui/Section";
+import SectionIntro from "@/components/ui/SectionIntro";
+
 import Container from "@/components/ui/Container";
+
 import type { FAQItem } from "@/types/service";
 
 interface FAQProps {
@@ -13,6 +18,7 @@ export default function FAQ({
   title = "Frequently Asked Questions",
   items,
 }: FAQProps) {
+
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleItem = (index: number) => {
@@ -20,63 +26,137 @@ export default function FAQ({
   };
 
   return (
-    <section className="bg-slate-50 py-24 lg:py-32">
+
+    <Section className="bg-[#FBFCFE]">
+
       <Container>
-        <div className="mx-auto max-w-4xl">
-          {/* Section Header */}
-          <div className="flex items-center gap-5">
-            <div className="h-px w-16 bg-[#123A63]" />
 
-            <span className="text-xs font-semibold uppercase tracking-[0.45em] text-[#123A63]">
-              FAQ
-            </span>
-          </div>
+        <div className="mx-auto max-w-[900px]">
 
-          {/* Title */}
-          <h2 className="mt-8 text-4xl font-bold tracking-[-0.03em] text-[#102A56] lg:text-5xl">
-            {title}
-          </h2>
+          <SectionIntro
+            eyebrow="FAQ"
+            title={title}
+            description="Answers to the most common questions about this professional service, its process, and expected business outcomes."
+            align="center"
+            className="mx-auto mb-10 max-w-[720px]"
+          />
 
-          {/* Accent */}
-          <div className="mt-6 h-1 w-20 rounded-full bg-[#2563EB]" />
+          <div className="space-y-4">
+                        {items.map((item, index) => {
 
-          {/* Accordion */}
-          <div className="mt-14 space-y-5">
-            {items.map((item, index) => {
               const isOpen = openIndex === index;
 
               return (
+
                 <div
                   key={item.question}
-                  className="overflow-hidden rounded-2xl border border-slate-200 bg-white transition-all duration-300"
+                  className="
+                    overflow-hidden
+
+                    rounded-[22px]
+
+                    border
+                    border-[#E8EEF7]
+
+                    bg-white
+
+                    transition-all
+                    duration-300
+
+                    hover:border-[#D6E5FB]
+                    hover:shadow-[0_14px_34px_rgba(18,58,99,0.08)]
+                  "
                 >
+
                   <button
                     type="button"
                     onClick={() => toggleItem(index)}
-                    className="flex w-full items-center justify-between px-8 py-6 text-left"
+                    className="
+                      flex
+                      w-full
+
+                      items-center
+                      justify-between
+
+                      px-6
+                      py-5
+
+                      text-left
+                    "
                   >
-                    <span className="text-lg font-semibold text-[#102A56]">
+
+                    <span
+                      className="
+                        text-[18px]
+                        font-semibold
+
+                        leading-7
+
+                        tracking-[-0.02em]
+
+                        text-[#102A56]
+                      "
+                    >
                       {item.question}
                     </span>
 
-                    <span className="text-2xl font-light text-[#2563EB]">
+                    <span
+                      className="
+                        text-[28px]
+                        font-light
+
+                        text-[#2563EB]
+
+                        transition-transform
+                        duration-300
+                      "
+                    >
                       {isOpen ? "−" : "+"}
                     </span>
+
                   </button>
 
                   {isOpen && (
-                    <div className="border-t border-slate-100 px-8 pb-8 pt-6">
-                      <p className="text-lg leading-8 text-slate-600">
+
+                    <div
+                      className="
+                        border-t
+                        border-[#EEF3FA]
+
+                        px-6
+                        pb-6
+                        pt-5
+                      "
+                    >
+
+                      <p
+                        className="
+                          text-[16px]
+                          leading-8
+
+                          text-slate-600
+                        "
+                      >
                         {item.answer}
                       </p>
+
                     </div>
+
                   )}
+
                 </div>
+
               );
+
             })}
+
           </div>
+
         </div>
+
       </Container>
-    </section>
+
+    </Section>
+
   );
 }

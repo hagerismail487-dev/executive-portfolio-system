@@ -1,4 +1,6 @@
 import Container from "@/components/ui/Container";
+import Section from "@/components/ui/Section";
+import SectionIntro from "@/components/ui/SectionIntro";
 
 interface BusinessOutcomesProps {
   title?: string;
@@ -10,47 +12,117 @@ export default function BusinessOutcomes({
   outcomes,
 }: BusinessOutcomesProps) {
   return (
-    <section className="bg-slate-50 py-24 lg:py-32">
+    <Section
+      className="bg-[#FBFCFE]"
+    >
+
       <Container>
-        <div className="mx-auto max-w-7xl">
-          {/* Section Header */}
-          <div className="flex items-center gap-5">
-            <div className="h-px w-16 bg-[#123A63]" />
 
-            <span className="text-xs font-semibold uppercase tracking-[0.45em] text-[#123A63]">
-              Business Impact
-            </span>
-          </div>
+        <div className="mx-auto max-w-[1200px]">
 
-          {/* Title */}
-          <h2 className="mt-8 text-4xl font-bold tracking-[-0.03em] text-[#102A56] lg:text-5xl">
-            {title}
-          </h2>
+          <SectionIntro
+            eyebrow="Business Impact"
+            title={title}
+            description="The measurable business outcomes organizations can expect from a structured reporting, analytics, and business intelligence solution."
+            align="center"
+            className="mx-auto mb-10 max-w-[720px]"
+          />
 
-          {/* Accent */}
-          <div className="mt-6 h-1 w-20 rounded-full bg-[#2563EB]" />
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+                        {outcomes.map((outcome, index) => (
 
-          {/* Outcome Cards */}
-          <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {outcomes.map((outcome) => (
               <div
                 key={outcome}
-                className="rounded-2xl border border-slate-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#2563EB] hover:shadow-xl"
+                className="
+                  group
+
+                  rounded-[22px]
+
+                  border
+                  border-[#E8EEF7]
+
+                  bg-white
+
+                  px-6
+                  py-6
+
+                  transition-all
+                  duration-300
+
+                  hover:-translate-y-1
+                  hover:border-[#D6E5FB]
+                  hover:shadow-[0_18px_40px_rgba(18,58,99,0.08)]
+                "
               >
-                {/* Icon */}
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#EEF5FF] text-xl font-bold text-[#2563EB]">
-                  ↗
+
+                {/* ========================================= */}
+                {/* Header */}
+                {/* ========================================= */}
+
+                <div className="flex items-center justify-between">
+
+                  <span
+                    className="
+                      text-[13px]
+                      font-semibold
+
+                      tracking-[0.18em]
+
+                      text-[#2563EB]
+                    "
+                  >
+                    {(index + 1).toString().padStart(2, "0")}
+                  </span>
+
+                  <div
+                    className="
+                      h-2
+                      w-2
+
+                      rounded-full
+
+                      bg-[#2563EB]
+
+                      transition-all
+                      duration-300
+
+                      group-hover:scale-125
+                    "
+                  />
+
                 </div>
 
-                {/* Text */}
-                <p className="mt-6 text-lg font-medium leading-8 text-[#102A56]">
+                {/* Divider */}
+
+                <div className="my-4 h-px w-full bg-[#E8EEF7]" />
+
+                {/* Outcome */}
+
+                <h3
+                  className="
+                    text-[18px]
+                    font-semibold
+
+                    leading-8
+
+                    tracking-[-0.02em]
+
+                    text-[#102A56]
+                  "
+                >
                   {outcome}
-                </p>
+                </h3>
+
               </div>
+
             ))}
+
           </div>
+
         </div>
+
       </Container>
-    </section>
+
+    </Section>
   );
 }

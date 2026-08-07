@@ -3,6 +3,8 @@ import BusinessValue from "@/components/services/shared/BusinessValue";
 import Deliverables from "@/components/services/shared/Deliverables";
 import Workflow from "@/components/services/shared/Workflow";
 import Technologies from "@/components/services/shared/Technologies";
+import WhyWorkWithMe from "@/components/services/shared/WhyWorkWithMe";
+import CTA from "@/components/services/shared/CTA";
 
 import data from "./data";
 
@@ -26,6 +28,18 @@ export default function ExecutiveDashboards() {
 
       <Technologies
         technologies={data.technologies}
+      />
+
+      <WhyWorkWithMe
+        description={data.whyWorkWithMe.description}
+        strengths={data.whyWorkWithMe.strengths}
+      />
+
+      <CTA
+        title={data.cta.title}
+        description={data.cta.description}
+        buttonText={data.cta.buttonText}
+        buttonHref={data.cta.buttonHref}
       />
     </>
   );

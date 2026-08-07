@@ -1,5 +1,7 @@
 import Link from "next/link";
+
 import Container from "@/components/ui/Container";
+
 import type { HeroSection } from "@/types/service";
 
 interface ServiceHeroProps {
@@ -10,96 +12,441 @@ export default function ServiceHero({
   hero,
 }: ServiceHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-[#FBFCFE] py-16 lg:py-20">
-      {/* Background */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -right-28 -top-28 h-[420px] w-[420px] rounded-full bg-[#EEF5FF] opacity-60 blur-3xl" />
+    <section
+      className="
+        relative
+        overflow-hidden
 
-        <div className="absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-[#F4F8FF] opacity-80 blur-3xl" />
+        bg-[#FBFCFE]
+
+        pt-12
+        pb-14
+
+        lg:pt-16
+        lg:pb-20
+      "
+    >
+      {/* ========================================= */}
+      {/* Background */}
+      {/* ========================================= */}
+
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+
+        <div
+          className="
+            absolute
+            -right-28
+            -top-28
+
+            h-[420px]
+            w-[420px]
+
+            rounded-full
+
+            bg-[#EEF5FF]
+
+            opacity-70
+
+            blur-[120px]
+          "
+        />
+
+        <div
+          className="
+            absolute
+            -left-24
+            bottom-0
+
+            h-[320px]
+            w-[320px]
+
+            rounded-full
+
+            bg-[#F4F8FF]
+
+            opacity-80
+
+            blur-[110px]
+          "
+        />
+
       </div>
 
       <Container>
-        <div className="relative z-10 grid items-center gap-16 lg:grid-cols-2">
-          {/* Left */}
-          <div>
-            <div className="flex items-center gap-5">
-              <div className="h-px w-16 bg-[#123A63]" />
 
-              <span className="text-xs font-semibold uppercase tracking-[0.45em] text-[#123A63]">
+        <div
+          className="
+            relative
+            z-10
+
+            grid
+            items-center
+
+            gap-10
+
+            lg:grid-cols-2
+            lg:gap-12
+          "
+        >
+
+          {/* ========================================= */}
+          {/* Left */}
+          {/* ========================================= */}
+
+          <div
+  className="
+    mt-4
+
+    max-w-[560px]
+
+    lg:mt-6
+  "
+>
+
+            {/* Label */}
+
+            <div className="flex items-center gap-4">
+
+              <div className="h-px w-14 bg-[#2563EB]" />
+
+              <span
+                className="
+                  text-[11px]
+                  font-semibold
+
+                  uppercase
+
+                  tracking-[0.32em]
+
+                  text-[#2563EB]
+                "
+              >
                 Professional Service
               </span>
+
             </div>
 
-            <p className="mt-8 text-base font-semibold text-[#2563EB]">
+            {/* Service Name */}
+
+            <p
+              className="
+                mt-6
+
+                text-[15px]
+                font-semibold
+
+                text-[#2563EB]
+              "
+            >
               {hero.title}
             </p>
 
-            <h1 className="mt-5 text-5xl font-bold leading-tight tracking-[-0.04em] text-[#102A56] lg:text-6xl">
+            {/* Headline */}
+
+            <h1
+              className="
+                mt-4
+
+                max-w-[620px]
+
+                text-[34px]
+                font-bold
+
+                leading-[1.08]
+
+                tracking-[-0.04em]
+
+                text-[#102A56]
+
+                md:text-[35px]
+                lg:text-[40px]
+              "
+            >
               {hero.headline}
             </h1>
 
-            <div className="mt-6 h-1 w-20 rounded-full bg-[#2563EB]" />
+            {/* Accent */}
 
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600">
+            <div
+              className="
+                mt-5
+
+                h-1
+                w-20
+
+                rounded-full
+
+                bg-[#2563EB]
+              "
+            />
+
+            {/* Description */}
+
+            <p
+              className="
+                mt-6
+
+                max-w-[560px]
+
+                text-[17px]
+                leading-8
+
+                text-slate-600
+              "
+            >
               {hero.description}
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="rounded-xl bg-[#123A63] px-7 py-4 font-semibold text-white transition hover:bg-[#0f3154]"
-              >
-                Let's Talk
-              </Link>
+            {/* Buttons */}
+
+            <div className="mt-8 flex flex-wrap gap-3">
+
+
 
               <Link
-                href="/contact"
-                className="rounded-xl border border-slate-300 bg-white px-7 py-4 font-semibold text-[#123A63] transition hover:border-[#123A63]"
+                href="/case-studies"
+                className="
+                  inline-flex
+                  items-center
+                  justify-center
+
+                  rounded-xl
+
+                  border
+                  border-[#D7E5FB]
+
+                  bg-white
+
+                  px-7
+                  py-4
+
+                  font-semibold
+
+                  text-[#123A63]
+
+                  transition-all
+                  duration-300
+
+                  hover:border-[#2563EB]
+                  hover:bg-[#F9FBFF]
+                "
               >
-                View Case Studies
+                Explore Projects
               </Link>
+
             </div>
+
           </div>
+                    {/* ========================================= */}
+          {/* Right Side */}
+          {/* ========================================= */}
 
-          {/* Right */}
-          <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-xl">
-            <span className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2563EB]">
-              Executive Focus
-            </span>
+          <div className="relative flex justify-center lg:justify-end">
 
-            <h3 className="mt-4 text-3xl font-bold text-[#102A56]">
-              Decision Support
-            </h3>
+            {/* Glow */}
 
-            <p className="mt-4 leading-8 text-slate-600">
-              Every dashboard is designed to help leadership monitor
-              performance, evaluate KPIs, and make faster business decisions.
-            </p>
+            <div
+              className="
+                absolute
 
-            <div className="mt-8 space-y-4">
-              {[
-                "Executive KPI Monitoring",
-                "Interactive Power BI Dashboards",
-                "Business Performance Visibility",
-                "Strategic Decision Support",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-3 rounded-xl bg-slate-50 px-4 py-3"
+                h-[360px]
+                w-[360px]
+
+                rounded-full
+
+                bg-[#2563EB]/8
+
+                blur-[90px]
+              "
+            />
+
+            {/* Executive Card */}
+
+            <div
+              className="
+                relative
+
+                w-full
+                max-w-[500px]
+
+                overflow-hidden
+
+                rounded-[26px]
+
+                border
+                border-[#E7EEF8]
+
+                bg-white
+
+                shadow-[0_24px_60px_rgba(18,58,99,0.10)]
+
+                transition-all
+                duration-500
+
+                hover:-translate-y-1
+                hover:shadow-[0_34px_70px_rgba(18,58,99,0.14)]
+              "
+            >
+
+              {/* Header */}
+
+              <div className="border-b border-[#EEF3FA] px-6 py-5">
+
+                <span
+                  className="
+                    text-[11px]
+                    font-semibold
+
+                    uppercase
+
+                    tracking-[0.22em]
+
+                    text-[#2563EB]
+                  "
                 >
-                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#123A63] text-xs font-bold text-white">
-                    ✓
+                  Executive Focus
+                </span>
+
+                <h3
+                  className="
+                    mt-2
+
+                    text-[24px]
+                    font-bold
+
+                    tracking-[-0.03em]
+
+                    text-[#102A56]
+                  "
+                >
+                  {hero.executiveTitle}
+                </h3>
+
+                <p
+                  className="
+                    mt-3
+
+                    text-[15px]
+                    leading-7
+
+                    text-slate-600
+                  "
+                >
+                  {hero.executiveDescription}
+                </p>
+
+              </div>
+
+              {/* Highlights */}
+
+              <div className="px-6 py-5 space-y-3">
+
+                {hero.highlights.map((item, index) => (
+
+                  <div
+                    key={item}
+                    className="
+                      flex
+                      items-center
+                      gap-4
+
+                      rounded-xl
+
+                      border
+                      border-[#EEF3FA]
+
+                      bg-[#FBFCFF]
+
+                      px-4
+                      py-3
+
+                      transition-all
+                      duration-300
+
+                      hover:border-[#DCE8FB]
+                      hover:bg-[#F8FBFF]
+                    "
+                  >
+
+                    <span
+                      className="
+                        text-[13px]
+                        font-semibold
+
+                        tracking-[0.15em]
+
+                        text-[#2563EB]
+                      "
+                    >
+                      {(index + 1).toString().padStart(2, "0")}
+                    </span>
+
+                    <span
+                      className="
+                        text-[15px]
+                        font-medium
+
+                        text-[#102A56]
+                      "
+                    >
+                      {item}
+                    </span>
+
                   </div>
 
-                  <span className="text-sm font-medium text-[#102A56]">
-                    {item}
+                ))}
+
+              </div>
+
+              {/* Footer */}
+
+              <div
+                className="
+                  border-t
+                  border-[#EEF3FA]
+
+                  bg-[#FBFCFE]
+
+                  px-6
+                  py-5
+                "
+              >
+
+                <div className="flex items-center justify-between">
+
+                  <span
+                    className="
+                      text-[13px]
+                      text-slate-500
+                    "
+                  >
+                    Designed for executive leadership
                   </span>
+
+                  <div
+                    className="
+                      h-2
+                      w-2
+
+                      rounded-full
+
+                      bg-[#2563EB]
+                    "
+                  />
+
                 </div>
-              ))}
+
+              </div>
+
             </div>
+
           </div>
+
         </div>
+
       </Container>
+
     </section>
+
   );
 }

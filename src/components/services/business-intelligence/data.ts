@@ -8,83 +8,75 @@ const data = {
     title: "Business Intelligence",
 
     headline:
-      "Business Intelligence Solutions That Transform Data Into Strategic Business Insight",
+      "Business Intelligence Solutions That Turn Business Data Into Strategic Insight",
 
-    description: `Business Intelligence is more than dashboards and reports—it's a strategic approach to transforming business data into meaningful insight that supports confident decision-making.
+    description: `Business Intelligence goes beyond reporting by helping organizations understand why performance changes, where opportunities exist, and which actions create the greatest business impact.
 
-I design Business Intelligence solutions that connect data, define meaningful KPIs, and deliver interactive analytical experiences that improve visibility across the organization. Every solution is built around business objectives, reporting clarity, and long-term analytical sustainability.`,
+I design Business Intelligence solutions that connect business data, uncover meaningful patterns, and transform information into actionable insights that support strategic planning, operational improvement, and executive decision-making.`,
+
+    executiveTitle: "Strategic Intelligence",
+
+    executiveDescription: `Designed to transform business information into meaningful insights that help leadership teams identify trends, measure performance, and make informed strategic decisions with confidence.`,
+
+    highlights: [
+      "Strategic Business Insights",
+      "Trend Analysis",
+      "Performance Intelligence",
+      "Executive Decision Support",
+    ],
   } satisfies HeroSection,
 
   businessValue: {
-    description: `Business Intelligence helps organizations transform raw data into meaningful insights that support strategic planning and operational improvement.
+    description: `Business Intelligence enables organizations to move beyond reporting by understanding business performance at a deeper level.
 
-This service provides a structured analytical environment where business leaders can monitor performance, identify trends, reduce fragmented reporting, and make faster, evidence-based decisions with confidence.`,
+Instead of simply presenting numbers, analytical models reveal trends, patterns, and opportunities that help leadership teams improve planning, optimize operations, and make proactive business decisions supported by reliable data.`,
 
     benefits: [
-      "Improved business visibility",
-      "Strategic KPI monitoring",
-      "Evidence-based decision-making",
-      "Trend and variance analysis",
-      "Reduced fragmented reporting",
-      "Cross-department performance insights",
-      "Reliable executive reporting",
-      "Scalable analytical framework",
-      "Better alignment between data and strategy",
+      "Strategic business visibility",
+      "Performance trend analysis",
+      "Data-driven decision-making",
+      "Business opportunity identification",
+      "Cross-functional business insights",
+      "Long-term analytical capability",
     ],
   },
 
   deliverables: [
-    "Business Intelligence Strategy Framework",
-    "Interactive Power BI Dashboards",
-    "Executive BI Reports",
-    "KPI Framework Design",
-    "Data Modeling Architecture",
+    "Business Intelligence Framework",
+    "Interactive Analytical Dashboards",
+    "Executive Intelligence Reports",
     "Business Performance Analysis",
-    "Cross-Department Performance Views",
     "Trend & Variance Analysis",
-    "Executive Summary Reporting",
-    "Power Query Data Transformation",
-    "Advanced DAX Measures",
-    "Reporting Documentation",
-    "Business Intelligence User Guide",
-    "Recommendations for Future BI Enhancements",
+    "KPI Intelligence Framework",
+    "Analytical Data Model",
+    "Business Intelligence Documentation",
   ],
 
   workflow: [
     {
       title: "Business Discovery",
       description:
-        "Understand business objectives, reporting challenges, stakeholders, available data sources, and strategic priorities.",
+        "Understand strategic objectives, business challenges, operational priorities, and the key decisions that require analytical support.",
     },
     {
-      title: "Business Analysis",
+      title: "Analytical Strategy",
       description:
-        "Define business questions, KPIs, analytical requirements, and reporting priorities aligned with organizational goals.",
+        "Define business questions, analytical objectives, KPIs, and insight requirements that align with organizational strategy.",
     },
     {
-      title: "Data Preparation",
+      title: "Data Integration",
       description:
-        "Prepare, clean, transform, and model business data to ensure reliable analytical outcomes.",
+        "Prepare, transform, and model business data to establish a reliable analytical foundation for Business Intelligence.",
     },
     {
-      title: "Solution Design",
+      title: "Insight Development",
       description:
-        "Design a Business Intelligence framework that delivers clear insights through interactive dashboards and executive reporting.",
+        "Develop analytical models and interactive reporting experiences that reveal trends, patterns, and performance opportunities.",
     },
     {
-      title: "Development",
+      title: "Business Adoption",
       description:
-        "Develop analytical models, Power BI reports, DAX calculations, and interactive reporting experiences.",
-    },
-    {
-      title: "Validation",
-      description:
-        "Validate business logic, KPI calculations, and reporting accuracy before deployment.",
-    },
-    {
-      title: "Delivery & Adoption",
-      description:
-        "Deliver the complete BI solution with documentation and guidance to support long-term adoption.",
+        "Deliver the complete Business Intelligence solution with documentation and guidance that supports long-term analytical decision-making.",
     },
   ] satisfies WorkflowStep[],
 
@@ -93,25 +85,49 @@ This service provides a structured analytical environment where business leaders
     "Microsoft Excel",
     "Power Query",
     "DAX",
-    "Power Pivot",
-    "Microsoft 365",
     "Data Modeling",
-    "Data Visualization",
-    "Business Process Analysis",
-    "Reporting Automation",
-    "KPI Framework Design",
-    "Executive Reporting",
+    "Business Intelligence",
+    "Trend Analysis",
+    "Executive Analytics",
   ],
 
+  whyWorkWithMe: {
+    description:
+      "Business Intelligence should answer business questions—not simply display data. I focus on transforming information into insights that help organizations understand performance and make better strategic decisions.",
+
+    strengths: [
+      {
+        title: "Insight Before Reporting",
+        description:
+          "I begin by identifying the business questions leaders need answered before designing analytical solutions or visual reports.",
+      },
+      {
+        title: "Strategic Thinking",
+        description:
+          "Every analysis is designed to connect operational performance with broader business objectives, helping leaders focus on what matters most.",
+      },
+      {
+        title: "Meaningful Business Analysis",
+        description:
+          "I prioritize identifying trends, patterns, and opportunities that create practical business value rather than simply presenting historical data.",
+      },
+      {
+        title: "Designed for Executive Decisions",
+        description:
+          "Every insight is structured to support faster, more informed decisions through clear analytical storytelling and reliable business intelligence.",
+      },
+    ],
+  },
+
   cta: {
-    title: "Ready to Turn Business Data Into Strategic Insight?",
+    title: "Ready to Unlock Better Business Insights?",
 
     description:
-      "Let's build a Business Intelligence solution that transforms your data into reliable insights, strengthens executive reporting, and supports smarter business decisions.",
+      "Let's build a Business Intelligence solution that transforms your business data into meaningful insights, strengthens strategic planning, and supports smarter executive decisions.",
 
     buttonText: "Let's Talk",
 
-    buttonHref: "/contact",
+    buttonHref: "https://www.linkedin.com/in/hagerismail1/",
   },
 };
 

@@ -24,6 +24,25 @@ export interface HeroSection {
   title: string;
   headline: string;
   description: string;
+
+  executiveTitle: string;
+  executiveDescription: string;
+  highlights: string[];
+}
+
+export interface BusinessValueSection {
+  description: string;
+  benefits: string[];
+}
+
+export interface WhyPartnerStrength {
+  title: string;
+  description: string;
+}
+
+export interface WhyPartnerSection {
+  description: string;
+  strengths: WhyPartnerStrength[];
 }
 
 export interface ServiceDetail {
@@ -31,7 +50,7 @@ export interface ServiceDetail {
 
   hero: HeroSection;
 
-  businessValue: string;
+  businessValue: BusinessValueSection;
 
   deliverables: string[];
 
@@ -43,7 +62,7 @@ export interface ServiceDetail {
 
   businessOutcomes: string[];
 
-  whyWorkWithMe: string;
+  whyWorkWithMe: WhyPartnerSection;
 
   faqs: FAQItem[];
 

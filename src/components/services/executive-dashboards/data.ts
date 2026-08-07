@@ -10,81 +10,77 @@ const data = {
     headline:
       "Executive Dashboards That Turn Business Data Into Clear Decisions",
 
-    description: `Executive dashboards are more than visual reports—they are strategic decision-support systems that help leaders understand business performance, monitor critical KPIs, and act with confidence.
+    description: `Modern organizations generate more data than ever, but data alone doesn't drive better decisions.
 
-I design executive dashboards that transform complex business data into clear, interactive insights, enabling executives, department managers, and business leaders to make faster, evidence-based decisions. Every dashboard is built around business objectives, reporting clarity, and meaningful performance measurement to become a trusted part of the organization's reporting ecosystem.`,
+I design executive dashboards that transform complex operational information into clear, interactive reporting experiences, giving leadership teams the visibility they need to monitor performance, identify opportunities, and act with confidence.
+
+Every solution is built around business objectives, meaningful KPIs, and intuitive reporting that supports informed decision-making across the organization.`,
+
+    executiveTitle: "Decision Support",
+
+    executiveDescription: `Built to provide leadership teams with instant access to the metrics that matter most, combining interactive reporting, KPI visibility, and performance insights in one centralized experience.`,
+
+    highlights: [
+      "Real-Time KPI Visibility",
+      "Interactive Reporting",
+      "Cross-Department Insights",
+      "Strategic Decision Support",
+    ],
   } satisfies HeroSection,
 
   businessValue: {
-    description: `Effective executive dashboards do more than visualize data—they provide leaders with a consistent, reliable view of business performance that supports confident decision-making.
+    description: `Reliable reporting creates a common understanding of business performance across the organization.
 
-This service helps organizations establish a unified reporting environment where executives can monitor KPIs, identify trends, reduce manual reporting, and improve visibility across departments. The result is a structured reporting system that enables faster decisions, stronger alignment between teams, and greater confidence in the information driving strategic planning.`,
+This service establishes a structured reporting environment where leadership teams can monitor key metrics, reduce manual reporting, and gain consistent visibility into operational performance.
+
+The outcome is faster decision-making, improved reporting consistency, and greater confidence in the information used to guide strategic initiatives.`,
 
     benefits: [
-      "Single view of business performance",
       "Executive visibility across departments",
       "Real-time KPI monitoring",
       "Reduced manual reporting effort",
-      "Early identification of trends and risks",
       "Faster evidence-based decision-making",
-      "Improved strategic alignment",
       "Standardized executive reporting",
       "Greater confidence in business data",
     ],
   },
 
   deliverables: [
-    "Executive KPI Dashboards",
-    "Department Performance Dashboards",
-    "Interactive Power BI Reports",
+    "Interactive KPI Dashboards",
+    "Department Performance Reports",
     "Executive Summary Pages",
-    "Drill-through Reporting Experience",
-    "Business KPI Framework",
-    "Interactive Filters & Slicers",
-    "Standardized Executive Reporting Layout",
-    "Advanced DAX Measures",
+    "Performance Measurement Framework",
     "Optimized Data Model",
-    "Power Query Data Transformation",
+    "Interactive Filters & Drilldowns",
     "Reporting Documentation",
-    "Dashboard User Guide",
-    "Recommendations for Future Reporting Enhancements",
+    "Power BI Reporting Solution",
   ],
 
   workflow: [
     {
       title: "Business Discovery",
       description:
-        "Understand your business objectives, reporting challenges, stakeholders, data sources, and decision-making requirements to establish a strong project foundation.",
+        "Understand business objectives, stakeholders, reporting challenges, and decision-making requirements.",
     },
     {
-      title: "KPI & Reporting Framework",
+      title: "Strategy & KPI Design",
       description:
-        "Define business questions, KPIs, reporting hierarchy, and the executive reporting structure to ensure every metric supports strategic decisions.",
+        "Define KPIs, reporting structure, business questions, and the reporting framework that aligns with organizational goals.",
     },
     {
       title: "Data Preparation",
       description:
-        "Prepare, clean, transform, and organize data to ensure consistency, accuracy, and reliable reporting.",
+        "Clean, transform, model, and validate business data to ensure reporting accuracy and consistency.",
     },
     {
-      title: "Dashboard Design",
+      title: "Solution Development",
       description:
-        "Design an executive-focused reporting experience with intuitive navigation, meaningful visualizations, and a clear business storytelling approach.",
+        "Build interactive reporting solutions using optimized data models, DAX calculations, and intuitive user experiences.",
     },
     {
-      title: "Development",
+      title: "Deployment & Enablement",
       description:
-        "Build scalable Power BI dashboards using optimized data models, DAX calculations, and interactive reporting capabilities.",
-    },
-    {
-      title: "Validation",
-      description:
-        "Review business logic, validate KPIs, verify calculations, and confirm reporting accuracy with stakeholders before delivery.",
-    },
-    {
-      title: "Deployment & Knowledge Transfer",
-      description:
-        "Deploy the final solution, provide documentation, and ensure users can confidently interpret and use the dashboards.",
+        "Validate the final solution, deploy the reports, and provide documentation that supports confident business adoption.",
     },
   ] satisfies WorkflowStep[],
 
@@ -93,25 +89,48 @@ This service helps organizations establish a unified reporting environment where
     "Microsoft Excel",
     "Power Query",
     "DAX",
-    "Power Pivot",
-    "Microsoft 365",
     "Data Modeling",
     "Data Visualization",
-    "Business Process Analysis",
-    "Reporting Automation",
     "KPI Framework Design",
     "Executive Reporting",
   ],
+  whyWorkWithMe: {
+    description:
+      "I don't build dashboards to display data—I build reporting solutions that help leaders understand performance, make informed decisions, and create lasting business value.",
+
+    strengths: [
+      {
+        title: "Business Before Dashboards",
+        description:
+          "Every project starts with understanding business goals, decision-making needs, and reporting challenges before designing a single visual.",
+      },
+      {
+        title: "Executive-Focused Reporting",
+        description:
+          "I design reporting experiences that help executives monitor KPIs, identify trends, and focus on the metrics that truly drive business performance.",
+      },
+      {
+        title: "Structured & Reliable Solutions",
+        description:
+          "From data preparation to final reporting, every solution follows a structured methodology that prioritizes accuracy, consistency, and long-term scalability.",
+      },
+      {
+        title: "Designed for Better Decisions",
+        description:
+          "Every dashboard, KPI, and interaction is intentionally designed to simplify complex information and support faster, more confident business decisions.",
+      },
+    ],
+  },
 
   cta: {
     title: "Ready to Transform Your Business Reporting?",
 
     description:
-      "Let's build executive dashboards that transform complex business data into clear insights, strengthen executive decision-making, and help your leadership team monitor performance with confidence.",
+      "Let's build a reporting solution that gives your leadership team the visibility, clarity, and confidence needed to make faster, better-informed business decisions.",
 
     buttonText: "Let's Talk",
 
-    buttonHref: "/contact",
+    buttonHref: "https://www.linkedin.com/in/hagerismail1/",
   },
 };
 

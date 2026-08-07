@@ -1,4 +1,7 @@
+import Section from "@/components/ui/Section";
+import SectionIntro from "@/components/ui/SectionIntro";
 import Container from "@/components/ui/Container";
+
 
 interface BusinessValueProps {
   title?: string;
@@ -12,55 +15,145 @@ export default function BusinessValue({
   benefits,
 }: BusinessValueProps) {
   return (
-    <section className="bg-white py-20 lg:py-24">
-      <Container>
-        <div className="mx-auto max-w-7xl">
-          {/* Section Header */}
-          <div className="flex items-center gap-5">
-            <div className="h-px w-16 bg-[#123A63]" />
+    <Section
+      background="white"
+      className="relative"
+    >
+  <Container>
 
-            <span className="text-xs font-semibold uppercase tracking-[0.45em] text-[#123A63]">
-              Value
-            </span>
+    <div className="mx-auto max-w-[1180px]">
+        {/* ========================================= */}
+        {/* Section Intro */}
+        {/* ========================================= */}
+
+        <SectionIntro
+          eyebrow="Value"
+          title={title}
+          description="Discover the strategic business value delivered through this service."
+          align="center"
+          className="mx-auto mb-10 max-w-[720px]"
+        />
+
+        {/* ========================================= */}
+        {/* Content */}
+        {/* ========================================= */}
+
+        <div className="
+            grid
+            items-start
+
+            gap-10
+
+            lg:grid-cols-[1.2fr_0.95fr]
+            lg:gap-12
+          "
+        >
+
+          {/* ========================================= */}
+          {/* Description */}
+          {/* ========================================= */}
+
+          <div>
+
+            <p
+              className="
+                text-[16px]
+                leading-8
+
+                text-slate-600
+              "
+            >
+              {description}
+            </p>
+
           </div>
 
-          {/* Title */}
-          <h2 className="mt-6 text-4xl font-bold tracking-[-0.03em] text-[#102A56] lg:text-5xl">
-            {title}
-          </h2>
+          {/* ========================================= */}
+          {/* Benefits */}
+          {/* ========================================= */}
 
-          {/* Accent */}
-          <div className="mt-5 h-1 w-20 rounded-full bg-[#2563EB]" />
+        
+                      {/* ========================================= */}
+          {/* Executive Benefits */}
+          {/* ========================================= */}
 
-          {/* Content */}
-          <div className="mt-12 grid gap-12 lg:grid-cols-[1.2fr_1fr]">
-            {/* Description */}
-            <div>
-              <p className="text-lg leading-9 text-slate-600">
-                {description}
-              </p>
-            </div>
+          <div className="grid gap-4 sm:grid-cols-2">
 
-            {/* Benefits */}
-            <div className="grid gap-3 sm:grid-cols-2">
-              {benefits?.map((benefit) => (
-                <div
-                  key={benefit}
-                  className="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 transition-all duration-300 hover:border-[#2563EB] hover:bg-white hover:shadow-md"
-                >
-                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#123A63] text-xs font-bold text-white">
-                    ✓
-                  </div>
+            {benefits.map((benefit, index) => (
 
-                  <p className="text-[13px] font-medium leading-6 text-[#102A56]">
-                    {benefit}
-                  </p>
+              <div
+                key={benefit}
+                className="
+                  group
+
+                  rounded-[20px]
+
+                  border
+                  border-[#E8EEF7]
+
+                  bg-white
+
+                  px-5
+                  py-5
+
+                  transition-all
+                  duration-300
+
+                  hover:-translate-y-1
+                  hover:border-[#D6E5FB]
+                  hover:shadow-[0_14px_34px_rgba(18,58,99,0.08)]
+                "
+              >
+
+                {/* Header */}
+
+                <div className="flex items-center gap-3">
+
+                  <span
+                    className="
+                      text-[13px]
+                      font-semibold
+
+                      tracking-[0.18em]
+
+                      text-[#2563EB]
+                    "
+                  >
+                    {(index + 1).toString().padStart(2, "0")}
+                  </span>
+
+                  <div className="h-px flex-1 bg-[#E8EEF7]" />
+
                 </div>
-              ))}
-            </div>
+
+                {/* Benefit */}
+
+                <p
+                  className="
+                    mt-4
+
+                    text-[15px]
+                    font-medium
+                    leading-7
+
+                    tracking-[-0.01em]
+
+                    text-[#102A56]
+                  "
+                >
+                  {benefit}
+                </p>
+
+              </div>
+
+            ))}
+
           </div>
+
         </div>
+  </div> 
       </Container>
-    </section>
+
+    </Section>
   );
 }

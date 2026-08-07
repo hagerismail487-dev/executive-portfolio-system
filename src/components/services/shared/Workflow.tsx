@@ -1,4 +1,7 @@
 import Container from "@/components/ui/Container";
+import Section from "@/components/ui/Section";
+import SectionIntro from "@/components/ui/SectionIntro";
+
 import type { WorkflowStep } from "@/types/service";
 
 interface WorkflowProps {
@@ -11,75 +14,164 @@ export default function Workflow({
   steps,
 }: WorkflowProps) {
   return (
-    <section className="bg-white py-16 lg:py-20">
+    <Section className="bg-white">
+
       <Container>
-        <div className="mx-auto max-w-7xl">
-          {/* Section Header */}
-          <div className="flex items-center gap-5">
-            <div className="h-px w-16 bg-[#123A63]" />
 
-            <span className="text-xs font-semibold uppercase tracking-[0.45em] text-[#123A63]">
-              Process
-            </span>
-          </div>
+        <div className="mx-auto max-w-[920px]">
 
-          {/* Title */}
-          <h2 className="mt-6 text-4xl font-bold tracking-[-0.03em] text-[#102A56] lg:text-5xl">
-            {title}
-          </h2>
+          <SectionIntro
+            eyebrow="Workflow"
+            title={title}
+            description="A structured methodology that transforms business requirements into reliable reporting solutions and measurable business outcomes."
+            align="center"
+            className="mx-auto mb-12 max-w-[720px]"
+          />
 
-          {/* Accent */}
-          <div className="mt-5 h-1 w-20 rounded-full bg-[#2563EB]" />
+          {/* ========================================= */}
+          {/* Executive Timeline */}
+          {/* ========================================= */}
 
-          {/* Desktop Timeline */}
-          <div className="relative mt-16 hidden xl:block">
-            <div className="absolute left-0 right-0 top-5 h-px bg-slate-300" />
+          <div className="relative">
 
-            <div className="grid grid-cols-7 gap-6">
-              {steps.map((step, index) => (
-                <div key={step.title} className="relative text-center">
-                  {/* Circle */}
-                  <div className="relative z-10 mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-[#123A63] text-sm font-bold text-white shadow-md">
-                    {String(index + 1).padStart(2, "0")}
+            {/* Vertical Line */}
+
+            <div
+              className="
+                absolute
+
+                left-[19px]
+                top-2
+                bottom-2
+
+                w-px
+
+                bg-[#E5EDF8]
+              "
+            />
+
+            <div className="space-y-5">
+                              {steps.map((step, index) => (
+
+                <div
+                  key={step.title}
+                  className="
+                    relative
+
+                    flex
+                    gap-6
+                  "
+                >
+
+                  {/* ========================================= */}
+                  {/* Timeline Number */}
+                  {/* ========================================= */}
+
+                  <div
+                    className="
+                      relative
+                      z-10
+
+                      flex
+                      h-10
+                      w-10
+
+                      shrink-0
+
+                      items-center
+                      justify-center
+
+                      rounded-full
+
+                      border-2
+                      border-[#2563EB]
+
+                      bg-white
+
+                      text-[13px]
+                      font-semibold
+
+                      tracking-[0.12em]
+
+                      text-[#2563EB]
+                    "
+                  >
+                    {(index + 1).toString().padStart(2, "0")}
                   </div>
 
-                  {/* Title */}
-                  <h3 className="mt-6 text-base font-semibold leading-6 text-[#102A56]">
-                    {step.title}
-                  </h3>
+                  {/* ========================================= */}
+                  {/* Card */}
+                  {/* ========================================= */}
 
-                  {/* Description */}
-                  <p className="mt-3 text-sm leading-6 text-slate-600">
-                    {step.description}
-                  </p>
+                  <div
+                    className="
+                      group
+
+                      flex-1
+
+                      rounded-[22px]
+
+                      border
+                      border-[#E8EEF7]
+
+                      bg-white
+
+                      px-5
+                      py-4
+
+                      transition-all
+                      duration-300
+
+                      hover:-translate-y-1
+                      hover:border-[#D6E5FB]
+                      hover:shadow-[0_18px_40px_rgba(18,58,99,0.08)]
+                    "
+                  >
+
+                    <h3
+                      className="
+                        text-[21px]
+                        font-semibold
+
+                        leading-tight
+
+                        tracking-[-0.02em]
+
+                        text-[#102A56]
+                      "
+                    >
+                      {step.title}
+                    </h3>
+
+                    <div className="mt-2 h-px w-full bg-[#E8EEF7]" />
+
+                    <p
+                      className="
+                        mt-2
+
+                        text-[15px]
+                        leading-7
+
+                        text-slate-600
+                      "
+                    >
+                      {step.description}
+                    </p>
+
+                  </div>
+
                 </div>
+
               ))}
+
             </div>
+
           </div>
 
-          {/* Tablet & Mobile */}
-          <div className="mt-8 grid gap-5 md:grid-cols-2 xl:hidden">
-            {steps.map((step, index) => (
-              <div
-                key={step.title}
-                className="rounded-2xl border border-slate-200 bg-white p-6"
-              >
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#123A63] text-sm font-bold text-white">
-                  {String(index + 1).padStart(2, "0")}
-                </div>
-
-                <h3 className="mt-5 text-lg font-semibold text-[#102A56]">
-                  {step.title}
-                </h3>
-
-                <p className="mt-3 text-sm leading-7 text-slate-600">
-                  {step.description}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
+
       </Container>
-    </section>
+
+    </Section>
   );
 }
