@@ -1,338 +1,674 @@
 import {
-  CalendarDays,
   Mail,
+  MapPin,
 } from "lucide-react";
 
-import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
-import SectionHeader from "@/components/ui/SectionHeader";
 
 export default function Contact() {
   return (
     <Section
       id="contact"
-      className="relative overflow-hidden bg-[#FBFCFE]"
+      className="
+        !bg-[#061C3A]
+
+        relative
+        overflow-hidden
+
+        py-16
+        lg:py-20
+      "
     >
-      <Container>
+      {/* ========================================= */}
+      {/* Background */}
+      {/* ========================================= */}
+
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+
+        {/* Grid */}
 
         <div
           className="
-            relative
-            overflow-hidden
+            absolute
+            inset-0
 
-            rounded-[24px]
+            opacity-[0.18]
 
-            border
-            border-[#E8EEF7]
+            bg-[linear-gradient(to_right,#1E4B80_1px,transparent_1px),linear-gradient(to_bottom,#1E4B80_1px,transparent_1px)]
 
-            bg-white
+            bg-[size:48px_48px]
+          "
+        />
 
-           shadow-[0_18px_45px_rgba(18,58,99,0.08)]
+        {/* Right Glow */}
+
+        <div
+          className="
+            absolute
+            -right-24
+            -top-24
+
+            h-[380px]
+            w-[380px]
+
+            rounded-full
+
+            bg-[#2563EB]
+
+            opacity-20
+
+            blur-[120px]
+          "
+        />
+
+        {/* Left Glow */}
+
+        <div
+          className="
+            absolute
+            -left-32
+            -bottom-32
+
+            h-[420px]
+            w-[420px]
+
+            rounded-full
+
+            bg-[#0B5ED7]
+
+            opacity-20
+
+            blur-[130px]
+          "
+        />
+
+        {/* Right Dots */}
+
+        <div
+          className="
+            absolute
+            right-8
+            top-10
+
+            opacity-30
           "
         >
+          <div className="grid grid-cols-7 gap-3">
+            {Array.from({ length: 49 }).map((_, index) => (
+              <div
+                key={index}
+                className="
+                  h-1
+                  w-1
+                  rounded-full
+                  bg-[#3B82F6]
+                "
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Left Circles */}
+
+        <div
+          className="
+            absolute
+            -left-[180px]
+            bottom-[-180px]
+
+            h-[440px]
+            w-[440px]
+
+            rounded-full
+
+            border
+            border-[#1D4F85]/40
+          "
+        />
+
+        <div
+          className="
+            absolute
+            -left-[130px]
+            bottom-[-130px]
+
+            h-[340px]
+            w-[340px]
+
+            rounded-full
+
+            border
+            border-[#1D4F85]/30
+          "
+        />
+
+      </div>
+
+      {/* ========================================= */}
+      {/* Content */}
+      {/* ========================================= */}
+
+      <Container>
+
+        <div className="relative z-10">
 
           {/* ========================================= */}
-          {/* Decorative Background */}
+          {/* Section Header */}
           {/* ========================================= */}
 
-          <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="flex flex-col items-center text-center">
 
-            {/* Top Left Dots */}
+            <div
+              className="
+                flex
+                items-center
+                gap-3
 
-            <div className="absolute left-6 top-6 opacity-15">
+                text-[10px]
+                font-semibold
+                uppercase
+                tracking-[0.28em]
 
-              <div className="grid grid-cols-7 gap-3">
+                text-[#5FA0FF]
+              "
+            >
+              <span
+                className="
+                  h-px
+                  w-10
+                  bg-[#2563EB]
+                "
+              />
 
-                {Array.from({ length: 49 }).map((_, index) => (
+              <span>
+                Let's Connect
+              </span>
 
-                  <div
-                    key={index}
-                    className="h-1 w-1 rounded-full bg-[#C8DBFF]"
-                  />
+              <span
+                className="
+                  h-px
+                  w-10
+                  bg-[#2563EB]
+                "
+              />
+            </div>
 
-                ))}
+          </div>
+
+          {/* ========================================= */}
+          {/* Main Content */}
+          {/* ========================================= */}
+
+          <div
+            className="
+              mt-10
+
+              grid
+              items-center
+
+              gap-12
+
+              lg:grid-cols-[1.35fr_0.9fr]
+              lg:gap-16
+            "
+          >
+
+            {/* ========================================= */}
+            {/* Left */}
+            {/* ========================================= */}
+
+            <div className="max-w-[650px]">
+
+              <h2
+                className="
+                  text-[36px]
+                  font-bold
+                  leading-[1.08]
+                  tracking-[-0.04em]
+
+                  !text-white
+
+                  sm:text-[42px]
+                  lg:text-[48px]
+                "
+              >
+                Let's Build Something
+
+
+                <br />
+
+                
+                <span className="!text-[#3B82F6]">
+                  Great Together
+                </span>
+              </h2>
+
+              {/* Accent */}
+
+              <div
+                className="
+                  mt-5
+
+                  h-[3px]
+                  w-20
+
+                  rounded-full
+
+                  bg-[#2563EB]
+                "
+              />
+
+              {/* Description */}
+
+             <p
+  className="
+    mt-5
+    max-w-[600px]
+
+    text-[15px]
+    leading-7
+
+    !text-[#C9D9EC]
+
+    sm:text-[16px]
+  "
+>
+  <span className="block">
+    Have a project in mind?
+  </span>
+
+  <span className="block">
+    Let's discuss how executive reporting, business intelligence,
+    performance analytics, and dashboards can help your organization
+    make faster, smarter, and more confident business decisions.
+  </span>
+</p>
+              {/* ========================================= */}
+              {/* Actions */}
+              {/* ========================================= */}
+
+              <div className="mt-7 flex flex-wrap gap-3">
+
+                {/* Let's Talk */}
+
+<a
+  href="https://www.linkedin.com/in/hagerismail1"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    inline-flex
+    items-center
+    justify-center
+    gap-2
+
+    min-w-[125px]
+
+    rounded-lg
+
+    border
+    border-[#2563EB]
+
+    bg-[#2563EB]
+
+    px-6
+    py-3.5
+
+    text-[15px]
+    font-semibold
+
+    !text-white
+
+    transition-all
+    duration-300
+
+    hover:-translate-y-1
+
+    hover:border-[#3B82F6]
+    hover:bg-[#3B82F6]
+    hover:!text-white
+
+    active:translate-y-0
+
+    focus:outline-none
+    focus-visible:ring-2
+    focus-visible:ring-[#3B82F6]
+    focus-visible:ring-offset-2
+    focus-visible:ring-offset-[#061C3A]
+  "
+>
+  Let's Talk
+
+  <span>
+    →
+  </span>
+</a>
+
+                {/* Download CV */}
+
+               <a
+  href="/identity/Hager-Ismail-CV.pdf"
+  download="Hager-Ismail-CV.pdf"
+  className="
+    inline-flex
+    items-center
+    justify-center
+    gap-2
+
+    min-w-[145px]
+
+    rounded-lg
+
+    border
+    border-[#6F9BCB]
+
+    bg-transparent
+
+    px-6
+    py-3.5
+
+    text-[15px]
+    font-semibold
+
+    !text-white
+
+    transition-all
+    duration-300
+
+    hover:-translate-y-1
+
+    hover:border-[#8FB3D7]
+    hover:bg-[#0D3768]
+    hover:!text-white
+
+    active:translate-y-0
+    active:bg-[#123A63]
+    active:!text-white
+
+    focus:outline-none
+    focus-visible:ring-2
+    focus-visible:ring-[#3B82F6]
+    focus-visible:ring-offset-2
+    focus-visible:ring-offset-[#061C3A]
+  "
+>
+  Download CV
+
+  <span>
+    ↓
+  </span>
+</a>
 
               </div>
 
             </div>
 
-            {/* Top Right Glow */}
+            {/* ========================================= */}
+            {/* Right Contact Card */}
+            {/* ========================================= */}
 
-            <div className="absolute -right-20 -top-20 h-[320px] w-[320px] rounded-full bg-[#EEF5FF] opacity-60 blur-3xl" />
+            <div
+              className="
+                relative
 
-            {/* Bottom Left Glow */}
+                overflow-hidden
 
-            <div className="absolute -bottom-14 -left-14 h-60 w-60 rounded-full bg-[#F4F8FF] opacity-80 blur-3xl" />
+                rounded-[22px]
 
-            {/* Bottom Waves */}
+                border
+                border-[#24558A]
 
-            <svg
-              className="absolute bottom-0 left-0 w-full opacity-70"
-              viewBox="0 0 1440 220"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+                bg-[#09284E]
+
+                p-6
+
+                shadow-[0_20px_50px_rgba(0,0,0,0.15)]
+
+                sm:p-7
+              "
             >
 
-              <path
-                d="M0 120C220 210 420 210 720 150C980 100 1180 130 1440 60V220H0Z"
-                fill="#F7FAFF"
+              {/* Top Accent */}
+
+              <div
+                className="
+                  absolute
+                  left-0
+                  top-0
+
+                  h-[2px]
+                  w-20
+
+                  bg-[#2563EB]
+                "
               />
 
-              <path
-                d="M0 145C240 220 470 200 760 160C1040 120 1220 145 1440 100"
-                stroke="#E3EEFF"
-                strokeWidth="2"
-              />
-
-              <path
-                d="M0 170C260 230 520 210 820 180C1080 150 1260 170 1440 140"
-                stroke="#EDF4FF"
-                strokeWidth="2"
-              />
-
-            </svg>
-
-          </div>
-
-          {/* ========================================= */}
-          {/* Content */}
-          {/* ========================================= */}
-
-          <div className="relative z-10 px-6 py-8 sm:px-8 lg:px-12 lg:py-12">
-
-            <SectionHeader>
-              Contact
-            </SectionHeader>
-
-            <div className="mt-10 grid items-center gap-10 xl:grid-cols-[1.35fr_1fr]">
-                              {/* ========================================= */}
-              {/* Left Side */}
+              {/* ========================================= */}
+              {/* Email */}
               {/* ========================================= */}
 
-              <div className="max-w-[520px]">
+              <div className="flex items-center gap-4">
 
-                {/* Heading */}
-
-                <h2
+                <div
                   className="
-                    text-[32px]
-                    font-bold
-                    leading-[1.08]
-                    tracking-[-0.04em]
-                    text-[#102A56]
+                    flex
+                    h-12
+                    w-12
+                    shrink-0
+                    items-center
+                    justify-center
 
-                    md:text-[38px]
-                    lg:text-[44px]
+                    rounded-full
+
+                    border
+                    border-[#2C6DB0]
+
+                    bg-[#0D3768]
+
+                    text-[#5FA0FF]
                   "
                 >
-                  Let's Build Something
+                  <Mail className="h-5 w-5" />
+                </div>
 
-                  <br />
+                <div>
 
-                  Great Together
+                  <p
+                    className="
+                      text-[11px]
+                      font-semibold
+                      uppercase
+                      tracking-[0.16em]
 
-                </h2>
+                      !text-[#8FB3D7]
+                    "
+                  >
+                    Email
+                  </p>
 
-                {/* Accent Line */}
-
-                <div className="mt-4 h-[3px] w-16 mt-5 h-1 w-20 rounded-full bg-[#2563EB]" />
-
-                {/* Description */}
-
-                <p
-                  className="
-                    mt-5
-                    max-w-[500px]
-
-                    text-[16px]
-                    leading-7
-
-                    text-slate-600
-                  "
-                >
-                  Have a project in mind?
-
-                  <br />
-
-                  Let's discuss how executive reporting,
-                  business intelligence,
-                  performance analytics,
-                  and dashboards can help your
-                  organization make faster,
-                  smarter,
-                  and more confident business decisions.
-
-                </p>
-
-                {/* Actions */}
-
-                <div className="mt-7 flex flex-wrap gap-3">
-
-                  <Button
+                  <a
                     href="mailto:hagerismail487@gmail.com"
-                    external
-                    size="lg"
-                    iconLeft={<Mail className="h-5 w-5" />}
-                  >
-                    Email Me
-                  </Button>
+                    className="
+                      mt-1
+                      block
 
-                  <Button
-                    href="https://www.linkedin.com/in/hagerismail1"
-                    external
-                    variant="secondary"
-                    size="lg"
-                    iconLeft={<CalendarDays className="h-5 w-5" />}
+                      text-[14px]
+                      font-medium
+
+                      !text-white
+
+                      transition-colors
+                      duration-300
+
+                      hover:text-[#5FA0FF]
+                    "
                   >
-                    Book a Consultation
-                  </Button>
+                    hagerismail487@gmail.com
+                  </a>
 
                 </div>
 
               </div>
 
+              {/* Divider */}
+
+              <div
+                className="
+                  my-5
+                  ml-[64px]
+
+                  h-px
+
+                  bg-[#1E456F]
+                "
+              />
+
               {/* ========================================= */}
-              {/* Right Side */}
+              {/* LinkedIn */}
               {/* ========================================= */}
 
-              <div className="relative">
+              <div className="flex items-center gap-4">
 
-                {/* Vertical Divider */}
+                <div
+                  className="
+                    flex
+                    h-12
+                    w-12
+                    shrink-0
+                    items-center
+                    justify-center
 
-                <div className="absolute left-0 top-6 hidden h-[80%] w-px bg-[#E5EDF8] xl:block" />
+                    rounded-full
 
-                <div className="xl:pl-10">
+                    border
+                    border-[#2C6DB0]
 
-                  {/* Title */}
+                    bg-[#0D3768]
 
-                  <h3
+                    text-[#5FA0FF]
+                  "
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-5 w-5"
+                  >
+                    <path d="M4.98 3.5C4.98 4.604 4.104 5.5 3 5.5S1.02 4.604 1.02 3.5 1.896 1.5 3 1.5s1.98.896 1.98 2zm.02 3.5H1v16h4V7zm6.5 0h-4v16h4v-8.4c0-4.67 6-5.05 6 0V23h4v-9.8c0-7.64-8.72-7.36-10-3.6V7z" />
+                  </svg>
+                </div>
+
+                <div>
+
+                  <p
                     className="
-                      text-[24px]
-                      font-bold
-                      tracking-[-0.02em]
-                      text-[#102A56]
+                      text-[11px]
+                      font-semibold
+                      uppercase
+                      tracking-[0.16em]
+
+                      !text-[#8FB3D7]
                     "
                   >
-                    Contact
-                  </h3>
+                    LinkedIn
+                  </p>
 
-                  <div className="mt-3 h-[3px] w-16 rounded-full bg-[#2563EB]" />
+                  <a
+                    href="https://www.linkedin.com/in/hagerismail1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      mt-1
+                      block
 
-                  {/* Contact Information */}
+                      text-[14px]
+                      font-medium
 
-                  <div className="mt-6 flex flex-col gap-5">
-                                        {/* Email */}
+                      !text-[#5FA0FF]
 
-                    <div className="flex items-center gap-4">
+                      transition-colors
+                      duration-300
 
-                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#EAF3FF]">
+                      hover:!text-white
+                    "
+                  >
+                    linkedin.com/in/hagerismail1
+                  </a>
 
-                        <Mail className="h-5 w-5 text-[#123A63]" />
+                </div>
 
-                      </div>
+              </div>
 
-                      <div>
+              {/* Divider */}
 
-                        <p className="text-[15px] font-bold text-[#102A56]">
-                          Email
-                        </p>
+              <div
+                className="
+                  my-5
+                  ml-[64px]
 
-                        <a
-                          href="mailto:hagerismail487@gmail.com"
-                          className="mt-1 block text-[15px] text-[#102A56] transition-all duration-300 hover:text-[#2563EB]"
-                        >
-                          hagerismail487@gmail.com
-                        </a>
+                  h-px
 
-                      </div>
+                  bg-[#1E456F]
+                "
+              />
 
-                    </div>
+              {/* ========================================= */}
+              {/* Location */}
+              {/* ========================================= */}
 
-                    <div className="ml-[68px] border-b border-slate-200/70" />
+              <div className="flex items-center gap-4">
 
-                    {/* LinkedIn */}
+                <div
+                  className="
+                    flex
+                    h-12
+                    w-12
+                    shrink-0
+                    items-center
+                    justify-center
 
-                    <div className="flex items-center gap-4">
+                    rounded-full
 
-                      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#EAF3FF]">
+                    border
+                    border-[#2C6DB0]
 
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                          className="h-6 w-6 text-[#0A66C2]"
-                        >
-                          <path d="M4.98 3.5C4.98 4.604 4.104 5.5 3 5.5S1.02 4.604 1.02 3.5 1.896 1.5 3 1.5s1.98.896 1.98 2zm.02 3.5H1v16h4V7zm6.5 0h-4v16h4v-8.4c0-4.67 6-5.05 6 0V23h4v-9.8c0-7.64-8.72-7.36-10-3.6V7z" />
-                        </svg>
+                    bg-[#0D3768]
 
-                      </div>
+                    text-[#5FA0FF]
+                  "
+                >
+                  <MapPin className="h-5 w-5" />
+                </div>
 
-                      <div>
+                <div>
 
-                        <p className="text-[15px] font-bold text-[#102A56]">
-                          LinkedIn
-                        </p>
+                  <p
+                    className="
+                      text-[11px]
+                      font-semibold
+                      uppercase
+                      tracking-[0.16em]
 
-                        <a
-                          href="https://www.linkedin.com/in/hagerismail1"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-1 block text-[15px] font-medium text-[#0A66C2] transition-all duration-300 hover:underline"
-                        >
-                          linkedin.com/in/hagerismail1
-                        </a>
+                      !text-[#8FB3D7]
+                    "
+                  >
+                    Location
+                  </p>
 
-                      </div>
+                  <p
+                    className="
+                      mt-1
 
-                    </div>
+                      text-[14px]
+                      font-medium
 
-                    <div className="ml-[68px] border-b border-slate-200/70" />
+                      !text-white
+                    "
+                  >
+                    Cairo, Egypt
+                  </p>
 
-                    {/* Location */}
-
-                    <div className="flex items-center gap-4">
-
-                      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#EAF3FF]">
-
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth={2}
-                          className="h-6 w-6 text-[#123A63]"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0L6.343 16.657A8 8 0 1117.657 16.657z"
-                          />
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                          />
-                        </svg>
-
-                      </div>
-
-                      <div>
-
-                        <p className="text-[15px] font-bold text-[#102A56]">
-                          Location
-                        </p>
-
-                        <p className="mt-1 text-[15px] text-[#102A56]">
-                          Cairo, Egypt
-                        </p>
-
-                      </div>
-
-                    </div>
-
-                  </div>
-            </div>
+                </div>
 
               </div>
 

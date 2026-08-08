@@ -54,88 +54,183 @@ export default function CoreExpertise() {
   return (
     <Section
       id="expertise"
-      className="bg-white"
+      background="white"
+      className="
+        relative
+        overflow-hidden
+        bg-white
+        py-16
+        lg:py-20
+      "
     >
-      <SectionIntro
-        eyebrow="Expertise"
-        title="Core Expertise"
-        description="A blend of analytical thinking, technical expertise, and business understanding to deliver data solutions that drive strategic impact."
-        align="center"
-        className="mx-auto mb-6 max-w-[680px]"
+      {/* ========================================= */}
+      {/* Subtle Background */}
+      {/* ========================================= */}
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          left-[-180px]
+          top-[120px]
+          h-[360px]
+          w-[360px]
+          rounded-full
+          bg-[#EEF5FF]
+          opacity-50
+          blur-[120px]
+        "
       />
 
-      <div className="grid gap-5 lg:grid-cols-3">
+      <div
+        className="
+          pointer-events-none
+          absolute
+          right-[-160px]
+          bottom-[-120px]
+          h-[340px]
+          w-[340px]
+          rounded-full
+          bg-[#F4F8FF]
+          opacity-70
+          blur-[120px]
+        "
+      />
 
+      {/* ========================================= */}
+      {/* Section Header */}
+      {/* ========================================= */}
+
+      <div className="relative z-10">
+        <SectionIntro
+          eyebrow="Expertise"
+          title="Core Expertise"
+          description="A blend of analytical thinking, technical expertise, and business understanding to deliver data solutions that drive strategic impact."
+          align="center"
+          className="mx-auto mb-10 max-w-[720px]"
+        />
+      </div>
+
+      {/* ========================================= */}
+      {/* Expertise Grid */}
+      {/* ========================================= */}
+
+      <div
+        className="
+          relative
+          z-10
+          grid
+          gap-5
+          md:grid-cols-2
+          lg:grid-cols-3
+        "
+      >
         {expertise.map((item, index) => {
-
+          const Icon = item.icon;
 
           return (
+            <ExecutiveCard
+              key={item.title}
+              padding="sm"
+              className="
+                group
+                min-h-[190px]
+                rounded-[22px]
+                border
+                border-[#DCE8F7]
+                bg-white
+                shadow-[0_10px_30px_rgba(16,42,86,0.04)]
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:border-[#BFD5F5]
+                hover:shadow-[0_18px_40px_rgba(16,42,86,0.08)]
+              "
+            >
+              {/* ========================================= */}
+              {/* Header */}
+              {/* ========================================= */}
 
-           <ExecutiveCard
-  key={item.title}
-  padding="sm"
-  className="rounded-[22px]"
->
-                   {/* ========================================= */}
-{/* Header */}
-{/* ========================================= */}
+              <div className="flex items-start gap-4">
+                {/* Number */}
 
-<div className="flex items-center gap-4">
-<span
-  className="
-    flex
-    h-8
-    w-8
-    shrink-0
-    items-center
-    justify-center
+                <span
+                  className="
+                    flex
+                    h-9
+                    w-9
+                    shrink-0
+                    items-center
+                    justify-center
+                    rounded-xl
+                    border
+                    border-[#D7E6FF]
+                    bg-[#F3F7FF]
+                    text-[12px]
+                    font-bold
+                    tracking-[0.02em]
+                    text-[#2563EB]
+                    transition-colors
+                    duration-300
+                    group-hover:border-[#BFD5FF]
+                    group-hover:bg-[#EAF2FF]
+                  "
+                >
+                  {(index + 1).toString().padStart(2, "0")}
+                </span>
 
-    rounded-lg
+                {/* Icon */}
 
-    border
-    border-[#DCEBFF]
+                <div
+                  className="
+                    flex
+                    h-9
+                    w-9
+                    shrink-0
+                    items-center
+                    justify-center
+                    rounded-xl
+                    bg-[#F7FAFF]
+                    text-[#2563EB]
+                  "
+                >
+                  <Icon
+                    size={19}
+                    strokeWidth={1.8}
+                  />
+                </div>
 
-    bg-[#EEF5FF]
+                {/* Title */}
 
-    text-[13px]
-    font-bold
-
-    text-[#2563EB]
-  "
->
-  {(index + 1).toString().padStart(2, "0")}
-</span>
-  <h3
-    className="
-      text-[20px]
-      font-semibold
-      leading-tight
-      tracking-[-0.02em]
-      text-[#102A56]
-    "
-  >
-    {item.title}
-  </h3>
-
-</div>
+                <h3
+                  className="
+                    pt-1
+                    text-[18px]
+                    font-semibold
+                    leading-[1.15]
+                    tracking-[-0.02em]
+                    text-[#102A56]
+                  "
+                >
+                  {item.title}
+                </h3>
+              </div>
 
               {/* ========================================= */}
               {/* Divider */}
               {/* ========================================= */}
 
               <div
-  className="
-    mt-3
-    mb-2
-
-    h-px
-    w-full
-
-    bg-gradient-to-r
-    from-[#2563EB]
-    to-transparent
-  "
-/>
+                className="
+                  mt-4
+                  h-px
+                  w-full
+                  bg-gradient-to-r
+                  from-[#2563EB]
+                  via-[#DCE8F7]
+                  to-transparent
+                "
+              />
 
               {/* ========================================= */}
               {/* Description */}
@@ -143,27 +238,31 @@ export default function CoreExpertise() {
 
               <p
                 className="
+                  mt-4
                   text-[14px]
                   leading-6
-                  text-[#123A63]/35
+                  text-[#385274]
                 "
               >
                 {item.description}
               </p>
-                          </ExecutiveCard>
-
+            </ExecutiveCard>
           );
-
         })}
-
       </div>
 
       {/* ========================================= */}
       {/* Closing Statement */}
       {/* ========================================= */}
 
-      <div className="mt-12 text-center">
-
+      <div
+        className="
+          relative
+          z-10
+          mt-12
+          text-center
+        "
+      >
         <p
           className="
             text-[17px]
@@ -179,18 +278,13 @@ export default function CoreExpertise() {
           className="
             mx-auto
             mt-3
-
             h-[3px]
             w-14
-
             rounded-full
-
-            bg-[#2E63D3]
+            bg-[#2563EB]
           "
         />
-
       </div>
-
     </Section>
   );
 }

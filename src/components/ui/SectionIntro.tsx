@@ -13,6 +13,8 @@ interface SectionIntroProps {
   className?: string;
 
   titleSize?: "lg" | "md" | "sm";
+
+  variant?: "light" | "dark";
 }
 
 export default function SectionIntro({
@@ -22,7 +24,10 @@ export default function SectionIntro({
   align = "left",
   className = "",
   titleSize = "lg",
+  variant = "light",
 }: SectionIntroProps) {
+  const isDark = variant === "dark";
+
   return (
     <div
       className={`
@@ -38,24 +43,49 @@ export default function SectionIntro({
         ${className}
       `}
     >
+      {/* ========================================= */}
+      {/* Eyebrow */}
+      {/* ========================================= */}
+
       <SectionHeader
         align={align}
         variant="lines"
+        className={
+          isDark
+            ? "!text-[#5FA0FF]"
+            : ""
+        }
       >
         {eyebrow}
       </SectionHeader>
 
+      {/* ========================================= */}
+      {/* Title */}
+      {/* ========================================= */}
+
       <SectionTitle
         size={titleSize}
         align={align}
-        className="mt-3"
+        className={`
+          mt-3
+
+          ${
+            isDark
+              ? "!text-white"
+              : "!text-[#102A56]"
+          }
+        `}
       >
         {title}
       </SectionTitle>
 
+      {/* ========================================= */}
+      {/* Description */}
+      {/* ========================================= */}
+
       {description && (
         <p
-          className="
+          className={`
             mt-4
             max-w-[600px]
 
@@ -65,8 +95,12 @@ export default function SectionIntro({
             md:text-[16px]
             md:leading-8
 
-            text-slate-600
-          "
+            ${
+              isDark
+                ? "!text-[#D6E5F7]"
+                : "!text-slate-600"
+            }
+          `}
         >
           {description}
         </p>

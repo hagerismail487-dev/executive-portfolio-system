@@ -9,94 +9,127 @@ export default function ProfessionalServices() {
   return (
     <Section
       id="services"
-      className="relative overflow-hidden bg-[#FBFCFE]"
+      background="white"
+      className="
+        relative
+        overflow-hidden
+        bg-white
+        py-16
+        lg:py-20
+      "
     >
-      <Container>
+      {/* ========================================= */}
+      {/* Background */}
+      {/* ========================================= */}
+
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+
+        {/* Subtle Grid */}
 
         <div
           className="
-            relative
-            overflow-hidden
+            absolute
+            inset-0
 
-            rounded-[30px]
+            opacity-[0.35]
 
-            border
-            border-[#E8EEF7]
+            bg-[linear-gradient(to_right,#EAF1FA_1px,transparent_1px),linear-gradient(to_bottom,#EAF1FA_1px,transparent_1px)]
 
-            bg-white
-
-            shadow-[0_24px_60px_rgba(18,58,99,0.08)]
+            bg-[size:48px_48px]
           "
-        >
+        />
+
+        {/* Top Right Glow */}
+
+        <div
+          className="
+            absolute
+            -right-32
+            -top-32
+
+            h-[420px]
+            w-[420px]
+
+            rounded-full
+
+            bg-[#EEF5FF]
+
+            opacity-60
+
+            blur-[120px]
+          "
+        />
+
+        {/* Bottom Left Glow */}
+
+        <div
+          className="
+            absolute
+            -bottom-32
+            -left-32
+
+            h-[360px]
+            w-[360px]
+
+            rounded-full
+
+            bg-[#F4F8FF]
+
+            opacity-80
+
+            blur-[120px]
+          "
+        />
+
+      </div>
+
+      {/* ========================================= */}
+      {/* Content */}
+      {/* ========================================= */}
+
+      <Container>
+
+        <div className="relative z-10">
 
           {/* ========================================= */}
-          {/* Background */}
+          {/* Section Intro */}
           {/* ========================================= */}
 
-          <div className="pointer-events-none absolute inset-0 overflow-hidden">
-
-            {/* Top Left Dots */}
-
-            <div className="absolute left-6 top-6 opacity-15">
-
-              <div className="grid grid-cols-7 gap-3">
-
-                {Array.from({ length: 49 }).map((_, i) => (
-
-                  <div
-                    key={i}
-                    className="h-1 w-1 rounded-full bg-[#C8DBFF]"
-                  />
-
-                ))}
-
-              </div>
-
-            </div>
-
-            {/* Top Right Glow */}
-
-            <div className="absolute -right-20 -top-20 h-[320px] w-[320px] rounded-full bg-[#EEF5FF] opacity-40 blur-3xl" />
-
-            {/* Bottom Left Glow */}
-
-            <div className="absolute -bottom-12 -left-12 h-60 w-60 rounded-full bg-[#F4F8FF] opacity-80 blur-3xl" />
-
-          </div>
+          <SectionIntro
+            eyebrow="Services"
+            title="Professional Services"
+            description="Professional services that help organizations transform business data into executive insights, strategic reporting, and confident business decisions."
+            align="center"
+            className="
+              mx-auto
+              mb-10
+              max-w-[720px]
+            "
+          />
 
           {/* ========================================= */}
-          {/* Content */}
+          {/* Services Grid */}
           {/* ========================================= */}
 
           <div
-  className="
-    relative
-    z-10
+            className="
+              grid
+              gap-5
 
-    px-6
-    py-8
+              md:grid-cols-2
 
-    sm:px-8
+              lg:gap-6
+            "
+          >
 
-    lg:px-12
-    lg:py-10
-  "
->
-
-            <SectionIntro
-              eyebrow="Services"
-              title="Professional Services"
-              description="Professional services that help organizations transform business data into executive insights, strategic reporting, and confident business decisions."
-              align="center"
-              className="mx-auto mb-8 max-w-[700px]"
-            />
-
-            <div className="grid gap-5 md:grid-cols-2">
-                          {services.map((service) => (
+            {services.map((service, index) => (
 
               <div
                 key={service.slug}
-                className="group"
+                className="
+                  group
+                  relative
+                "
               >
 
                 <ServiceCard
@@ -107,12 +140,11 @@ export default function ProfessionalServices() {
 
             ))}
 
-            </div>
-
           </div>
 
         </div>
-              </Container>
+
+      </Container>
 
     </Section>
   );

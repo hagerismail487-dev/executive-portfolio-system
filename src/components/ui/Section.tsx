@@ -9,7 +9,7 @@ interface SectionProps {
 
   className?: string;
 
-  background?: "default" | "white" | "light";
+  background?: "default" | "white" | "light" | "dark";
 }
 
 export default function Section({
@@ -24,6 +24,8 @@ export default function Section({
     white: "bg-white",
 
     light: "bg-[#F8FBFF]",
+
+    dark: "bg-[#031B3B]",
   };
 
   return (
@@ -35,7 +37,6 @@ export default function Section({
 
         py-14
         lg:py-18
-
 
         ${backgrounds[background]}
 
