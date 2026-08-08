@@ -5,17 +5,17 @@ const about = {
 
   hero: {
     
-    badge: "Executive Profile",
+    badge: "Beyond Reporting",
 
     executiveTitle:
       "Business Systems, Reporting & Decision Intelligence Specialist",
 
     headline:
-      "Building Structured Business Systems That Transform Operational Complexity Into Confident Executive Decisions",
+      "Building Business Systems That Enable Better Executive Decisions",
 
       signature:
   "I don't just build reports. I build business systems that enable better decisions.",
-  
+
     introduction: `Business performance is rarely limited by the amount of available data.
 
 More often, it is limited by fragmented processes, inconsistent reporting, and the absence of structured systems that leadership can trust.
@@ -40,7 +40,7 @@ I specialize in designing business systems that connect operations, reporting, a
      ========================================================== */
 
   executiveProfile: {
-    title: "Executive Profile",
+    title: "BEYOND REPORTING",
 
     summary: `I am passionate about understanding how businesses operate beyond the numbers.
 

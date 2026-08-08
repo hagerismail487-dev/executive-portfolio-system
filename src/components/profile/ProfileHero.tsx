@@ -1,501 +1,490 @@
-import Link from "next/link";
+import {
+  BarChart3,
+  Building2,
+  Database,
+  Settings2,
+  UsersRound,
+} from "lucide-react";
 
-import Container from "@/components/ui/Container";
+type SystemNodeProps = {
+  label: string;
+  icon: React.ElementType;
+  position: string;
+};
 
-import about from "@/content/profile/About";
+const systemNodes: SystemNodeProps[] = [
+  {
+    label: "BUSINESS\nUNDERSTANDING",
+    icon: UsersRound,
+    position:
+      "left-1/2 top-0 -translate-x-1/2 -translate-y-1/2",
+  },
+  {
+    label: "PROCESSES &\nSTRUCTURE",
+    icon: Settings2,
+    position:
+      "left-0 top-1/2 -translate-x-1/8 -translate-y-1/3",
+  },
+  {
+    label: "DATA &\nREPORTING",
+    icon: Database,
+    position:
+      "right-0 top-1/2 translate-x-1/8 -translate-y-1/3",
+  },
+  {
+    label: "EXECUTIVE\nDECISIONS",
+    icon: BarChart3,
+    position:
+      "left-1/2 bottom-0 -translate-x-1/2 translate-y-1/2",
+  },
+];
 
-export default function ProfileHero() {
-  const { hero } = about;
-
+function SystemNode({
+  label,
+  icon: Icon,
+  position,
+}: SystemNodeProps) {
   return (
-    <section
-      className="
-        relative
-        overflow-hidden
-
-        bg-[#FBFCFE]
-
-        pt-12
-        pb-14
-
-        lg:pt-16
-        lg:pb-20
-      "
+    <div
+      className={`absolute ${position} z-20 flex w-[100px] flex-col items-center`}
     >
-      {/* ========================================= */}
-      {/* Background */}
-      {/* ========================================= */}
-
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-
-        <div
-          className="
-            absolute
-            -right-28
-            -top-28
-
-            h-[420px]
-            w-[420px]
-
-            rounded-full
-
-            bg-[#EEF5FF]
-
-            opacity-70
-
-            blur-[120px]
-          "
+      <div
+        className="
+          flex h-[48px] w-[48px] items-center justify-center
+          rounded-full
+          border border-white
+          bg-white
+          shadow-[0_8px_25px_rgba(0,0,0,0.18)]
+        "
+      >
+        <Icon
+          className="h-[23px] w-[23px] !text-[#0864e8]"
+          strokeWidth={2.2}
         />
-
-        <div
-          className="
-            absolute
-            -left-24
-            bottom-0
-
-            h-[320px]
-            w-[320px]
-
-            rounded-full
-
-            bg-[#F4F8FF]
-
-            opacity-80
-
-            blur-[110px]
-          "
-        />
-
       </div>
-
-      <Container>
-
-        <div
-          className="
-            relative
-            z-10
-
-            grid
-            items-center
-
-            gap-12
-
-            lg:grid-cols-[1.2fr_.8fr]
-            lg:gap-14
-          "
-        >
-
-          {/* ========================================= */}
-          {/* Left Side */}
-          {/* ========================================= */}
-
-          <div className="max-w-[640px]">
-
-            {/* Badge */}
-
-            <div className="flex items-center gap-4">
-
-              <div className="h-px w-14 bg-[#2563EB]" />
-
-              <span
-                className="
-                  text-[11px]
-                  font-semibold
-
-                  uppercase
-
-                  tracking-[0.34em]
-
-                  text-[#2563EB]
-                "
-              >
-                {hero.badge}
-              </span>
-
-            </div>
-
-            {/* Executive Title */}
-
-            <p
-              className="
-                mt-7
-
-                text-[16px]
-                font-semibold
-
-                text-[#2563EB]
-              "
-            >
-              {hero.executiveTitle}
-            </p>
-
-            {/* Headline */}
-
-            <h1
-              className="
-                mt-4
-
-                max-w-[700px]
-
-                text-[36px]
-                font-bold
-
-                leading-[1.08]
-
-                tracking-[-0.04em]
-
-                text-[#102A56]
-
-                md:text-[42px]
-                lg:text-[48px]
-              "
-            >
-              {hero.headline}
-            </h1>
-
-            {/* Accent */}
-
-            <div
-              className="
-                mt-6
-
-                h-1
-                w-24
-
-                rounded-full
-
-                bg-[#2563EB]
-              "
-            />
-
-            {/* Signature */}
-
-            <div
-              className="
-                mt-8
-
-                max-w-[560px]
-
-                border-l-4
-                border-[#2563EB]
-
-                pl-6
-              "
-            >
-
-              <p
-                className="
-                  text-[20px]
-                  font-semibold
-
-                  leading-9
-
-                  tracking-[-0.02em]
-
-                  text-[#123A63]
-                "
-              >
-                {hero.signature}
-              </p>
-
-            </div>
-
-            {/* Buttons */}
-
-            <div
-              className="
-                mt-10
-
-                flex
-                flex-wrap
-
-                gap-4
-              "
-            >
-
-              <Link
-                href={hero.primaryButton.href}
-                className="
-                  inline-flex
-                  items-center
-                  justify-center
-
-                  rounded-xl
-
-                  bg-[#123A63]
-
-                  px-8
-                  py-4
-
-                  font-semibold
-
-                  text-white
-
-                  transition-all
-                  duration-300
-
-                  hover:-translate-y-1
-                  hover:bg-[#0F3154]
-                  hover:shadow-[0_18px_40px_rgba(18,58,99,0.18)]
-                "
-              >
-                {hero.primaryButton.label}
-              </Link>
-
-              <Link
-                href={hero.secondaryButton.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                  inline-flex
-                  items-center
-                  justify-center
-
-                  rounded-xl
-
-                  border
-                  border-[#D7E5FB]
-
-                  bg-white
-
-                  px-8
-                  py-4
-
-                  font-semibold
-
-                  text-[#123A63]
-
-                  transition-all
-                  duration-300
-
-                  hover:-translate-y-1
-                  hover:border-[#2563EB]
-                  hover:bg-[#F8FBFF]
-                "
-              >
-                {hero.secondaryButton.label}
-              </Link>
-
-            </div>
-
-          </div>
-{/* ========================================= */}
-{/* Right Side */}
-{/* ========================================= */}
-
-<div className="relative flex justify-center lg:justify-end">
-
-  {/* Glow */}
-
-  <div
-    className="
-      absolute
-
-      h-[360px]
-      w-[360px]
-
-      rounded-full
-
-      bg-[#2563EB]/8
-
-      blur-[90px]
-    "
-  />
-
-  {/* Executive Blueprint */}
-
-  <div
-    className="
-      relative
-
-      w-full
-      max-w-[420px]
-
-      overflow-hidden
-
-      rounded-[28px]
-
-      border
-      border-[#E7EEF8]
-
-      bg-white
-
-      shadow-[0_24px_60px_rgba(18,58,99,0.10)]
-
-      transition-all
-      duration-500
-
-      hover:-translate-y-1
-      hover:shadow-[0_34px_70px_rgba(18,58,99,0.14)]
-    "
-  >
-
-    {/* Header */}
-
-    <div className="border-b border-[#EEF3FA] px-7 py-6">
 
       <span
         className="
-          text-[11px]
-          font-semibold
-
-          uppercase
-
-          tracking-[0.24em]
-
-          text-[#2563EB]
-        "
-      >
-        Executive Blueprint
-      </span>
-
-      <h3
-        className="
-          mt-3
-
-          text-[26px]
+          mt-2.5
+          whitespace-pre-line
+          text-center
+          text-[9px]
           font-bold
-
-          tracking-[-0.03em]
-
-          text-[#102A56]
+          uppercase
+          leading-[1.2]
+          tracking-[-0.01em]
+          !text-white
         "
       >
-        Beyond Reporting
-      </h3>
-
-      <p
-        className="
-          mt-3
-
-          text-[15px]
-          leading-7
-
-          text-slate-600
-        "
-      >
-        Designing business systems that strengthen operations,
-        standardize reporting, and support executive decisions.
-      </p>
-
+        {label}
+      </span>
     </div>
+  );
+}
 
-    {/* Content */}
-
-    <div className="px-7 py-3">
-              {[
-        {
-          label: "Focus",
-          value: "Business Systems",
-        },
-        {
-          label: "Specialization",
-          value: "Decision Intelligence",
-        },
-        {
-          label: "Approach",
-          value: "Business Before Dashboards",
-        },
-        {
-          label: "Mission",
-          value: "Create Lasting Systems",
-        },
-        {
-          label: "Industry",
-          value: "Real Estate",
-        },
-      ].map((item) => (
-        <div
-          key={item.label}
-          className="
-            border-b
-            border-[#EEF3FA]
-
-            py-5
-
-            last:border-0
-          "
-        >
-          <p
-            className="
-              text-[12px]
-              font-medium
-
-              uppercase
-
-              tracking-[0.18em]
-
-              text-slate-500
-            "
-          >
-            {item.label}
-          </p>
-
-          <h4
-            className="
-              mt-2
-
-              text-[18px]
-              font-semibold
-
-              tracking-[-0.02em]
-
-              text-[#102A56]
-            "
-          >
-            {item.value}
-          </h4>
-        </div>
-      ))}
-    </div>
-
-    {/* Footer */}
-
+function BusinessSystemsDiagram() {
+  return (
     <div
       className="
-        border-t
-        border-[#EEF3FA]
-
-        bg-[#FBFCFE]
-
-        px-7
-        py-5
+        relative
+        h-[250px]
+        w-[470px]
+        max-w-full
+        shrink-0
       "
+      aria-label="Business Systems framework"
     >
-      <div className="flex items-center justify-between">
+      {/* Outer orbit */}
+      <div
+        className="
+          absolute
+          left-1/2
+          top-1/2
+          h-[215px]
+          w-[215px]
+          -translate-x-1/2
+          -translate-y-1/2
+          rounded-full
+          border
+          border-[#3f94ff]/40
+        "
+      />
 
-        <span
-          className="
-            text-[13px]
+      {/* Inner orbit */}
+      <div
+        className="
+          absolute
+          left-1/2
+          top-1/2
+          h-[170px]
+          w-[170px]
+          -translate-x-1/2
+          -translate-y-1/2
+          rounded-full
+          border
+          border-[#3f94ff]/30
+        "
+      />
 
-            text-slate-500
-          "
-        >
-          Building systems before dashboards
-        </span>
+      {/* Dashed orbit */}
+      <div
+        className="
+          absolute
+          left-1/2
+          top-1/2
+          h-[215px]
+          w-[215px]
+          -translate-x-1/2
+          -translate-y-1/2
+          rounded-full
+          border
+          border-dashed
+          border-[#3f94ff]/35
+        "
+      />
 
-        <div
-          className="
-            h-2
-            w-2
+      {/* Top connection */}
+      <div
+        className="
+          absolute
+          left-1/2
+          top-[27px]
+          h-[73px]
+          w-px
+          -translate-x-1/2
+          bg-gradient-to-b
+          from-[#3f94ff]/20
+          via-[#3f94ff]
+          to-[#3f94ff]/60
+        "
+      />
 
-            rounded-full
+      {/* Left connection */}
+      <div
+        className="
+          absolute
+          left-[104px]
+          top-1/2
+          h-px
+          w-[86px]
+          -translate-y-1/2
+          bg-gradient-to-r
+          from-[#3f94ff]/20
+          via-[#3f94ff]
+          to-[#3f94ff]/60
+        "
+      />
 
-            bg-[#2563EB]
-          "
-        />
+      {/* Right connection */}
+      <div
+        className="
+          absolute
+          right-[104px]
+          top-1/2
+          h-px
+          w-[86px]
+          -translate-y-1/2
+          bg-gradient-to-l
+          from-[#3f94ff]/20
+          via-[#3f94ff]
+          to-[#3f94ff]/60
+        "
+      />
 
+      {/* Bottom connection */}
+      <div
+        className="
+          absolute
+          bottom-[27px]
+          left-1/2
+          h-[73px]
+          w-px
+          -translate-x-1/2
+          bg-gradient-to-t
+          from-[#3f94ff]/20
+          via-[#3f94ff]
+          to-[#3f94ff]/60
+        "
+      />
+
+      {/* Connection points */}
+      <span
+        className="
+          absolute
+          left-1/2
+          top-[97px]
+          z-20
+          h-2
+          w-2
+          -translate-x-1/2
+          rounded-full
+          bg-[#2585ff]
+          shadow-[0_0_10px_rgba(37,133,255,0.8)]
+        "
+      />
+
+      <span
+        className="
+          absolute
+          left-[184px]
+          top-1/2
+          z-20
+          h-2
+          w-2
+          -translate-y-1/2
+          rounded-full
+          bg-[#2585ff]
+          shadow-[0_0_10px_rgba(37,133,255,0.8)]
+        "
+      />
+
+      <span
+        className="
+          absolute
+          right-[184px]
+          top-1/2
+          z-20
+          h-2
+          w-2
+          -translate-y-1/2
+          rounded-full
+          bg-[#2585ff]
+          shadow-[0_0_10px_rgba(37,133,255,0.8)]
+        "
+      />
+
+      <span
+        className="
+          absolute
+          bottom-[97px]
+          left-1/2
+          z-20
+          h-2
+          w-2
+          -translate-x-1/2
+          rounded-full
+          bg-[#2585ff]
+          shadow-[0_0_10px_rgba(37,133,255,0.8)]
+        "
+      />
+
+      {/* Central node */}
+      <div
+        className="
+          absolute
+          left-1/2
+          top-1/2
+          z-30
+          flex
+          h-[116px]
+          w-[116px]
+          -translate-x-1/2
+          -translate-y-1/2
+          items-center
+          justify-center
+          rounded-full
+          border
+          border-[#64a8ff]/70
+          bg-[radial-gradient(circle_at_35%_28%,#2879ed_0%,#155bc4_50%,#0a4296_100%)]
+          shadow-[0_0_0_12px_rgba(50,126,235,0.12),0_0_0_24px_rgba(50,126,235,0.07),0_20px_45px_rgba(0,0,0,0.28)]
+        "
+      >
+        <div className="flex flex-col items-center text-center">
+          <Building2
+            className="mb-2 h-[27px] w-[27px] !text-white"
+            strokeWidth={1.8}
+          />
+
+          <span className="text-[12px] font-bold leading-[1.15] !text-white">
+            BUSINESS
+          </span>
+
+          <span className="text-[12px] font-bold leading-[1.15] !text-white">
+            SYSTEMS
+          </span>
+        </div>
       </div>
 
+      {/* Surrounding nodes */}
+      {systemNodes.map((node) => (
+        <SystemNode
+          key={node.label}
+          label={node.label}
+          icon={node.icon}
+          position={node.position}
+        />
+      ))}
     </div>
+  );
+}
 
-  </div>
+export default function ProfileHero() {
+  return (
+    <section
+      aria-labelledby="profile-hero-title"
+      className="
+        relative
+        isolate
+        mx-4
+        mt-10
+        w-auto
+        overflow-hidden
+        rounded-[7px]
+        bg-[#0a2345]
+        shadow-[0_12px_40px_rgba(5,35,75,0.12)]
+        sm:mx-6
+        lg:mx-8
+        lg:mt-12
+      "
+    >
+      {/* Main blueprint background */}
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute
+          inset-0
+          -z-10
+          bg-[radial-gradient(circle_at_72%_45%,rgba(36,116,235,0.25),transparent_30%),linear-gradient(110deg,#0b2b55_0%,#0a2345_48%,#081d3a_100%)]
+        "
+      />
 
-</div>
+      {/* Blueprint grid */}
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute
+          inset-0
+          -z-10
+          opacity-30
+          [background-image:linear-gradient(rgba(115,174,255,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(115,174,255,0.12)_1px,transparent_1px)]
+          [background-size:42px_42px]
+        "
+      />
+
+      {/* Right dotted field */}
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute
+          right-[-30px]
+          top-[-50px]
+          -z-10
+          h-[350px]
+          w-[350px]
+          opacity-40
+          [background-image:radial-gradient(circle,rgba(56,143,255,0.65)_1px,transparent_1px)]
+          [background-size:8px_8px]
+          [mask-image:radial-gradient(circle,black,transparent_72%)]
+        "
+      />
+
+      {/* Bottom blueprint wave */}
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute
+          bottom-[-130px]
+          left-[-5%]
+          -z-10
+          h-[220px]
+          w-[65%]
+          rounded-[50%]
+          border-t
+          border-[#2585ff]/20
+          opacity-70
+          blur-[0.2px]
+        "
+      />
+
+      <div
+        className="
+          mx-auto
+          flex
+          min-h-[300px]
+          max-w-[1440px]
+          items-center
+          justify-between
+          gap-12
+          px-8
+          py-12
+          sm:px-10
+          lg:px-[72px]
+          lg:py-[48px]
+        "
+      >
+        {/* Left side */}
+        <div className="relative z-10 max-w-[620px]">
+          <p
+            className="
+              mb-4
+              text-[11px]
+              font-bold
+              uppercase
+              tracking-[0.2em]
+              !text-[#4ea0ff]
+            "
+          >
+            Professional Profile
+          </p>
+
+          <h1
+            id="profile-hero-title"
+            className="
+              max-w-[620px]
+              text-[36px]
+              font-bold
+              leading-[1.08]
+              tracking-[-0.035em]
+              !text-white
+              sm:text-[40px]
+              lg:text-[44px]
+            "
+          >
+            Beyond Reporting.
+            <br />
+
+            Building{" "}
+            <span className="!text-[#4ea0ff]">
+              Business Systems
+            </span>
+
+            <br />
+
+            That Drive Real Impact.
+          </h1>
+
+          <p
+            className="
+              mt-6
+              max-w-[570px]
+              text-[14px]
+              font-medium
+              leading-[1.7]
+              !text-[#edf4ff]
+              sm:text-[15px]
+            "
+          >
+            I transform complex business data into structured
+            reporting systems that empower leaders to understand
+            performance, make confident decisions, and create
+            measurable impact.
+          </p>
         </div>
 
-      </Container>
+        {/* Desktop diagram */}
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <BusinessSystemsDiagram />
+        </div>
+      </div>
 
+      {/* Mobile diagram */}
+      <div className="flex justify-center px-6 pb-10 lg:hidden">
+        <BusinessSystemsDiagram />
+      </div>
     </section>
   );
 }
