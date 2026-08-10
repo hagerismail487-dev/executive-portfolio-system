@@ -92,7 +92,7 @@ export const caseStudies: CaseStudy[] = [
       {
     id: 1,
 
-    slug: "executive-sales-dashboard",
+    slug: "executive-sales-performance-intelligence",
 
     featured: true,
 
@@ -111,16 +111,19 @@ export const caseStudies: CaseStudy[] = [
 
     role: "Senior MIS & BI Specialist",
 
-    images: {
-      cover:
-        "/images/case-studies/executive-sales-dashboard/cover.jpg",
+   images: {
+  cover:
+    "/projects/executive-sales-performance-intelligence/02-executive-dashboard.png",
 
-      gallery: [
-        "/images/case-studies/executive-sales-dashboard/dashboard-01.jpg",
-        "/images/case-studies/executive-sales-dashboard/dashboard-02.jpg",
-        "/images/case-studies/executive-sales-dashboard/dashboard-03.jpg",
-      ],
-    },
+  gallery: [
+    "/projects/executive-sales-performance-intelligence/01-landing-page.png",
+    "/projects/executive-sales-performance-intelligence/02-executive-dashboard.png",
+    "/projects/executive-sales-performance-intelligence/03-contracts-reservations-cancellations.png",
+    "/projects/executive-sales-performance-intelligence/04-leads-meetings.png",
+    "/projects/executive-sales-performance-intelligence/05-inventory-analysis.png",
+    "/projects/executive-sales-performance-intelligence/06-orientation-analysis.png",
+  ],
+},
 
     tools: [
       "Power BI",

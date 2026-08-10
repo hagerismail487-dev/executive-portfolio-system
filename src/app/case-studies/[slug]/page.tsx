@@ -1,9 +1,7 @@
 import { notFound } from "next/navigation";
 
 import { caseStudies } from "@/data/case-studies";
-
-import CaseStudyHero from "@/components/case-studies/CaseStudyHero";
-import CaseStudyContent from "@/components/case-studies/CaseStudyContent";
+import ExecutiveSalesPerformanceIntelligence from "@/components/case-studies/ExecutiveSalesPerformanceIntelligence";
 
 interface PageProps {
   params: Promise<{
@@ -24,13 +22,8 @@ export default async function CaseStudyPage({
     notFound();
   }
 
-  return (
-    <main className="bg-[#FBFCFE]">
-
-      <CaseStudyHero project={project} />
-
-      
-
-    </main>
-  );
+  if (project.slug === "executive-sales-performance-intelligence") {
+  return <ExecutiveSalesPerformanceIntelligence />;
+}
+  notFound();
 }

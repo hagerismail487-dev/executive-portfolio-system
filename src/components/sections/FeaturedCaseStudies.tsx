@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
@@ -20,9 +21,7 @@ export default function FeaturedCaseStudies() {
       className="
         relative
         overflow-hidden
-
         !bg-[#061B3A]
-
         py-16
         lg:py-20
       "
@@ -39,85 +38,59 @@ export default function FeaturedCaseStudies() {
           overflow-hidden
         "
       >
-        {/* ========================================= */}
         {/* Background Grid */}
-        {/* ========================================= */}
 
         <div
           className="
             absolute
             inset-0
-
             opacity-[0.07]
-
             bg-[linear-gradient(rgba(72,140,255,0.35)_1px,transparent_1px),linear-gradient(90deg,rgba(72,140,255,0.35)_1px,transparent_1px)]
-
             bg-[size:48px_48px]
           "
         />
 
-        {/* ========================================= */}
         {/* Top Right Glow */}
-        {/* ========================================= */}
 
         <div
           className="
             absolute
-
             -right-32
             -top-32
-
             h-[420px]
             w-[420px]
-
             rounded-full
-
             bg-[#1769FF]/15
-
             blur-[120px]
           "
         />
 
-        {/* ========================================= */}
         {/* Bottom Left Glow */}
-        {/* ========================================= */}
 
         <div
           className="
             absolute
-
             -bottom-40
             -left-40
-
             h-[420px]
             w-[420px]
-
             rounded-full
-
             bg-[#0D5BEF]/10
-
             blur-[130px]
           "
         />
 
-        {/* ========================================= */}
         {/* Decorative Dots */}
-        {/* ========================================= */}
 
         <div
           className="
             absolute
-
             right-10
             top-16
-
             h-[140px]
             w-[140px]
-
             opacity-30
-
             bg-[radial-gradient(circle,#3D8BFF_1px,transparent_1px)]
-
             bg-[size:12px_12px]
           "
         />
@@ -155,9 +128,7 @@ export default function FeaturedCaseStudies() {
             className="
               grid
               gap-5
-
               md:grid-cols-2
-
               lg:grid-cols-3
             "
           >
@@ -178,24 +149,15 @@ export default function FeaturedCaseStudies() {
                     h-full
                     flex-col
                     overflow-hidden
-
                     rounded-[22px]
-
                     !border-[#1F4E86]
-
                     !bg-[#0A2850]
-
                     shadow-[0_18px_45px_rgba(0,0,0,0.18)]
-
                     transition-all
                     duration-300
-
                     hover:-translate-y-1
-
                     hover:!border-[#3182FF]
-
                     hover:!bg-[#0C2E5D]
-
                     hover:shadow-[0_24px_55px_rgba(0,0,0,0.28)]
                   "
                 >
@@ -205,104 +167,92 @@ export default function FeaturedCaseStudies() {
                   {/* ========================================= */}
 
                   <div
-                    className="
-                      relative
+  className="
+    group/preview
+    relative
+    mx-3
+    mt-3
+    aspect-[16/10]
+    overflow-hidden
+    rounded-[14px]
+    border
+    border-[#24558D]
+    bg-[#071F42]
+  "
+>
 
-                      aspect-[16/10]
-
-                      overflow-hidden
-
-                      rounded-[14px]
-
-                      border
-                      border-[#24558D]
-
-                      bg-[#071F42]
-                    "
-                  >
-                    {/* Preview Grid */}
-
-                    <div
+                    <Image
+                      src={project.images.cover}
+                      alt={`${project.title} dashboard preview`}
+                      fill
                       className="
-                        absolute
-                        inset-0
-
-                        opacity-40
-
-                        bg-[linear-gradient(rgba(61,139,255,0.18)_1px,transparent_1px),linear-gradient(90deg,rgba(61,139,255,0.18)_1px,transparent_1px)]
-
-                        bg-[size:28px_28px]
+                        object-cover
+                        object-top
+                        transition-transform
+                        duration-500
+                        ease-out
+                        group-hover/preview:scale-[1.04]
+                      "
+                      sizes="
+                        (max-width: 768px) 100vw,
+                        (max-width: 1200px) 50vw,
+                        33vw
                       "
                     />
 
-                    {/* Center Indicator */}
+                    {/* Dark Overlay */}
 
                     <div
                       className="
+                        pointer-events-none
                         absolute
-
-                        left-1/2
-                        top-1/2
-
-                        flex
-
-                        h-14
-                        w-14
-
-                        -translate-x-1/2
-                        -translate-y-1/2
-
-                        items-center
-                        justify-center
-
-                        rounded-2xl
-
-                        border
-                        border-[#3182FF]/40
-
-                        bg-[#0D3470]/80
-
-                        text-[#5FA0FF]
-
-                        backdrop-blur-sm
-
-                        transition-all
-                        duration-300
-
-                        group-hover:scale-110
-
-                        group-hover:border-[#4A96FF]
-
-                        group-hover:bg-[#12448B]
+                        inset-0
+                        bg-gradient-to-t
+                        from-[#061B3A]/65
+                        via-transparent
+                        to-transparent
                       "
-                    >
-                      <span className="text-[22px]">
-                        ↗
-                      </span>
-                    </div>
+                    />
 
                     {/* Hover Glow */}
 
                     <div
                       className="
                         pointer-events-none
-
                         absolute
                         inset-0
-
-                        bg-gradient-to-t
-                        from-[#061B3A]/60
-                        via-transparent
-                        to-[#2E7FFF]/10
-
+                        bg-[#3182FF]/10
                         opacity-0
-
                         transition-opacity
                         duration-300
-
-                        group-hover:opacity-100
+                        group-hover/preview:opacity-100
                       "
                     />
+
+                    {/* Dashboard Preview Label */}
+
+                    <div
+                      className="
+                        absolute
+                        bottom-3
+                        left-3
+                        rounded-md
+                        border
+                        border-[#4B8ED0]/40
+                        bg-[#061B3A]/80
+                        px-2.5
+                        py-1.5
+                        text-[9px]
+                        font-semibold
+                        uppercase
+                        tracking-[0.12em]
+                        text-[#B9D8FF]
+                        backdrop-blur-sm
+                      "
+                    >
+                      Dashboard Preview
+                    </div>
+
                   </div>
 
                   {/* ========================================= */}
@@ -312,28 +262,18 @@ export default function FeaturedCaseStudies() {
                   <span
                     className="
                       mt-4
-
                       inline-flex
                       w-fit
-
                       rounded-full
-
                       border
                       border-[#2B5F9B]
-
                       bg-[#0D3470]
-
                       px-3
                       py-1
-
                       text-[10px]
-
                       font-semibold
-
                       uppercase
-
                       tracking-[0.20em]
-
                       text-[#8DBBFF]
                     "
                   >
@@ -347,20 +287,13 @@ export default function FeaturedCaseStudies() {
                   <h3
                     className="
                       mt-4
-
                       text-[20px]
-
                       font-semibold
-
                       leading-tight
-
                       tracking-[-0.02em]
-
                       !text-white
-
                       transition-colors
                       duration-300
-
                       group-hover:!text-[#5FA0FF]
                     "
                   >
@@ -375,10 +308,8 @@ export default function FeaturedCaseStudies() {
                     className="
                       mt-3
                       mb-3
-
                       h-px
                       w-full
-
                       bg-gradient-to-r
                       from-[#3182FF]
                       via-[#28598F]
@@ -393,11 +324,8 @@ export default function FeaturedCaseStudies() {
                   <p
                     className="
                       flex-1
-
                       text-[14px]
-
                       leading-6
-
                       !text-[#C5D7EE]
                     "
                   >
@@ -411,22 +339,15 @@ export default function FeaturedCaseStudies() {
                   <span
                     className="
                       mt-6
-
                       inline-flex
                       items-center
                       gap-2
-
                       text-[14px]
-
                       font-semibold
-
                       !text-white
-
                       transition-all
                       duration-300
-
                       group-hover:gap-3
-
                       group-hover:!text-[#5FA0FF]
                     "
                   >
@@ -436,7 +357,6 @@ export default function FeaturedCaseStudies() {
                       className="
                         transition-transform
                         duration-300
-
                         group-hover:translate-x-1
                       "
                     >
@@ -454,28 +374,24 @@ export default function FeaturedCaseStudies() {
           {/* ========================================= */}
 
           <div className="mt-10 text-center">
+
             <Button
               href="/case-studies"
               variant="outline"
               size="lg"
               className="
                 min-w-[175px]
-
                 !border-[#5A91D0]
-
                 !bg-transparent
-
                 !text-white
-
                 hover:!border-[#3182FF]
-
                 hover:!bg-[#3182FF]
-
                 hover:!text-white
               "
             >
               View All Projects
             </Button>
+
           </div>
 
         </div>
