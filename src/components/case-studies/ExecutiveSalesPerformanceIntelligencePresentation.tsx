@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 import { executiveSalesProject as project } from "@/data/executive-sales-performance-intelligence";
 
-export default function DashboardPresentation() {
+export default function ExecutiveSalesPerformanceIntelligencePresentation() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
@@ -230,11 +230,11 @@ export default function DashboardPresentation() {
             </div>
 
             <div className="mt-3 flex items-center justify-center gap-2 text-[9px] text-[#536b84]">
-              <span>← Previous</span>
-              <span>•</span>
+              <span>â† Previous</span>
+              <span>â€¢</span>
               <span>Use keyboard arrows to navigate</span>
-              <span>•</span>
-              <span>Next →</span>
+              <span>â€¢</span>
+              <span>Next â†’</span>
             </div>
 
           </div>
@@ -297,7 +297,7 @@ export default function DashboardPresentation() {
             {String(activeSlide + 1).padStart(2, "0")}
             {" / "}
             {String(project.dashboards.length).padStart(2, "0")}
-            {" — "}
+            {" â€” "}
             {dashboard.title}
 
           </div>
@@ -308,3 +308,4 @@ export default function DashboardPresentation() {
     </main>
   );
 }
+

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -32,7 +32,7 @@ const toneClasses: Record<string, string> = {
     "text-[#d48cff] border-[#d48cff]/20 bg-[#d48cff]/[0.06]",
 };
 
-export default function ExecutiveSalesPerformanceIntelligence() {
+export default function ExecutiveSalesPerformanceIntelligenceDashboard() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#030a16] text-white">
 
@@ -352,7 +352,7 @@ export default function ExecutiveSalesPerformanceIntelligence() {
       rel="noopener noreferrer"
       className="text-[10px] text-[#aac2da] transition hover:text-white"
     >
-      Open dashboard presentation →
+      Open dashboard presentation â†’
     </Link>
 
     <ArrowRight

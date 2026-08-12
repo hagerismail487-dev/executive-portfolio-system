@@ -1,7 +1,7 @@
 ﻿import { notFound } from "next/navigation";
 
 import { caseStudies } from "@/data/case-studies";
-import ExecutiveSalesPerformanceIntelligence from "@/components/case-studies/ExecutiveSalesPerformanceIntelligence";
+import ExecutiveSalesPerformanceIntelligenceDashboard from "@/components/case-studies/ExecutiveSalesPerformanceIntelligenceDashboard";
 import CustomerExperienceOperationsDashboard from "@/components/case-studies/CustomerExperienceOperationsDashboard";
 
 interface PageProps {
@@ -24,7 +24,7 @@ export default async function CaseStudyPage({
   }
 
   if (project.slug === "executive-sales-performance-intelligence") {
-    return <ExecutiveSalesPerformanceIntelligence />;
+    return <ExecutiveSalesPerformanceIntelligenceDashboard />;
   }
 
   if (project.slug === "customer-experience-operations-dashboard") {
@@ -33,3 +33,4 @@ export default async function CaseStudyPage({
 
   notFound();
 }
+
