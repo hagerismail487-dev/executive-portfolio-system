@@ -1,4 +1,5 @@
-import DashboardPresentation from "@/components/case-studies/DashboardPresentation";
+﻿import DashboardPresentation from "@/components/case-studies/DashboardPresentation";
+import CustomerExperienceDashboardPresentation from "@/components/case-studies/CustomerExperienceDashboardPresentation";
 
 interface PageProps {
   params: Promise<{
@@ -11,9 +12,13 @@ export default async function DashboardPage({
 }: PageProps) {
   const { slug } = await params;
 
-  if (slug !== "executive-sales-performance-intelligence") {
-    return null;
+  if (slug === "executive-sales-performance-intelligence") {
+    return <DashboardPresentation />;
   }
 
-  return <DashboardPresentation />;
+  if (slug === "customer-experience-operations-dashboard") {
+    return <CustomerExperienceDashboardPresentation />;
+  }
+
+  return null;
 }

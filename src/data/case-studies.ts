@@ -1,4 +1,4 @@
-/* ===========================================================
+﻿/* ===========================================================
    CASE STUDIES DATA
    Executive Portfolio System
 =========================================================== */
@@ -175,85 +175,106 @@ export const caseStudies: CaseStudy[] = [
     contactCTA: defaultCTA,
   },
     {
-    id: 2,
+  id: 2,
 
-    slug: "hr-analytics-dashboard",
+  slug: "customer-experience-operations-dashboard",
 
-    featured: true,
+  featured: true,
 
-    title: "HR Analytics Dashboard",
+  title: "Customer Experience & Operations Dashboard",
 
-    excerpt:
-      "Executive HR analytics dashboard providing workforce insights, hiring performance, turnover analysis, and organizational health metrics.",
+  excerpt:
+    "Executive Business Intelligence solution integrating customer service, collections, and legal case management into a unified operational intelligence environment.",
 
-    category: "Human Resources",
+  category: "Customer Experience",
 
-    industry: "Human Resources",
+  industry:
+    "Customer Experience / Customer Service / Collections / Legal Operations",
 
-    year: "2026",
+  year: "",
 
-    client: "Confidential",
+  client: "",
 
-    role: "Senior MIS & BI Specialist",
+  role: "",
 
-    images: {
-      cover:
-        "/images/case-studies/hr-analytics-dashboard/cover.jpg",
+  images: {
+    cover:
+      "/projects/customer-experience-operations-dashboard/03-customer-experience.PNG",
 
-      gallery: [
-        "/images/case-studies/hr-analytics-dashboard/dashboard-01.jpg",
-        "/images/case-studies/hr-analytics-dashboard/dashboard-02.jpg",
-        "/images/case-studies/hr-analytics-dashboard/dashboard-03.jpg",
-      ],
-    },
-
-    tools: [
-      "Power BI",
-      "DAX",
-      "Power Query",
-      "Excel",
+    gallery: [
+      "/projects/customer-experience-operations-dashboard/01-landing-page.png",
+      "/projects/customer-experience-operations-dashboard/03-customer-experience.PNG",
+      "/projects/customer-experience-operations-dashboard/03-customer-experience.png",
+      "/projects/customer-experience-operations-dashboard/04-collections-performance.png",
+      "/projects/customer-experience-operations-dashboard/05-legal-performance.png",
+      "/projects/customer-experience-operations-dashboard/data-model.png",
     ],
-
-    objectives: [
-      "Monitor workforce performance.",
-      "Track recruitment activities.",
-      "Analyze employee turnover.",
-      "Support HR strategic planning.",
-    ],
-
-    content: {
-      ...emptyContent,
-
-      overview:
-        "Executive HR reporting solution providing leadership with a complete workforce overview.",
-
-      challenge:
-        "HR information was spread across multiple reports with limited executive visibility.",
-
-      solution:
-        "Designed an interactive Power BI dashboard integrating recruitment, workforce, contracts, and employee analytics.",
-
-      results:
-        "Enabled faster HR reporting and executive-level workforce visibility.",
-    },
-
-    businessImpact: [
-      {
-        title: "Reporting Time",
-        value: "-70%",
-      },
-      {
-        title: "Executive Visibility",
-        value: "100%",
-      },
-      {
-        title: "Recruitment Tracking",
-        value: "+45%",
-      },
-    ],
-
-    contactCTA: defaultCTA,
   },
+
+  tools: [
+    "Power BI",
+    "DAX",
+    "Power Query",
+    "Excel Sheets",
+  ],
+
+  objectives: [
+    "Monitor customer service performance.",
+    "Track service request resolution.",
+    "Analyze request trends and case types.",
+    "Evaluate agent workload.",
+    "Monitor payment collection performance.",
+    "Identify outstanding balances.",
+    "Analyze installment payment status.",
+    "Monitor legal case activity and workload.",
+    "Identify operational areas requiring management attention.",
+  ],
+
+  content: {
+    ...emptyContent,
+
+    overview:
+      "Customer Experience & Operations Dashboard is an executive Business Intelligence solution designed to provide management with a centralized view of customer service, collections and legal case activity performance.",
+
+    challenge:
+      "Customer-facing operational data was distributed across multiple functions, making it difficult for management to monitor service performance, collection effectiveness, legal workload, and project-level operational activity through one centralized reporting environment.",
+
+    solution:
+      "Create an integrated customer operations intelligence system that enables management to monitor service performance, collection effectiveness, and legal workload through standardized KPIs and interactive analysis.",
+
+    results:
+      "The solution transforms fragmented customer-facing operational data into a centralized executive intelligence environment covering customer service, collections, legal operations and performance.",
+  },
+
+  businessImpact: [
+    {
+      title: "Resolution Rate",
+      value: "92%",
+    },
+    {
+      title: "SLA Calls Compliance",
+      value: "96.46%",
+    },
+    {
+      title: "Remaining Collections",
+      value: "1.21bn",
+    },
+    {
+      title: "Unpaid Installments",
+      value: "75.89%",
+    },
+    {
+      title: "Active Legal Cases",
+      value: "330",
+    },
+    {
+      title: "Total Legal Cases",
+      value: "484",
+    },
+  ],
+
+  contactCTA: defaultCTA,
+},
 
   {
     id: 3,

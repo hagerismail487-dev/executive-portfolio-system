@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 
 import Button from "@/components/ui/Button";
@@ -229,30 +229,6 @@ export default function FeaturedCaseStudies() {
                       "
                     />
 
-                    {/* Dashboard Preview Label */}
-
-                    <div
-                      className="
-                        absolute
-                        bottom-3
-                        left-3
-                        rounded-md
-                        border
-                        border-[#4B8ED0]/40
-                        bg-[#061B3A]/80
-                        px-2.5
-                        py-1.5
-                        text-[9px]
-                        font-semibold
-                        uppercase
-                        tracking-[0.12em]
-                        text-[#B9D8FF]
-                        backdrop-blur-sm
-                      "
-                    >
-                      Dashboard Preview
-                    </div>
-
                   </div>
 
                   {/* ========================================= */}
@@ -399,3 +375,4 @@ export default function FeaturedCaseStudies() {
     </Section>
   );
 }
+
