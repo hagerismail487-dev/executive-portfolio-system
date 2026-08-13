@@ -202,11 +202,11 @@ export const caseStudies: CaseStudy[] = [
       "/projects/customer-experience-operations-dashboard/03-customer-experience.PNG",
 
     gallery: [
-      "/projects/customer-experience-operations-dashboard/01-landing-page.png",
+      "/projects/customer-experience-operations-dashboard/01-landing-page.PNG",
       "/projects/customer-experience-operations-dashboard/03-customer-experience.PNG",
-      "/projects/customer-experience-operations-dashboard/03-customer-experience.png",
-      "/projects/customer-experience-operations-dashboard/04-collections-performance.png",
-      "/projects/customer-experience-operations-dashboard/05-legal-performance.png",
+      "/projects/customer-experience-operations-dashboard/03-customer-experience.PNG",
+      "/projects/customer-experience-operations-dashboard/04-collections-performance.PNG",
+      "/projects/customer-experience-operations-dashboard/05-legal-performance.PNG",
       "/projects/customer-experience-operations-dashboard/data-model.png",
     ],
   },
@@ -357,3 +357,4 @@ export const caseStudies: CaseStudy[] = [
     contactCTA: defaultCTA,
   },
 ];
+
