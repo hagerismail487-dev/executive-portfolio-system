@@ -1,4 +1,4 @@
-import {
+﻿import {
   Mail,
   MapPin,
 } from "lucide-react";
@@ -394,9 +394,7 @@ export default function Contact() {
 >
   Download CV
 
-  <span>
-    ↓
-  </span>
+  <span>&#8595;</span>
 </a>
 
               </div>
@@ -613,7 +611,93 @@ export default function Contact() {
               />
 
               {/* ========================================= */}
-              {/* Location */}
+              {/* WhatsApp */}
+
+              <div className="flex items-center gap-4">
+
+                <div
+                  className="
+                    flex
+                    h-12
+                    w-12
+                    shrink-0
+                    items-center
+                    justify-center
+
+                    rounded-full
+
+                    border
+                    border-[#2C6DB0]
+
+                    bg-[#0D3768]
+
+                    text-[#5FA0FF]
+                  "
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-5 w-5"
+                  >
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                    <path d="M20.52 3.449C18.286 1.214 15.315 0 12.151 0 5.495 0 .083 5.411.083 12.067c0 2.126.555 4.202 1.609 6.033L.001 24l6.044-1.586a12.04 12.04 0 0 0 6.1 1.644h.005c6.654 0 12.066-5.412 12.066-12.067 0-3.164-1.216-6.134-3.696-8.542zM12.15 22.059h-.004a9.98 9.98 0 0 1-5.09-1.393l-.365-.216-3.586.941.957-3.495-.237-.379a10.017 10.017 0 1 1 8.325 4.542z" />
+                  </svg>
+                </div>
+
+                <div>
+
+                  <p
+                    className="
+                      text-[11px]
+                      font-semibold
+                      uppercase
+                      tracking-[0.16em]
+
+                      !text-[#8FB3D7]
+                    "
+                  >
+                    WhatsApp
+                  </p>
+
+                  <a
+                    href="https://wa.me/201023281762"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      mt-1
+                      block
+
+                      text-[14px]
+                      font-medium
+
+                      !text-[#5FA0FF]
+
+                      transition-colors
+                      duration-300
+
+                      hover:!text-white
+                    "
+                  >
+                    +20 1023281762
+                  </a>
+
+                </div>
+
+              </div>
+
+              {/* Divider */}
+
+          <div
+            className="
+              my-5
+              ml-[64px]
+              h-px
+              bg-[#1E456F]
+            "
+          />
+
+          {/* Location */}
               {/* ========================================= */}
 
               <div className="flex items-center gap-4">
@@ -683,3 +767,7 @@ export default function Contact() {
     </Section>
   );
 }
+
+
+
+
