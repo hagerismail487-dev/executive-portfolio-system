@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+﻿import type { ReactNode } from "react";
 
 export interface ExecutiveSalesProject {
   title: string;
@@ -95,35 +95,35 @@ export const executiveSalesProject: ExecutiveSalesProject = {
       description:
         "High-level view of commercial and sales performance.",
       image:
-        "/projects/executive-sales-performance-intelligence/02-executive-dashboard.png",
+        "/projects/executive-sales-performance-intelligence/02-executive-dashboard.PNG",
     },
     {
       title: "Contracts, Reservations & Cancellations",
       description:
         "Analysis of contracts, reservations, and cancellation performance.",
       image:
-        "/projects/executive-sales-performance-intelligence/03-contracts-reservations-cancellations.png",
+        "/projects/executive-sales-performance-intelligence/03-contracts-reservations-cancellations.PNG",
     },
     {
       title: "Leads & Meetings",
       description:
         "Sales funnel activity and lead-to-meeting analysis.",
       image:
-        "/projects/executive-sales-performance-intelligence/04-leads-meetings.png",
+        "/projects/executive-sales-performance-intelligence/04-leads-meetings.PNG",
     },
     {
       title: "Inventory Analysis",
       description:
         "Visibility into remaining units and inventory exposure.",
       image:
-        "/projects/executive-sales-performance-intelligence/05-inventory-analysis.png",
+        "/projects/executive-sales-performance-intelligence/05-inventory-analysis.PNG",
     },
     {
       title: "Orientation Analysis",
       description:
         "Analysis of orientation activity within the sales journey.",
       image:
-        "/projects/executive-sales-performance-intelligence/06-orientation-analysis.png",
+        "/projects/executive-sales-performance-intelligence/06-orientation-analysis.PNG",
     },
   ],
 
@@ -235,3 +235,4 @@ export const executiveSalesProject: ExecutiveSalesProject = {
     "Decision-Oriented Insight Generation",
   ],
 };
+

@@ -236,11 +236,12 @@ export default function ExecutiveSalesPerformanceIntelligenceDashboard() {
     Dashboard Experience
   </SectionLabel>
 
+  
   <p className="mt-2 text-[12px] leading-5 text-[#8fa7bf]">
     Explore the full reporting journey across the sales lifecycle.
   </p>
 
-  <div className="mt-7 overflow-visible">
+  <div className="mt-5 overflow-visible">
 
     <div className="flex gap-4 overflow-x-auto px-2 pb-6 pt-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
 
@@ -338,30 +339,6 @@ export default function ExecutiveSalesPerformanceIntelligenceDashboard() {
   </div>
 
   {/* Presentation Link */}
-
-  <div className="mt-3 flex items-center justify-between rounded-lg border border-[#143a61] bg-[#071a2d] px-3 py-2">
-
-    <ArrowLeft
-      size={14}
-      className="text-[#69b9ff]"
-    />
-
-    <Link
-      href="/case-studies/executive-sales-performance-intelligence/dashboard"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-[10px] text-[#aac2da] transition hover:text-white"
-    >
-      Open dashboard presentation â†’
-    </Link>
-
-    <ArrowRight
-      size={14}
-      className="text-[#69b9ff]"
-    />
-
-  </div>
-
 </section>
         {/* Architecture */}
 
@@ -371,7 +348,8 @@ export default function ExecutiveSalesPerformanceIntelligenceDashboard() {
             Data & Reporting Architecture
           </SectionLabel>
 
-          <p className="mt-2 text-[12px] leading-5 text-[#8fa7bf]">
+          
+  <p className="mt-2 text-[12px] leading-5 text-[#8fa7bf]">
             How data flows from multiple sources into one unified intelligence layer.
           </p>
 
@@ -423,7 +401,8 @@ export default function ExecutiveSalesPerformanceIntelligenceDashboard() {
             Key Business Insights
           </SectionLabel>
 
-          <p className="mt-2 text-[12px] leading-5 text-[#8fa7bf]">
+          
+  <p className="mt-2 text-[12px] leading-5 text-[#8fa7bf]">
             From the selected executive view and documented project analysis.
           </p>
 
@@ -695,3 +674,6 @@ function InfoPanel({
     </div>
   );
 }
+
+
+

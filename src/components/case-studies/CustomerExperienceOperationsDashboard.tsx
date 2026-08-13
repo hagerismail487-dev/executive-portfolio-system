@@ -284,7 +284,39 @@ export default function CustomerExperienceOperationsDashboard() {
         </section>
 
         <section className="mt-4 rounded-[12px] border border-[#174574] bg-[#061426]/85 p-4 sm:p-5">
-          <SectionLabel>Dashboard Experience</SectionLabel>
+          <div className="flex items-center justify-between gap-4">
+  <SectionLabel>Dashboard Experience</SectionLabel>
+
+  <Link
+    href="/case-studies/customer-experience-operations-dashboard/dashboard"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      inline-flex
+      shrink-0
+      items-center
+      gap-2
+      rounded-md
+      border
+      border-[#2b6597]
+      bg-[#07192b]
+      px-3
+      py-2
+      text-[9px]
+      font-semibold
+      uppercase
+      tracking-[0.12em]
+      text-[#aac2da]
+      transition-all
+      duration-300
+      hover:border-[#55b5ff]
+      hover:text-white
+    "
+  >
+    <span>Open Dashboard</span>
+    <ArrowRight size={13} className="text-[#69b9ff]" />
+  </Link>
+</div>
 
           <p className="mt-2 text-[12px] leading-5 text-[#8fa7bf]">
             Explore the reporting journey across customer operations,
@@ -330,22 +362,7 @@ export default function CustomerExperienceOperationsDashboard() {
               ))}
             </div>
           </div>
-
-          <div className="mt-3 flex items-center justify-between rounded-lg border border-[#143a61] bg-[#071a2d] px-3 py-2">
-            <ArrowLeft size={14} className="text-[#69b9ff]" />
-
-            <Link
-              href="/case-studies/customer-experience-operations-dashboard/dashboard"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[10px] text-[#aac2da] transition hover:text-white"
-            >
-              Open dashboard presentation →
-            </Link>
-
-            <ArrowRight size={14} className="text-[#69b9ff]" />
-          </div>
-        </section>
+</section>
 
         <section className="mt-4 rounded-[12px] border border-[#174574] bg-[#061426]/85 p-4 sm:p-5">
           <SectionLabel>Data &amp; Reporting Architecture</SectionLabel>
@@ -630,4 +647,5 @@ function BriefcaseIcon({ size }: { size?: number }) {
     </svg>
   );
 }
+
 
