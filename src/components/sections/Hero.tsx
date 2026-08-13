@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
@@ -444,7 +444,7 @@ export default function Hero() {
                   text-[#4D9BFF]
                 "
               >
-                ▣
+                ◆
               </div>
 
               <p
@@ -551,23 +551,21 @@ export default function Hero() {
                 min-h-[300px]
                 overflow-hidden
                 bg-[#071C36]
-                sm:min-h-[330px]
+                sm:min-h-[290px]
               "
             >
               <Image
-                src="/images/hero/executive-dashboard-preview.webp"
-                alt="Executive Performance Dashboard"
+                src="/projects/executive-sales-performance-intelligence/02-executive-dashboard.PNG"
+                alt="Executive Sales Dashboard"
                 width={900}
                 height={560}
                 priority
                 className="
                   block
                   h-full
-                  min-h-[300px]
-                  w-full
-                  object-cover
-                  object-center
-                  sm:min-h-[330px]
+                  min-h-[260px] w-full
+                  object-contain object-center p-5
+                  sm:min-h-[290px]
                 "
               />
             </div>
@@ -657,3 +655,8 @@ export default function Hero() {
     </Section>
   );
 }
+
+
+
+
+
