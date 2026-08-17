@@ -4,6 +4,7 @@ import CustomerExperienceDashboardPresentation from "@/components/case-studies/C
 import RealEstateDecisionIntelligencePresentation from "@/components/case-studies/RealEstateDecisionIntelligencePresentation";
 import CRMSalesIntelligencePresentation from "@/components/case-studies/CRMSalesIntelligencePresentation";
 import ProcurementManagementPresentation from "@/components/case-studies/ProcurementManagementPresentation";
+import ProcurementInventoryManagementPresentation from "@/components/case-studies/ProcurementInventoryManagementPresentation";
 
 interface PageProps {
   params: Promise<{
@@ -37,6 +38,10 @@ export default async function DashboardPage({
 
   if (slug === "procurement-management") {
     return <ProcurementManagementPresentation />;
+  }
+
+  if (slug === "procurement-inventory-management") {
+    return <ProcurementInventoryManagementPresentation />;
   }
 
   return null;

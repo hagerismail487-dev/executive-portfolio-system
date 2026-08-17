@@ -2,6 +2,7 @@
 import { realEstateDecisionIntelligenceProject } from "@/data/real-estate-decision-intelligence";
 import { crmSalesIntelligenceProject } from "@/data/crm-sales-intelligence";
 import { procurementManagementProject } from "@/data/procurement-management";
+import { procurementInventoryManagementProject } from "@/data/procurement-inventory-management";
 
 /* ===========================================================
    CASE STUDIES DATA
@@ -241,6 +242,41 @@ const procurementManagementCaseStudy: CaseStudy = {
   businessImpact: [],
   contactCTA: defaultCTA,
 };
+const procurementInventoryManagementCaseStudy: CaseStudy = {
+  id: 7,
+  slug: "procurement-inventory-management",
+  featured: false,
+  title: procurementInventoryManagementProject.title,
+  excerpt: procurementInventoryManagementProject.description,
+  category: procurementInventoryManagementProject.category,
+  industry: "Procurement / Inventory / Fixed Assets",
+  year: "",
+  client: "",
+  role: "",
+  images: {
+    cover: procurementInventoryManagementProject.dashboards[1].image,
+    gallery: procurementInventoryManagementProject.dashboards.map(
+      (dashboard) => dashboard.image
+    ),
+  },
+  tools: procurementInventoryManagementProject.technologies,
+  objectives: [
+    "Monitor procurement and supply order performance.",
+    "Analyze supplier and department procurement activity.",
+    "Track inventory movement and stock position.",
+    "Monitor fixed assets movement and operational status.",
+    "Support management visibility across procurement, inventory, and fixed assets.",
+  ],
+  content: {
+    overview: procurementInventoryManagementProject.description,
+    challenge: procurementInventoryManagementProject.overview.challenge,
+    solution: procurementInventoryManagementProject.overview.solution,
+    results:
+      "The solution provides an integrated management reporting environment across procurement, supply orders, inventory movement, and fixed assets.",
+  },
+  businessImpact: [],
+  contactCTA: defaultCTA,
+};
 export const caseStudies: CaseStudy[] = [
       {
     id: 1,
@@ -432,7 +468,9 @@ export const caseStudies: CaseStudy[] = [
   realEstateDecisionIntelligenceCaseStudy,
   crmSalesIntelligenceCaseStudy,
   procurementManagementCaseStudy,
-];
+
+  procurementInventoryManagementCaseStudy,];
+
 
 
 

@@ -7,6 +7,7 @@ import RealEstateDecisionIntelligenceDashboard from "@/components/case-studies/R
 import HRDecisionSupportSystemDashboard from "@/components/case-studies/HRDecisionSupportSystemDashboard";
 import CRMSalesIntelligenceDashboard from "@/components/case-studies/CRMSalesIntelligenceDashboard";
 import ProcurementManagementDashboard from "@/components/case-studies/ProcurementManagementDashboard";
+import ProcurementInventoryManagementDashboard from "@/components/case-studies/ProcurementInventoryManagementDashboard";
 
 interface PageProps {
   params: Promise<{
@@ -44,6 +45,10 @@ export default async function CaseStudyPage({
 
   if (project.slug === "crm-sales-intelligence") {
     return <CRMSalesIntelligenceDashboard />;
+  }
+
+  if (project.slug === "procurement-inventory-management") {
+    return <ProcurementInventoryManagementDashboard />;
   }
 
   if (project.slug === "procurement-management") {
