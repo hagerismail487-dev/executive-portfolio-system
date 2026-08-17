@@ -1,6 +1,7 @@
 ﻿import { hrDecisionSupportSystem } from "@/data/hr-decision-support-system";
 import { realEstateDecisionIntelligenceProject } from "@/data/real-estate-decision-intelligence";
 import { crmSalesIntelligenceProject } from "@/data/crm-sales-intelligence";
+import { procurementManagementProject } from "@/data/procurement-management";
 
 /* ===========================================================
    CASE STUDIES DATA
@@ -203,6 +204,43 @@ const realEstateDecisionIntelligenceCaseStudy: CaseStudy = {
   businessImpact: [],
   contactCTA: defaultCTA,
 };
+
+const procurementManagementCaseStudy: CaseStudy = {
+  id: 6,
+  slug: "procurement-management",
+  featured: false,
+  title: procurementManagementProject.title,
+  excerpt: procurementManagementProject.description,
+  category: procurementManagementProject.category,
+  industry: "Procurement / Inventory / Fixed Assets",
+  year: "",
+  client: "",
+  role: "",
+  images: {
+    cover: procurementManagementProject.dashboards[0].image,
+    gallery: procurementManagementProject.dashboards.map(
+      (dashboard) => dashboard.image
+    ),
+  },
+  tools: procurementManagementProject.technologies,
+  objectives: [
+    "Monitor procurement performance.",
+    "Analyze supplier activity and procurement concentration.",
+    "Track payment progress and outstanding procurement balances.",
+    "Monitor inventory position, availability, and concentration.",
+    "Analyze fixed asset movement and utilization status.",
+    "Support executive decision-making across procurement, inventory, and fixed assets.",
+  ],
+  content: {
+    overview: procurementManagementProject.description,
+    challenge: procurementManagementProject.overview.challenge,
+    solution: procurementManagementProject.overview.solution,
+    results:
+      "The solution provides a unified management reporting environment across procurement, inventory, and fixed assets.",
+  },
+  businessImpact: [],
+  contactCTA: defaultCTA,
+};
 export const caseStudies: CaseStudy[] = [
       {
     id: 1,
@@ -393,7 +431,9 @@ export const caseStudies: CaseStudy[] = [
   hrCaseStudy,
   realEstateDecisionIntelligenceCaseStudy,
   crmSalesIntelligenceCaseStudy,
+  procurementManagementCaseStudy,
 ];
+
 
 
 
