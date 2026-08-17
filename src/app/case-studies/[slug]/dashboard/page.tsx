@@ -1,6 +1,7 @@
 ﻿import ExecutiveSalesPerformanceIntelligencePresentation from "@/components/case-studies/ExecutiveSalesPerformanceIntelligencePresentation";
 import HRDecisionSupportSystemPresentation from "@/components/case-studies/HRDecisionSupportSystemPresentation";
 import CustomerExperienceDashboardPresentation from "@/components/case-studies/CustomerExperienceDashboardPresentation";
+import RealEstateDecisionIntelligencePresentation from "@/components/case-studies/RealEstateDecisionIntelligencePresentation";
 
 interface PageProps {
   params: Promise<{
@@ -24,8 +25,13 @@ export default async function DashboardPage({
     return <HRDecisionSupportSystemPresentation />;
   }
 
+  if (slug === "real-estate-decision-intelligence") {
+    return <RealEstateDecisionIntelligencePresentation />;
+  }
+
   return null;
 }
+
 
 
 

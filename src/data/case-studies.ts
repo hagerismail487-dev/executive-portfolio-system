@@ -1,4 +1,5 @@
 ﻿import { hrDecisionSupportSystem } from "@/data/hr-decision-support-system";
+import { realEstateDecisionIntelligenceProject } from "@/data/real-estate-decision-intelligence";
 
 /* ===========================================================
    CASE STUDIES DATA
@@ -91,7 +92,7 @@ const emptyContent: CaseStudyContent = {
 =========================================================== */
 
 const hrCaseStudy: CaseStudy = {
-  id: 4,
+  id: 3,
   slug: hrDecisionSupportSystem.slug,
   featured: true,
   title: hrDecisionSupportSystem.title,
@@ -123,6 +124,42 @@ const hrCaseStudy: CaseStudy = {
     overview: hrDecisionSupportSystem.description,
     challenge: hrDecisionSupportSystem.challenge,
     solution: hrDecisionSupportSystem.solution,
+    results: "",
+  },
+  businessImpact: [],
+  contactCTA: defaultCTA,
+};
+
+const realEstateDecisionIntelligenceCaseStudy: CaseStudy = {
+  id: 4,
+  slug: "real-estate-decision-intelligence",
+  featured: false,
+  title: realEstateDecisionIntelligenceProject.title,
+  excerpt: realEstateDecisionIntelligenceProject.description,
+  category: realEstateDecisionIntelligenceProject.category,
+  industry: "Real Estate",
+  year: "",
+  client: "",
+  role: "",
+  images: {
+    cover: realEstateDecisionIntelligenceProject.dashboards[0].image,
+    gallery: realEstateDecisionIntelligenceProject.dashboards.map(
+      (dashboard) => dashboard.image
+    ),
+  },
+  tools: realEstateDecisionIntelligenceProject.technologies,
+  objectives: [
+    "Monitor real estate sales performance.",
+    "Analyze inventory position and exposure.",
+    "Monitor lead pipeline activity.",
+    "Evaluate conversion and closure performance.",
+    "Analyze cancellation activity.",
+    "Support executive decision-making across sales, inventory, and pipeline intelligence.",
+  ],
+  content: {
+    overview: realEstateDecisionIntelligenceProject.description,
+    challenge: realEstateDecisionIntelligenceProject.overview.challenge,
+    solution: realEstateDecisionIntelligenceProject.overview.solution,
     results: "",
   },
   businessImpact: [],
@@ -315,8 +352,15 @@ export const caseStudies: CaseStudy[] = [
 
   contactCTA: defaultCTA,
 },
-
   hrCaseStudy,
+  realEstateDecisionIntelligenceCaseStudy,
 ];
+
+
+
+
+
+
+
 
 

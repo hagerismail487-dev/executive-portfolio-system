@@ -3,6 +3,7 @@
 import { caseStudies } from "@/data/case-studies";
 import ExecutiveSalesPerformanceIntelligenceDashboard from "@/components/case-studies/ExecutiveSalesPerformanceIntelligenceDashboard";
 import CustomerExperienceOperationsDashboard from "@/components/case-studies/CustomerExperienceOperationsDashboard";
+import RealEstateDecisionIntelligenceDashboard from "@/components/case-studies/RealEstateDecisionIntelligenceDashboard";
 import HRDecisionSupportSystemDashboard from "@/components/case-studies/HRDecisionSupportSystemDashboard";
 
 interface PageProps {
@@ -35,7 +36,12 @@ export default async function CaseStudyPage({
     return <HRDecisionSupportSystemDashboard />;
   }
 
+  if (project.slug === "real-estate-decision-intelligence") {
+    return <RealEstateDecisionIntelligenceDashboard />;
+  }
+
   notFound();
 }
+
 
 
