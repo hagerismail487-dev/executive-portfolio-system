@@ -5,6 +5,7 @@ import ExecutiveSalesPerformanceIntelligenceDashboard from "@/components/case-st
 import CustomerExperienceOperationsDashboard from "@/components/case-studies/CustomerExperienceOperationsDashboard";
 import RealEstateDecisionIntelligenceDashboard from "@/components/case-studies/RealEstateDecisionIntelligenceDashboard";
 import HRDecisionSupportSystemDashboard from "@/components/case-studies/HRDecisionSupportSystemDashboard";
+import CRMSalesIntelligenceDashboard from "@/components/case-studies/CRMSalesIntelligenceDashboard";
 
 interface PageProps {
   params: Promise<{
@@ -40,8 +41,13 @@ export default async function CaseStudyPage({
     return <RealEstateDecisionIntelligenceDashboard />;
   }
 
+  if (project.slug === "crm-sales-intelligence") {
+    return <CRMSalesIntelligenceDashboard />;
+  }
+
   notFound();
 }
+
 
 
 

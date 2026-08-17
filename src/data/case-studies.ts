@@ -1,5 +1,6 @@
 ﻿import { hrDecisionSupportSystem } from "@/data/hr-decision-support-system";
 import { realEstateDecisionIntelligenceProject } from "@/data/real-estate-decision-intelligence";
+import { crmSalesIntelligenceProject } from "@/data/crm-sales-intelligence";
 
 /* ===========================================================
    CASE STUDIES DATA
@@ -124,6 +125,43 @@ const hrCaseStudy: CaseStudy = {
     overview: hrDecisionSupportSystem.description,
     challenge: hrDecisionSupportSystem.challenge,
     solution: hrDecisionSupportSystem.solution,
+    results: "",
+  },
+  businessImpact: [],
+  contactCTA: defaultCTA,
+};
+
+const crmSalesIntelligenceCaseStudy: CaseStudy = {
+  id: 5,
+  slug: "crm-sales-intelligence",
+  featured: false,
+  title: crmSalesIntelligenceProject.title,
+  excerpt: crmSalesIntelligenceProject.description,
+  category: crmSalesIntelligenceProject.category,
+  industry: "CRM / Sales / Revenue Performance",
+  year: "",
+  client: "",
+  role: "",
+  images: {
+    cover: crmSalesIntelligenceProject.dashboards[0].image,
+    gallery: crmSalesIntelligenceProject.dashboards.map(
+      (dashboard) => dashboard.image
+    ),
+  },
+  tools: crmSalesIntelligenceProject.technologies,
+  objectives: [
+    "Monitor sales performance.",
+    "Analyze pipeline efficiency and opportunity leakage.",
+    "Evaluate sales team performance.",
+    "Analyze product contribution and commercial behavior.",
+    "Understand customer and account contribution.",
+    "Evaluate regional performance and opportunity.",
+    "Support executive decision-making through integrated sales intelligence.",
+  ],
+  content: {
+    overview: crmSalesIntelligenceProject.description,
+    challenge: crmSalesIntelligenceProject.overview.challenge,
+    solution: crmSalesIntelligenceProject.overview.solution,
     results: "",
   },
   businessImpact: [],
@@ -354,7 +392,13 @@ export const caseStudies: CaseStudy[] = [
 },
   hrCaseStudy,
   realEstateDecisionIntelligenceCaseStudy,
+  crmSalesIntelligenceCaseStudy,
 ];
+
+
+
+
+
 
 
 
