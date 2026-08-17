@@ -3,6 +3,7 @@
 import { caseStudies } from "@/data/case-studies";
 import ExecutiveSalesPerformanceIntelligenceDashboard from "@/components/case-studies/ExecutiveSalesPerformanceIntelligenceDashboard";
 import CustomerExperienceOperationsDashboard from "@/components/case-studies/CustomerExperienceOperationsDashboard";
+import HRDecisionSupportSystemDashboard from "@/components/case-studies/HRDecisionSupportSystemDashboard";
 
 interface PageProps {
   params: Promise<{
@@ -30,7 +31,11 @@ export default async function CaseStudyPage({
   if (project.slug === "customer-experience-operations-dashboard") {
     return <CustomerExperienceOperationsDashboard />;
   }
+  if (project.slug === "hr-decision-support-system") {
+    return <HRDecisionSupportSystemDashboard />;
+  }
 
   notFound();
 }
+
 

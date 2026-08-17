@@ -31,6 +31,11 @@ const dashboards = [
     image:
       "/projects/customer-experience-operations-dashboard/05-legal-performance.PNG",
   },
+  {
+    title: "Data Model",
+    image:
+      "/projects/customer-experience-operations-dashboard/data-model.png",
+  },
 ];
 
 export default function CustomerExperienceDashboardPresentation() {
@@ -121,7 +126,7 @@ export default function CustomerExperienceDashboardPresentation() {
             <ArrowLeft size={18} />
           </button>
 
-          <div className="w-full max-w-[1320px]">
+          <div className="w-full max-w-[1500px]">
             <div className="relative overflow-hidden rounded-xl border border-[#1c4c79] bg-[#071525] p-2 shadow-[0_30px_100px_rgba(0,50,110,.3)] sm:p-3 lg:p-4">
               <div className="relative aspect-[16/9] overflow-hidden rounded-lg border border-[#173a5d] bg-[#020a14]">
                 <Image
@@ -252,4 +257,6 @@ export default function CustomerExperienceDashboardPresentation() {
     </main>
   );
 }
+
+
 

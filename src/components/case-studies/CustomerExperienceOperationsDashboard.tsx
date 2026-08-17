@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -46,6 +47,14 @@ const dashboards = [
     description:
       "Legal operations analysis covering case status, opening reasons, legal-office workload, registration trends, and project exposure.",
   },
+  {
+    title: "Data Model",
+    image:
+      "/projects/customer-experience-operations-dashboard/data-model.png",
+    description:
+      "Power BI data model connecting customer experience, collections, and legal operational reporting.",
+  },
+
 ];
 
 const snapshot = [
@@ -135,6 +144,7 @@ const toneClasses: Record<string, string> = {
 };
 
 export default function CustomerExperienceOperationsDashboard() {
+  const dashboardScrollerRef = useRef<HTMLDivElement>(null);
   return (
     <main className="min-h-screen overflow-hidden bg-[#030a16] text-white">
       <div className="pointer-events-none fixed inset-0 -z-0 bg-[radial-gradient(circle_at_70%_10%,rgba(18,96,180,.18),transparent_30%),radial-gradient(circle_at_10%_50%,rgba(0,62,130,.12),transparent_28%)]" />
@@ -323,23 +333,61 @@ export default function CustomerExperienceOperationsDashboard() {
             collections, and legal performance.
           </p>
 
-          <div className="mt-7 overflow-visible">
-            <div className="flex gap-4 overflow-x-auto px-2 pb-6 pt-3 [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
-              {dashboards.map((dashboard, index) => (
+          <div className="relative mt-7 overflow-visible">
+            <button
+              type="button"
+              aria-label="Previous dashboard"
+              onClick={() =>
+                dashboardScrollerRef.current?.scrollBy({
+                  left: -266,
+                  behavior: "smooth",
+                })
+              }
+              className="
+                absolute
+                left-0
+                top-[75px]
+                z-20
+                hidden
+                h-10
+                w-10
+                -translate-y-1/2
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#285579]
+                bg-[#061426]/95
+                text-[#75beff]
+                shadow-[0_8px_24px_rgba(0,0,0,.35)]
+                transition
+                hover:border-[#55b5ff]
+                hover:bg-[#0a2440]
+                hover:text-white
+                md:flex
+              "
+            >
+              <ArrowLeft size={17} />
+            </button>
+
+            <div
+              ref={dashboardScrollerRef}
+              className="flex gap-4 overflow-x-auto px-12 pb-6 pt-3 scroll-smooth [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden"
+            >              {dashboards.map((dashboard, index) => (
                 <Link
                   key={dashboard.title}
                   href={`/case-studies/customer-experience-operations-dashboard/dashboard?slide=${index}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative min-w-[190px] flex-1 text-left sm:min-w-[205px]"
+                  className="group relative w-[250px] shrink-0 text-left"
                 >
-                  <div className="relative z-0 aspect-[16/10] overflow-visible rounded-lg">
+                  <div className="relative z-0 h-[150px] w-full overflow-visible rounded-lg">
                     <div className="relative h-full w-full overflow-hidden rounded-lg border border-[#173b61] bg-[#07192b] transition-all duration-300 ease-out group-hover:z-50 group-hover:scale-[1.08] group-hover:border-[#1987ff] group-hover:shadow-[0_18px_45px_rgba(0,96,190,.35)]">
                       <Image
                         src={dashboard.image}
                         alt={dashboard.title}
                         fill
-                        className="object-cover object-top transition-transform duration-300 ease-out"
+                        className="object-contain object-top transition-transform duration-300 ease-out"
                         sizes="260px"
                       />
 
@@ -361,56 +409,45 @@ export default function CustomerExperienceOperationsDashboard() {
                 </Link>
               ))}
             </div>
+
+            <button
+              type="button"
+              aria-label="Next dashboard"
+              onClick={() =>
+                dashboardScrollerRef.current?.scrollBy({
+                  left: 266,
+                  behavior: "smooth",
+                })
+              }
+              className="
+                absolute
+                right-0
+                top-[75px]
+                z-20
+                hidden
+                h-10
+                w-10
+                -translate-y-1/2
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#285579]
+                bg-[#061426]/95
+                text-[#75beff]
+                shadow-[0_8px_24px_rgba(0,0,0,.35)]
+                transition
+                hover:border-[#55b5ff]
+                hover:bg-[#0a2440]
+                hover:text-white
+                md:flex
+              "
+            >
+              <ArrowRight size={17} />
+            </button>
           </div>
 </section>
-
-        <section className="mt-4 rounded-[12px] border border-[#174574] bg-[#061426]/85 p-4 sm:p-5">
-          <SectionLabel>Data &amp; Reporting Architecture</SectionLabel>
-
-          <p className="mt-2 text-[12px] leading-5 text-[#8fa7bf]">
-            The reporting environment connects operational data across
-            customer experience, collections, and legal performance.
-          </p>
-
-          <div className="mt-5 overflow-hidden rounded-lg border border-[#1c456e] bg-[#0b111a] p-2 sm:p-4">
-            <Image
-              src="/projects/customer-experience-operations-dashboard/data-model.png"
-              alt="Customer Experience & Operations data model"
-              width={1675}
-              height={637}
-              className="h-auto w-full"
-              sizes="(max-width: 1024px) 100vw, 1400px"
-            />
-          </div>
-
-          <div className="mt-4 grid gap-3 md:grid-cols-3">
-            <ArchitectureCard
-              icon={<Database size={18} />}
-              title="Data Sources"
-              items={["Excel Sheets"]}
-            />
-
-            <ArchitectureCard
-              icon={<Layers3 size={18} />}
-              title="Operational Areas"
-              items={[
-                "Customer Experience",
-                "Collections",
-                "Legal Operations",
-              ]}
-            />
-
-            <ArchitectureCard
-              icon={<BarChart3 size={18} />}
-              title="Analytical Layer"
-              items={[
-                "Executive Reporting",
-                "Operational KPIs",
-                "Interactive Analysis",
-              ]}
-            />
-          </div>
-        </section>
+        
 
         <section
           id="insights"
@@ -647,5 +684,14 @@ function BriefcaseIcon({ size }: { size?: number }) {
     </svg>
   );
 }
+
+
+
+
+
+
+
+
+
 
 

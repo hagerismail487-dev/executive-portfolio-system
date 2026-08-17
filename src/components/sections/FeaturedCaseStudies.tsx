@@ -170,14 +170,12 @@ export default function FeaturedCaseStudies() {
   className="
     group/preview
     relative
-    mx-3
-    mt-3
-    aspect-[16/10]
+    mx-0 mt-3 aspect-[16/9]
     overflow-hidden
     rounded-[14px]
     border
     border-[#24558D]
-    bg-[#071F42]
+    bg-transparent
   "
 >
 
@@ -186,7 +184,7 @@ export default function FeaturedCaseStudies() {
                       alt={`${project.title} dashboard preview`}
                       fill
                       className="
-                        object-cover
+                        object-contain
                         object-top
                         transition-transform
                         duration-500
@@ -375,4 +373,9 @@ export default function FeaturedCaseStudies() {
     </Section>
   );
 }
+
+
+
+
+
 

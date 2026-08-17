@@ -1,4 +1,6 @@
-﻿/* ===========================================================
+﻿import { hrDecisionSupportSystem } from "@/data/hr-decision-support-system";
+
+/* ===========================================================
    CASE STUDIES DATA
    Executive Portfolio System
 =========================================================== */
@@ -88,6 +90,44 @@ const emptyContent: CaseStudyContent = {
    Case Studies
 =========================================================== */
 
+const hrCaseStudy: CaseStudy = {
+  id: 4,
+  slug: hrDecisionSupportSystem.slug,
+  featured: true,
+  title: hrDecisionSupportSystem.title,
+  excerpt: hrDecisionSupportSystem.description,
+  category: hrDecisionSupportSystem.category,
+  industry: hrDecisionSupportSystem.industry,
+  year: "",
+  client: "",
+  role: "",
+  images: {
+    cover: hrDecisionSupportSystem.dashboards[1].image,
+    gallery: hrDecisionSupportSystem.dashboards.map(
+      (dashboard) => dashboard.image
+    ),
+  },
+  tools: hrDecisionSupportSystem.tools,
+  objectives: [
+    "Monitor overall workforce health.",
+    "Analyze employee distribution and workforce composition.",
+    "Track recruitment funnel performance.",
+    "Evaluate hiring effectiveness.",
+    "Monitor learning and employee development.",
+    "Track engagement initiatives.",
+    "Identify documentation and contract risks.",
+    "Monitor HR compliance indicators.",
+    "Provide executive-level KPIs and actionable insights.",
+  ],
+  content: {
+    overview: hrDecisionSupportSystem.description,
+    challenge: hrDecisionSupportSystem.challenge,
+    solution: hrDecisionSupportSystem.solution,
+    results: "",
+  },
+  businessImpact: [],
+  contactCTA: defaultCTA,
+};
 export const caseStudies: CaseStudy[] = [
       {
     id: 1,
@@ -276,88 +316,7 @@ export const caseStudies: CaseStudy[] = [
   contactCTA: defaultCTA,
 },
 
-  {
-    id: 3,
-
-    slug: "procurement-dashboard",
-
-    featured: true,
-
-    title: "Procurement Dashboard",
-
-    excerpt:
-      "Executive procurement dashboard for purchasing performance, inventory movement, supplier management, and operational efficiency.",
-
-    category: "Procurement",
-
-    industry: "Procurement",
-
-    year: "2026",
-
-    client: "Confidential",
-
-    role: "Senior MIS & BI Specialist",
-
-    images: {
-      cover:
-        "/images/case-studies/procurement-dashboard/cover.jpg",
-
-      gallery: [
-        "/images/case-studies/procurement-dashboard/dashboard-01.jpg",
-        "/images/case-studies/procurement-dashboard/dashboard-02.jpg",
-        "/images/case-studies/procurement-dashboard/dashboard-03.jpg",
-      ],
-    },
-
-    tools: [
-      "Power BI",
-      "DAX",
-      "Power Query",
-      "Excel",
-    ],
-
-    objectives: [
-      "Track purchasing performance.",
-      "Monitor supplier efficiency.",
-      "Analyze inventory movement.",
-      "Support procurement decisions.",
-    ],
-
-    content: {
-      ...emptyContent,
-
-      overview:
-        "Executive procurement reporting solution for monitoring purchasing and inventory performance.",
-
-      challenge:
-        "Procurement reporting relied on disconnected spreadsheets and manual analysis.",
-
-      solution:
-        "Built an integrated Power BI dashboard covering procurement, suppliers, inventory, and purchasing KPIs.",
-
-      results:
-        "Provided real-time procurement visibility and significantly improved reporting efficiency.",
-    },
-
-    businessImpact: [
-      {
-        title: "Reporting Time",
-        value: "-65%",
-      },
-      {
-        title: "Inventory Visibility",
-        value: "100%",
-      },
-      {
-        title: "Supplier Monitoring",
-        value: "+50%",
-      },
-    ],
-
-    contactCTA: defaultCTA,
-  },
+  hrCaseStudy,
 ];
-
-
 
 
