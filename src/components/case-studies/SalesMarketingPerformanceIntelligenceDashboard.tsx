@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import { type ReactNode } from "react";
 
-import { realEstateDecisionIntelligenceProject as project } from "@/data/real-estate-decision-intelligence";
+import { salesMarketingPerformanceProject as project } from "@/data/sales-marketing-performance-intelligence";
 
 const toneClasses: Record<string, string> = {
   danger:
@@ -32,7 +32,7 @@ const toneClasses: Record<string, string> = {
     "text-[#d48cff] border-[#d48cff]/20 bg-[#d48cff]/[0.06]",
 };
 
-export default function RealEstateDecisionIntelligenceDashboard() {
+export default function SalesMarketingPerformanceIntelligenceDashboard() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#030a16] text-white">
 
@@ -89,14 +89,14 @@ export default function RealEstateDecisionIntelligenceDashboard() {
               {project.positioning}
             </p>
 
-            <p className="mt-4 max-w-xl text-[14px] leading-6 text-[#b7c7d9] sm:text-[14px]">
+            <p className="mt-4 max-w-xl text-[13px] leading-6 text-[#b7c7d9] sm:text-[14px]">
               {project.description}
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
 
               <Link
-                href="/case-studies/real-estate-decision-intelligence/dashboard"
+                href="/case-studies/sales-marketing-performance-intelligence/dashboard"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md bg-[#0969ed] px-4 py-2.5 text-[11px] font-semibold text-white shadow-[0_8px_28px_rgba(9,105,237,.24)] transition hover:bg-[#1777f5]"
@@ -161,7 +161,7 @@ export default function RealEstateDecisionIntelligenceDashboard() {
                 Layers3,
                 BarChart3,
                 Database,
-              ][index];
+              ][index % 4];
 
               return (
                 <div
@@ -175,11 +175,11 @@ export default function RealEstateDecisionIntelligenceDashboard() {
 
                   <div className="min-w-0">
 
-                    <p className="text-[13px] font-semibold text-[#d7e6f5] sm:text-[12px]">
+                    <p className="text-[11px] font-semibold text-[#d7e6f5] sm:text-[12px]">
                       {item.label}
                     </p>
 
-                    <p className="mt-1.5 whitespace-pre-line text-[13px] leading-6 text-[#91a8bf] sm:text-[12px]">
+                    <p className="mt-1.5 whitespace-pre-line text-[11px] leading-5 text-[#91a8bf] sm:text-[12px]">
                       {item.value}
                     </p>
 
@@ -234,27 +234,28 @@ export default function RealEstateDecisionIntelligenceDashboard() {
 
           <div className="flex flex-wrap items-start justify-between gap-4">
 
-  <div>
-    <SectionLabel>
-      Dashboard Experience
-    </SectionLabel>
+            <div>
+              <SectionLabel>
+                Dashboard Experience
+              </SectionLabel>
 
-    <p className="mt-2 text-[12px] leading-5 text-[#8fa7bf]">
-      Explore the full reporting journey across the project dashboard views.
-    </p>
-  </div>
+              <p className="mt-2 text-[12px] leading-5 text-[#8fa7bf]">
+                Explore the full reporting journey across sales, marketing, and
+                product performance.
+              </p>
+            </div>
 
-  <Link
-    href="/case-studies/real-estate-decision-intelligence/dashboard"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex shrink-0 items-center gap-2 rounded-md border border-[#31577d] bg-[#071525] px-4 py-2 text-[10px] font-semibold uppercase tracking-wide text-white transition hover:border-[#4d8bc2] hover:bg-[#0a2138]"
-  >
-    Open Dashboard
-    <ArrowRight size={13} />
-  </Link>
+            <Link
+              href="/case-studies/sales-marketing-performance-intelligence/dashboard"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex shrink-0 items-center gap-2 rounded-md border border-[#31577d] bg-[#071525] px-4 py-2 text-[10px] font-semibold uppercase tracking-wide text-white transition hover:border-[#4d8bc2] hover:bg-[#0a2138]"
+            >
+              Open Dashboard
+              <ArrowRight size={13} />
+            </Link>
 
-</div>
+          </div>
 
           <div className="mt-5 overflow-visible">
 
@@ -264,13 +265,13 @@ export default function RealEstateDecisionIntelligenceDashboard() {
 
                 <Link
                   key={dashboard.title}
-                  href={`/case-studies/real-estate-decision-intelligence/dashboard?slide=${index}`}
+                  href={`/case-studies/sales-marketing-performance-intelligence/dashboard?slide=${index + 1}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative min-w-[190px] flex-1 text-left sm:min-w-[205px]"
+                  className="group relative min-w-[240px] flex-1 text-left sm:min-w-[270px]"
                 >
 
-                  <div className="relative z-0 aspect-[16/9] overflow-visible rounded-lg">
+                  <div className="relative z-0 aspect-[16/10] overflow-visible rounded-lg">
 
                     <div
                       className="
@@ -296,8 +297,14 @@ export default function RealEstateDecisionIntelligenceDashboard() {
                         src={dashboard.image}
                         alt={dashboard.title}
                         fill
-                        className="object-contain object-center bg-[#061321] transition-transform duration-300 ease-out"
-                        sizes="260px"
+                        className="
+                          object-cover
+                          object-top
+                          transition-transform
+                          duration-300
+                          ease-out
+                        "
+                        sizes="300px"
                       />
 
                       <span
@@ -323,11 +330,11 @@ export default function RealEstateDecisionIntelligenceDashboard() {
 
                   <div className="relative z-10">
 
-                    <h3 className="mt-3 text-[14px] font-semibold text-white transition-colors duration-200 group-hover:text-[#67bbff]">
+                    <h3 className="mt-3 text-[13px] font-semibold text-white transition-colors duration-200 group-hover:text-[#67bbff]">
                       {dashboard.title}
                     </h3>
 
-                    <p className="mt-1 line-clamp-3 text-[13px] leading-6 text-[#7890aa]">
+                    <p className="mt-1 line-clamp-3 text-[11px] leading-5 text-[#7890aa]">
                       {dashboard.description}
                     </p>
 
@@ -343,41 +350,57 @@ export default function RealEstateDecisionIntelligenceDashboard() {
 
         </section>
 
-        {/* Data & Reporting Architecture */}
+        {/* Architecture */}
 
-        <section className="mt-4 rounded-[12px] border border-[#174574] bg-[#061426]/85 p-4 sm:p-5">
+        {project.architectureImage && (
+          <section className="mt-4 rounded-[12px] border border-[#174574] bg-[#061426]/85 p-4 sm:p-5">
 
-          <SectionLabel>
-            Data & Reporting Architecture
-          </SectionLabel>
+            <SectionLabel>
+              Data & Reporting Architecture
+            </SectionLabel>
 
-          <p className="mt-2 text-[13px] leading-6 text-[#8fa7bf]">
-            Connected data sources and analytical layers supporting the decision-support environment.
-          </p>
+            <p className="mt-2 text-[12px] leading-5 text-[#8fa7bf]">
+              How data flows from multiple sources into one unified intelligence
+              layer.
+            </p>
 
-          <div className="mt-5 grid gap-3 md:grid-cols-3">
+            <div className="mt-5 overflow-hidden rounded-lg border border-[#1c456e] bg-[#0b111a] p-2 sm:p-4">
 
-            <ArchitectureCard
-              icon={<Database size={18} />}
-              title="Data Sources"
-              items={project.architecture.sources}
-            />
+              <Image
+                src={project.architectureImage}
+                alt={`${project.title} data and reporting architecture`}
+                width={1675}
+                height={637}
+                className="h-auto w-full"
+                sizes="(max-width: 1024px) 100vw, 1400px"
+              />
 
-            <ArchitectureCard
-              icon={<Layers3 size={18} />}
-              title="Core Data Areas"
-              items={project.architecture.dataAreas}
-            />
+            </div>
 
-            <ArchitectureCard
-              icon={<BarChart3 size={18} />}
-              title="Analytical Layer"
-              items={project.architecture.analyticalLayer}
-            />
+            <div className="mt-4 grid gap-3 md:grid-cols-3">
 
-          </div>
+              <ArchitectureCard
+                icon={<Database size={18} />}
+                title="Data Sources"
+                items={project.architecture.sources}
+              />
 
-        </section>
+              <ArchitectureCard
+                icon={<Layers3 size={18} />}
+                title="Core Data Areas"
+                items={project.architecture.dataAreas}
+              />
+
+              <ArchitectureCard
+                icon={<BarChart3 size={18} />}
+                title="Analytical Layer"
+                items={project.architecture.analyticalLayer}
+              />
+
+            </div>
+
+          </section>
+        )}
 
         {/* Insights */}
 
@@ -390,20 +413,22 @@ export default function RealEstateDecisionIntelligenceDashboard() {
             Key Business Insights
           </SectionLabel>
 
-          <p className="mt-2 text-[13px] leading-6 text-[#8fa7bf]">
-            Documented business signals from the Real Estate Decision Intelligence analysis.
+          <p className="mt-2 text-[12px] leading-5 text-[#8fa7bf]">
+            From the selected executive view and documented project analysis.
           </p>
 
-          <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-5">
 
             {project.insights.map((insight) => (
 
               <article
                 key={insight.label}
-                className={`rounded-lg border p-4 ${toneClasses[insight.tone]}`}
+                className={`rounded-lg border p-4 ${
+                  toneClasses[insight.tone]
+                }`}
               >
 
-                <p className="text-[12px] font-bold uppercase tracking-[0.12em]">
+                <p className="text-[11px] font-bold uppercase tracking-[0.12em]">
                   {insight.label}
                 </p>
 
@@ -411,21 +436,21 @@ export default function RealEstateDecisionIntelligenceDashboard() {
                   {insight.value}
                 </p>
 
-                <p className="mt-2 text-[13px] font-semibold text-white/90">
+                <p className="mt-2 text-[11px] font-semibold text-white/90">
                   {insight.secondary}
                 </p>
 
-                <p className="mt-4 min-h-[52px] text-[13px] font-medium leading-6 text-[#b8c8d9]">
+                <p className="mt-4 min-h-[52px] text-[11px] font-medium leading-5 text-[#b8c8d9]">
                   {insight.detail}
                 </p>
 
                 <div className="mt-4 border-t border-white/10 pt-3">
 
-                  <p className="text-[11px] font-bold uppercase tracking-[0.08em] text-white/70">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.08em] text-white/70">
                     Decision support
                   </p>
 
-                  <p className="mt-2 text-[13px] font-medium leading-6 text-[#d1dce8]">
+                  <p className="mt-2 text-[11px] font-medium leading-5 text-[#d1dce8]">
                     {insight.decision}
                   </p>
 
@@ -439,56 +464,59 @@ export default function RealEstateDecisionIntelligenceDashboard() {
 
         </section>
 
-        {/* Technologies & Capabilities */}
+        {/* Technologies / Capabilities / Positioning */}
 
         <section className="mt-4 grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
 
-          <InfoPanel
-            title="Technologies"
-            items={project.technologies}
-            icon={<Database size={15} />}
-          />
+          <div className="grid gap-4">
 
-          <InfoPanel
-            title="Capabilities Demonstrated"
-            items={project.capabilities}
-            icon={<Check size={15} />}
-            columns
-          />
+            {project.technologies.length > 0 && (
+              <InfoPanel
+                title="Technologies & Tools"
+                items={project.technologies}
+                icon={<Database size={15} />}
+              />
+            )}
 
-        </section>
+            <InfoPanel
+              title="Capabilities Demonstrated"
+              items={project.capabilities}
+              icon={<Check size={15} />}
+              columns
+            />
 
-        {/* Project Positioning */}
+          </div>
 
-        <section className="mt-4 rounded-[12px] border border-[#174574] bg-[#061426]/85 p-5">
+          <div className="rounded-[12px] border border-[#174574] bg-[#061426]/85 p-5">
 
-          <SectionLabel>
-            Project Positioning
-          </SectionLabel>
+            <SectionLabel>
+              Project Positioning
+            </SectionLabel>
 
-          <p className="mt-4 text-[14px] leading-7 text-[#a9bdd2]">
-            {project.positioning}
-          </p>
+            <p className="mt-4 text-[12px] leading-6 text-[#a9bdd2]">
+              {project.positioning}
+            </p>
 
-          <div className="mt-5 flex flex-wrap gap-2">
+            <div className="mt-5 flex flex-wrap gap-2">
 
-            {[
-              "Real Estate Intelligence",
-              "Decision Support",
-              "Sales Intelligence",
-              "Inventory Intelligence",
-              "Lead Pipeline Intelligence",
-              "Executive Reporting",
-            ].map((tag) => (
+              {[
+                "Business Intelligence",
+                "Executive Reporting",
+                "Sales Intelligence",
+                "Marketing Performance",
+                "Product Analytics",
+              ].map((tag) => (
 
-              <span
-                key={tag}
-                className="rounded-full border border-[#204a73] bg-[#0a2038] px-3 py-1.5 text-[12px] font-medium text-[#aac0d5]"
-              >
-                {tag}
-              </span>
+                <span
+                  key={tag}
+                  className="rounded-full border border-[#204a73] bg-[#0a2038] px-3 py-1.5 text-[10px] font-medium text-[#aac0d5]"
+                >
+                  {tag}
+                </span>
 
-            ))}
+              ))}
+
+            </div>
 
           </div>
 
@@ -505,18 +533,19 @@ export default function RealEstateDecisionIntelligenceDashboard() {
               <p className="text-[24px] font-semibold leading-tight text-white sm:text-[26px]">
                 Ready to build a reporting solution
                 <br className="hidden sm:block" />
-                that supports better business decisions?
+                that drives real business impact?
               </p>
 
               <p className="mt-3 text-[14px] font-medium leading-6 text-[#a8bed5]">
-                Let&apos;s create a structured intelligence solution around your business decisions.
+                Let&apos;s create a structured intelligence solution around your
+                business decisions.
               </p>
 
             </div>
 
             <Link
               href="/#contact"
-              className="inline-flex shrink-0 items-center gap-2 rounded-md bg-[#0b75f4] px-6 py-3 text-[14px] font-semibold text-white shadow-[0_10px_30px_rgba(11,117,244,.28)] transition hover:bg-[#1782ff]"
+              className="inline-flex shrink-0 items-center gap-2 rounded-md bg-[#0b75f4] px-6 py-3 text-[12px] font-semibold text-white shadow-[0_10px_30px_rgba(11,117,244,.28)] transition hover:bg-[#1782ff]"
             >
               Let&apos;s Talk About Your Project
               <ArrowRight size={14} />
@@ -592,7 +621,7 @@ function ArchitectureCard({
 
         <span>{icon}</span>
 
-        <h3 className="text-[14px] font-semibold">
+        <h3 className="text-[12px] font-semibold">
           {title}
         </h3>
 
@@ -603,7 +632,7 @@ function ArchitectureCard({
         {items.map((item) => (
           <li
             key={item}
-            className="flex items-start gap-2 text-[13px] leading-6 text-[#8ca4bc]"
+            className="flex items-start gap-2 text-[11px] leading-5 text-[#8ca4bc]"
           >
             <span className="mt-[8px] h-1 w-1 shrink-0 rounded-full bg-[#2389ee]" />
             <span>{item}</span>
@@ -650,7 +679,7 @@ function InfoPanel({
 
           <li
             key={item}
-            className="flex items-start gap-2 text-[13px] font-medium leading-6 text-[#aebfd0]"
+            className="flex items-start gap-2 text-[11px] font-medium leading-5 text-[#aebfd0]"
           >
 
             <span className="mt-1 h-1 w-1 shrink-0 rounded-full bg-[#2389ee]" />
@@ -666,9 +695,4 @@ function InfoPanel({
     </div>
   );
 }
-
-
-
-
-
 

@@ -3,6 +3,7 @@ import { realEstateDecisionIntelligenceProject } from "@/data/real-estate-decisi
 import { crmSalesIntelligenceProject } from "@/data/crm-sales-intelligence";
 import { procurementManagementProject } from "@/data/procurement-management";
 import { procurementInventoryManagementProject } from "@/data/procurement-inventory-management";
+import { salesMarketingPerformanceProject } from "@/data/sales-marketing-performance-intelligence";
 
 /* ===========================================================
    CASE STUDIES DATA
@@ -242,6 +243,7 @@ const procurementManagementCaseStudy: CaseStudy = {
   businessImpact: [],
   contactCTA: defaultCTA,
 };
+
 const procurementInventoryManagementCaseStudy: CaseStudy = {
   id: 7,
   slug: "procurement-inventory-management",
@@ -277,6 +279,46 @@ const procurementInventoryManagementCaseStudy: CaseStudy = {
   businessImpact: [],
   contactCTA: defaultCTA,
 };
+
+const salesMarketingPerformanceIntelligenceCaseStudy: CaseStudy = {
+  id: 8,
+  slug: "sales-marketing-performance-intelligence",
+  featured: false,
+  title: salesMarketingPerformanceProject.title,
+  excerpt: salesMarketingPerformanceProject.description,
+  category: salesMarketingPerformanceProject.category,
+  industry: "Sales & Marketing",
+  year: "",
+  client: "",
+  role: "",
+  images: {
+    cover:
+      "/projects/sales-marketing-performance-intelligence/01-sales-marketing-dashboard.png",
+    gallery: salesMarketingPerformanceProject.dashboards.map(
+      (dashboard) => dashboard.image
+    ),
+  },
+  tools: [],
+  objectives: [
+    "Monitor revenue, cost, and profit performance.",
+    "Evaluate conversion and views.",
+    "Analyze lead and sales channel performance.",
+    "Evaluate marketing campaign performance.",
+    "Analyze regional and country performance.",
+    "Review product-level performance across revenue, cost, profit, stock, invoices, pricing, and views.",
+  ],
+  content: {
+    overview: salesMarketingPerformanceProject.description,
+    challenge:
+      "Sales and marketing performance spans multiple dimensions including revenue, cost, profit, conversion, leads, sales channels, campaigns, regions, countries, and products.",
+    solution:
+      "A two-page analytical dashboard combining an executive Sales Marketing Dashboard with a detailed Product Details view.",
+    results: "",
+  },
+  businessImpact: [],
+  contactCTA: defaultCTA,
+};
+
 export const caseStudies: CaseStudy[] = [
       {
     id: 1,
@@ -468,21 +510,6 @@ export const caseStudies: CaseStudy[] = [
   realEstateDecisionIntelligenceCaseStudy,
   crmSalesIntelligenceCaseStudy,
   procurementManagementCaseStudy,
-
-  procurementInventoryManagementCaseStudy,];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  procurementInventoryManagementCaseStudy,
+  salesMarketingPerformanceIntelligenceCaseStudy,
+];

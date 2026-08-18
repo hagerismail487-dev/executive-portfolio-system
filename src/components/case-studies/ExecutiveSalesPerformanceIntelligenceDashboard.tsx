@@ -232,14 +232,29 @@ export default function ExecutiveSalesPerformanceIntelligenceDashboard() {
 
 <section className="mt-4 rounded-[12px] border border-[#174574] bg-[#061426]/85 p-4 sm:p-5">
 
-  <SectionLabel>
-    Dashboard Experience
-  </SectionLabel>
+  <div className="flex flex-wrap items-start justify-between gap-4">
 
-  
-  <p className="mt-2 text-[12px] leading-5 text-[#8fa7bf]">
-    Explore the full reporting journey across the sales lifecycle.
-  </p>
+  <div>
+    <SectionLabel>
+      Dashboard Experience
+    </SectionLabel>
+
+    <p className="mt-2 text-[12px] leading-5 text-[#8fa7bf]">
+      Explore the full reporting journey across the project dashboard views.
+    </p>
+  </div>
+
+  <Link
+    href="/case-studies/executive-sales-performance-intelligence/dashboard"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex shrink-0 items-center gap-2 rounded-md border border-[#31577d] bg-[#071525] px-4 py-2 text-[10px] font-semibold uppercase tracking-wide text-white transition hover:border-[#4d8bc2] hover:bg-[#0a2138]"
+  >
+    Open Dashboard
+    <ArrowRight size={13} />
+  </Link>
+
+</div>
 
   <div className="mt-5 overflow-visible">
 
@@ -674,6 +689,7 @@ function InfoPanel({
     </div>
   );
 }
+
 
 
 

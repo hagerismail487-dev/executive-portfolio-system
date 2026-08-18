@@ -5,6 +5,7 @@ import RealEstateDecisionIntelligencePresentation from "@/components/case-studie
 import CRMSalesIntelligencePresentation from "@/components/case-studies/CRMSalesIntelligencePresentation";
 import ProcurementManagementPresentation from "@/components/case-studies/ProcurementManagementPresentation";
 import ProcurementInventoryManagementPresentation from "@/components/case-studies/ProcurementInventoryManagementPresentation";
+import SalesMarketingPerformanceIntelligencePresentation from "@/components/case-studies/SalesMarketingPerformanceIntelligencePresentation";
 
 interface PageProps {
   params: Promise<{
@@ -24,6 +25,7 @@ export default async function DashboardPage({
   if (slug === "customer-experience-operations-dashboard") {
     return <CustomerExperienceDashboardPresentation />;
   }
+
   if (slug === "hr-decision-support-system") {
     return <HRDecisionSupportSystemPresentation />;
   }
@@ -44,12 +46,9 @@ export default async function DashboardPage({
     return <ProcurementInventoryManagementPresentation />;
   }
 
+  if (slug === "sales-marketing-performance-intelligence") {
+    return <SalesMarketingPerformanceIntelligencePresentation />;
+  }
+
   return null;
 }
-
-
-
-
-
-
-

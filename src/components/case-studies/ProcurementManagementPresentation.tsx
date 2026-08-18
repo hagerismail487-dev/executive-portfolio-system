@@ -107,17 +107,27 @@ export default function ProcurementManagementPresentation() {
 
         <section className="flex flex-1 items-center justify-center px-4 py-8 sm:px-8 lg:px-14">
 
-          <button
-            onClick={previousSlide}
-            aria-label="Previous dashboard"
-            className="mr-3 hidden h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#20476e] bg-[#07192b] text-[#75beff] transition hover:border-[#3f81b9] hover:bg-[#0a2440] hover:text-white md:flex"
-          >
-            <ArrowLeft size={18} />
-          </button>
-
-          <div className="w-full max-w-[1320px]">
+          <div className="min-w-0 flex-1 w-full max-w-[1320px]">
 
             <div className="relative w-full overflow-hidden rounded-xl border border-[#1c4c79] bg-[#071525] p-2 shadow-[0_30px_100px_rgba(0,50,110,.3)] sm:p-3 lg:p-4">
+
+              <button
+                type="button"
+                onClick={previousSlide}
+                aria-label="Previous dashboard"
+                className="absolute left-6 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#20476e] bg-[#07192b]/90 text-[#75beff] shadow-lg transition hover:border-[#3f81b9] hover:bg-[#0a2440] hover:text-white"
+              >
+                <ArrowLeft size={17} />
+              </button>
+
+              <button
+                type="button"
+                onClick={nextSlide}
+                aria-label="Next dashboard"
+                className="absolute right-6 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#20476e] bg-[#07192b]/90 text-[#75beff] shadow-lg transition hover:border-[#3f81b9] hover:bg-[#0a2440] hover:text-white"
+              >
+                <ArrowRight size={17} />
+              </button>
 
               <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-[#173a5d] bg-[#020a14]">
 
@@ -144,7 +154,6 @@ export default function ProcurementManagementPresentation() {
               </div>
 
             </div>
-
             {/* Information */}
 
             <div className="mt-5 flex flex-col items-center justify-between gap-4 sm:flex-row">
@@ -228,8 +237,7 @@ export default function ProcurementManagementPresentation() {
             </div>
 
           </div>
-
-        </section>
+</section>
 
       </div>
 
@@ -335,4 +343,14 @@ export default function ProcurementManagementPresentation() {
     </main>
   );
 }
+
+
+
+
+
+
+
+
+
+
 
