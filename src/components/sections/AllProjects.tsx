@@ -13,13 +13,18 @@ export default function AllProjects() {
 
   const categories = [
     "All",
-    ...Array.from(new Set(caseStudies.map((project) => project.category))),
+    "Sales & Commercial",
+    "Real Estate",
+    "HR & Workforce",
+    "Operations & Supply Chain",
   ];
 
   const filteredProjects =
     activeCategory === "All"
       ? caseStudies
-      : caseStudies.filter((project) => project.category === activeCategory);
+      : caseStudies.filter((project) =>
+          project.filterCategories.includes(activeCategory)
+        );
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-[#F8FAFD]">
@@ -336,6 +341,7 @@ export default function AllProjects() {
     </section>
   );
 }
+
 
 
 

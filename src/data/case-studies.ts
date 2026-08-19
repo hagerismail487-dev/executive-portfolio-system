@@ -50,6 +50,8 @@ export interface CaseStudy {
 
   category: string;
 
+  filterCategories: string[];
+
   industry: string;
 
   year: string;
@@ -103,6 +105,8 @@ const hrCaseStudy: CaseStudy = {
   title: hrDecisionSupportSystem.title,
   excerpt: hrDecisionSupportSystem.description,
   category: hrDecisionSupportSystem.category,
+
+  filterCategories: ["HR & Workforce"],
   industry: hrDecisionSupportSystem.industry,
   year: "",
   client: "",
@@ -143,6 +147,8 @@ const workforceTalentIntelligenceCaseStudy: CaseStudy = {
   title: workforceTalentIntelligenceProject.title,
   excerpt: workforceTalentIntelligenceProject.description,
   category: workforceTalentIntelligenceProject.category,
+
+  filterCategories: ["HR & Workforce"],
   industry: "Human Resources / Workforce Management",
   year: "",
   client: "",
@@ -177,6 +183,8 @@ const crmSalesIntelligenceCaseStudy: CaseStudy = {
   title: crmSalesIntelligenceProject.title,
   excerpt: crmSalesIntelligenceProject.description,
   category: crmSalesIntelligenceProject.category,
+
+  filterCategories: ["Sales & Commercial", "Real Estate"],
   industry: "CRM / Sales / Revenue Performance",
   year: "",
   client: "",
@@ -214,6 +222,8 @@ const realEstateDecisionIntelligenceCaseStudy: CaseStudy = {
   title: realEstateDecisionIntelligenceProject.title,
   excerpt: realEstateDecisionIntelligenceProject.description,
   category: realEstateDecisionIntelligenceProject.category,
+
+  filterCategories: ["Real Estate"],
   industry: "Real Estate",
   year: "",
   client: "",
@@ -250,6 +260,8 @@ const procurementManagementCaseStudy: CaseStudy = {
   title: procurementManagementProject.title,
   excerpt: procurementManagementProject.description,
   category: procurementManagementProject.category,
+
+  filterCategories: ["Operations & Supply Chain"],
   industry: "Procurement / Inventory / Fixed Assets",
   year: "",
   client: "",
@@ -287,6 +299,8 @@ const procurementInventoryManagementCaseStudy: CaseStudy = {
   title: procurementInventoryManagementProject.title,
   excerpt: procurementInventoryManagementProject.description,
   category: procurementInventoryManagementProject.category,
+
+  filterCategories: ["Operations & Supply Chain"],
   industry: "Procurement / Inventory / Fixed Assets",
   year: "",
   client: "",
@@ -323,6 +337,8 @@ const salesMarketingPerformanceIntelligenceCaseStudy: CaseStudy = {
   title: salesMarketingPerformanceProject.title,
   excerpt: salesMarketingPerformanceProject.description,
   category: salesMarketingPerformanceProject.category,
+
+  filterCategories: ["Sales & Commercial", "Real Estate"],
   industry: "Sales & Marketing",
   year: "",
   client: "",
@@ -369,6 +385,8 @@ export const caseStudies: CaseStudy[] = [
       "Executive reporting solution designed to monitor sales performance, revenue trends, reservations, and strategic KPIs.",
 
     category: "Real Estate",
+
+    filterCategories: ["Sales & Commercial", "Real Estate"],
 
     industry: "Real Estate",
 
@@ -453,6 +471,8 @@ export const caseStudies: CaseStudy[] = [
       "Executive Business Intelligence solution integrating customer service, collections, and legal case management into a unified operational intelligence environment.",
 
     category: "Customer Experience",
+
+    filterCategories: ["Operations & Supply Chain"],
 
     industry:
       "Customer Experience / Customer Service / Collections / Legal Operations",
@@ -550,3 +570,7 @@ export const caseStudies: CaseStudy[] = [
   salesMarketingPerformanceIntelligenceCaseStudy,
   workforceTalentIntelligenceCaseStudy,
 ];
+
+
+
+
