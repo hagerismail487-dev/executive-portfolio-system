@@ -1,4 +1,4 @@
-import {
+﻿import {
   BarChart3,
   Building2,
   Database,
@@ -435,9 +435,9 @@ export default function ProfileHero() {
             id="profile-hero-title"
             className="
               max-w-[620px]
-              text-[36px]
+              text-[32px]
               font-bold
-              leading-[1.08]
+              leading-[1.02]
               tracking-[-0.035em]
               !text-white
               sm:text-[40px]
@@ -482,9 +482,13 @@ export default function ProfileHero() {
       </div>
 
       {/* Mobile diagram */}
-      <div className="flex justify-center px-6 pb-10 lg:hidden">
+      <div className="flex h-[270px] justify-center overflow-visible px-6 pb-6 lg:hidden [&>div]:origin-center [&>div]:scale-[0.72]">
         <BusinessSystemsDiagram />
       </div>
     </section>
   );
 }
+
+
+
+

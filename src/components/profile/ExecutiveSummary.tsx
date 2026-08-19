@@ -1,4 +1,4 @@
-import {
+﻿import {
   BarChart3,
   Building2,
   Database,
@@ -56,7 +56,13 @@ function SummaryStepItem({
   isLast: boolean;
 }) {
   return (
-    <div className="relative flex flex-1 items-start">
+    <div
+      className={`relative flex w-full items-start lg:flex-1 ${
+        step.number === "03"
+          ? "col-span-2 mx-auto max-w-[180px]"
+          : ""
+      }`}
+    >
       <div className="flex w-full flex-col items-center text-center">
         {/* Icon */}
         <div
@@ -72,9 +78,7 @@ function SummaryStepItem({
             ${
               step.featured
                 ? `
-                  h-[84px]
-                  w-[84px]
-                  border
+                  h-[68px] w-[68px] border lg:h-[84px] lg:w-[84px]
                   border-[#c8d9f4]
                   bg-[#f7faff]
                   shadow-[0_12px_35px_rgba(20,74,145,0.12)]
@@ -93,9 +97,7 @@ function SummaryStepItem({
             <div
               className="
                 flex
-                h-[64px]
-                w-[64px]
-                items-center
+                h-[52px] w-[52px] items-center lg:h-[64px] lg:w-[64px]
                 justify-center
                 rounded-full
                 bg-[radial-gradient(circle_at_35%_30%,#ffffff_0%,#edf4ff_100%)]
@@ -103,7 +105,7 @@ function SummaryStepItem({
               "
             >
               <Building2
-                className="h-[25px] w-[25px] text-[#083f96]"
+                className="h-[21px] w-[21px] lg:h-[25px] lg:w-[25px] text-[#083f96]"
                 strokeWidth={1.8}
               />
             </div>
@@ -117,8 +119,7 @@ function SummaryStepItem({
 
         {/* Number */}
         <span
-          className={`
-            mt-3
+          className={` mt-2 lg:mt-3
             text-[8px]
             font-bold
             tracking-[0.08em]
@@ -134,8 +135,7 @@ function SummaryStepItem({
 
         {/* Title */}
         <span
-          className="
-            mt-1.5
+          className=" mt-1 lg:mt-1.5
             whitespace-pre-line
             text-center
             text-[8px]
@@ -150,8 +150,7 @@ function SummaryStepItem({
 
         {/* Description */}
         <p
-          className="
-            mt-2
+          className=" mt-1.5 lg:mt-2
             whitespace-pre-line
             text-center
             text-[8px]
@@ -169,7 +168,7 @@ function SummaryStepItem({
         <div
           aria-hidden="true"
           className="
-            absolute
+            absolute hidden lg:block
             left-[calc(50%+28px)]
             right-[calc(-50%+28px)]
             top-[24px]
@@ -210,7 +209,7 @@ function BusinessSystemsFlow() {
         py-5
       "
     >
-      <div className="flex items-start">
+      <div className="grid grid-cols-2 gap-x-3 gap-y-1 lg:flex lg:items-start lg:gap-0">
         {summarySteps.map((step, index) => (
           <SummaryStepItem
             key={step.number}
@@ -333,3 +332,11 @@ export default function ExecutiveSummary() {
     </section>
   );
 }
+
+
+
+
+
+
+
+

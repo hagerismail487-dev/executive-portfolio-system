@@ -1,4 +1,4 @@
-import {
+﻿import {
   Network,
   Search,
   Target,
@@ -49,15 +49,15 @@ function PrincipleCard({
         group
         relative
         flex
-        min-h-[190px]
+        min-h-[140px] lg:min-h-[190px]
         flex-1
-        gap-5
+        gap-3 lg:gap-5
         rounded-[12px]
         border
         border-[#e3ebf7]
         bg-white
-        px-6
-        py-6
+        px-4 lg:px-6
+        py-3 lg:py-6
         shadow-[0_5px_22px_rgba(15,54,105,0.045)]
         transition-all
         duration-300
@@ -69,9 +69,7 @@ function PrincipleCard({
       {/* Icon */}
       <div
         className="
-          flex
-          h-[54px]
-          w-[54px]
+          flex h-[48px] w-[48px] lg:h-[54px] lg:w-[54px]
           shrink-0
           items-center
           justify-center
@@ -82,7 +80,7 @@ function PrincipleCard({
         "
       >
         <Icon
-          className="h-[25px] w-[25px] text-[#075bd8]"
+          className="h-[22px] w-[22px] text-[#075bd8] lg:h-[25px] lg:w-[25px]"
           strokeWidth={1.9}
         />
       </div>
@@ -102,7 +100,7 @@ function PrincipleCard({
         </h3>
 
         {/* Accent line */}
-        <div className="my-3 h-[2px] w-[24px] bg-[#0867e8]" />
+        <div className="my-2 h-[2px] w-[24px] bg-[#0867e8] lg:my-3" />
 
         <p
           className="
@@ -139,8 +137,8 @@ export default function Principles() {
       className="
         w-full
         bg-white
-        px-6
-        pb-10
+        px-4 lg:px-6
+        pb-0
         pt-2
         sm:px-8
         lg:px-[48px]
@@ -150,7 +148,7 @@ export default function Principles() {
     >
       <div className="mx-auto max-w-[1180px]">
         {/* Section heading */}
-        <div className="mb-5 flex items-center justify-center gap-3">
+        <div className="mb-3 flex items-center justify-center gap-3 lg:mb-5">
           <span
             aria-hidden="true"
             className="h-[2px] w-[20px] bg-[#0867e8]"
@@ -196,3 +194,13 @@ export default function Principles() {
     </section>
   );
 }
+
+
+
+
+
+
+
+
+
+

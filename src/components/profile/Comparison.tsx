@@ -1,4 +1,4 @@
-import {
+﻿import {
   BarChart3,
   CheckCircle2,
   CircleDot,
@@ -322,13 +322,13 @@ export default function Comparison() {
       aria-labelledby="comparison-title"
       className="
         relative
-        mt-8
+        mt-3
         w-full
         overflow-hidden
         rounded-[6px]
         bg-white
         px-6
-        py-10
+        py-6
         shadow-[0_4px_25px_rgba(12,45,90,0.035)]
         sm:px-8
         lg:mt-10
@@ -338,7 +338,7 @@ export default function Comparison() {
     >
       <div className="mx-auto max-w-[1180px]">
         {/* Section heading */}
-        <div className="mb-7 flex items-center justify-center gap-3">
+        <div className="mb-5 flex items-center justify-center gap-3 lg:mb-7">
           <span
             aria-hidden="true"
             className="h-[2px] w-[24px] bg-[#0867e8]"
@@ -369,7 +369,7 @@ export default function Comparison() {
             relative
             flex
             flex-col
-            gap-8
+            gap-4
             lg:flex-row
             lg:items-start
             lg:gap-0
@@ -461,3 +461,6 @@ export default function Comparison() {
     </section>
   );
 }
+
+
+

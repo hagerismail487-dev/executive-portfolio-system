@@ -1,4 +1,4 @@
-import {
+﻿import {
   BarChart3,
   Puzzle,
   ShieldCheck,
@@ -50,7 +50,7 @@ function DifferentiatorCard({
     <article
       className="
         flex
-        min-h-[130px]
+        min-h-[90px] lg:min-h-[110px]
         flex-1
         items-start
         gap-4
@@ -58,8 +58,7 @@ function DifferentiatorCard({
         border
         border-[#e3ebf7]
         bg-white
-        px-5
-        py-5
+        px-5 py-3
         shadow-[0_4px_18px_rgba(15,54,105,0.035)]
       "
     >
@@ -123,8 +122,7 @@ export default function Differentiators() {
         w-full
         bg-white
         px-6
-        pb-10
-        pt-2
+        pb-4 pt-2
         sm:px-8
         lg:px-[48px]
         lg:pb-[46px]
@@ -162,10 +160,7 @@ export default function Differentiators() {
         <div
           className="
             grid
-            grid-cols-1
-            gap-3
-            sm:grid-cols-2
-            lg:grid-cols-4
+            grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4
           "
         >
           {differentiators.map((item) => (
@@ -179,3 +174,6 @@ export default function Differentiators() {
     </section>
   );
 }
+
+
+

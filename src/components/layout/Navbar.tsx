@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -8,6 +8,7 @@ import Container from "../ui/Container";
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const sections = [
@@ -45,16 +46,44 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const mobileLinks = [
+    { label: "Profile", href: "/#profile", id: "profile" },
+    {
+      label: "Business Value",
+      href: "/#business-value",
+      id: "business-value",
+    },
+    {
+      label: "Expertise",
+      href: "/#expertise",
+      id: "expertise",
+    },
+    {
+      label: "Case Studies",
+      href: "/#projects",
+      id: "projects",
+    },
+    {
+      label: "Services",
+      href: "/#services",
+      id: "services",
+    },
+    {
+      label: "Contact",
+      href: "/#contact",
+      id: "contact",
+    },
+  ];
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl">
       <Container>
-
         <div className="flex h-16 items-center justify-between">
-
           {/* Logo */}
 
           <Link
             href="/"
+            onClick={() => setMobileMenuOpen(false)}
             className="transition-opacity duration-300 hover:opacity-90"
           >
             <Image
@@ -66,30 +95,31 @@ export default function Navbar() {
               className="h-10 w-auto"
             />
           </Link>
-                    {/* Desktop Navigation */}
+
+          {/* Desktop Navigation */}
 
           <nav className="hidden items-center gap-8 lg:flex">
+            {/* Profile */}
 
-           {/* Profile */}
+            <Link
+              href="/#profile"
+              className={`relative pb-1.5 text-[14px] transition-all duration-300 ${
+                activeSection === "profile"
+                  ? "font-semibold text-[#123A63]"
+                  : "font-medium text-slate-600 hover:text-[#123A63]"
+              }`}
+            >
+              Profile
 
-<Link
-  href="/#profile"
-  className={`relative pb-1.5 text-[14px] transition-all duration-300 ${
-    activeSection === "profile"
-      ? "font-semibold text-[#123A63]"
-      : "font-medium text-slate-600 hover:text-[#123A63]"
-  }`}
->
-  Profile
+              <span
+                className={`absolute bottom-0 left-0 h-[2px] rounded-full bg-[#2563EB] transition-all duration-300 ${
+                  activeSection === "profile"
+                    ? "w-full opacity-100"
+                    : "w-0 opacity-0"
+                }`}
+              />
+            </Link>
 
-  <span
-    className={`absolute bottom-0 left-0 h-[2px] rounded-full bg-[#2563EB] transition-all duration-300 ${
-      activeSection === "profile"
-        ? "w-full opacity-100"
-        : "w-0 opacity-0"
-    }`}
-  />
-</Link>
             {/* Business Value */}
 
             <Link
@@ -194,53 +224,107 @@ export default function Navbar() {
                 }`}
               />
             </Link>
-
           </nav>
-                    {/* Mobile Menu */}
+
+          {/* Mobile Menu Button */}
 
           <button
+            type="button"
+            onClick={() => setMobileMenuOpen((open) => !open)}
             className="
               flex
               h-10
               w-10
               items-center
               justify-center
-
               rounded-lg
-
               border
               border-slate-200
-
+              bg-white
               transition-all
               duration-300
-
               hover:border-[#2563EB]
               hover:bg-[#F7FAFF]
-
               lg:hidden
             "
-            aria-label="Open Menu"
+            aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 text-[#123A67]"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 7h16M4 12h16M4 17h16"
-              />
-            </svg>
+            {mobileMenuOpen ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-[#123A67]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 6l12 12M18 6L6 18"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-[#123A67]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 7h16M4 12h16M4 17h16"
+                />
+              </svg>
+            )}
           </button>
-
         </div>
 
-      </Container>
+        {/* Mobile Navigation */}
 
+        {mobileMenuOpen && (
+          <nav
+            id="mobile-navigation"
+            className="
+              border-t
+              border-slate-100
+              bg-white
+              py-3
+              lg:hidden
+            "
+          >
+            <div className="flex flex-col">
+              {mobileLinks.map((item) => (
+                <Link
+                  key={item.id}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`
+                    rounded-lg
+                    px-3
+                    py-3.5
+                    text-[15px]
+                    transition-colors
+                    duration-200
+                    ${
+                      activeSection === item.id
+                        ? "bg-[#F7FAFF] font-semibold text-[#123A63]"
+                        : "font-medium text-slate-600 hover:bg-[#F7FAFF] hover:text-[#123A63]"
+                    }
+                  `}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </nav>
+        )}
+      </Container>
     </header>
   );
 }

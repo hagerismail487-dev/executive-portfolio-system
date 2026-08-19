@@ -1,4 +1,4 @@
-import {
+﻿import {
   BarChart3,
   FileBarChart,
   LayoutDashboard,
@@ -76,13 +76,12 @@ function ExpertiseRow({
     <article
       className="
         grid
-        min-h-[92px]
+        min-h-[78px]
         grid-cols-[36px_minmax(0,1fr)]
         items-center
         gap-3
         border-b
-        border-[#e4ebf4]
-        py-2.5
+        border-[#e4ebf4] py-2
         last:border-b-0
         lg:grid-cols-[40px_minmax(0,1fr)_320px]
         lg:gap-4
@@ -167,9 +166,7 @@ function ExpertiseRow({
       {/* Capabilities */}
       <div
         className="
-          col-start-2
-          flex
-          flex-nowrap
+          col-start-2 flex flex-wrap
           items-center
           justify-start
           gap-1.5
@@ -188,10 +185,7 @@ function ExpertiseRow({
               justify-center
               rounded-full
               border
-              border-[#dce7f5]
-              bg-[#f8fbff]
-              px-2.5
-              py-1.5
+              border-[#dce7f5] bg-[#f8fbff] px-2.5 py-1
               text-[9px]
               font-semibold
               leading-none
@@ -313,3 +307,4 @@ export default function ExpertiseMatrix() {
     </section>
   );
 }
+

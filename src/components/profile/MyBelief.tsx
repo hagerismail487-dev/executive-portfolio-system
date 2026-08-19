@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 export default function MyBelief() {
   return (
@@ -6,7 +6,7 @@ export default function MyBelief() {
       aria-labelledby="my-belief-title"
       className="
   relative
-  mt-5
+  mt-0
   w-full
   overflow-hidden
   rounded-[6px]
@@ -156,3 +156,7 @@ export default function MyBelief() {
     </section>
   );
 }
+
+
+
+

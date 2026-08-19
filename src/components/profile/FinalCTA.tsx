@@ -1,10 +1,10 @@
-export default function FinalCTA() {
+﻿export default function FinalCTA() {
   return (
     <section
       aria-labelledby="final-cta-title"
       className="
         relative
-        mt-8
+        mt-3
         w-full
         overflow-hidden
         rounded-[7px]
@@ -223,3 +223,5 @@ export default function FinalCTA() {
     </section>
   );
 }
+
+

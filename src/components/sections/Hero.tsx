@@ -180,13 +180,15 @@ export default function Hero() {
           className="
             relative
             z-10
+            min-w-0
+            w-full
             max-w-[500px]
           "
         >
           {/* Badge */}
 
           <div className="mb-5">
-            <Badge>
+            <Badge className="!w-full !max-w-full !whitespace-normal break-words text-center leading-5">
               Senior Data Analyst | MIS & Business Intelligence Specialist
             </Badge>
           </div>
@@ -196,7 +198,9 @@ export default function Hero() {
           <h1
             className="
               !text-white
-              max-w-[500px]
+              min-w-0
+            w-full
+            max-w-[500px]
               text-[40px]
               font-bold
               leading-[1.02]
@@ -312,7 +316,9 @@ export default function Hero() {
             className="
               mt-8
               grid
-              max-w-[500px]
+              min-w-0
+            w-full
+            max-w-[500px]
               grid-cols-3
               border-t
               border-[#2D5A91]/60
@@ -427,7 +433,7 @@ export default function Hero() {
 
             {/* Strategic Partner */}
 
-            <div className="pl-4">
+            <div className="sm:pl-4">
               <div
                 className="
                   mb-3
@@ -655,6 +661,10 @@ export default function Hero() {
     </Section>
   );
 }
+
+
+
+
 
 
 

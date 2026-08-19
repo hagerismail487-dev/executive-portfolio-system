@@ -1,4 +1,4 @@
-import {
+﻿import {
   BarChart3,
   Database,
   LayoutDashboard,
@@ -53,15 +53,22 @@ function FocusCard({
       className="
         relative
         flex
-        min-h-[150px]
-        flex-col
+        min-h-[105px]
+        flex-row
+        items-start
+        gap-3
         rounded-[10px]
         border
         border-[#dfe8f3]
         bg-white
-        px-5
-        py-5
+        px-4
+        py-3
         shadow-[0_5px_20px_rgba(15,54,105,0.04)]
+        lg:min-h-[0px]
+        lg:flex-col
+        lg:gap-0
+        lg:px-5
+        lg:py-4
       "
     >
       {/* Number */}
@@ -83,62 +90,67 @@ function FocusCard({
       <div
         className="
           flex
-          h-[42px]
-          w-[42px]
+          h-[38px]
+          w-[38px]
+          shrink-0
           items-center
           justify-center
           rounded-full
           bg-[#edf5ff]
           ring-1
           ring-[#dceaff]
+          lg:h-[42px]
+          lg:w-[42px]
         "
       >
         <Icon
-          className="h-[20px] w-[20px] text-[#075bd8]"
+          className="h-[18px] w-[18px] text-[#075bd8] lg:h-[20px] lg:w-[20px]"
           strokeWidth={1.9}
         />
       </div>
 
-      {/* Title */}
-      <h3
-        className="
-          mt-3.5
-          text-[11px]
-          font-bold
-          leading-[1.3]
-          text-[#102653]
-        "
-      >
-        {area.title}
-      </h3>
+      {/* Content */}
+      <div className="min-w-0 lg:w-full">
+        {/* Title */}
+        <h3
+          className="
+            mt-0.5
+            text-[11px]
+            font-bold
+            leading-[1.3]
+            text-[#102653]
+            lg:mt-3.5
+          "
+        >
+          {area.title}
+        </h3>
 
-      {/* Accent */}
-      <div className="mt-2 h-[2px] w-[22px] bg-[#0867e8]" />
+        {/* Accent */}
+        <div className="mt-2 h-[2px] w-[22px] bg-[#0867e8]" />
 
-      {/* Description */}
-      <p
-        className="
-          mt-2.5
-          text-[9px]
-          font-medium
-          leading-[1.55]
-          text-[#586d87]
-        "
-      >
-        {area.description}
-      </p>
+        {/* Description */}
+        <p
+          className="
+            mt-2
+            text-[9px]
+            font-medium
+            leading-[1.55]
+            text-[#586d87]
+          "
+        >
+          {area.description}
+        </p>
+      </div>
     </article>
   );
 }
-
 export default function CurrentFocus() {
   return (
     <section
       aria-labelledby="current-focus-title"
       className="
         relative
-        mt-7
-        w-full
+        mt-3 w-full
         overflow-hidden
         rounded-[6px]
         bg-[#f7f9fc]
@@ -263,3 +275,10 @@ export default function CurrentFocus() {
     </section>
   );
 }
+
+
+
+
+
+
+

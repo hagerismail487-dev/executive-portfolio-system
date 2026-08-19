@@ -1,4 +1,4 @@
-import {
+﻿import {
   BarChart3,
   Database,
   FileText,
@@ -47,41 +47,36 @@ const journeySteps: JourneyStep[] = [
   },
 ];
 
-function JourneyStep({
-  step,
-  isLast,
-}: {
-  step: JourneyStep;
-  isLast: boolean;
-}) {
+function JourneyStep({ step, isLast, index }: { step: JourneyStep; isLast: boolean; index: number }) {
   const Icon = step.icon;
 
   return (
-    <div className="relative flex flex-1 flex-col items-center text-center">
+    <div className={`relative flex flex-col items-center text-center md:flex-1 ${step.number === "03" ? "col-span-2" : ""}`}>
       {/* Connector */}
       {!isLast && (
         <div
           aria-hidden="true"
-          className="
-            absolute
-            left-[calc(50%+24px)]
-            right-[calc(-50%+24px)]
-            top-[24px]
-            h-px
-            border-t
+          className="hidden md:block absolute left-1/2 top-full
+            h-8
+            w-px
+            -translate-x-1/2
+            border-l
             border-dashed
             border-[#8bb8f3]
-          "
+
+            md:left-[calc(50%+24px)]
+            md:right-[calc(-50%+24px)]
+            md:top-[24px]
+            md:h-px
+            md:w-auto
+            md:translate-x-0
+            md:border-l-0
+            md:border-t"
         >
           <span
             className="
               absolute
-              left-1/2
-              top-1/2
-              h-[6px]
-              w-[6px]
-              -translate-x-1/2
-              -translate-y-1/2
+              left-1/2 bottom-0 h-[6px] w-[6px] -translate-x-1/2 translate-y-1/2 md:top-1/2 md:bottom-auto md:-translate-y-1/2
               rounded-full
               bg-[#176ee4]
             "
@@ -163,7 +158,7 @@ export default function Journey() {
         w-full
         bg-white
         px-6
-        py-10
+        py-4
         sm:px-8
         lg:px-[48px]
         lg:py-[46px]
@@ -171,7 +166,7 @@ export default function Journey() {
     >
       <div className="mx-auto max-w-[1180px]">
         {/* Heading */}
-        <div className="mb-7 flex items-center justify-center gap-3">
+        <div className="mb-4 flex items-center justify-center gap-3 lg:mb-7">
           <span
             aria-hidden="true"
             className="h-[2px] w-[22px] bg-[#0867e8]"
@@ -198,19 +193,10 @@ export default function Journey() {
 
         {/* Journey */}
         <div
-          className="
-            flex
-            flex-col
-            gap-8
-            md:flex-row
-            md:gap-0
-          "
+          className="grid grid-cols-2 gap-x-4 gap-y-3 md:flex md:flex-row md:gap-0"
         >
           {journeySteps.map((step, index) => (
-            <JourneyStep
-              key={step.number}
-              step={step}
-              isLast={index === journeySteps.length - 1}
+            <JourneyStep key={step.number} step={step} index={index} isLast={index === journeySteps.length - 1}
             />
           ))}
         </div>
@@ -218,3 +204,9 @@ export default function Journey() {
     </section>
   );
 }
+
+
+
+
+
+
