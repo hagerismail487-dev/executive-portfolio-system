@@ -4,6 +4,7 @@ import { crmSalesIntelligenceProject } from "@/data/crm-sales-intelligence";
 import { procurementManagementProject } from "@/data/procurement-management";
 import { procurementInventoryManagementProject } from "@/data/procurement-inventory-management";
 import { salesMarketingPerformanceProject } from "@/data/sales-marketing-performance-intelligence";
+import { workforceTalentIntelligenceProject } from "@/data/workforce-talent-intelligence-dashboard";
 
 /* ===========================================================
    CASE STUDIES DATA
@@ -134,6 +135,41 @@ const hrCaseStudy: CaseStudy = {
   contactCTA: defaultCTA,
 };
 
+
+const workforceTalentIntelligenceCaseStudy: CaseStudy = {
+  id: 9,
+  slug: "workforce-talent-intelligence-dashboard",
+  featured: false,
+  title: workforceTalentIntelligenceProject.title,
+  excerpt: workforceTalentIntelligenceProject.description,
+  category: workforceTalentIntelligenceProject.category,
+  industry: "Human Resources / Workforce Management",
+  year: "",
+  client: "",
+  role: "",
+  images: {
+    cover: workforceTalentIntelligenceProject.dashboards[0].image,
+    gallery: workforceTalentIntelligenceProject.dashboards.map(
+      (dashboard) => dashboard.image
+    ),
+  },
+  tools: workforceTalentIntelligenceProject.technologies,
+  objectives: [
+    "Provide an interactive view of workforce conditions.",
+    "Analyze employee resignation patterns.",
+    "Monitor talent acquisition activity.",
+    "Monitor contract compliance indicators.",
+    "Provide executive HR reporting visibility.",
+  ],
+  content: {
+    overview: workforceTalentIntelligenceProject.overview.objective,
+    challenge: workforceTalentIntelligenceProject.overview.challenge,
+    solution: workforceTalentIntelligenceProject.overview.solution,
+    results: "",
+  },
+  businessImpact: [],
+  contactCTA: defaultCTA,
+};
 const crmSalesIntelligenceCaseStudy: CaseStudy = {
   id: 5,
   slug: "crm-sales-intelligence",
@@ -320,7 +356,7 @@ const salesMarketingPerformanceIntelligenceCaseStudy: CaseStudy = {
 };
 
 export const caseStudies: CaseStudy[] = [
-      {
+  {
     id: 1,
 
     slug: "executive-sales-performance-intelligence",
@@ -342,19 +378,19 @@ export const caseStudies: CaseStudy[] = [
 
     role: "Senior MIS & BI Specialist",
 
-   images: {
-  cover:
-    "/projects/executive-sales-performance-intelligence/02-executive-dashboard.PNG",
+    images: {
+      cover:
+        "/projects/executive-sales-performance-intelligence/02-executive-dashboard.PNG",
 
-  gallery: [
-    "/projects/executive-sales-performance-intelligence/01-landing-page.png",
-    "/projects/executive-sales-performance-intelligence/02-executive-dashboard.PNG",
-    "/projects/executive-sales-performance-intelligence/03-contracts-reservations-cancellations.PNG",
-    "/projects/executive-sales-performance-intelligence/04-leads-meetings.PNG",
-    "/projects/executive-sales-performance-intelligence/05-inventory-analysis.PNG",
-    "/projects/executive-sales-performance-intelligence/06-orientation-analysis.PNG",
-  ],
-},
+      gallery: [
+        "/projects/executive-sales-performance-intelligence/01-landing-page.png",
+        "/projects/executive-sales-performance-intelligence/02-executive-dashboard.PNG",
+        "/projects/executive-sales-performance-intelligence/03-contracts-reservations-cancellations.PNG",
+        "/projects/executive-sales-performance-intelligence/04-leads-meetings.PNG",
+        "/projects/executive-sales-performance-intelligence/05-inventory-analysis.PNG",
+        "/projects/executive-sales-performance-intelligence/06-orientation-analysis.PNG",
+      ],
+    },
 
     tools: [
       "Power BI",
@@ -391,12 +427,10 @@ export const caseStudies: CaseStudy[] = [
         title: "Reporting Time",
         value: "-75%",
       },
-
       {
         title: "Decision Speed",
         value: "+40%",
       },
-
       {
         title: "Executive Visibility",
         value: "100%",
@@ -405,111 +439,114 @@ export const caseStudies: CaseStudy[] = [
 
     contactCTA: defaultCTA,
   },
-    {
-  id: 2,
 
-  slug: "customer-experience-operations-dashboard",
+  {
+    id: 2,
 
-  featured: true,
+    slug: "customer-experience-operations-dashboard",
 
-  title: "Customer Experience & Operations Dashboard",
+    featured: true,
 
-  excerpt:
-    "Executive Business Intelligence solution integrating customer service, collections, and legal case management into a unified operational intelligence environment.",
+    title: "Customer Experience & Operations Dashboard",
 
-  category: "Customer Experience",
+    excerpt:
+      "Executive Business Intelligence solution integrating customer service, collections, and legal case management into a unified operational intelligence environment.",
 
-  industry:
-    "Customer Experience / Customer Service / Collections / Legal Operations",
+    category: "Customer Experience",
 
-  year: "",
+    industry:
+      "Customer Experience / Customer Service / Collections / Legal Operations",
 
-  client: "",
+    year: "",
 
-  role: "",
+    client: "",
 
-  images: {
-    cover:
-      "/projects/customer-experience-operations-dashboard/03-customer-experience.PNG",
+    role: "",
 
-    gallery: [
-      "/projects/customer-experience-operations-dashboard/01-landing-page.PNG",
-      "/projects/customer-experience-operations-dashboard/03-customer-experience.PNG",
-      "/projects/customer-experience-operations-dashboard/03-customer-experience.PNG",
-      "/projects/customer-experience-operations-dashboard/04-collections-performance.PNG",
-      "/projects/customer-experience-operations-dashboard/05-legal-performance.PNG",
-      "/projects/customer-experience-operations-dashboard/data-model.png",
+    images: {
+      cover:
+        "/projects/customer-experience-operations-dashboard/03-customer-experience.PNG",
+
+      gallery: [
+        "/projects/customer-experience-operations-dashboard/01-landing-page.PNG",
+        "/projects/customer-experience-operations-dashboard/03-customer-experience.PNG",
+        "/projects/customer-experience-operations-dashboard/03-customer-experience.PNG",
+        "/projects/customer-experience-operations-dashboard/04-collections-performance.PNG",
+        "/projects/customer-experience-operations-dashboard/05-legal-performance.PNG",
+        "/projects/customer-experience-operations-dashboard/data-model.png",
+      ],
+    },
+
+    tools: [
+      "Power BI",
+      "DAX",
+      "Power Query",
+      "Excel Sheets",
     ],
+
+    objectives: [
+      "Monitor customer service performance.",
+      "Track service request resolution.",
+      "Analyze request trends and case types.",
+      "Evaluate agent workload.",
+      "Monitor payment collection performance.",
+      "Identify outstanding balances.",
+      "Analyze installment payment status.",
+      "Monitor legal case activity and workload.",
+      "Identify operational areas requiring management attention.",
+    ],
+
+    content: {
+      ...emptyContent,
+
+      overview:
+        "Customer Experience & Operations Dashboard is an executive Business Intelligence solution designed to provide management with a centralized view of customer service, collections and legal case activity performance.",
+
+      challenge:
+        "Customer-facing operational data was distributed across multiple functions, making it difficult for management to monitor service performance, collection effectiveness, legal workload, and project-level operational activity through one centralized reporting environment.",
+
+      solution:
+        "Create an integrated customer operations intelligence system that enables management to monitor service performance, collection effectiveness, and legal workload through standardized KPIs and interactive analysis.",
+
+      results:
+        "The solution transforms fragmented customer-facing operational data into a centralized executive intelligence environment covering customer service, collections, legal operations and performance.",
+    },
+
+    businessImpact: [
+      {
+        title: "Resolution Rate",
+        value: "92%",
+      },
+      {
+        title: "SLA Calls Compliance",
+        value: "96.46%",
+      },
+      {
+        title: "Remaining Collections",
+        value: "1.21bn",
+      },
+      {
+        title: "Unpaid Installments",
+        value: "75.89%",
+      },
+      {
+        title: "Active Legal Cases",
+        value: "330",
+      },
+      {
+        title: "Total Legal Cases",
+        value: "484",
+      },
+    ],
+
+    contactCTA: defaultCTA,
   },
 
-  tools: [
-    "Power BI",
-    "DAX",
-    "Power Query",
-    "Excel Sheets",
-  ],
-
-  objectives: [
-    "Monitor customer service performance.",
-    "Track service request resolution.",
-    "Analyze request trends and case types.",
-    "Evaluate agent workload.",
-    "Monitor payment collection performance.",
-    "Identify outstanding balances.",
-    "Analyze installment payment status.",
-    "Monitor legal case activity and workload.",
-    "Identify operational areas requiring management attention.",
-  ],
-
-  content: {
-    ...emptyContent,
-
-    overview:
-      "Customer Experience & Operations Dashboard is an executive Business Intelligence solution designed to provide management with a centralized view of customer service, collections and legal case activity performance.",
-
-    challenge:
-      "Customer-facing operational data was distributed across multiple functions, making it difficult for management to monitor service performance, collection effectiveness, legal workload, and project-level operational activity through one centralized reporting environment.",
-
-    solution:
-      "Create an integrated customer operations intelligence system that enables management to monitor service performance, collection effectiveness, and legal workload through standardized KPIs and interactive analysis.",
-
-    results:
-      "The solution transforms fragmented customer-facing operational data into a centralized executive intelligence environment covering customer service, collections, legal operations and performance.",
-  },
-
-  businessImpact: [
-    {
-      title: "Resolution Rate",
-      value: "92%",
-    },
-    {
-      title: "SLA Calls Compliance",
-      value: "96.46%",
-    },
-    {
-      title: "Remaining Collections",
-      value: "1.21bn",
-    },
-    {
-      title: "Unpaid Installments",
-      value: "75.89%",
-    },
-    {
-      title: "Active Legal Cases",
-      value: "330",
-    },
-    {
-      title: "Total Legal Cases",
-      value: "484",
-    },
-  ],
-
-  contactCTA: defaultCTA,
-},
   hrCaseStudy,
   realEstateDecisionIntelligenceCaseStudy,
   crmSalesIntelligenceCaseStudy,
   procurementManagementCaseStudy,
   procurementInventoryManagementCaseStudy,
   salesMarketingPerformanceIntelligenceCaseStudy,
+  workforceTalentIntelligenceCaseStudy,
 ];

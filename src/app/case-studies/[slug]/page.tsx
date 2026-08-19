@@ -9,6 +9,7 @@ import CRMSalesIntelligenceDashboard from "@/components/case-studies/CRMSalesInt
 import ProcurementManagementDashboard from "@/components/case-studies/ProcurementManagementDashboard";
 import ProcurementInventoryManagementDashboard from "@/components/case-studies/ProcurementInventoryManagementDashboard";
 import SalesMarketingPerformanceIntelligenceDashboard from "@/components/case-studies/SalesMarketingPerformanceIntelligenceDashboard";
+import WorkforceTalentIntelligenceDashboard from "@/components/case-studies/WorkforceTalentIntelligenceDashboard";
 
 interface PageProps {
   params: Promise<{
@@ -57,9 +58,13 @@ export default async function CaseStudyPage({
     return <ProcurementManagementDashboard />;
   }
 
+  if (project.slug === "workforce-talent-intelligence-dashboard") {
+    return <WorkforceTalentIntelligenceDashboard />;
+  }
   if (project.slug === "sales-marketing-performance-intelligence") {
     return <SalesMarketingPerformanceIntelligenceDashboard />;
   }
 
   notFound();
 }
+

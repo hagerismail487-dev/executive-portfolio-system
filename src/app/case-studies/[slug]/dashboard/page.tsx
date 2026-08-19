@@ -6,6 +6,7 @@ import CRMSalesIntelligencePresentation from "@/components/case-studies/CRMSales
 import ProcurementManagementPresentation from "@/components/case-studies/ProcurementManagementPresentation";
 import ProcurementInventoryManagementPresentation from "@/components/case-studies/ProcurementInventoryManagementPresentation";
 import SalesMarketingPerformanceIntelligencePresentation from "@/components/case-studies/SalesMarketingPerformanceIntelligencePresentation";
+import WorkforceTalentIntelligencePresentation from "@/components/case-studies/WorkforceTalentIntelligencePresentation";
 
 interface PageProps {
   params: Promise<{
@@ -46,9 +47,13 @@ export default async function DashboardPage({
     return <ProcurementInventoryManagementPresentation />;
   }
 
+  if (slug === "workforce-talent-intelligence-dashboard") {
+    return <WorkforceTalentIntelligencePresentation />;
+  }
   if (slug === "sales-marketing-performance-intelligence") {
     return <SalesMarketingPerformanceIntelligencePresentation />;
   }
 
   return null;
 }
+
