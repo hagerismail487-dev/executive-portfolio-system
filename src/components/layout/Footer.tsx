@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import { Mail } from "lucide-react";
@@ -48,7 +48,7 @@ export default function Footer() {
 
               {/* ================= Navigation ================= */}
 
-              <nav className="flex items-center justify-center gap-4">
+              <nav className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 lg:flex-nowrap lg:gap-4">
                 <Link
                   href="/#Profile"
                  className="
@@ -182,7 +182,7 @@ export default function Footer() {
 
           {/* Bottom Row */}
 
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col items-center justify-center gap-1.5 text-center lg:flex-row lg:items-center lg:justify-between lg:gap-0">
            <p className="text-[10px] text-slate-400">
   © {new Date().getFullYear()} Hager Ismail. All rights reserved.
 </p>
@@ -197,3 +197,4 @@ export default function Footer() {
     </footer>
   );
 }
+

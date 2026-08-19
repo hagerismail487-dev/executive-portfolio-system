@@ -122,7 +122,7 @@ export default function Differentiators() {
         w-full
         bg-white
         px-6
-        pb-4 pt-2
+        pb-4 pt-6
         sm:px-8
         lg:px-[48px]
         lg:pb-[46px]
@@ -174,6 +174,7 @@ export default function Differentiators() {
     </section>
   );
 }
+
 
 
 

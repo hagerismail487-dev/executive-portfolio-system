@@ -116,7 +116,7 @@
         >
           Ready to Turn Business Data
           <br className="hidden sm:block" />
-          Into{" "}
+          {" "}Into{" "}
           <span className="!text-[#4da0ff]">
             Strategic Advantage?
           </span>
@@ -223,5 +223,6 @@
     </section>
   );
 }
+
 
 
