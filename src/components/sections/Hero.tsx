@@ -187,7 +187,7 @@ export default function Hero() {
         >
           {/* Badge */}
 
-          <div className="mb-5">
+          <div className="mt-2 mb-5 lg:mt-0">
             <Badge className="!w-full !max-w-full !whitespace-normal break-words text-center leading-5">
               Senior Data Analyst | MIS & Business Intelligence Specialist
             </Badge>
@@ -661,6 +661,9 @@ export default function Hero() {
     </Section>
   );
 }
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-import {
+﻿import {
   Database,
   Eye,
   Lightbulb,
@@ -414,8 +414,8 @@ export default function CreatingBusinessValue() {
               <div
                 className="
                   absolute
-                  h-[230px]
-                  w-[230px]
+                  h-[190px] w-[190px]
+                  lg:h-[230px] lg:w-[230px]
                   rounded-full
                   border
                   border-[#2379FF]/30
@@ -428,8 +428,8 @@ export default function CreatingBusinessValue() {
               <div
                 className="
                   absolute
-                  h-[185px]
-                  w-[185px]
+                  h-[155px] w-[155px]
+                  lg:h-[185px] lg:w-[185px]
                   rounded-full
                   border
                   border-[#2379FF]/30
@@ -442,8 +442,8 @@ export default function CreatingBusinessValue() {
                 className="
                   relative
                   flex
-                  h-[145px]
-                  w-[145px]
+                  h-[120px] w-[120px]
+                  lg:h-[145px] lg:w-[145px]
                   items-center
                   justify-center
                   rounded-full
@@ -465,7 +465,7 @@ export default function CreatingBusinessValue() {
 
                 <div className="relative text-center">
                   <TrendingUp
-                    size={24}
+                    size={20}
                     strokeWidth={1.6}
                     className="mx-auto mb-2 !text-[#9BC6FF]"
                   />
