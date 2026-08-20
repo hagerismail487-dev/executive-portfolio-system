@@ -14,13 +14,13 @@ const data = {
     story: [
       "Business Intelligence is more than dashboards and reports.",
 
-      "I design Executive Dashboards, MIS Reporting Systems, and Business Intelligence solutions that transform complex business data into clear, actionable insights for executive decision-making.",
+      "My work sits at the intersection of data, business performance, and executive decision-making. I focus on building reporting environments that give leaders a clear view of what is happening, why it matters, and where attention is needed.",
 
-      "Every reporting solution is built to improve visibility, strengthen performance management, and create measurable business value.",
+      "The goal is not to produce more reports. It is to create trusted information that helps organizations understand performance, identify priorities, and make better decisions.",
     ],
 
     closingLine:
-      "Helping organizations transform business data into strategic advantage.",
+      "Turning business information into clarity, confidence, and strategic action.",
   },
 
   executiveCards: [
