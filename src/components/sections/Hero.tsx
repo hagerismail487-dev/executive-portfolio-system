@@ -188,8 +188,8 @@ export default function Hero() {
           {/* Badge */}
 
           <div className="mt-2 mb-5 lg:mt-0">
-            <Badge className="!w-full !max-w-full !whitespace-normal break-words text-center leading-5">
-              Senior Data Analyst | MIS & Business Intelligence Specialist
+            <Badge className="w-full max-w-full !whitespace-normal px-4 text-center text-[9px] tracking-[0.12em] leading-5 sm:w-fit sm:max-w-none sm:!whitespace-nowrap sm:px-8 sm:text-[11px] sm:tracking-[0.18em]">
+              MIS & Business Intelligence | Executive Reporting
             </Badge>
           </div>
 
@@ -254,9 +254,8 @@ export default function Hero() {
               sm:text-[16px]
             "
           >
-            I design business systems and reporting solutions that turn
-            complex data into clarity, drive performance, and support
-            confident decision-making.
+            I design structured reporting and business intelligence systems that turn
+            complex data into reliable insights, clear performance visibility, and decision-ready intelligence for leaders.
           </p>
 
           {/* ================================================= */}
@@ -274,7 +273,7 @@ export default function Hero() {
             {/* Explore Profile */}
 
             <Button
-              href="/profile"
+              href="/case-studies"
               size="lg"
               className="
                 min-w-[175px]
@@ -285,15 +284,14 @@ export default function Hero() {
                 hover:!bg-[#2681FF]
               "
             >
-              Explore My Profile →
+              Explore My Work →
             </Button>
-
-            {/* Download CV */}
+            {/* View Profile */}
 
             <Button
-              href="/identity/Hager-Ismail-CV.pdf"
-              download="Hager-Ismail-CV.pdf"
+              href="/profile"
               size="lg"
+              variant="outline"
               className="
                 min-w-[175px]
                 !border-[#7194C1]
@@ -304,7 +302,7 @@ export default function Hero() {
                 hover:!text-white
               "
             >
-              Download Resume ↓
+              View My Profile →
             </Button>
           </div>
 
@@ -661,15 +659,4 @@ export default function Hero() {
     </Section>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
 
