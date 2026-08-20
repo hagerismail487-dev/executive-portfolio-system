@@ -12,27 +12,27 @@ import Section from "@/components/ui/Section";
 const values = [
   {
     icon: Target,
-    title: "Strategic Thinking",
+    title: "Reliable Reporting",
     description:
-      "Aligning business objectives, data, and operations to support better decisions.",
+      "Build a consistent foundation for trusted business information.",
   },
   {
     icon: Monitor,
-    title: "Executive Reporting",
+    title: "Clear Performance Visibility",
     description:
-      "Designing reporting systems that simplify complex business performance into clear visibility.",
+      "Give leaders a structured view of what is happening.",
   },
   {
     icon: Database,
-    title: "Business Intelligence",
+    title: "Actionable Insight",
     description:
-      "Turning business data into meaningful intelligence that supports sustainable growth.",
+      "Identify trends, gaps, and meaningful performance signals.",
   },
   {
     icon: TrendingUp,
-    title: "Performance Intelligence",
+    title: "Confident Decisions",
     description:
-      "Building KPI frameworks and performance reports that improve visibility and execution.",
+      "Turn reliable information into better business decisions.",
   },
 ];
 
@@ -386,7 +386,7 @@ export default function CreatingBusinessValue() {
               lg:items-center
             "
           >
-            {/* Strategic Thinking */}
+            {/* Reliable Reporting */}
 
             <ValueCard
               item={values[0]}
@@ -501,21 +501,21 @@ export default function CreatingBusinessValue() {
               </div>
             </div>
 
-            {/* Executive Reporting */}
+            {/* Clear Performance Visibility */}
 
             <ValueCard
               item={values[1]}
               className="lg:col-start-3 lg:row-start-1"
             />
 
-            {/* Business Intelligence */}
+            {/* Actionable Insight */}
 
             <ValueCard
               item={values[2]}
               className="lg:col-start-1 lg:row-start-2"
             />
 
-            {/* Performance Intelligence */}
+            {/* Confident Decisions */}
 
             <ValueCard
               item={values[3]}
