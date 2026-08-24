@@ -654,17 +654,17 @@ function BusinessValueSection() {
       icon: Gauge,
       title: "Performance Measurement",
       description:
-        "Structured KPIs that establish a clear view of business performance",
+        "Structured KPIs that define how business performance is measured",
     },
     {
       icon: LineChart,
       title: "Performance Visibility",
       description:
-        "Clear trends and operational signals across the organization",
+        "Clear performance information that helps management monitor progress and priorities",
     },
     {
       icon: Target,
-      title: "Gap Detection",
+      title: "Performance Gap Detection",
       description:
         "Early identification of performance gaps and improvement opportunities",
     },
@@ -672,7 +672,7 @@ function BusinessValueSection() {
       icon: CheckCircle2,
       title: "Continuous Improvement",
       description:
-        "Actionable performance insight that supports better business outcomes",
+        "Performance insight that helps translate identified gaps into improvement priorities",
     },
   ];
 
@@ -691,7 +691,7 @@ function BusinessValueSection() {
             text-[#102A56]
           "
         >
-          Turning Performance Data Into Continuous Improvement
+          From Performance Measurement to Continuous Improvement
         </h2>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-4">
@@ -865,7 +865,7 @@ function WorkflowSection() {
             text-[#102A56]
           "
         >
-          Our 5-Step Methodology
+          From Performance Gaps to Improvement
         </h2>
 
         <div className="relative mt-10 grid gap-8 lg:grid-cols-5 lg:gap-5">
