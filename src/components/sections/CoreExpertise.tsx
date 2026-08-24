@@ -132,7 +132,7 @@ export default function CoreExpertise() {
         <SectionIntro
           eyebrow="Expertise"
           title="Core Expertise"
-          description="A blend of analytical thinking, technical expertise, and business understanding to deliver data solutions that drive strategic impact."
+          description="Structured expertise across reporting, intelligence, performance, and data governance—designed to turn business information into reliable management insight."
           align="center"
           className="mx-auto mb-10 max-w-[720px]"
         />
