@@ -639,19 +639,19 @@ function BusinessValueSection() {
       icon: Database,
       title: "Business Data",
       description:
-        "Connect and organize business information from multiple sources",
+        "Connect relevant business data to establish a reliable analytical foundation",
     },
     {
       icon: LineChart,
       title: "Trend Analysis",
       description:
-        "Reveal patterns and changes that explain business performance",
+        "Identify trends, patterns, and meaningful changes in business performance",
     },
     {
       icon: TrendingUp,
       title: "Strategic Insight",
       description:
-        "Turn analytical findings into meaningful business opportunities",
+        "Translate analysis into clear insights that support business priorities",
     },
     {
       icon: Target,
