@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -22,21 +22,23 @@ export default function Navbar() {
     ];
 
     const handleScroll = () => {
-      const scrollY = window.scrollY + 100;
+      const scrollY = window.scrollY + 120;
+
+      let currentSection = "home";
 
       for (const id of sections) {
         const section = document.getElementById(id);
 
         if (!section) continue;
 
-        const top = section.offsetTop;
-        const bottom = top + section.offsetHeight;
-
-        if (scrollY >= top && scrollY < bottom) {
-          setActiveSection(id);
+        if (scrollY >= section.offsetTop) {
+          currentSection = id;
+        } else {
           break;
         }
       }
+
+      setActiveSection(currentSection);
     };
 
     handleScroll();
