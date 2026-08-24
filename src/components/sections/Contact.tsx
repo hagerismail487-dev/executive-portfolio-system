@@ -1,4 +1,4 @@
-﻿import {
+import {
   Mail,
   MapPin,
 } from "lucide-react";
@@ -279,9 +279,8 @@ export default function Contact() {
   </span>
 
   <span className="block">
-    Let's discuss how executive reporting, business intelligence,
-    performance analytics, and dashboards can help your organization
-    make faster, smarter, and more confident business decisions.
+    Let's discuss how structured reporting, business intelligence,
+    and performance analytics can help your organization improve visibility and make more confident business decisions.
   </span>
 </p>
               {/* ========================================= */}
