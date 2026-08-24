@@ -5,6 +5,32 @@ import ServiceCard from "@/components/ui/ServiceCard";
 
 import { services } from "@/data/services";
 
+const serviceCapabilities: Record<string, string[]> = {
+  "executive-dashboards": [
+    "Executive Reporting Dashboard",
+    "KPI & Performance Views",
+    "Management Reporting Pack",
+  ],
+
+  "mis-reporting-systems": [
+    "MIS Reporting Structure",
+    "Standard Reporting Templates",
+    "Management Reports",
+  ],
+
+  "business-intelligence": [
+    "BI Analysis Framework",
+    "Data Modeling",
+    "KPI & Analytical Models",
+  ],
+
+  "performance-analytics": [
+    "KPI Framework",
+    "Performance Reports",
+    "Trend Analysis",
+  ],
+};
+
 export default function ProfessionalServices() {
   return (
     <Section
@@ -23,64 +49,33 @@ export default function ProfessionalServices() {
       {/* ========================================= */}
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-
-        {/* Subtle Grid */}
-
-        <div
-          className="
-            absolute
-            inset-0
-
-            opacity-[0.35]
-
-            bg-[linear-gradient(to_right,#EAF1FA_1px,transparent_1px),linear-gradient(to_bottom,#EAF1FA_1px,transparent_1px)]
-
-            bg-[size:48px_48px]
-          "
-        />
-
-        {/* Top Right Glow */}
-
         <div
           className="
             absolute
             -right-32
             -top-32
-
             h-[420px]
             w-[420px]
-
             rounded-full
-
             bg-[#EEF5FF]
-
             opacity-60
-
             blur-[120px]
           "
         />
-
-        {/* Bottom Left Glow */}
 
         <div
           className="
             absolute
             -bottom-32
             -left-32
-
             h-[360px]
             w-[360px]
-
             rounded-full
-
             bg-[#F4F8FF]
-
-            opacity-80
-
+            opacity-70
             blur-[120px]
           "
         />
-
       </div>
 
       {/* ========================================= */}
@@ -88,64 +83,37 @@ export default function ProfessionalServices() {
       {/* ========================================= */}
 
       <Container>
-
         <div className="relative z-10">
-
-          {/* ========================================= */}
-          {/* Section Intro */}
-          {/* ========================================= */}
-
           <SectionIntro
             eyebrow="Services"
             title="Professional Services"
-            description="Professional services that help organizations transform business data into executive insights, strategic reporting, and confident business decisions."
+            description="Practical data and reporting solutions that turn business information into clearer performance visibility and better decisions."
             align="center"
             className="
               mx-auto
               mb-10
-              max-w-[720px]
+              max-w-[700px]
             "
           />
-
-          {/* ========================================= */}
-          {/* Services Grid */}
-          {/* ========================================= */}
 
           <div
             className="
               grid
-              gap-5
-
+              gap-[18px]
               md:grid-cols-2
-
-              lg:gap-6
             "
           >
-
             {services.map((service, index) => (
-
-              <div
+              <ServiceCard
                 key={service.slug}
-                className="
-                  group
-                  relative
-                "
-              >
-
-                <ServiceCard
-                  {...service}
-                />
-
-              </div>
-
+                {...service}
+                number={String(index + 1).padStart(2, "0")}
+                capabilities={serviceCapabilities[service.slug] ?? []}
+              />
             ))}
-
           </div>
-
         </div>
-
       </Container>
-
     </Section>
   );
 }
