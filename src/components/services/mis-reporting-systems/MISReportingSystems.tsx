@@ -527,27 +527,27 @@ function BusinessValueSection() {
   const items = [
     {
       icon: FileBarChart,
-      title: "Fragmented Data",
+      title: "Reporting Structure",
       description:
-        "Multiple sources and inconsistent reporting",
+        "Clear reporting processes and responsibilities across departments",
     },
     {
       icon: Network,
-      title: "Standardized System",
+      title: "Standardized Information",
       description:
-        "Structured processes and data standards",
+        "Consistent formats, KPIs, definitions, and reporting requirements",
     },
     {
       icon: LineChart,
-      title: "Executive Visibility",
+      title: "Reporting Control",
       description:
-        "Clear performance insights in real-time",
+        "Structured validation and reporting routines that improve information reliability",
     },
     {
       icon: Target,
-      title: "Better Decisions",
+      title: "Management Visibility",
       description:
-        "Confident, data-driven decision-making",
+        "Consistent business information that gives management a clearer view of operations",
     },
   ];
 
@@ -566,7 +566,7 @@ function BusinessValueSection() {
             text-[#102A56]
           "
         >
-          Transforming Reporting Into Strategic Advantage
+          From Fragmented Reporting to a Standardized System
         </h2>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-4">
@@ -740,7 +740,7 @@ function WorkflowSection() {
             text-[#102A56]
           "
         >
-          Our 5-Step Methodology
+          From Reporting Gaps to a Standardized MIS
         </h2>
 
         <div className="relative mt-10 grid gap-8 lg:grid-cols-5 lg:gap-5">
@@ -933,9 +933,9 @@ function WhyWorkWithMeSection() {
                 text-[#102A56]
               "
             >
-              Reporting Systems
+              MIS Built for Consistency,
               <br />
-              Built for Long-Term Value
+              Control & Adoption
             </h2>
 
             <p
