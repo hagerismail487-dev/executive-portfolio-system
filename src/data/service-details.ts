@@ -30,33 +30,33 @@ export const serviceDetails: ServiceDetail[] = [
   {
     slug: "executive-dashboards",
 
-    title: "Executive Dashboards",
+    title: "Executive Reporting",
 
     shortDescription:
-      "Executive dashboards designed to transform complex business data into clear, strategic insights for faster decision-making.",
+      "Executive reporting solutions that turn complex business performance into clear, decision-ready information for leadership.",
 
     heroDescription:
-      "Enterprise-grade dashboards that help executives monitor KPIs, business performance, and operational trends through interactive and intuitive visualizations.",
+      "Executive reporting solutions that bring KPIs, business performance, and key operational signals together into a clear view for leadership decision-making.",
 
     businessValue:
-      "Empower leadership teams with real-time visibility into business performance, enabling faster decisions and improved strategic planning.",
+      "Give leadership a trusted view of business performance, helping decision-makers understand what matters, where attention is needed, and what requires action.",
 
     deliverables: [
-      "Interactive Executive Dashboard",
-      "KPI Scorecards",
-      "Custom Visualizations",
-      "Executive Reporting",
-      "Data Model",
+      "Executive Reporting Dashboard",
+      "KPI & Performance Views",
+      "Management Reporting Pack",
+      "Custom Executive Visualizations",
+      "Supporting Data Model",
       "Documentation",
     ],
 
     workflow: [
       "Business Discovery",
-      "Requirements Analysis",
+      "Reporting Requirements",
       "Data Preparation",
-      "Dashboard Design",
+      "Reporting Design",
       "Development",
-      "Testing",
+      "Validation",
       "Deployment",
     ],
 
@@ -70,9 +70,9 @@ export const serviceDetails: ServiceDetail[] = [
 
     faqs: [
       {
-        question: "Can the dashboard connect to existing databases?",
+        question: "Can executive reporting connect to our existing data sources?",
         answer:
-          "Yes. Dashboards can integrate with Excel, SQL Server, cloud platforms, and various business data sources.",
+          "Yes. Executive reporting solutions can integrate with Excel, SQL Server, cloud platforms, and various business data sources.",
       },
       {
         question: "Will I receive documentation?",
@@ -82,9 +82,9 @@ export const serviceDetails: ServiceDetail[] = [
     ],
 
     cta: {
-      title: "Ready to Build Your Dashboard?",
+      title: "Ready to Improve Executive Reporting?",
       description:
-        "Let's discuss your business goals and create an executive dashboard tailored to your organization.",
+        "Let's discuss your reporting needs and build a clearer view of business performance for leadership.",
       buttonText: "Let's Talk",
     },
   },
@@ -95,27 +95,28 @@ export const serviceDetails: ServiceDetail[] = [
     title: "MIS Reporting Systems",
 
     shortDescription:
-      "Structured reporting systems that improve visibility and standardize business reporting.",
+      "Structured MIS reporting systems that standardize business information, improve reporting consistency, and support management visibility.",
 
     heroDescription:
-      "Designing scalable MIS reporting frameworks that deliver consistent, reliable, and executive-ready reports across departments.",
+      "Structured MIS reporting frameworks that establish consistent reporting standards, templates, and processes across departments.",
 
     businessValue:
-      "Create standardized reporting processes that improve transparency, reduce manual work, and support executive decision-making.",
+      "Create a consistent reporting environment that improves information clarity, strengthens reporting discipline, and gives management a more reliable view of operations.",
 
     deliverables: [
-      "MIS Reports",
-      "Reporting Templates",
-      "Performance Reports",
-      "Data Validation",
-      "Documentation",
+      "MIS Reporting Structure",
+      "Standard Reporting Templates",
+      "Management Reports",
+      "Data Validation Framework",
+      "Reporting Documentation",
     ],
 
     workflow: [
       "Current Process Assessment",
-      "Reporting Framework Design",
-      "Development",
-      "Testing",
+      "Reporting Requirements",
+      "Framework & Standards Design",
+      "Report Development",
+      "Validation & Testing",
       "Implementation",
     ],
 
@@ -130,14 +131,14 @@ export const serviceDetails: ServiceDetail[] = [
       {
         question: "Can existing reports be improved?",
         answer:
-          "Yes. Existing reporting systems can be redesigned for better accuracy, automation, and usability.",
+          "Yes. Existing reporting systems can be reviewed and redesigned to improve consistency, accuracy, structure, and usability.",
       },
     ],
 
     cta: {
       title: "Improve Your Reporting Process",
       description:
-        "Build reporting systems that executives can trust every day.",
+        "Build a structured reporting environment that management can rely on for consistent business information.",
       buttonText: "Get Started",
     },
   },
@@ -148,27 +149,28 @@ export const serviceDetails: ServiceDetail[] = [
     title: "Business Intelligence",
 
     shortDescription:
-      "Business intelligence solutions that transform raw business data into actionable insights.",
+      "Business intelligence solutions that connect business data, KPIs, and analysis to reveal meaningful performance insights.",
 
     heroDescription:
-      "Helping organizations establish scalable Business Intelligence ecosystems that support strategic growth.",
+      "Business intelligence solutions that connect data, KPIs, and analysis to help organizations understand performance, identify patterns, and uncover meaningful business insights.",
 
     businessValue:
-      "Convert disconnected business data into meaningful insights that improve operational and strategic decision-making.",
+      "Turn business data into a clearer understanding of performance, helping leaders identify patterns, relationships, and areas that require attention.",
 
     deliverables: [
-      "BI Strategy",
+      "BI Analysis Framework",
       "Data Modeling",
-      "Reporting Framework",
-      "Executive Insights",
+      "KPI & Analytical Models",
+      "Performance Insights",
       "Documentation",
     ],
 
     workflow: [
       "Business Assessment",
-      "Data Analysis",
-      "Solution Design",
+      "Data & KPI Analysis",
+      "Analytical Solution Design",
       "Development",
+      "Validation",
       "Deployment",
     ],
 
@@ -181,16 +183,16 @@ export const serviceDetails: ServiceDetail[] = [
 
     faqs: [
       {
-        question: "Is Business Intelligence suitable for small businesses?",
+        question: "What does a Business Intelligence solution help us understand?",
         answer:
-          "Yes. BI solutions can be tailored for organizations of all sizes.",
+          "It helps connect business data and KPIs with analysis to reveal performance patterns, relationships, and areas that may require attention.",
       },
     ],
 
     cta: {
-      title: "Unlock the Value of Your Data",
+      title: "Turn Data Into Business Insight",
       description:
-        "Turn business data into meaningful insights that drive growth.",
+        "Build a clearer analytical view of your business data, KPIs, and performance.",
       buttonText: "Book a Consultation",
     },
   },
@@ -201,27 +203,27 @@ export const serviceDetails: ServiceDetail[] = [
     title: "Performance Analytics",
 
     shortDescription:
-      "Performance analytics that measure KPIs and identify improvement opportunities.",
+      "Performance analytics that measure KPIs, reveal performance gaps, and identify opportunities for improvement.",
 
     heroDescription:
-      "Comprehensive analytics solutions designed to monitor business performance, evaluate KPIs, and support continuous improvement.",
+      "Performance analytics that track KPIs, analyze trends and performance gaps, and help organizations focus on areas that require improvement.",
 
     businessValue:
-      "Measure what matters most through reliable performance metrics and executive-level analysis.",
+      "Create a clear view of performance against expectations, helping leaders identify gaps, understand trends, and focus improvement efforts.",
 
     deliverables: [
       "KPI Framework",
       "Performance Reports",
       "Trend Analysis",
-      "Executive Dashboards",
+      "Performance Gap Analysis",
       "Recommendations",
     ],
 
     workflow: [
       "KPI Definition",
-      "Data Collection",
-      "Analysis",
-      "Visualization",
+      "Data Preparation",
+      "Performance Analysis",
+      "Trend & Gap Analysis",
       "Performance Review",
     ],
 
@@ -234,7 +236,7 @@ export const serviceDetails: ServiceDetail[] = [
 
     faqs: [
       {
-        question: "Can KPIs be customized?",
+        question: "Can KPIs be customized to our business objectives?",
         answer:
           "Absolutely. KPIs are designed around your business objectives and operational goals.",
       },

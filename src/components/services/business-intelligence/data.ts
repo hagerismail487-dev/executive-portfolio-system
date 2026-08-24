@@ -102,7 +102,7 @@ Instead of simply presenting numbers, analytical models reveal trends, patterns,
           "I begin by identifying the business questions leaders need answered before designing analytical solutions or visual reports.",
       },
       {
-        title: "Strategic Thinking",
+        title: "Reliable Reporting",
         description:
           "Every analysis is designed to connect operational performance with broader business objectives, helping leaders focus on what matters most.",
       },

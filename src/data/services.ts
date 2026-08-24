@@ -11,10 +11,10 @@ export const services = [
 
     icon: LayoutDashboard,
 
-    title: "Executive Dashboards",
+    title: "Executive Reporting",
 
     description:
-      "Executive dashboards designed to transform complex business data into clear, strategic insights for faster decision-making.",
+      "Executive reporting solutions designed to turn complex business performance into clear, decision-ready information for leadership.",
   },
 
   {
@@ -25,7 +25,7 @@ export const services = [
     title: "MIS Reporting Systems",
 
     description:
-      "Structured MIS reporting systems that standardize business reporting, improve visibility, and support executive management.",
+      "Structured MIS reporting systems that standardize business information, improve reporting consistency, and support executive management.",
   },
 
   {
@@ -36,7 +36,7 @@ export const services = [
     title: "Business Intelligence",
 
     description:
-      "Business intelligence solutions that convert raw operational data into meaningful performance insights across the organization.",
+      "Business intelligence solutions that transform operational data into meaningful performance insights and explain what the data means for the business.",
   },
 
   {
@@ -47,6 +47,6 @@ export const services = [
     title: "Performance Analytics",
 
     description:
-      "Performance analytics that measure KPIs, identify opportunities, and help organizations continuously improve business results.",
+      "Performance analytics that measure KPIs, reveal performance gaps, and help leaders focus on opportunities for improvement.",
   },
 ] as const;
