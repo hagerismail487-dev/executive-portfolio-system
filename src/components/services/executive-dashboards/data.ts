@@ -5,20 +5,16 @@ import type {
 
 const data = {
   hero: {
-    title: "Executive Dashboards",
+    title: "Executive Reporting",
 
     headline:
-      "Executive Dashboards That Turn Business Data Into Clear Decisions",
+      "Decision-Ready Reporting for Executive Performance Visibility",
 
-    description: `Modern organizations generate more data than ever, but data alone doesn't drive better decisions.
-
-I design executive dashboards that transform complex operational information into clear, interactive reporting experiences, giving leadership teams the visibility they need to monitor performance, identify opportunities, and act with confidence.
-
-Every solution is built around business objectives, meaningful KPIs, and intuitive reporting that supports informed decision-making across the organization.`,
+    description: `I design executive reporting solutions that bring business performance, KPIs, and key management information into a clear, structured view for leadership. Each solution is built around business objectives and meaningful measures, helping decision-makers understand what matters, focus attention where it is needed, and act with greater confidence.`,
 
     executiveTitle: "Decision Support",
 
-    executiveDescription: `Built to provide leadership teams with instant access to the metrics that matter most, combining interactive reporting, KPI visibility, and performance insights in one centralized experience.`,
+    executiveDescription: `Designed to bring the information leadership needs into a clear, centralized reporting view that supports performance visibility and informed decision-making.`,
 
     highlights: [
       "Real-Time KPI Visibility",
@@ -29,31 +25,29 @@ Every solution is built around business objectives, meaningful KPIs, and intuiti
   } satisfies HeroSection,
 
   businessValue: {
-    description: `Reliable reporting creates a common understanding of business performance across the organization.
+    description: `Leadership teams need more than disconnected reports and individual performance measures.
 
-This service establishes a structured reporting environment where leadership teams can monitor key metrics, reduce manual reporting, and gain consistent visibility into operational performance.
-
-The outcome is faster decision-making, improved reporting consistency, and greater confidence in the information used to guide strategic initiatives.`,
+Executive Reporting brings the information that matters most into a clear management view, helping decision-makers understand current performance, identify areas requiring attention, and make more confident business decisions.`,
 
     benefits: [
       "Executive visibility across departments",
-      "Real-time KPI monitoring",
-      "Reduced manual reporting effort",
-      "Faster evidence-based decision-making",
-      "Standardized executive reporting",
-      "Greater confidence in business data",
+      "Clear KPI visibility for leadership",
+      "Focused management information",
+      "Decision-ready performance reporting",
+      "Clearer areas requiring attention",
+      "Greater confidence in business information",
     ],
   },
 
   deliverables: [
-    "Interactive KPI Dashboards",
-    "Department Performance Reports",
+    "Executive Reporting Views",
+    "KPI & Performance Views",
     "Executive Summary Pages",
-    "Performance Measurement Framework",
-    "Optimized Data Model",
+    "Management Reporting Pack",
+    "Custom Executive Visualizations",
+    "Supporting Data Model",
     "Interactive Filters & Drilldowns",
     "Reporting Documentation",
-    "Power BI Reporting Solution",
   ],
 
   workflow: [
@@ -63,24 +57,24 @@ The outcome is faster decision-making, improved reporting consistency, and great
         "Understand business objectives, stakeholders, reporting challenges, and decision-making requirements.",
     },
     {
-      title: "Strategy & KPI Design",
+      title: "Reporting & KPI Design",
       description:
-        "Define KPIs, reporting structure, business questions, and the reporting framework that aligns with organizational goals.",
+        "Define the key measures, reporting structure, business questions, and information required for leadership decision-making.",
     },
     {
       title: "Data Preparation",
       description:
-        "Clean, transform, model, and validate business data to ensure reporting accuracy and consistency.",
+        "Prepare, transform, model, and validate business data to establish a reliable reporting foundation.",
     },
     {
-      title: "Solution Development",
+      title: "Reporting Solution Development",
       description:
-        "Build interactive reporting solutions using optimized data models, DAX calculations, and intuitive user experiences.",
+        "Build the executive reporting solution using structured data models, KPI calculations, and clear reporting experiences.",
     },
     {
       title: "Deployment & Enablement",
       description:
-        "Validate the final solution, deploy the reports, and provide documentation that supports confident business adoption.",
+        "Validate the final solution, deploy the reporting environment, and provide documentation that supports confident business use.",
     },
   ] satisfies WorkflowStep[],
 
@@ -100,33 +94,33 @@ The outcome is faster decision-making, improved reporting consistency, and great
 
     strengths: [
       {
-        title: "Business Before Dashboards",
+        title: "Business Before Reporting",
         description:
-          "Every project starts with understanding business goals, decision-making needs, and reporting challenges before designing a single visual.",
+          "Every engagement starts with understanding business objectives, decision requirements, and reporting challenges before defining the reporting solution.",
       },
       {
-        title: "Executive-Focused Reporting",
+        title: "Leadership-Focused Information",
         description:
-          "I design reporting experiences that help executives monitor KPIs, identify trends, and focus on the metrics that truly drive business performance.",
+          "Reporting is structured around the information leadership needs to monitor performance, identify areas requiring attention, and support informed decisions.",
       },
       {
-        title: "Structured & Reliable Solutions",
+        title: "Reliable Reporting",
         description:
-          "From data preparation to final reporting, every solution follows a structured methodology that prioritizes accuracy, consistency, and long-term scalability.",
+          "From data preparation through validation and final reporting, the solution follows a structured approach that prioritizes consistency, accuracy, and confidence in the information presented.",
       },
       {
-        title: "Designed for Better Decisions",
+        title: "Designed for Decision Support",
         description:
-          "Every dashboard, KPI, and interaction is intentionally designed to simplify complex information and support faster, more confident business decisions.",
+          "Every KPI, report, and visual is selected with a clear purpose: helping decision-makers understand performance and determine what requires action.",
       },
     ],
   },
 
   cta: {
-    title: "Ready to Transform Your Business Reporting?",
+    title: "Ready to Build a Clearer Executive Reporting View?",
 
     description:
-      "Let's build a reporting solution that gives your leadership team the visibility, clarity, and confidence needed to make faster, better-informed business decisions.",
+      "Let's discuss the information your leadership team needs to monitor performance, understand priorities, and make more confident business decisions.",
 
     buttonText: "Let's Talk",
 

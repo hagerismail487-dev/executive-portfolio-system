@@ -134,7 +134,7 @@ function HeroDashboardVisual() {
                 text-[#2563EB]
               "
             >
-              Executive Dashboard
+              Executive Reporting
             </span>
 
             <h3
@@ -576,27 +576,27 @@ function BusinessValueSection() {
   const items = [
     {
       icon: Database,
-      title: "Complex Data",
+      title: "Business Information",
       description:
-        "Multiple data sources and disconnected business information",
+        "Relevant business information brought together around leadership priorities",
     },
     {
       icon: Gauge,
       title: "KPI Visibility",
       description:
-        "Structured metrics that make performance easier to monitor",
+        "Clear measures that make business performance easier to monitor",
     },
     {
       icon: LineChart,
-      title: "Performance Insight",
+      title: "Performance Clarity",
       description:
-        "Clear trends and signals that reveal what is happening",
+        "Focused reporting that shows what is happening and where attention is needed",
     },
     {
       icon: Target,
-      title: "Better Decisions",
+      title: "Decision Support",
       description:
-        "Decision-ready information for faster business action",
+        "Decision-ready information that helps leaders determine what requires action",
     },
   ];
 
@@ -615,7 +615,7 @@ function BusinessValueSection() {
             text-[#102A56]
           "
         >
-          Turning Data Into Executive Visibility
+          From Business Data to Management Clarity
         </h2>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-4">
@@ -789,7 +789,7 @@ function WorkflowSection() {
             text-[#102A56]
           "
         >
-          Our 5-Step Methodology
+          From Business Need to Decision-Ready Reporting
         </h2>
 
         <div className="relative mt-10 grid gap-8 lg:grid-cols-5 lg:gap-5">
