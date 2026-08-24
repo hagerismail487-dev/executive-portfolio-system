@@ -7,7 +7,7 @@ import { services } from "@/data/services";
 
 const serviceCapabilities: Record<string, string[]> = {
   "executive-dashboards": [
-    "Executive Reporting Dashboard",
+    "Executive Reporting Views",
     "KPI & Performance Views",
     "Management Reporting Pack",
   ],
@@ -15,7 +15,7 @@ const serviceCapabilities: Record<string, string[]> = {
   "mis-reporting-systems": [
     "MIS Reporting Structure",
     "Standard Reporting Templates",
-    "Management Reports",
+    "Reporting Controls",
   ],
 
   "business-intelligence": [
@@ -26,7 +26,7 @@ const serviceCapabilities: Record<string, string[]> = {
 
   "performance-analytics": [
     "KPI Framework",
-    "Performance Reports",
+    "Performance Gap Analysis",
     "Trend Analysis",
   ],
 };
@@ -87,7 +87,7 @@ export default function ProfessionalServices() {
           <SectionIntro
             eyebrow="Services"
             title="Professional Services"
-            description="Practical data and reporting solutions that turn business information into clearer performance visibility and better decisions."
+            description="Practical intelligence and reporting solutions that turn business data into clearer performance visibility and better decisions."
             align="center"
             className="
               mx-auto
