@@ -42,7 +42,7 @@ export const serviceDetails: ServiceDetail[] = [
       "Give leadership a trusted view of business performance, helping decision-makers understand what matters, where attention is needed, and what requires action.",
 
     deliverables: [
-      "Executive Reporting Dashboard",
+      "Executive Reporting Views",
       "KPI & Performance Views",
       "Management Reporting Pack",
       "Custom Executive Visualizations",
@@ -106,7 +106,7 @@ export const serviceDetails: ServiceDetail[] = [
     deliverables: [
       "MIS Reporting Structure",
       "Standard Reporting Templates",
-      "Management Reports",
+      "Reporting Controls",
       "Data Validation Framework",
       "Reporting Documentation",
     ],
@@ -213,7 +213,7 @@ export const serviceDetails: ServiceDetail[] = [
 
     deliverables: [
       "KPI Framework",
-      "Performance Reports",
+      "Performance Analysis",
       "Trend Analysis",
       "Performance Gap Analysis",
       "Recommendations",
