@@ -87,7 +87,7 @@ export default function ProfessionalServices() {
           <SectionIntro
             eyebrow="Services"
             title="Professional Services"
-            description="Practical intelligence and reporting solutions that turn business data into clearer performance visibility and better decisions."
+            description="Professional reporting and intelligence solutions that help organizations structure information, understand performance, and support better business decisions."
             align="center"
             className="
               mx-auto
