@@ -11,42 +11,69 @@ import ExecutiveCard from "@/components/design-system/ExecutiveCard";
 import Section from "@/components/ui/Section";
 import SectionIntro from "@/components/ui/SectionIntro";
 
-const expertise = [
+const capabilityGroups = [
   {
+    number: "01",
     icon: BarChart3,
-    title: "Executive Reporting Systems",
+    title: "Reporting & Intelligence",
     description:
-      "Design and build executive reporting systems that transform complex business performance into concise, decision-ready insights.",
+      "Turning complex business data into clear, decision-ready information.",
+    capabilities: [
+      {
+        icon: BarChart3,
+        title: "Executive Reporting Systems",
+        description:
+          "Design and build reporting systems that turn complex business performance into concise, decision-ready insights.",
+      },
+      {
+        icon: Database,
+        title: "Business Intelligence",
+        description:
+          "Transform raw business data into meaningful intelligence through structured modeling, analytics, and interactive dashboards.",
+      },
+    ],
   },
   {
-    icon: Database,
-    title: "Business Intelligence",
-    description:
-      "Transform raw business data into meaningful intelligence through advanced modeling, analytics, and interactive dashboards.",
-  },
-  {
-    icon: Network,
-    title: "MIS Strategy & Frameworks",
-    description:
-      "Develop scalable MIS frameworks and reporting processes that align business operations with strategic objectives.",
-  },
-  {
+    number: "02",
     icon: Target,
-    title: "KPI & Performance Management",
+    title: "Performance & Analytics",
     description:
-      "Build KPI architectures and performance frameworks that improve visibility, accountability, and execution.",
+      "Making performance visible, measurable, and actionable.",
+    capabilities: [
+      {
+        icon: Target,
+        title: "KPI & Performance Management",
+        description:
+          "Build KPI frameworks that improve performance visibility, accountability, and alignment with business objectives.",
+      },
+      {
+        icon: LineChart,
+        title: "Data Analytics",
+        description:
+          "Analyze business data to uncover trends, performance gaps, risks, and opportunities that support better decisions.",
+      },
+    ],
   },
   {
-    icon: LineChart,
-    title: "Data Analytics",
-    description:
-      "Apply analytical thinking and data exploration techniques to uncover trends, risks, and growth opportunities.",
-  },
-  {
+    number: "03",
     icon: ShieldCheck,
-    title: "Data Governance",
+    title: "Data Trust",
     description:
-      "Ensure data quality, consistency, and governance standards that establish trust across reporting systems.",
+      "Building the structure and governance behind reliable management information.",
+    capabilities: [
+      {
+        icon: Network,
+        title: "MIS Strategy & Frameworks",
+        description:
+          "Develop structured MIS frameworks and reporting processes that create consistency, clarity, and reliable management information.",
+      },
+      {
+        icon: ShieldCheck,
+        title: "Data Governance",
+        description:
+          "Establish data quality, consistency, and governance standards that strengthen trust in reporting and decision-making.",
+      },
+    ],
   },
 ];
 
@@ -112,33 +139,26 @@ export default function CoreExpertise() {
       </div>
 
       {/* ========================================= */}
-      {/* Expertise Grid */}
+      {/* Capability Groups */}
       {/* ========================================= */}
 
-      <div
-        className="
-          relative
-          z-10
-          grid
-          gap-5
-          md:grid-cols-2
-          lg:grid-cols-3
-        "
-      >
-        {expertise.map((item, index) => {
-          const Icon = item.icon;
+      <div className="relative z-10 grid gap-6 lg:grid-cols-3">
+        {capabilityGroups.map((group) => {
+          const GroupIcon = group.icon;
 
           return (
             <ExecutiveCard
-              key={item.title}
+              key={group.title}
               padding="sm"
               className="
                 group
-                min-h-[190px]
-                rounded-[22px]
+                relative
+                overflow-hidden
+                rounded-[24px]
                 border
                 border-[#DCE8F7]
                 bg-white
+                p-6
                 shadow-[0_10px_30px_rgba(16,42,86,0.04)]
                 transition-all
                 duration-300
@@ -147,105 +167,148 @@ export default function CoreExpertise() {
                 hover:shadow-[0_18px_40px_rgba(16,42,86,0.08)]
               "
             >
-              {/* ========================================= */}
-              {/* Header */}
-              {/* ========================================= */}
 
-              <div className="flex items-start gap-4">
-                {/* Number */}
+              {/* Group Header */}
 
-                <span
-                  className="
-                    flex
-                    h-9
-                    w-9
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-xl
-                    border
-                    border-[#D7E6FF]
-                    bg-[#F3F7FF]
-                    text-[12px]
-                    font-bold
-                    tracking-[0.02em]
-                    text-[#2563EB]
-                    transition-colors
-                    duration-300
-                    group-hover:border-[#BFD5FF]
-                    group-hover:bg-[#EAF2FF]
-                  "
-                >
-                  {(index + 1).toString().padStart(2, "0")}
-                </span>
+              <div className="relative z-10">
+                <div className="flex items-center gap-4">
+                  <span
+                    className="
+                      shrink-0
+                      text-[40px]
+                      font-semibold
+                      leading-none
+                      tracking-[-0.05em]
+                      text-[#2563EB]
+                    "
+                  >
+                    {group.number}
+                  </span>
 
-                {/* Icon */}
+                  <h3
+                    className="
+                      max-w-[210px]
+                      text-[22px]
+                      font-semibold
+                      leading-[1.05]
+                      tracking-[-0.025em]
+                      text-[#102A56]
+                    "
+                  >
+                    {group.title}
+                  </h3>
+                </div>
 
                 <div
                   className="
-                    flex
-                    h-9
-                    w-9
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-xl
-                    bg-[#F7FAFF]
-                    text-[#2563EB]
+                    mt-5
+                    h-[2px]
+                    w-16
+                    bg-[#2563EB]
                   "
-                >
-                  <Icon
-                    size={19}
-                    strokeWidth={1.8}
-                  />
-                </div>
+                />
 
-                {/* Title */}
-
-                <h3
+                <p
                   className="
-                    pt-1
-                    text-[18px]
-                    font-semibold
-                    leading-[1.15]
-                    tracking-[-0.02em]
-                    text-[#102A56]
+                    mt-4
+                    text-[14px]
+                    leading-6
+                    text-[#385274]
                   "
                 >
-                  {item.title}
-                </h3>
+                  {group.description}
+                </p>
               </div>
 
-              {/* ========================================= */}
-              {/* Divider */}
-              {/* ========================================= */}
+              {/* Capabilities */}
 
-              <div
-                className="
-                  mt-4
-                  h-px
-                  w-full
-                  bg-gradient-to-r
-                  from-[#2563EB]
-                  via-[#DCE8F7]
-                  to-transparent
-                "
-              />
+              <div className="relative z-10 mt-7 space-y-5">
+                {group.capabilities.map((capability, index) => {
+                  const CapabilityIcon = capability.icon;
 
-              {/* ========================================= */}
-              {/* Description */}
-              {/* ========================================= */}
+                  return (
+                    <div
+                      key={capability.title}
+                      className="
+                        rounded-[18px]
+                        border
+                        border-[#DCE8F7]
+                        bg-[#F8FBFF]
+                        p-4 sm:p-5 lg:p-6
+                        shadow-[0_12px_28px_rgba(16,42,86,0.07)]
+                        transition-all
+                        duration-300
+                        hover:-translate-y-0.5
+                        hover:border-[#C8DCF5]
+                        hover:bg-[#F4F8FF]
+                        hover:shadow-[0_16px_32px_rgba(16,42,86,0.09)]
+                      "
+                    >
+                      <div className="flex items-start gap-3">
+                        <div
+                          className="
+                            flex
+                            h-8
+                            w-8
+                            shrink-0
+                            items-center
+                            justify-center
+                            rounded-lg
+                            bg-white
+                            text-[#2563EB]
+                            shadow-[0_4px_12px_rgba(16,42,86,0.05)]
+                          "
+                        >
+                          <CapabilityIcon size={18} strokeWidth={1.8} />
+                        </div>
 
-              <p
-                className="
-                  mt-4
-                  text-[14px]
-                  leading-6
-                  text-[#385274]
-                "
-              >
-                {item.description}
-              </p>
+                        <div className="min-w-0">
+                          <div className="flex items-center gap-2">
+                            <h4
+                              className="
+                                text-[14px]
+                                font-semibold
+                                leading-5
+                                tracking-[-0.01em]
+                                text-[#102A56]
+                              "
+                            >
+                              {capability.title}
+                            </h4>
+                          </div>
+
+                          <p
+                            className="
+                              mt-2
+                              text-[13px]
+                              leading-5
+                              text-[#526985]
+                            "
+                          >
+                            {capability.description}
+                          </p>
+                        </div>
+
+                        <span
+                          className="
+                            ml-auto
+                            shrink-0
+                            pt-1
+                            text-[22px]
+                            leading-none
+                            text-[#123A63]
+                            transition-transform
+                            duration-300
+                            group-hover:translate-x-1
+                          "
+                        >
+                          ›
+                        </span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </ExecutiveCard>
           );
         })}
@@ -271,7 +334,7 @@ export default function CoreExpertise() {
             text-[#102A56]
           "
         >
-          Turning data into strategic advantage.
+          Turning analytical capability into business confidence.
         </p>
 
         <div
