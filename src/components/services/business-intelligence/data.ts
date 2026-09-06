@@ -127,7 +127,7 @@ Instead of simply presenting numbers, analytical models reveal trends, patterns,
 
     buttonText: "Let's Talk",
 
-    buttonHref: "https://www.linkedin.com/in/hagerismail1/",
+    buttonHref: "https://wa.me/201023281762",
   },
 };
 
