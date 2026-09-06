@@ -50,7 +50,7 @@ export default function Footer() {
 
               <nav className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 lg:flex-nowrap lg:gap-4">
                 <Link
-                  href="/#Profile"
+                  href="/#profile"
                  className="
   relative
 
