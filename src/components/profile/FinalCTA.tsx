@@ -1,4 +1,4 @@
-﻿export default function FinalCTA() {
+export default function FinalCTA() {
   return (
     <section
       aria-labelledby="final-cta-title"
@@ -152,7 +152,7 @@
         >
           {/* Let's Talk */}
           <a
-            href="https://www.linkedin.com/in/hagerismail1/"
+            href="https://wa.me/201023281762"
             target="_blank"
             rel="noopener noreferrer"
             className="
@@ -223,6 +223,7 @@
     </section>
   );
 }
+
 
 
 

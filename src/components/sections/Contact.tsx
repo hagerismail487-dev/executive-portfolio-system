@@ -292,7 +292,7 @@ export default function Contact() {
                 {/* Let's Talk */}
 
 <a
-  href="https://www.linkedin.com/in/hagerismail1"
+  href="https://wa.me/201023281762"
   target="_blank"
   rel="noopener noreferrer"
   className="
@@ -571,7 +571,7 @@ export default function Contact() {
                   </p>
 
                   <a
-                    href="https://www.linkedin.com/in/hagerismail1"
+                    href="https://wa.me/201023281762"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
@@ -766,6 +766,7 @@ export default function Contact() {
     </Section>
   );
 }
+
 
 
 
