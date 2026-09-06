@@ -46,7 +46,7 @@ Instead of simply presenting numbers, analytical models reveal trends, patterns,
     "Interactive Analytical Dashboards",
     "Executive Intelligence Reports",
     "Business Performance Analysis",
-    "Trend & Variance Analysis",
+    "Business Opportunity Analysis",
     "KPI Intelligence Framework",
     "Analytical Data Model",
     "Business Intelligence Documentation",
@@ -132,3 +132,4 @@ Instead of simply presenting numbers, analytical models reveal trends, patterns,
 };
 
 export default data;
+
