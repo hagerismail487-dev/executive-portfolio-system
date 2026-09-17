@@ -1,4 +1,4 @@
-﻿import type { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 export interface ExecutiveSalesProject {
   title: string;
@@ -47,7 +47,7 @@ export const executiveSalesProject: ExecutiveSalesProject = {
   tertiaryCategory: "Real Estate Analytics",
 
   positioning:
-    "Sales + Pipeline + Inventory Intelligence",
+    "Executive Sales Performance & Lifecycle Reporting",
 
   description:
     "An executive Power BI solution designed to transform real-estate sales and commercial performance data into a structured decision-support environment across the sales lifecycle.",
@@ -59,7 +59,7 @@ export const executiveSalesProject: ExecutiveSalesProject = {
     },
     {
       label: "Primary Focus",
-      value: "Sales, Pipeline & Inventory Intelligence",
+      value: "Sales Performance Across the Commercial Lifecycle",
     },
     {
       label: "Reporting Platform",

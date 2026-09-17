@@ -31,6 +31,13 @@ const serviceCapabilities: Record<string, string[]> = {
   ],
 };
 
+const serviceQuestions: Record<string, string> = {
+  "executive-dashboards": "What does leadership need to know?",
+  "mis-reporting-systems": "How do we structure and standardize reporting?",
+  "business-intelligence": "What does the data tell us and why?",
+  "performance-analytics": "Are we performing against expectations?",
+};
+
 export default function ProfessionalServices() {
   return (
     <Section
@@ -109,6 +116,7 @@ export default function ProfessionalServices() {
                 {...service}
                 number={String(index + 1).padStart(2, "0")}
                 capabilities={serviceCapabilities[service.slug] ?? []}
+                businessQuestion={serviceQuestions[service.slug] ?? ""}
               />
             ))}
           </div>

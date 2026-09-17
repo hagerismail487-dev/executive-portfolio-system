@@ -1,4 +1,4 @@
-﻿export interface WorkforceTalentIntelligenceProject {
+export interface WorkforceTalentIntelligenceProject {
   title: string;
   category: string;
   secondaryCategory: string;
@@ -45,7 +45,7 @@ export const workforceTalentIntelligenceProject: WorkforceTalentIntelligenceProj
   tertiaryCategory: "Executive HR Reporting",
 
   positioning:
-    "Workforce + Talent + HR Compliance Intelligence",
+    "Workforce & Talent Lifecycle Intelligence",
 
   description:
     "An executive Power BI solution designed to transform HR operational data into a structured intelligence environment covering workforce overview, employee resignations, talent acquisition, contract compliance, and HR data architecture.",
@@ -57,7 +57,7 @@ export const workforceTalentIntelligenceProject: WorkforceTalentIntelligenceProj
     },
     {
       label: "Primary Focus",
-      value: "Workforce, Talent Acquisition & HR Compliance",
+      value: "Workforce Lifecycle, Talent Acquisition & Compliance",
     },
     {
       label: "Reporting Platform",

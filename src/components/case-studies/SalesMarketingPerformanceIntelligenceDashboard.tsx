@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -433,7 +433,7 @@ export default function SalesMarketingPerformanceIntelligenceDashboard() {
                 </p>
 
                 <p className="mt-5 text-[34px] font-bold tracking-[-0.04em]">
-                  {insight.value}
+                  {insight.value}{insight.secondary === "Average Conversion Rate" ? "%" : ""}
                 </p>
 
                 <p className="mt-2 text-[11px] font-semibold text-white/90">
@@ -695,4 +695,3 @@ function InfoPanel({
     </div>
   );
 }
-

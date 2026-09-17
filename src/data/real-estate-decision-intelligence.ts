@@ -1,4 +1,4 @@
-﻿export interface RealEstateDecisionIntelligenceProject {
+export interface RealEstateDecisionIntelligenceProject {
   title: string;
   category: string;
   secondaryCategory: string;
@@ -52,7 +52,7 @@ export const realEstateDecisionIntelligenceProject: RealEstateDecisionIntelligen
   tertiaryCategory: "Sales, Inventory & Pipeline Intelligence",
 
   positioning:
-    "Integrated Real Estate Sales, Inventory & Pipeline Intelligence System",
+    "Real Estate Decision Support for Sales, Inventory & Pipeline Exposure",
 
   description:
     "An integrated Business Intelligence solution designed to provide management with a connected view of real estate sales performance, inventory position, lead pipeline, conversion, closure, and cancellation activity.",
@@ -68,7 +68,7 @@ export const realEstateDecisionIntelligenceProject: RealEstateDecisionIntelligen
     },
     {
       label: "Primary Focus",
-      value: "Sales, Inventory & Pipeline Intelligence",
+      value: "Decision Support for Sales, Inventory & Pipeline Exposure",
     },
     {
       label: "Reporting Period",

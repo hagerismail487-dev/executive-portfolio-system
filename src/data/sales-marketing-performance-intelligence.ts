@@ -1,4 +1,4 @@
-﻿export interface SalesMarketingPerformanceProject {
+export interface SalesMarketingPerformanceProject {
   title: string;
   category: string;
   secondaryCategory: string;
@@ -55,7 +55,7 @@ export const salesMarketingPerformanceProject: SalesMarketingPerformanceProject 
     "Sales + Marketing + Product Performance Intelligence",
 
   description:
-    "A sales and marketing performance dashboard that brings revenue, cost, profit, conversion, views, lead performance, sales channels, marketing campaigns, regional performance, country performance, and product-level metrics into one analytical reporting experience.",
+    "A sales and marketing performance dashboard built from multiple Excel files, bringing revenue, cost, profit, conversion, views, lead performance, sales channels, marketing campaigns, regional performance, country performance, and product-level metrics into one analytical reporting experience.",
 
   snapshot: [
     {
@@ -68,7 +68,7 @@ export const salesMarketingPerformanceProject: SalesMarketingPerformanceProject 
     },
     {
       label: "Dashboard Views",
-      value: "Sales Marketing Dashboard`nProduct Details",
+      value: "Sales Marketing Dashboard & Product Details",
     },
     {
       label: "Reporting Period",
@@ -77,27 +77,27 @@ export const salesMarketingPerformanceProject: SalesMarketingPerformanceProject 
   ],
   overview: {
     challenge:
-      "The dashboard brings multiple sales and marketing performance dimensions into one reporting experience, including revenue, cost, profit, conversion, views, lead performance, sales channels, marketing campaigns, regions, countries, and product performance.",
+      "As the business expanded across multiple regions, products, and marketing channels, sales data became increasingly fragmented. Management lacked a centralized view to evaluate revenue performance, marketing effectiveness, product profitability, and regional trends, making it more difficult to identify growth opportunities and support timely business decisions.",
 
     objective:
-      "Provide a consolidated view of sales and marketing performance while allowing users to move from overall performance indicators into product-level detail.",
+      "Monitor revenue, cost, and profit performance; evaluate conversion and sales-channel performance; measure marketing campaign effectiveness; analyze regional and country performance; identify top-performing products and profitability patterns; and support revenue growth and strategic planning.",
 
     solution:
-      "A two-page analytical dashboard experience combining an executive Sales Marketing Dashboard with a detailed Product Details view.",
+      "A two-module Power BI reporting solution that brings sales, marketing, channel, regional, and product performance into one analytical environment, enabling management to monitor business performance, evaluate commercial effectiveness, and identify growth opportunities.",
   },
 
   dashboards: [
     {
       title: "Sales Marketing Dashboard",
       description:
-        "Executive performance view covering revenue, cost, profit, conversion, views, monthly revenue, lead performance, sales channels, marketing campaigns, regions, and country-level performance.",
+        "Executive performance view for monitoring revenue, cost, profit, conversion, monthly trends, lead performance, sales channels, marketing campaigns, regions, and country-level performance to support commercial decisions.",
       image:
         "/projects/sales-marketing-performance-intelligence/01-sales-marketing-dashboard.png",
     },
     {
       title: "Product Details",
       description:
-        "Detailed product-level view covering rating, scoring, stock, invoices, average price, views, revenue, cost, and profit with product performance trends.",
+        "Detailed product-level view covering rating, scoring, stock, invoices, average price, views, revenue, cost, and profit to identify high-performing products, profitability patterns, and areas requiring commercial attention.",
       image:
         "/projects/sales-marketing-performance-intelligence/02-product-details.png",
     },
@@ -160,7 +160,7 @@ export const salesMarketingPerformanceProject: SalesMarketingPerformanceProject 
       value: "17",
       secondary: "Average Conversion Rate",
       detail:
-        "The executive dashboard displays an average conversion rate of 17.",
+        "The executive dashboard displays an average conversion rate of 17%.",
       decision:
         "Provides a high-level conversion performance indicator.",
       tone: "amber",

@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
@@ -639,7 +639,7 @@ export default function Hero() {
                 </div>
 
                 <a
-                  href="#case-studies"
+                  href="#projects"
                   className="
                     !text-[#4D9BFF]
                     shrink-0
@@ -659,4 +659,3 @@ export default function Hero() {
     </Section>
   );
 }
-

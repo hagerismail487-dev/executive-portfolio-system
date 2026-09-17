@@ -1,4 +1,4 @@
-﻿export interface ProcurementManagementProject {
+export interface ProcurementManagementProject {
   title: string;
   category: string;
   secondaryCategory: string;
@@ -50,7 +50,7 @@ export const procurementManagementProject: ProcurementManagementProject = {
   tertiaryCategory: "Procurement, Inventory & Fixed Assets Intelligence",
 
   positioning:
-    "Executive Procurement, Inventory & Fixed Assets Intelligence",
+    "Executive Procurement Performance, Supplier & Payment Intelligence",
 
   description:
     "An integrated intelligence system for procurement performance, inventory visibility, and fixed asset management.",
@@ -62,7 +62,7 @@ export const procurementManagementProject: ProcurementManagementProject = {
     },
     {
       label: "Primary Focus",
-      value: "Procurement Performance, Inventory & Asset Intelligence",
+      value: "Procurement Performance, Supplier & Payment Intelligence",
     },
     {
       label: "Reporting Platform",
@@ -70,7 +70,7 @@ export const procurementManagementProject: ProcurementManagementProject = {
     },
     {
       label: "Analytical Framework",
-      value: "Procurement + Inventory + Fixed Assets",
+      value: "Procurement Performance + Supplier + Payment + Inventory + Fixed Assets",
     },
   ],
 

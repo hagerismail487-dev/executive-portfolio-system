@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -229,13 +229,7 @@ export default function ExecutiveSalesPerformanceIntelligencePresentation() {
 
             </div>
 
-            <div className="mt-3 flex items-center justify-center gap-2 text-[9px] text-[#536b84]">
-              <span>â† Previous</span>
-              <span>â€¢</span>
-              <span>Use keyboard arrows to navigate</span>
-              <span>â€¢</span>
-              <span>Next â†’</span>
-            </div>
+
 
           </div>
 
@@ -297,7 +291,7 @@ export default function ExecutiveSalesPerformanceIntelligencePresentation() {
             {String(activeSlide + 1).padStart(2, "0")}
             {" / "}
             {String(project.dashboards.length).padStart(2, "0")}
-            {" â€” "}
+            {" — "}
             {dashboard.title}
 
           </div>
@@ -308,4 +302,3 @@ export default function ExecutiveSalesPerformanceIntelligencePresentation() {
     </main>
   );
 }
-

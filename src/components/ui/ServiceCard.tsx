@@ -7,6 +7,7 @@ interface ServiceCardProps {
   title: string;
   description: string;
   capabilities: string[];
+  businessQuestion: string;
   number: string;
 }
 
@@ -16,6 +17,7 @@ export default function ServiceCard({
   title,
   description,
   capabilities,
+  businessQuestion,
   number,
 }: ServiceCardProps) {
   return (
@@ -183,6 +185,41 @@ export default function ServiceCard({
       >
         {description}
       </p>
+
+      {/* Business Question */}
+
+      <div
+        className="
+          relative
+          z-10
+          mt-4
+          border-l
+          border-[#C9D9F2]
+          pl-3
+        "
+      >
+        <p
+          className="
+            text-[11px]
+            font-bold
+            tracking-[0.06em]
+            text-[#08245A]
+          "
+        >
+          Business Question
+        </p>
+
+        <p
+          className="
+            mt-1
+            text-[13px]
+            leading-[1.5]
+            text-[#35547F]
+          "
+        >
+          {businessQuestion}
+        </p>
+      </div>
 
       {/* Capability Tags */}
 

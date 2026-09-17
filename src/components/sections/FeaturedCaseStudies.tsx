@@ -14,6 +14,35 @@ export default function FeaturedCaseStudies() {
     (project) => project.featured
   );
 
+  const evidenceTeasers: Record<
+    string,
+    {
+      challenge: string;
+      solution: string;
+    }
+  > = {
+    "executive-sales-performance-intelligence": {
+      challenge:
+        "Fragmented business data made executive reporting slow, inconsistent, and difficult to trust.",
+      solution:
+        "Integrated sales, reservations, contracts, and financial indicators into one executive reporting platform.",
+    },
+
+    "customer-experience-operations-dashboard": {
+      challenge:
+        "Customer-facing data was fragmented across functions, limiting centralized management visibility.",
+      solution:
+        "Integrated customer service, collections, and legal operations into one standardized intelligence environment.",
+    },
+
+    "hr-decision-support-system": {
+      challenge:
+        "HR data was spread across operational spreadsheets, limiting connected workforce and compliance visibility.",
+      solution:
+        "Centralized workforce, recruitment, learning, engagement, and compliance data into an executive decision-support system.",
+    },
+  };
+
   return (
     <Section
       id="projects"
@@ -38,8 +67,6 @@ export default function FeaturedCaseStudies() {
           overflow-hidden
         "
       >
-        {/* Background Grid */}
-
         <div
           className="
             absolute
@@ -49,8 +76,6 @@ export default function FeaturedCaseStudies() {
             bg-[size:48px_48px]
           "
         />
-
-        {/* Top Right Glow */}
 
         <div
           className="
@@ -65,8 +90,6 @@ export default function FeaturedCaseStudies() {
           "
         />
 
-        {/* Bottom Left Glow */}
-
         <div
           className="
             absolute
@@ -79,8 +102,6 @@ export default function FeaturedCaseStudies() {
             blur-[130px]
           "
         />
-
-        {/* Decorative Dots */}
 
         <div
           className="
@@ -109,8 +130,8 @@ export default function FeaturedCaseStudies() {
 
           <SectionIntro
             eyebrow="Case Studies"
-            title="Featured Projects"
-            description="A selection of executive dashboards and business intelligence solutions designed to transform data into strategic business decisions."
+            title="Featured Case Studies"
+            description="Selected examples of how business challenges are translated into structured reporting, intelligence, and decision-support solutions."
             align="center"
             variant="dark"
             className="
@@ -121,7 +142,7 @@ export default function FeaturedCaseStudies() {
           />
 
           {/* ========================================= */}
-          {/* Projects Grid */}
+          {/* Case Studies Grid */}
           {/* ========================================= */}
 
           <div
@@ -167,18 +188,19 @@ export default function FeaturedCaseStudies() {
                   {/* ========================================= */}
 
                   <div
-  className="
-    group/preview
-    relative
-    mx-0 mt-3 aspect-[16/9]
-    overflow-hidden
-    rounded-[14px]
-    border
-    border-[#24558D]
-    bg-transparent
-  "
->
-
+                    className="
+                      group/preview
+                      relative
+                      mx-0
+                      mt-3
+                      aspect-[16/9]
+                      overflow-hidden
+                      rounded-[14px]
+                      border
+                      border-[#24558D]
+                      bg-transparent
+                    "
+                  >
                     <Image
                       src={project.images.cover}
                       alt={`${project.title} dashboard preview`}
@@ -198,8 +220,6 @@ export default function FeaturedCaseStudies() {
                       "
                     />
 
-                    {/* Dark Overlay */}
-
                     <div
                       className="
                         pointer-events-none
@@ -211,8 +231,6 @@ export default function FeaturedCaseStudies() {
                         to-transparent
                       "
                     />
-
-                    {/* Hover Glow */}
 
                     <div
                       className="
@@ -226,11 +244,10 @@ export default function FeaturedCaseStudies() {
                         group-hover/preview:opacity-100
                       "
                     />
-
                   </div>
 
                   {/* ========================================= */}
-                  {/* Category */}
+                  {/* Business Domain */}
                   {/* ========================================= */}
 
                   <span
@@ -248,7 +265,7 @@ export default function FeaturedCaseStudies() {
                       font-semibold
                       uppercase
                       tracking-[0.20em]
-                      text-[#8DBBFF]
+                      !text-[#8DBBFF]
                     "
                   >
                     {project.category}
@@ -275,36 +292,70 @@ export default function FeaturedCaseStudies() {
                   </h3>
 
                   {/* ========================================= */}
-                  {/* Divider */}
+                  {/* Evidence Content */}
                   {/* ========================================= */}
 
                   <div
-                    className="
-                      mt-3
-                      mb-3
-                      h-px
-                      w-full
-                      bg-gradient-to-r
-                      from-[#3182FF]
-                      via-[#28598F]
-                      to-transparent
-                    "
-                  />
-
-                  {/* ========================================= */}
-                  {/* Description */}
-                  {/* ========================================= */}
-
-                  <p
-                    className="
-                      flex-1
-                      text-[14px]
-                      leading-6
-                      !text-[#C5D7EE]
-                    "
+                    className={`
+                      mt-5
+                      space-y-4
+                      ${project.slug === "executive-sales-performance-intelligence" ? "pt-6" : ""}
+                    `}
                   >
-                    {project.excerpt}
-                  </p>
+                    {/* Business Challenge */}
+
+                    <div>
+                      <p
+                        className="
+                          text-[10px]
+                          font-bold
+                          uppercase
+                          tracking-[0.14em]
+                          !text-[#8DBBFF]
+                        "
+                      >
+                        Business Challenge
+                      </p>
+
+                      <p
+                        className="
+                          mt-1.5
+                          text-[13px]
+                          leading-[1.65]
+                          !text-[#C5D7EE]
+                        "
+                      >
+                        {evidenceTeasers[project.slug]?.challenge ?? project.content.challenge}
+                      </p>
+                    </div>
+
+                    {/* Solution / Decision Value */}
+
+                    <div>
+                      <p
+                        className="
+                          text-[10px]
+                          font-bold
+                          uppercase
+                          tracking-[0.14em]
+                          !text-[#8DBBFF]
+                        "
+                      >
+                        Solution / Decision Value
+                      </p>
+
+                      <p
+                        className="
+                          mt-1.5
+                          text-[13px]
+                          leading-[1.65]
+                          !text-[#C5D7EE]
+                        "
+                      >
+                        {evidenceTeasers[project.slug]?.solution ?? project.content.solution}
+                      </p>
+                    </div>
+                  </div>
 
                   {/* ========================================= */}
                   {/* CTA */}
@@ -312,7 +363,8 @@ export default function FeaturedCaseStudies() {
 
                   <span
                     className="
-                      mt-6
+                      mt-auto
+                      pt-6
                       inline-flex
                       items-center
                       gap-2
@@ -325,7 +377,7 @@ export default function FeaturedCaseStudies() {
                       group-hover:!text-[#5FA0FF]
                     "
                   >
-                    View Project
+                    View Case Study
 
                     <span
                       className="
@@ -348,7 +400,6 @@ export default function FeaturedCaseStudies() {
           {/* ========================================= */}
 
           <div className="mt-10 text-center">
-
             <Button
               href="/case-studies"
               variant="outline"
@@ -363,9 +414,8 @@ export default function FeaturedCaseStudies() {
                 hover:!text-white
               "
             >
-              View All Projects
+              View All Case Studies
             </Button>
-
           </div>
 
         </div>
@@ -373,8 +423,6 @@ export default function FeaturedCaseStudies() {
     </Section>
   );
 }
-
-
 
 
 

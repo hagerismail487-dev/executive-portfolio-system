@@ -1,8 +1,6 @@
 ﻿import {
-  Database,
   Eye,
   Lightbulb,
-  Monitor,
   Target,
   TrendingUp,
 } from "lucide-react";
@@ -11,51 +9,28 @@ import Section from "@/components/ui/Section";
 
 const values = [
   {
-    icon: Target,
-    title: "Reliable Reporting",
-    description:
-      "Build a consistent foundation for trusted business information.",
-  },
-  {
-    icon: Monitor,
-    title: "Clear Performance Visibility",
-    description:
-      "Give leaders a structured view of what is happening.",
-  },
-  {
-    icon: Database,
-    title: "Actionable Insight",
-    description:
-      "Identify trends, gaps, and meaningful performance signals.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Confident Decisions",
-    description:
-      "Turn reliable information into better business decisions.",
-  },
-];
-
-const outcomes = [
-  {
     icon: Eye,
     title: "Clarity",
-    description: "See what really matters.",
+    description:
+      "Create a reliable view of the business through structured reporting and trusted information.",
   },
   {
     icon: Lightbulb,
     title: "Insight",
-    description: "Understand the why behind the data.",
+    description:
+      "Use meaningful KPIs and analysis to reveal trends, gaps, and performance signals.",
   },
   {
     icon: Target,
     title: "Decision",
-    description: "Make confident, data-driven choices.",
+    description:
+      "Turn clear insights into evidence-based choices with stronger context and confidence.",
   },
   {
     icon: TrendingUp,
     title: "Impact",
-    description: "Deliver measurable business results.",
+    description:
+      "Enable better performance through decisions grounded in reliable business information.",
   },
 ];
 
@@ -77,8 +52,6 @@ export default function CreatingBusinessValue() {
       {/* ===================================================== */}
 
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-        {/* Grid */}
-
         <div
           className="
             absolute
@@ -88,8 +61,6 @@ export default function CreatingBusinessValue() {
             [background-size:48px_48px]
           "
         />
-
-        {/* Center Glow */}
 
         <div
           className="
@@ -106,8 +77,6 @@ export default function CreatingBusinessValue() {
           "
         />
 
-        {/* Left Glow */}
-
         <div
           className="
             absolute
@@ -121,8 +90,6 @@ export default function CreatingBusinessValue() {
           "
         />
 
-        {/* Right Glow */}
-
         <div
           className="
             absolute
@@ -135,8 +102,6 @@ export default function CreatingBusinessValue() {
             blur-[120px]
           "
         />
-
-        {/* Decorative Rings */}
 
         <div
           className="
@@ -228,13 +193,13 @@ export default function CreatingBusinessValue() {
               sm:text-[14px]
             "
           >
-            Connecting strategy, reporting, intelligence, and performance
-            to transform information into business impact.
+            Connecting reliable information, meaningful performance signals,
+            and clear insights to support better business decisions.
           </p>
         </div>
 
         {/* =================================================== */}
-        {/* VALUE SYSTEM */}
+        {/* VALUE STORY */}
         {/* =================================================== */}
 
         <div
@@ -249,8 +214,6 @@ export default function CreatingBusinessValue() {
           {/* ================================================= */}
 
           <div className="pointer-events-none absolute inset-0 z-0 hidden lg:block">
-            {/* Left Top */}
-
             <div
               className="
                 absolute
@@ -279,8 +242,6 @@ export default function CreatingBusinessValue() {
               "
             />
 
-            {/* Left Bottom */}
-
             <div
               className="
                 absolute
@@ -308,8 +269,6 @@ export default function CreatingBusinessValue() {
                 shadow-[0_0_12px_rgba(37,99,235,0.9)]
               "
             />
-
-            {/* Right Top */}
 
             <div
               className="
@@ -338,8 +297,6 @@ export default function CreatingBusinessValue() {
                 shadow-[0_0_12px_rgba(37,99,235,0.9)]
               "
             />
-
-            {/* Right Bottom */}
 
             <div
               className="
@@ -386,8 +343,6 @@ export default function CreatingBusinessValue() {
               lg:items-center
             "
           >
-            {/* Reliable Reporting */}
-
             <ValueCard
               item={values[0]}
               className="lg:col-start-1 lg:row-start-1"
@@ -409,41 +364,36 @@ export default function CreatingBusinessValue() {
                 lg:order-none
               "
             >
-              {/* Outer Ring */}
-
               <div
                 className="
                   absolute
                   h-[190px] w-[190px]
-                  lg:h-[230px] lg:w-[230px]
                   rounded-full
                   border
                   border-[#2379FF]/30
                   shadow-[0_0_50px_rgba(37,99,235,0.12)]
+                  lg:h-[230px]
+                  lg:w-[230px]
                 "
               />
-
-              {/* Middle Ring */}
 
               <div
                 className="
                   absolute
                   h-[155px] w-[155px]
-                  lg:h-[185px] lg:w-[185px]
                   rounded-full
                   border
                   border-[#2379FF]/30
+                  lg:h-[185px]
+                  lg:w-[185px]
                 "
               />
-
-              {/* Core */}
 
               <div
                 className="
                   relative
                   flex
                   h-[120px] w-[120px]
-                  lg:h-[145px] lg:w-[145px]
                   items-center
                   justify-center
                   rounded-full
@@ -451,6 +401,8 @@ export default function CreatingBusinessValue() {
                   border-[#5EA0FF]/60
                   bg-[radial-gradient(circle_at_35%_30%,#2678ED,#08469F_58%,#062F72)]
                   shadow-[0_0_55px_rgba(37,99,235,0.42)]
+                  lg:h-[145px]
+                  lg:w-[145px]
                 "
               >
                 <div
@@ -501,124 +453,20 @@ export default function CreatingBusinessValue() {
               </div>
             </div>
 
-            {/* Clear Performance Visibility */}
-
             <ValueCard
               item={values[1]}
               className="lg:col-start-3 lg:row-start-1"
             />
-
-            {/* Actionable Insight */}
 
             <ValueCard
               item={values[2]}
               className="lg:col-start-1 lg:row-start-2"
             />
 
-            {/* Confident Decisions */}
-
             <ValueCard
               item={values[3]}
               className="lg:col-start-3 lg:row-start-2"
             />
-          </div>
-        </div>
-
-        {/* =================================================== */}
-        {/* OUTCOME STRIP */}
-        {/* =================================================== */}
-
-        <div
-          className="
-            relative
-            z-10
-            mx-auto
-            mt-10
-            max-w-[850px]
-            overflow-hidden
-            rounded-[16px]
-            border
-            border-[#2A5A91]
-            bg-[#062653]
-            lg:mt-12
-          "
-        >
-          <div className="grid grid-cols-2 lg:grid-cols-4">
-            {outcomes.map((item, index) => {
-              const Icon = item.icon;
-
-              return (
-                <div
-                  key={item.title}
-                  className={`
-                    relative
-                    flex
-                    min-h-[92px]
-                    items-center
-                    gap-3
-                    px-4
-                    py-4
-                    lg:px-5
-
-                    ${
-                      index !== 3
-                        ? "lg:border-r lg:border-[#2A5A91]"
-                        : ""
-                    }
-
-                    ${
-                      index < 2
-                        ? "border-b border-[#2A5A91] lg:border-b-0"
-                        : ""
-                    }
-                  `}
-                >
-                  <div
-                    className="
-                      flex
-                      h-9
-                      w-9
-                      shrink-0
-                      items-center
-                      justify-center
-                      rounded-full
-                      border
-                      border-[#287CFF]/60
-                      bg-[#0A3974]
-                      !text-[#69ACFF]
-                    "
-                  >
-                    <Icon
-                      size={17}
-                      strokeWidth={1.8}
-                    />
-                  </div>
-
-                  <div>
-                    <h3
-                      className="
-                        !text-white
-                        text-[12px]
-                        font-bold
-                      "
-                    >
-                      {item.title}
-                    </h3>
-
-                    <p
-                      className="
-                        mt-1
-                        !text-[#B8CBE4]
-                        text-[10px]
-                        leading-4
-                      "
-                    >
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
           </div>
         </div>
       </div>
@@ -663,8 +511,6 @@ function ValueCard({
       `}
     >
       <div className="flex items-start gap-4">
-        {/* Icon */}
-
         <div
           className="
             flex
@@ -686,8 +532,6 @@ function ValueCard({
             strokeWidth={1.7}
           />
         </div>
-
-        {/* Content */}
 
         <div className="min-w-0">
           <h3

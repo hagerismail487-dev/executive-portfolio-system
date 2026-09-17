@@ -1,4 +1,4 @@
-import {
+﻿import {
   BarChart3,
   Database,
   LineChart,
@@ -11,69 +11,48 @@ import ExecutiveCard from "@/components/design-system/ExecutiveCard";
 import Section from "@/components/ui/Section";
 import SectionIntro from "@/components/ui/SectionIntro";
 
-const capabilityGroups = [
+const capabilities = [
   {
-    number: "01",
+    category: "Reporting & Intelligence",
     icon: BarChart3,
-    title: "Reporting & Intelligence",
+    title: "Executive Reporting Systems",
     description:
-      "Turning complex business data into clear, decision-ready information.",
-    capabilities: [
-      {
-        icon: BarChart3,
-        title: "Executive Reporting Systems",
-        description:
-          "Design and build reporting systems that turn complex business performance into concise, decision-ready insights.",
-      },
-      {
-        icon: Database,
-        title: "Business Intelligence",
-        description:
-          "Transform raw business data into meaningful intelligence through structured modeling, analytics, and interactive dashboards.",
-      },
-    ],
+      "Design and build reporting systems that turn complex business performance into concise, decision-ready insights.",
   },
   {
-    number: "02",
+    category: "Reporting & Intelligence",
+    icon: Database,
+    title: "Business Intelligence",
+    description:
+      "Transform raw business data into meaningful intelligence through structured modeling, analytics, and interactive dashboards.",
+  },
+  {
+    category: "Reporting & Intelligence",
+    icon: Network,
+    title: "MIS Strategy & Frameworks",
+    description:
+      "Develop structured MIS frameworks and reporting processes that create consistency, clarity, and reliable management information.",
+  },
+  {
+    category: "Performance & Analytics",
     icon: Target,
-    title: "Performance & Analytics",
+    title: "KPI & Performance Management",
     description:
-      "Making performance visible, measurable, and actionable.",
-    capabilities: [
-      {
-        icon: Target,
-        title: "KPI & Performance Management",
-        description:
-          "Build KPI frameworks that improve performance visibility, accountability, and alignment with business objectives.",
-      },
-      {
-        icon: LineChart,
-        title: "Data Analytics",
-        description:
-          "Analyze business data to uncover trends, performance gaps, risks, and opportunities that support better decisions.",
-      },
-    ],
+      "Build KPI frameworks that improve performance visibility, accountability, and alignment with business objectives.",
   },
   {
-    number: "03",
-    icon: ShieldCheck,
-    title: "Data Trust",
+    category: "Performance & Analytics",
+    icon: LineChart,
+    title: "Data Analytics",
     description:
-      "Building the structure and governance behind reliable management information.",
-    capabilities: [
-      {
-        icon: Network,
-        title: "MIS Strategy & Frameworks",
-        description:
-          "Develop structured MIS frameworks and reporting processes that create consistency, clarity, and reliable management information.",
-      },
-      {
-        icon: ShieldCheck,
-        title: "Data Governance",
-        description:
-          "Establish data quality, consistency, and governance standards that strengthen trust in reporting and decision-making.",
-      },
-    ],
+      "Analyze business data to uncover trends, performance gaps, risks, and opportunities that support better decisions.",
+  },
+  {
+    category: "Data Trust",
+    icon: ShieldCheck,
+    title: "Data Governance",
+    description:
+      "Establish data quality, consistency, and governance standards that strengthen trust in reporting and decision-making.",
   },
 ];
 
@@ -139,22 +118,34 @@ export default function CoreExpertise() {
       </div>
 
       {/* ========================================= */}
-      {/* Capability Groups */}
+      {/* Capability Grid */}
       {/* ========================================= */}
 
-      <div className="relative z-10 grid gap-6 lg:grid-cols-3">
-        {capabilityGroups.map((group) => {
-          const GroupIcon = group.icon;
+      <div
+        className="
+          relative
+          z-10
+          grid
+          gap-5
+          md:grid-cols-2
+          lg:grid-cols-3
+        "
+      >
+        {capabilities.map((capability) => {
+          const CapabilityIcon = capability.icon;
 
           return (
             <ExecutiveCard
-              key={group.title}
+              key={capability.title}
               padding="sm"
               className="
                 group
                 relative
+                flex
+                min-h-[250px]
+                flex-col
                 overflow-hidden
-                rounded-[24px]
+                rounded-[22px]
                 border
                 border-[#DCE8F7]
                 bg-white
@@ -167,147 +158,98 @@ export default function CoreExpertise() {
                 hover:shadow-[0_18px_40px_rgba(16,42,86,0.08)]
               "
             >
-
-              {/* Group Header */}
+              {/* Category */}
 
               <div className="relative z-10">
-                <div className="flex items-center gap-4">
-                  <span
-                    className="
-                      shrink-0
-                      text-[40px]
-                      font-semibold
-                      leading-none
-                      tracking-[-0.05em]
-                      text-[#2563EB]
-                    "
-                  >
-                    {group.number}
-                  </span>
-
-                  <h3
-                    className="
-                      max-w-[210px]
-                      text-[22px]
-                      font-semibold
-                      leading-[1.05]
-                      tracking-[-0.025em]
-                      text-[#102A56]
-                    "
-                  >
-                    {group.title}
-                  </h3>
-                </div>
+                <span
+                  className="
+                    text-[11px]
+                    font-bold
+                    tracking-[0.06em]
+                    text-[#2563EB]
+                  "
+                >
+                  {capability.category}
+                </span>
 
                 <div
                   className="
-                    mt-5
+                    mt-3
                     h-[2px]
-                    w-16
+                    w-10
                     bg-[#2563EB]
                   "
                 />
-
-                <p
-                  className="
-                    mt-4
-                    text-[14px]
-                    leading-6
-                    text-[#385274]
-                  "
-                >
-                  {group.description}
-                </p>
               </div>
 
-              {/* Capabilities */}
+              {/* Capability */}
 
-              <div className="relative z-10 mt-7 space-y-5">
-                {group.capabilities.map((capability, index) => {
-                  const CapabilityIcon = capability.icon;
+              <div
+                className="
+                  relative
+                  z-10
+                  mt-6
+                  flex
+                  items-start
+                  gap-4
+                "
+              >
+                <div
+                  className="
+                    flex
+                    h-10
+                    w-10
+                    shrink-0
+                    items-center
+                    justify-center
+                    rounded-xl
+                    bg-[#F8FBFF]
+                    text-[#2563EB]
+                    shadow-[0_4px_12px_rgba(16,42,86,0.05)]
+                  "
+                >
+                  <CapabilityIcon size={19} strokeWidth={1.8} />
+                </div>
 
-                  return (
-                    <div
-                      key={capability.title}
-                      className="
-                        rounded-[18px]
-                        border
-                        border-[#DCE8F7]
-                        bg-[#F8FBFF]
-                        p-4 sm:p-5 lg:p-6
-                        shadow-[0_12px_28px_rgba(16,42,86,0.07)]
-                        transition-all
-                        duration-300
-                        hover:-translate-y-0.5
-                        hover:border-[#C8DCF5]
-                        hover:bg-[#F4F8FF]
-                        hover:shadow-[0_16px_32px_rgba(16,42,86,0.09)]
-                      "
-                    >
-                      <div className="flex items-start gap-3">
-                        <div
-                          className="
-                            flex
-                            h-8
-                            w-8
-                            shrink-0
-                            items-center
-                            justify-center
-                            rounded-lg
-                            bg-white
-                            text-[#2563EB]
-                            shadow-[0_4px_12px_rgba(16,42,86,0.05)]
-                          "
-                        >
-                          <CapabilityIcon size={18} strokeWidth={1.8} />
-                        </div>
+                <div className="min-w-0 flex-1">
+                  <h3
+                    className="
+                      text-[16px]
+                      font-semibold
+                      leading-5
+                      tracking-[-0.015em]
+                      text-[#102A56]
+                    "
+                  >
+                    {capability.title}
+                  </h3>
 
-                        <div className="min-w-0">
-                          <div className="flex items-center gap-2">
-                            <h4
-                              className="
-                                text-[14px]
-                                font-semibold
-                                leading-5
-                                tracking-[-0.01em]
-                                text-[#102A56]
-                              "
-                            >
-                              {capability.title}
-                            </h4>
-                          </div>
+                  <p
+                    className="
+                      mt-3
+                      text-[13px]
+                      leading-5
+                      text-[#526985]
+                    "
+                  >
+                    {capability.description}
+                  </p>
+                </div>
 
-                          <p
-                            className="
-                              mt-2
-                              text-[13px]
-                              leading-5
-                              text-[#526985]
-                            "
-                          >
-                            {capability.description}
-                          </p>
-                        </div>
-
-                        <span
-                          className="
-                            ml-auto
-                            shrink-0
-                            pt-1
-                            text-[22px]
-                            leading-none
-                            text-[#123A63]
-                            transition-transform
-                            duration-300
-                            group-hover:translate-x-1
-                          "
-                        >
-                          ›
-                        </span>
-                      </div>
-                    </div>
-                  );
-                })}
+                <span
+                  className="
+                    shrink-0
+                    pt-1
+                    text-[22px]
+                    leading-none
+                    text-[#123A63]
+                    transition-transform
+                    duration-300
+                    group-hover:translate-x-1
+                  "
+                >
+                  →
+                </span>
               </div>
             </ExecutiveCard>
           );

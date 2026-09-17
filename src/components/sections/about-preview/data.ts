@@ -12,15 +12,15 @@ const data = {
   "to Executive Decisions.",
 ],
     story: [
-      "Business Intelligence is more than dashboards and reports.",
+      "I approach Business Intelligence from a business perspective first.",
 
-      "My work sits at the intersection of data, business performance, and executive decision-making. I focus on building reporting environments that give leaders a clear view of what is happening, why it matters, and where attention is needed.",
+      "The starting point is not the dashboard or the report, but the business question behind it — what needs to be understood, what requires attention, and what decision the information should support.",
 
-      "The goal is not to produce more reports. It is to create trusted information that helps organizations understand performance, identify priorities, and make better decisions.",
+      "That mindset shapes how I work with data. I focus on building structured reporting environments where information is consistent, performance is visible, and insights have clear business context.",
     ],
 
     closingLine:
-      "Turning business information into clarity, confidence, and strategic action.",
+      "I build reporting with the decision in mind — not just the dashboard.",
   },
 
   executiveCards: [

@@ -1,4 +1,5 @@
-﻿import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 import { caseStudies } from "@/data/case-studies";
 import ExecutiveSalesPerformanceIntelligenceDashboard from "@/components/case-studies/ExecutiveSalesPerformanceIntelligenceDashboard";
@@ -17,6 +18,22 @@ interface PageProps {
   }>;
 }
 
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const project = caseStudies.find((item) => item.slug === slug);
+
+  if (!project) {
+    notFound();
+  }
+
+  return {
+    title: project.title,
+    description: project.excerpt,
+  };
+}
 export default async function CaseStudyPage({
   params,
 }: PageProps) {

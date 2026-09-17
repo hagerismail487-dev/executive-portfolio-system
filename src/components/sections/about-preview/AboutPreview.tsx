@@ -691,7 +691,7 @@ shadow-[0_20px_50px_rgba(18,58,99,0.14)]
                     sm:text-[20px]
                   "
                 >
-                  100%
+                  Business First
                 </p>
 
                 <p
@@ -704,7 +704,7 @@ shadow-[0_20px_50px_rgba(18,58,99,0.14)]
                     sm:text-[9px]
                   "
                 >
-                  Business Focused
+                  Decision-focused reporting
                 </p>
               </div>
             </div>

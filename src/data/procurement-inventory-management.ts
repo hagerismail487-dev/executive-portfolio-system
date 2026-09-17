@@ -1,4 +1,4 @@
-﻿export interface ProcurementInventoryManagementProject {
+export interface ProcurementInventoryManagementProject {
   title: string;
   category: string;
   secondaryCategory: string;
@@ -50,10 +50,10 @@ export const procurementInventoryManagementProject: ProcurementInventoryManageme
   tertiaryCategory: "Procurement, Inventory & Fixed Assets",
 
   positioning:
-    "Executive Procurement, Inventory & Fixed Assets Intelligence",
+    "Executive Procurement, Supply Orders & Inventory Movement Intelligence",
 
   description:
-    "An executive Power BI reporting solution designed to provide an integrated view of procurement, supply orders, inventory movement, and fixed assets.",
+    "An executive Power BI reporting solution designed to provide an integrated view of procurement, supply orders, inventory movement, and operational stock management, with fixed assets included as part of the reporting scope.",
 
   snapshot: [
     {
@@ -62,7 +62,7 @@ export const procurementInventoryManagementProject: ProcurementInventoryManageme
     },
     {
       label: "Primary Focus",
-      value: "Procurement, Supply Orders, Inventory & Fixed Assets",
+      value: "Procurement + Supply Orders + Inventory Movement",
     },
     {
       label: "Reporting Platform",
@@ -149,8 +149,8 @@ export const procurementInventoryManagementProject: ProcurementInventoryManageme
 
     analyticalLayer: [
       "Procurement Intelligence",
-      "Inventory Intelligence",
       "Supply Order Analysis",
+      "Inventory Movement Intelligence",
       "Supplier Performance",
       "Location Analysis",
       "Fixed Assets Analysis",
