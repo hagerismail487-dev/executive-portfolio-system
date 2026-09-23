@@ -639,7 +639,7 @@ export default function Hero() {
                 </div>
 
                 <a
-                  href="#projects"
+                  href="/case-studies/executive-sales-performance-intelligence/dashboard"
                   className="
                     !text-[#4D9BFF]
                     shrink-0

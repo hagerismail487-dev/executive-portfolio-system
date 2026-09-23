@@ -265,7 +265,7 @@ export default function SalesMarketingPerformanceIntelligenceDashboard() {
 
                 <Link
                   key={dashboard.title}
-                  href={`/case-studies/sales-marketing-performance-intelligence/dashboard?slide=${index + 1}`}
+                  href={`/case-studies/sales-marketing-performance-intelligence/dashboard?slide=${index}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative min-w-[240px] flex-1 text-left sm:min-w-[270px]"
