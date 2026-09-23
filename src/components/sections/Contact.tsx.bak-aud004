@@ -292,7 +292,7 @@ export default function Contact() {
                 {/* Let's Talk */}
 
 <a
-  href="https://wa.me/201023281762"
+  href="https://www.linkedin.com/in/hagerismail1"
   target="_blank"
   rel="noopener noreferrer"
   className="

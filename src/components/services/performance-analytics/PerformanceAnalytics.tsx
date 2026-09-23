@@ -1,3 +1,4 @@
+import FAQSection from "../FAQSection";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -612,7 +613,7 @@ function ServiceHero() {
             </Link>
 
             <Link
-              href="/case-studies"
+              href="/case-studies/customer-experience-operations-dashboard"
               className="
                 inline-flex
                 items-center
@@ -1321,6 +1322,7 @@ export default function PerformanceAnalytics() {
 
       <WhyWorkWithMeSection />
 
+      <FAQSection serviceSlug="performance-analytics" />
       <CTASection />
     </main>
   );

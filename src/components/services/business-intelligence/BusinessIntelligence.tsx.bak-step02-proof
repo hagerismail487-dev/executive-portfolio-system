@@ -1,4 +1,3 @@
-import FAQSection from "../FAQSection";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -16,7 +15,7 @@ import {
   Settings2,
   ShieldCheck,
   Target,
-  Workflow as WorkflowIcon,
+  TrendingUp,
 } from "lucide-react";
 
 import data from "./data";
@@ -48,25 +47,25 @@ function SectionLabel({
 }
 
 /* =========================================================
-   HERO DASHBOARD VISUAL
+   HERO INTELLIGENCE VISUAL
 ========================================================= */
 
-function HeroDashboardVisual() {
-  const metrics = [
+function HeroIntelligenceVisual() {
+  const insights = [
     {
-      label: "Revenue",
-      value: "92%",
-      trend: "+12.4%",
+      label: "Growth",
+      value: "+18.4%",
+      icon: TrendingUp,
     },
     {
-      label: "Performance",
+      label: "Opportunity",
       value: "84%",
-      trend: "+8.2%",
+      icon: Target,
     },
     {
-      label: "Conversion",
-      value: "76%",
-      trend: "+6.8%",
+      label: "Insight",
+      value: "92%",
+      icon: LineChart,
     },
   ];
 
@@ -77,11 +76,13 @@ function HeroDashboardVisual() {
         mx-auto
         w-full
         max-w-[560px]
-        translate-y-4
+        translate-y-5
         lg:translate-y-7
       "
     >
-      {/* Background Glow */}
+      {/* =====================================================
+          Glow
+      ===================================================== */}
 
       <div
         className="
@@ -89,8 +90,8 @@ function HeroDashboardVisual() {
           absolute
           left-1/2
           top-1/2
-          h-[360px]
-          w-[360px]
+          h-[370px]
+          w-[370px]
           -translate-x-1/2
           -translate-y-1/2
           rounded-full
@@ -99,7 +100,9 @@ function HeroDashboardVisual() {
         "
       />
 
-      {/* Main Dashboard Card */}
+      {/* =====================================================
+          Main Intelligence Card
+      ===================================================== */}
 
       <div
         className="
@@ -135,7 +138,7 @@ function HeroDashboardVisual() {
                 text-[#2563EB]
               "
             >
-              Executive Reporting
+              Business Intelligence
             </span>
 
             <h3
@@ -147,7 +150,7 @@ function HeroDashboardVisual() {
                 text-[#102A56]
               "
             >
-              Business Performance
+              Strategic Insight
             </h3>
           </div>
 
@@ -162,43 +165,47 @@ function HeroDashboardVisual() {
               bg-[#EEF5FF]
             "
           >
-            <BarChart3 className="h-5 w-5 text-[#2563EB]" />
+            <TrendingUp className="h-5 w-5 text-[#2563EB]" />
           </div>
         </div>
 
-        {/* KPI Row */}
+        {/* Insight Indicators */}
 
         <div className="grid grid-cols-3 gap-3 px-6 py-5">
-          {metrics.map((metric) => (
-            <div
-              key={metric.label}
-              className="
-                rounded-xl
-                border
-                border-[#E8EEF7]
-                bg-[#FBFCFE]
-                px-3
-                py-3
-              "
-            >
-              <span className="text-[9px] font-medium text-[#7C94B2]">
-                {metric.label}
-              </span>
+          {insights.map((item) => {
+            const Icon = item.icon;
 
-              <div className="mt-1 text-[20px] font-bold text-[#102A56]">
-                {metric.value}
+            return (
+              <div
+                key={item.label}
+                className="
+                  rounded-xl
+                  border
+                  border-[#E8EEF7]
+                  bg-[#FBFCFE]
+                  px-3
+                  py-3
+                "
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[9px] font-medium text-[#7C94B2]">
+                    {item.label}
+                  </span>
+
+                  <Icon className="h-3.5 w-3.5 text-[#2563EB]" />
+                </div>
+
+                <div className="mt-2 text-[19px] font-bold text-[#102A56]">
+                  {item.value}
+                </div>
               </div>
-
-              <span className="text-[9px] font-semibold text-[#2563EB]">
-                {metric.trend}
-              </span>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        {/* Chart */}
+        {/* Intelligence Chart */}
 
-        <div className="px-6 pb-6">
+        <div className="px-6 pb-5">
           <div
             className="
               relative
@@ -212,14 +219,24 @@ function HeroDashboardVisual() {
           >
             {/* Grid */}
 
-            <div className="absolute inset-0 flex flex-col justify-between px-4 py-4">
+            <div
+              className="
+                absolute
+                inset-0
+                flex
+                flex-col
+                justify-between
+                px-4
+                py-4
+              "
+            >
               <div className="h-px w-full bg-[#E9F0FA]" />
               <div className="h-px w-full bg-[#E9F0FA]" />
               <div className="h-px w-full bg-[#E9F0FA]" />
               <div className="h-px w-full bg-[#E9F0FA]" />
             </div>
 
-            {/* Chart Line */}
+            {/* Insight Area */}
 
             <svg
               viewBox="0 0 500 150"
@@ -233,7 +250,7 @@ function HeroDashboardVisual() {
             >
               <defs>
                 <linearGradient
-                  id="dashboardArea"
+                  id="intelligenceArea"
                   x1="0"
                   y1="0"
                   x2="0"
@@ -242,7 +259,7 @@ function HeroDashboardVisual() {
                   <stop
                     offset="0%"
                     stopColor="#2563EB"
-                    stopOpacity="0.16"
+                    stopOpacity="0.17"
                   />
 
                   <stop
@@ -255,53 +272,87 @@ function HeroDashboardVisual() {
 
               <path
                 d="
-                  M0 112
-                  C45 105 60 90 95 96
-                  C135 103 145 72 185 78
-                  C225 84 240 55 275 63
-                  C315 72 325 38 365 48
-                  C405 58 425 28 455 35
-                  C475 40 490 24 500 20
+                  M0 116
+                  C40 112 60 100 92 104
+                  C125 108 145 82 180 88
+                  C215 94 235 70 270 75
+                  C305 80 325 50 360 57
+                  C395 64 420 40 450 45
+                  C475 49 490 30 500 22
                   L500 150
                   L0 150
                   Z
                 "
-                fill="url(#dashboardArea)"
+                fill="url(#intelligenceArea)"
               />
 
               <path
                 d="
-                  M0 112
-                  C45 105 60 90 95 96
-                  C135 103 145 72 185 78
-                  C225 84 240 55 275 63
-                  C315 72 325 38 365 48
-                  C405 58 425 28 455 35
-                  C475 40 490 24 500 20
+                  M0 116
+                  C40 112 60 100 92 104
+                  C125 108 145 82 180 88
+                  C215 94 235 70 270 75
+                  C305 80 325 50 360 57
+                  C395 64 420 40 450 45
+                  C475 49 490 30 500 22
                 "
                 fill="none"
                 stroke="#2563EB"
                 strokeWidth="3"
                 vectorEffect="non-scaling-stroke"
               />
+
+              {/* Insight Points */}
+
+              <circle
+                cx="180"
+                cy="88"
+                r="5"
+                fill="#2563EB"
+              />
+
+              <circle
+                cx="360"
+                cy="57"
+                r="5"
+                fill="#2563EB"
+              />
+
+              <circle
+                cx="500"
+                cy="22"
+                r="5"
+                fill="#2563EB"
+              />
             </svg>
 
-            {/* Current Point */}
+            {/* Insight Label */}
 
             <div
               className="
                 absolute
-                right-[9%]
-                top-[12%]
-                h-3
-                w-3
-                rounded-full
-                border-2
-                border-white
-                bg-[#2563EB]
-                shadow-[0_0_0_4px_rgba(37,99,235,0.12)]
+                right-4
+                top-4
+                rounded-md
+                border
+                border-[#DCE8FA]
+                bg-white/90
+                px-2
+                py-1
               "
-            />
+            >
+              <span
+                className="
+                  text-[8px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.12em]
+                  text-[#2563EB]
+                "
+              >
+                Emerging Trend
+              </span>
+            </div>
           </div>
         </div>
 
@@ -309,9 +360,6 @@ function HeroDashboardVisual() {
 
         <div
           className="
-            flex
-            items-center
-            justify-between
             border-t
             border-[#E8EEF7]
             bg-[#FBFCFE]
@@ -319,21 +367,23 @@ function HeroDashboardVisual() {
             py-4
           "
         >
-          <div className="flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-[#2563EB]" />
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-[#2563EB]" />
 
-            <span className="text-[10px] font-medium text-[#526A88]">
-              Live Performance View
+              <span className="text-[10px] font-medium text-[#526A88]">
+                Business Insight Active
+              </span>
+            </div>
+
+            <span className="text-[9px] font-semibold uppercase tracking-[0.15em] text-[#8AA4C5]">
+              Strategic View
             </span>
           </div>
-
-          <span className="text-[9px] font-semibold uppercase tracking-[0.16em] text-[#8AA4C5]">
-            Executive View
-          </span>
         </div>
       </div>
 
-      {/* Floating Insight */}
+      {/* Floating Insight Card */}
 
       <div
         className="
@@ -352,7 +402,17 @@ function HeroDashboardVisual() {
         "
       >
         <div className="flex items-center gap-2">
-          <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#EEF5FF]">
+          <div
+            className="
+              flex
+              h-7
+              w-7
+              items-center
+              justify-center
+              rounded-lg
+              bg-[#EEF5FF]
+            "
+          >
             <Target className="h-4 w-4 text-[#2563EB]" />
           </div>
 
@@ -362,7 +422,7 @@ function HeroDashboardVisual() {
             </div>
 
             <div className="text-[11px] font-bold text-[#102A56]">
-              Clear KPI Visibility
+              Actionable Insight
             </div>
           </div>
         </div>
@@ -456,7 +516,7 @@ function ServiceHero() {
 
           <h1
             className="
-              max-w-[540px]
+              max-w-[550px]
               text-[42px]
               font-bold
               leading-[1.08]
@@ -466,15 +526,15 @@ function ServiceHero() {
               lg:text-[52px]
             "
           >
-            Executive
+            Business
             <br />
-            Dashboards
+            Intelligence
           </h1>
 
           <h2
             className="
               mt-4
-              max-w-[540px]
+              max-w-[550px]
               text-[22px]
               font-semibold
               leading-[1.35]
@@ -485,7 +545,7 @@ function ServiceHero() {
           >
             Turning Business Data
             <br />
-            Into Clear Decisions
+            Into Strategic Insight
           </h2>
 
           <p
@@ -497,11 +557,11 @@ function ServiceHero() {
               text-[#355275]
             "
           >
-            I design executive dashboards that transform
-            complex operational information into clear,
-            interactive reporting experiences, giving
-            leadership teams the visibility they need to
-            monitor performance and act with confidence.
+            I design Business Intelligence solutions that
+            connect business data, uncover meaningful
+            patterns, and transform information into
+            actionable insights that support strategic
+            planning and executive decision-making.
           </p>
 
           {/* Buttons */}
@@ -537,7 +597,7 @@ function ServiceHero() {
             </Link>
 
             <Link
-              href="/case-studies/executive-sales-performance-intelligence"
+              href="/case-studies"
               className="
                 inline-flex
                 items-center
@@ -563,7 +623,7 @@ function ServiceHero() {
 
         {/* RIGHT */}
 
-        <HeroDashboardVisual />
+        <HeroIntelligenceVisual />
       </div>
     </section>
   );
@@ -577,27 +637,27 @@ function BusinessValueSection() {
   const items = [
     {
       icon: Database,
-      title: "Business Information",
+      title: "Business Data",
       description:
-        "Relevant business information brought together around leadership priorities",
-    },
-    {
-      icon: Gauge,
-      title: "KPI Visibility",
-      description:
-        "Clear measures that make business performance easier to monitor",
+        "Connect relevant business data to establish a reliable analytical foundation",
     },
     {
       icon: LineChart,
-      title: "Performance Clarity",
+      title: "Trend Analysis",
       description:
-        "Focused reporting that shows what is happening and where attention is needed",
+        "Identify trends, patterns, and meaningful changes in business performance",
+    },
+    {
+      icon: TrendingUp,
+      title: "Strategic Insight",
+      description:
+        "Translate analysis into clear insights that support business priorities",
     },
     {
       icon: Target,
-      title: "Decision Support",
+      title: "Better Decisions",
       description:
-        "Decision-ready information that helps leaders determine what requires action",
+        "Support proactive planning through reliable business intelligence",
     },
   ];
 
@@ -616,7 +676,7 @@ function BusinessValueSection() {
             text-[#102A56]
           "
         >
-          From Business Data to Management Clarity
+          Turning Business Data Into Strategic Insight
         </h2>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-4">
@@ -700,14 +760,14 @@ function BusinessValueSection() {
 
 function DeliverablesSection() {
   const icons = [
-    Gauge,
+    Network,
     BarChart3,
     FileBarChart,
-    Target,
+    LineChart,
+    TrendingUp,
+    Gauge,
     Database,
-    Network,
     FileText,
-    FileCheck2,
   ];
 
   return (
@@ -771,7 +831,7 @@ function WorkflowSection() {
     ClipboardCheck,
     Settings2,
     Database,
-    BarChart3,
+    LineChart,
     ShieldCheck,
   ];
 
@@ -790,7 +850,7 @@ function WorkflowSection() {
             text-[#102A56]
           "
         >
-          From Business Need to Decision-Ready Reporting
+          Our 5-Step Methodology
         </h2>
 
         <div className="relative mt-10 grid gap-8 lg:grid-cols-5 lg:gap-5">
@@ -863,9 +923,9 @@ function TechnologiesSection() {
     Database,
     Gauge,
     Network,
-    Layers3,
-    Target,
     LineChart,
+    TrendingUp,
+    Target,
   ];
 
   return (
@@ -919,7 +979,7 @@ function TechnologiesSection() {
 function getTechnologyDescription(technology: string) {
   const descriptions: Record<string, string> = {
     "Microsoft Power BI":
-      "Interactive dashboards and executive reporting",
+      "Interactive intelligence dashboards and reporting",
 
     "Microsoft Excel":
       "Business analysis and supporting data preparation",
@@ -928,19 +988,19 @@ function getTechnologyDescription(technology: string) {
       "Data preparation and transformation",
 
     DAX:
-      "Advanced calculations and KPI measures",
+      "Advanced analytical calculations and measures",
 
     "Data Modeling":
-      "Reliable and optimized reporting structures",
+      "Reliable analytical structures for business insight",
 
-    "Data Visualization":
-      "Clear visual communication of business performance",
+    "Business Intelligence":
+      "Integrated analytical capability for business decisions",
 
-    "KPI Framework Design":
-      "Meaningful metrics aligned with business objectives",
+    "Trend Analysis":
+      "Identification of patterns and business performance changes",
 
-    "Executive Reporting":
-      "Decision-ready management information",
+    "Executive Analytics":
+      "Decision-ready insights for leadership teams",
   };
 
   return (
@@ -956,9 +1016,9 @@ function getTechnologyDescription(technology: string) {
 function WhyWorkWithMeSection() {
   const icons = [
     Target,
+    Network,
+    TrendingUp,
     BarChart3,
-    ShieldCheck,
-    CheckCircle2,
   ];
 
   return (
@@ -975,7 +1035,7 @@ function WhyWorkWithMeSection() {
 
             <h2
               className="
-                max-w-[420px]
+                max-w-[440px]
                 text-[28px]
                 font-bold
                 leading-[1.15]
@@ -983,9 +1043,9 @@ function WhyWorkWithMeSection() {
                 text-[#102A56]
               "
             >
-              Dashboards Built
+              Intelligence Built
               <br />
-              Around Decisions
+              Around Business Questions
             </h2>
 
             <p
@@ -1130,8 +1190,6 @@ function CTASection() {
         "
       />
 
-      {/* Content */}
-
       <div
         className="
           relative
@@ -1241,7 +1299,7 @@ function CTASection() {
    PAGE
 ========================================================= */
 
-export default function ExecutiveDashboards() {
+export default function BusinessIntelligence() {
   return (
     <main className="bg-white">
       <ServiceHero />
@@ -1256,7 +1314,6 @@ export default function ExecutiveDashboards() {
 
       <WhyWorkWithMeSection />
 
-      <FAQSection serviceSlug="executive-dashboards" />
       <CTASection />
     </main>
   );

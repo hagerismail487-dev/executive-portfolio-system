@@ -1,3 +1,4 @@
+import FAQSection from "../FAQSection";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -597,7 +598,7 @@ function ServiceHero() {
             </Link>
 
             <Link
-              href="/case-studies"
+              href="/case-studies/crm-sales-intelligence"
               className="
                 inline-flex
                 items-center
@@ -1314,6 +1315,7 @@ export default function BusinessIntelligence() {
 
       <WhyWorkWithMeSection />
 
+      <FAQSection serviceSlug="business-intelligence" />
       <CTASection />
     </main>
   );

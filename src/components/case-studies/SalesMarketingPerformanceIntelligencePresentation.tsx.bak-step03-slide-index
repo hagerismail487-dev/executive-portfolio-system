@@ -15,10 +15,10 @@ export default function SalesMarketingPerformanceIntelligencePresentation() {
 
     if (
       Number.isInteger(value) &&
-      value >= 0 &&
-      value < project.dashboards.length
+      value >= 1 &&
+      value <= project.dashboards.length
     ) {
-      return value;
+      return value - 1;
     }
 
     return 0;
@@ -60,7 +60,7 @@ export default function SalesMarketingPerformanceIntelligencePresentation() {
 
   useEffect(() => {
     const url = new URL(window.location.href);
-    url.searchParams.set("slide", String(currentSlide));
+    url.searchParams.set("slide", String(currentSlide + 1));
     window.history.replaceState({}, "", url.toString());
   }, [currentSlide]);
 
@@ -264,4 +264,3 @@ export default function SalesMarketingPerformanceIntelligencePresentation() {
     </main>
   );
 }
-

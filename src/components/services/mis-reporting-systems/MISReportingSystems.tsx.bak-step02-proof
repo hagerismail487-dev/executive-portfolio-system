@@ -1,9 +1,7 @@
-import FAQSection from "../FAQSection";
 import Link from "next/link";
 import {
   ArrowRight,
   BarChart3,
-  CheckCircle2,
   ClipboardCheck,
   Database,
   FileBarChart,
@@ -16,6 +14,7 @@ import {
   Settings2,
   ShieldCheck,
   Target,
+  TrendingUp,
   Workflow as WorkflowIcon,
 } from "lucide-react";
 
@@ -48,25 +47,38 @@ function SectionLabel({
 }
 
 /* =========================================================
-   HERO DASHBOARD VISUAL
+   HERO SYSTEM VISUAL
 ========================================================= */
 
-function HeroDashboardVisual() {
-  const metrics = [
+function HeroSystemVisual() {
+  const nodes = [
     {
-      label: "Revenue",
-      value: "92%",
-      trend: "+12.4%",
+      title: "STANDARDIZED",
+      subtitle: "PROCESSES",
+      icon: Layers3,
+      position: "left-1/2 top-0 -translate-x-1/2",
+      labelClass: "mt-6",
     },
     {
-      label: "Performance",
-      value: "84%",
-      trend: "+8.2%",
+      title: "DATA",
+      subtitle: "ACCURACY",
+      icon: Database,
+      position: "left-0 top-1/2 -translate-y-1/2",
+      labelClass: "mt-3",
     },
     {
-      label: "Conversion",
-      value: "76%",
-      trend: "+6.8%",
+      title: "EXECUTIVE",
+      subtitle: "VISIBILITY",
+      icon: Target,
+      position: "right-0 top-1/2 -translate-y-1/2",
+      labelClass: "mt-3",
+    },
+    {
+      title: "PERFORMANCE",
+      subtitle: "CONTROL",
+      icon: BarChart3,
+      position: "bottom-0 left-1/2 -translate-x-1/2",
+      labelClass: "mt-3",
     },
   ];
 
@@ -75,298 +87,237 @@ function HeroDashboardVisual() {
       className="
         relative
         mx-auto
+        h-[430px]
         w-full
         max-w-[560px]
-        translate-y-4
-        lg:translate-y-7
+        translate-y-6
+        lg:translate-y-8
       "
     >
       {/* Background Glow */}
 
       <div
         className="
-          pointer-events-none
           absolute
           left-1/2
           top-1/2
-          h-[360px]
-          w-[360px]
+          h-[300px]
+          w-[300px]
           -translate-x-1/2
           -translate-y-1/2
           rounded-full
           bg-[#2563EB]/8
-          blur-[100px]
+          blur-[90px]
         "
       />
 
-      {/* Main Dashboard Card */}
-
-      <div
-        className="
-          relative
-          overflow-hidden
-          rounded-[24px]
-          border
-          border-[#DCE8FA]
-          bg-white
-          shadow-[0_24px_70px_rgba(18,58,99,0.12)]
-        "
-      >
-        {/* Header */}
-
-        <div
-          className="
-            flex
-            items-center
-            justify-between
-            border-b
-            border-[#E8EEF7]
-            px-6
-            py-5
-          "
-        >
-          <div>
-            <span
-              className="
-                text-[9px]
-                font-semibold
-                uppercase
-                tracking-[0.25em]
-                text-[#2563EB]
-              "
-            >
-              Executive Reporting
-            </span>
-
-            <h3
-              className="
-                mt-1
-                text-[17px]
-                font-bold
-                tracking-[-0.02em]
-                text-[#102A56]
-              "
-            >
-              Business Performance
-            </h3>
-          </div>
-
-          <div
-            className="
-              flex
-              h-9
-              w-9
-              items-center
-              justify-center
-              rounded-lg
-              bg-[#EEF5FF]
-            "
-          >
-            <BarChart3 className="h-5 w-5 text-[#2563EB]" />
-          </div>
-        </div>
-
-        {/* KPI Row */}
-
-        <div className="grid grid-cols-3 gap-3 px-6 py-5">
-          {metrics.map((metric) => (
-            <div
-              key={metric.label}
-              className="
-                rounded-xl
-                border
-                border-[#E8EEF7]
-                bg-[#FBFCFE]
-                px-3
-                py-3
-              "
-            >
-              <span className="text-[9px] font-medium text-[#7C94B2]">
-                {metric.label}
-              </span>
-
-              <div className="mt-1 text-[20px] font-bold text-[#102A56]">
-                {metric.value}
-              </div>
-
-              <span className="text-[9px] font-semibold text-[#2563EB]">
-                {metric.trend}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {/* Chart */}
-
-        <div className="px-6 pb-6">
-          <div
-            className="
-              relative
-              h-[155px]
-              overflow-hidden
-              rounded-xl
-              border
-              border-[#E8EEF7]
-              bg-[#FBFCFE]
-            "
-          >
-            {/* Grid */}
-
-            <div className="absolute inset-0 flex flex-col justify-between px-4 py-4">
-              <div className="h-px w-full bg-[#E9F0FA]" />
-              <div className="h-px w-full bg-[#E9F0FA]" />
-              <div className="h-px w-full bg-[#E9F0FA]" />
-              <div className="h-px w-full bg-[#E9F0FA]" />
-            </div>
-
-            {/* Chart Line */}
-
-            <svg
-              viewBox="0 0 500 150"
-              className="
-                absolute
-                inset-0
-                h-full
-                w-full
-              "
-              preserveAspectRatio="none"
-            >
-              <defs>
-                <linearGradient
-                  id="dashboardArea"
-                  x1="0"
-                  y1="0"
-                  x2="0"
-                  y2="1"
-                >
-                  <stop
-                    offset="0%"
-                    stopColor="#2563EB"
-                    stopOpacity="0.16"
-                  />
-
-                  <stop
-                    offset="100%"
-                    stopColor="#2563EB"
-                    stopOpacity="0"
-                  />
-                </linearGradient>
-              </defs>
-
-              <path
-                d="
-                  M0 112
-                  C45 105 60 90 95 96
-                  C135 103 145 72 185 78
-                  C225 84 240 55 275 63
-                  C315 72 325 38 365 48
-                  C405 58 425 28 455 35
-                  C475 40 490 24 500 20
-                  L500 150
-                  L0 150
-                  Z
-                "
-                fill="url(#dashboardArea)"
-              />
-
-              <path
-                d="
-                  M0 112
-                  C45 105 60 90 95 96
-                  C135 103 145 72 185 78
-                  C225 84 240 55 275 63
-                  C315 72 325 38 365 48
-                  C405 58 425 28 455 35
-                  C475 40 490 24 500 20
-                "
-                fill="none"
-                stroke="#2563EB"
-                strokeWidth="3"
-                vectorEffect="non-scaling-stroke"
-              />
-            </svg>
-
-            {/* Current Point */}
-
-            <div
-              className="
-                absolute
-                right-[9%]
-                top-[12%]
-                h-3
-                w-3
-                rounded-full
-                border-2
-                border-white
-                bg-[#2563EB]
-                shadow-[0_0_0_4px_rgba(37,99,235,0.12)]
-              "
-            />
-          </div>
-        </div>
-
-        {/* Footer */}
-
-        <div
-          className="
-            flex
-            items-center
-            justify-between
-            border-t
-            border-[#E8EEF7]
-            bg-[#FBFCFE]
-            px-6
-            py-4
-          "
-        >
-          <div className="flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-[#2563EB]" />
-
-            <span className="text-[10px] font-medium text-[#526A88]">
-              Live Performance View
-            </span>
-          </div>
-
-          <span className="text-[9px] font-semibold uppercase tracking-[0.16em] text-[#8AA4C5]">
-            Executive View
-          </span>
-        </div>
-      </div>
-
-      {/* Floating Insight */}
+      {/* Outer Orbit */}
 
       <div
         className="
           absolute
-          -bottom-5
-          -left-5
-          hidden
-          rounded-xl
+          left-1/2
+          top-1/2
+          h-[300px]
+          w-[300px]
+          -translate-x-1/2
+          -translate-y-1/2
+          rounded-full
           border
-          border-[#DCE8FA]
+          border-[#2563EB]/25
+        "
+      />
+
+      {/* Inner Orbit */}
+
+      <div
+        className="
+          absolute
+          left-1/2
+          top-1/2
+          h-[220px]
+          w-[220px]
+          -translate-x-1/2
+          -translate-y-1/2
+          rounded-full
+          border
+          border-dashed
+          border-[#2563EB]/30
+        "
+      />
+
+      {/* Orbit Dots */}
+
+      <div className="absolute left-[16%] top-[25%] h-1.5 w-1.5 rounded-full bg-[#2563EB]" />
+
+      <div className="absolute right-[16%] top-[25%] h-1.5 w-1.5 rounded-full bg-[#2563EB]" />
+
+      <div className="absolute bottom-[25%] left-[16%] h-1.5 w-1.5 rounded-full bg-[#2563EB]" />
+
+      <div className="absolute bottom-[25%] right-[16%] h-1.5 w-1.5 rounded-full bg-[#2563EB]" />
+
+      {/* Connector Lines */}
+
+      <div
+        className="
+          absolute
+          left-1/2
+          top-[72px]
+          h-[85px]
+          w-px
+          -translate-x-1/2
+          bg-gradient-to-b
+          from-[#2563EB]
+          to-[#2563EB]/20
+        "
+      />
+
+      <div
+        className="
+          absolute
+          left-[115px]
+          top-1/2
+          h-px
+          w-[95px]
+          bg-gradient-to-r
+          from-transparent
+          to-[#2563EB]
+          md:left-[125px]
+        "
+      />
+
+      <div
+        className="
+          absolute
+          right-[115px]
+          top-1/2
+          h-px
+          w-[95px]
+          bg-gradient-to-l
+          from-transparent
+          to-[#2563EB]
+          md:right-[125px]
+        "
+      />
+
+      <div
+        className="
+          absolute
+          bottom-[72px]
+          left-1/2
+          h-[85px]
+          w-px
+          -translate-x-1/2
+          bg-gradient-to-t
+          from-[#2563EB]
+          to-[#2563EB]/20
+        "
+      />
+
+      {/* Center System */}
+
+      <div
+        className="
+          absolute
+          left-1/2
+          top-1/2
+          flex
+          h-[150px]
+          w-[150px]
+          -translate-x-1/2
+          -translate-y-1/2
+          items-center
+          justify-center
+          rounded-full
+          border
+          border-[#2563EB]/25
           bg-white
-          px-4
-          py-3
-          shadow-[0_15px_40px_rgba(18,58,99,0.10)]
-          sm:block
+          shadow-[0_20px_60px_rgba(37,99,235,0.16)]
         "
       >
-        <div className="flex items-center gap-2">
-          <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#EEF5FF]">
-            <Target className="h-4 w-4 text-[#2563EB]" />
-          </div>
-
-          <div>
-            <div className="text-[9px] font-medium text-[#7C94B2]">
-              Decision Support
+        <div
+          className="
+            flex
+            h-[122px]
+            w-[122px]
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-[#2563EB]/20
+            bg-gradient-to-br
+            from-white
+            to-[#EEF5FF]
+          "
+        >
+          <div className="text-center">
+            <div className="text-[17px] font-bold leading-tight text-[#123A63]">
+              MIS
             </div>
 
-            <div className="text-[11px] font-bold text-[#102A56]">
-              Clear KPI Visibility
+            <div className="text-[17px] font-bold leading-tight text-[#2563EB]">
+              REPORTING
+            </div>
+
+            <div className="text-[17px] font-bold leading-tight text-[#2563EB]">
+              SYSTEM
             </div>
           </div>
         </div>
       </div>
+
+      {/* Nodes */}
+
+      {nodes.map((node) => {
+        const Icon = node.icon;
+
+        return (
+          <div
+            key={node.title}
+            className={`
+              absolute
+              ${node.position}
+              flex
+              w-[120px]
+              flex-col
+              items-center
+              text-center
+            `}
+          >
+            <div
+              className="
+                flex
+                h-[58px]
+                w-[58px]
+                shrink-0
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#2563EB]/35
+                bg-white
+                shadow-[0_10px_30px_rgba(37,99,235,0.08)]
+              "
+            >
+              <Icon className="h-6 w-6 text-[#2563EB]" />
+            </div>
+
+            <div
+              className={`
+                ${node.labelClass}
+                text-[9px]
+                font-bold
+                leading-4
+                text-[#102A56]
+              `}
+            >
+              {node.title}
+              <br />
+              {node.subtitle}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -439,7 +390,7 @@ function ServiceHero() {
           grid
           max-w-[1280px]
           items-center
-          gap-10
+          gap-8
           px-6
           py-16
           lg:grid-cols-[0.9fr_1.1fr]
@@ -456,7 +407,7 @@ function ServiceHero() {
 
           <h1
             className="
-              max-w-[540px]
+              max-w-[520px]
               text-[42px]
               font-bold
               leading-[1.08]
@@ -466,15 +417,15 @@ function ServiceHero() {
               lg:text-[52px]
             "
           >
-            Executive
+            MIS Reporting
             <br />
-            Dashboards
+            Systems
           </h1>
 
           <h2
             className="
               mt-4
-              max-w-[540px]
+              max-w-[520px]
               text-[22px]
               font-semibold
               leading-[1.35]
@@ -483,25 +434,23 @@ function ServiceHero() {
               md:text-[24px]
             "
           >
-            Turning Business Data
+            Standardizing Business Reporting
             <br />
-            Into Clear Decisions
+            for Executive Visibility
           </h2>
 
           <p
             className="
               mt-5
-              max-w-[510px]
+              max-w-[500px]
               text-[15px]
               leading-7
               text-[#355275]
             "
           >
-            I design executive dashboards that transform
-            complex operational information into clear,
-            interactive reporting experiences, giving
-            leadership teams the visibility they need to
-            monitor performance and act with confidence.
+            I design MIS reporting systems that bring structure
+            to your data, standardize reporting processes, and
+            deliver reliable insights leadership can trust.
           </p>
 
           {/* Buttons */}
@@ -527,6 +476,7 @@ function ServiceHero() {
                 duration-300
                 hover:-translate-y-0.5
                 hover:bg-[#1D4ED8]
+                hover:!text-white
               "
             >
               <span className="!text-white">
@@ -537,7 +487,7 @@ function ServiceHero() {
             </Link>
 
             <Link
-              href="/case-studies/executive-sales-performance-intelligence"
+              href="/case-studies"
               className="
                 inline-flex
                 items-center
@@ -563,7 +513,7 @@ function ServiceHero() {
 
         {/* RIGHT */}
 
-        <HeroDashboardVisual />
+        <HeroSystemVisual />
       </div>
     </section>
   );
@@ -576,28 +526,28 @@ function ServiceHero() {
 function BusinessValueSection() {
   const items = [
     {
-      icon: Database,
-      title: "Business Information",
+      icon: FileBarChart,
+      title: "Reporting Structure",
       description:
-        "Relevant business information brought together around leadership priorities",
+        "Clear reporting processes and responsibilities across departments",
     },
     {
-      icon: Gauge,
-      title: "KPI Visibility",
+      icon: Network,
+      title: "Standardized Information",
       description:
-        "Clear measures that make business performance easier to monitor",
+        "Consistent formats, KPIs, definitions, and reporting requirements",
     },
     {
       icon: LineChart,
-      title: "Performance Clarity",
+      title: "Reporting Control",
       description:
-        "Focused reporting that shows what is happening and where attention is needed",
+        "Structured validation and reporting routines that improve information reliability",
     },
     {
       icon: Target,
-      title: "Decision Support",
+      title: "Management Visibility",
       description:
-        "Decision-ready information that helps leaders determine what requires action",
+        "Consistent business information that gives management a clearer view of operations",
     },
   ];
 
@@ -616,7 +566,7 @@ function BusinessValueSection() {
             text-[#102A56]
           "
         >
-          From Business Data to Management Clarity
+          From Fragmented Reporting to a Standardized System
         </h2>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-4">
@@ -682,7 +632,7 @@ function BusinessValueSection() {
                   {item.title}
                 </h3>
 
-                <p className="mx-auto mt-2 max-w-[185px] text-[12px] leading-5 text-[#526A88]">
+                <p className="mx-auto mt-2 max-w-[180px] text-[12px] leading-5 text-[#526A88]">
                   {item.description}
                 </p>
               </div>
@@ -700,14 +650,14 @@ function BusinessValueSection() {
 
 function DeliverablesSection() {
   const icons = [
-    Gauge,
-    BarChart3,
-    FileBarChart,
-    Target,
-    Database,
-    Network,
-    FileText,
     FileCheck2,
+    FileBarChart,
+    FileText,
+    ClipboardCheck,
+    Gauge,
+    WorkflowIcon,
+    ShieldCheck,
+    FileText,
   ];
 
   return (
@@ -771,7 +721,7 @@ function WorkflowSection() {
     ClipboardCheck,
     Settings2,
     Database,
-    BarChart3,
+    FileBarChart,
     ShieldCheck,
   ];
 
@@ -790,7 +740,7 @@ function WorkflowSection() {
             text-[#102A56]
           "
         >
-          From Business Need to Decision-Ready Reporting
+          From Reporting Gaps to a Standardized MIS
         </h2>
 
         <div className="relative mt-10 grid gap-8 lg:grid-cols-5 lg:gap-5">
@@ -837,7 +787,7 @@ function WorkflowSection() {
                 </span>
 
                 <h3 className="mt-1 text-[13px] font-bold text-[#102A56]">
-                  {step.title}
+                  {step.title.replace("Reporting ", "")}
                 </h3>
 
                 <p className="mx-auto mt-2 max-w-[175px] text-[11px] leading-5 text-[#526A88]">
@@ -864,8 +814,8 @@ function TechnologiesSection() {
     Gauge,
     Network,
     Layers3,
-    Target,
     LineChart,
+    Settings2,
   ];
 
   return (
@@ -919,28 +869,28 @@ function TechnologiesSection() {
 function getTechnologyDescription(technology: string) {
   const descriptions: Record<string, string> = {
     "Microsoft Power BI":
-      "Interactive dashboards and executive reporting",
+      "Interactive dashboards and reporting",
 
     "Microsoft Excel":
-      "Business analysis and supporting data preparation",
+      "Advanced modeling and analysis",
 
     "Power Query":
       "Data preparation and transformation",
 
     DAX:
-      "Advanced calculations and KPI measures",
+      "Advanced calculations and measures",
 
     "Data Modeling":
-      "Reliable and optimized reporting structures",
+      "Optimized data models for performance",
 
-    "Data Visualization":
-      "Clear visual communication of business performance",
-
-    "KPI Framework Design":
-      "Meaningful metrics aligned with business objectives",
+    "Reporting Automation":
+      "Reliable and repeatable reporting",
 
     "Executive Reporting":
       "Decision-ready management information",
+
+    "MIS Framework Design":
+      "Scalable reporting structure and data flow",
   };
 
   return (
@@ -956,9 +906,9 @@ function getTechnologyDescription(technology: string) {
 function WhyWorkWithMeSection() {
   const icons = [
     Target,
-    BarChart3,
+    Network,
     ShieldCheck,
-    CheckCircle2,
+    TrendingUp,
   ];
 
   return (
@@ -975,7 +925,7 @@ function WhyWorkWithMeSection() {
 
             <h2
               className="
-                max-w-[420px]
+                max-w-[440px]
                 text-[28px]
                 font-bold
                 leading-[1.15]
@@ -983,9 +933,9 @@ function WhyWorkWithMeSection() {
                 text-[#102A56]
               "
             >
-              Dashboards Built
+              MIS Built for Consistency,
               <br />
-              Around Decisions
+              Control & Adoption
             </h2>
 
             <p
@@ -1044,7 +994,14 @@ function WhyWorkWithMeSection() {
                       </div>
 
                       <div>
-                        <span className="text-[9px] font-semibold tracking-[0.15em] text-[#8AA4C5]">
+                        <span
+                          className="
+                            text-[9px]
+                            font-semibold
+                            tracking-[0.15em]
+                            text-[#8AA4C5]
+                          "
+                        >
                           {(index + 1)
                             .toString()
                             .padStart(2, "0")}
@@ -1130,7 +1087,7 @@ function CTASection() {
         "
       />
 
-      {/* Content */}
+      {/* CTA Content */}
 
       <div
         className="
@@ -1224,13 +1181,20 @@ function CTASection() {
             duration-300
             hover:-translate-y-0.5
             hover:bg-[#3B82F6]
+            hover:!text-white
           "
         >
           <span className="!text-white">
             {data.cta.buttonText}
           </span>
 
-          <ArrowRight className="h-4 w-4 !text-white" />
+          <ArrowRight
+            className="
+              h-4
+              w-4
+              !text-white
+            "
+          />
         </Link>
       </div>
     </section>
@@ -1241,7 +1205,7 @@ function CTASection() {
    PAGE
 ========================================================= */
 
-export default function ExecutiveDashboards() {
+export default function MISReportingSystems() {
   return (
     <main className="bg-white">
       <ServiceHero />
@@ -1256,7 +1220,6 @@ export default function ExecutiveDashboards() {
 
       <WhyWorkWithMeSection />
 
-      <FAQSection serviceSlug="executive-dashboards" />
       <CTASection />
     </main>
   );

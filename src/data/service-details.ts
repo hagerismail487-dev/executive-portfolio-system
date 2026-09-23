@@ -70,15 +70,30 @@ export const serviceDetails: ServiceDetail[] = [
 
     faqs: [
       {
-        question: "Can executive reporting connect to our existing data sources?",
+        question: "What does \"Executive Reporting\" actually mean, and how is it different from a regular dashboard?",
         answer:
-          "Yes. Executive reporting solutions can integrate with Excel, SQL Server, cloud platforms, and various business data sources.",
+          "Executive Reporting is the process of translating business performance into a clear, leadership-level view — the key KPIs, performance measures, and trends that matter most to decision-makers. Unlike a general dashboard built for operational staff, it is structured specifically around what leadership needs to see, understand, and act on, with the noise and detail-level data removed."
       },
       {
-        question: "Will I receive documentation?",
+        question: "Who is this service designed for?",
         answer:
-          "Yes. Every project includes documentation to support maintenance and future enhancements.",
+          "This service is designed for business owners, executives, and leadership teams who need a reliable, high-level view of company or departmental performance without having to interpret raw data themselves. It suits organizations where important information exists but is not yet organized into a format leadership can quickly read and act on."
       },
+      {
+        question: "What will I actually receive at the end of the engagement?",
+        answer:
+          "Deliverables typically include executive reporting views, KPI and performance views, executive summary pages, a management reporting pack, and custom executive visualizations, supported by an underlying data model. Interactive filters and drilldowns are included where relevant, along with documentation explaining how the reporting is structured and should be used."
+      },
+      {
+        question: "We already have reports — why would we need this?",
+        answer:
+          "Many organizations have reports, but not reporting built for executive decision-making. Existing reports are often operational, fragmented, or too detailed for leadership use. This service reorganizes and presents that information into a decision-ready format focused on visibility, clarity, and the specific performance measures leadership needs."
+      },
+      {
+        question: "Does this replace our existing systems or data sources?",
+        answer:
+          "No. The goal is not to replace existing systems or data sources. The reporting layer is designed to work with the available business information and organize it into a clearer executive view, with the underlying reporting structure and data model aligned to the specific management requirements."
+      }
     ],
 
     cta: {
@@ -129,10 +144,30 @@ export const serviceDetails: ServiceDetail[] = [
 
     faqs: [
       {
-        question: "Can existing reports be improved?",
+        question: "What problem does an MIS Reporting System actually solve?",
         answer:
-          "Yes. Existing reporting systems can be reviewed and redesigned to improve consistency, accuracy, structure, and usability.",
+          "It addresses fragmented, inconsistent, or ad-hoc management information — where reports differ between teams, KPIs are defined differently across the business, or leadership receives conflicting numbers. The service establishes a structured reporting framework so management information is organized, standardized, and reliable on a recurring basis."
       },
+      {
+        question: "How is this different from just building better reports?",
+        answer:
+          "Reports are an output; an MIS is the underlying structure that governs how those reports are produced. This service focuses on defining KPIs consistently, establishing reporting structures, and setting the standards that make recurring management reporting accurate and repeatable — not on designing individual reports in isolation."
+      },
+      {
+        question: "Our teams currently report numbers differently — can this be fixed?",
+        answer:
+          "Yes, this is a core focus of the service. Inconsistent KPI definitions and reporting formats across teams are addressed by standardizing how management information is defined, structured, and reported, so leadership receives consistent figures regardless of which team or department they come from."
+      },
+      {
+        question: "Is this a one-time project or something that needs to be maintained?",
+        answer:
+          "An MIS Reporting System is designed to support recurring management reporting rather than a single report. The initial engagement focuses on establishing the reporting structure, standards, KPI definitions, and information requirements so the framework can support consistent reporting over time."
+      },
+      {
+        question: "What does \"reporting governance\" mean in practical terms here?",
+        answer:
+          "In this context, governance means having clear, agreed definitions for KPIs and reporting structures, and a consistent process for how management information is produced. It reduces reliance on individual interpretation and ensures decision-makers are working from the same, reliably structured information."
+      }
     ],
 
     cta: {
@@ -183,10 +218,30 @@ export const serviceDetails: ServiceDetail[] = [
 
     faqs: [
       {
-        question: "What does a Business Intelligence solution help us understand?",
+        question: "What is the difference between Business Intelligence and Executive Reporting?",
         answer:
-          "It helps connect business data and KPIs with analysis to reveal performance patterns, relationships, and areas that may require attention.",
+          "Executive Reporting focuses on presenting performance clearly for leadership visibility. Business Intelligence goes further, starting from business questions and strategic priorities to explain why performance is changing, what is driving results, and where opportunities exist. It is oriented around analysis and interpretation, not just presentation."
       },
+      {
+        question: "Do we need to already know what questions we want answered?",
+        answer:
+          "Not necessarily. This service starts from your business challenges and operational priorities, then works with you to shape those into specific, answerable questions. Having some sense of your key concerns is helpful, but the process is designed to translate business context into meaningful analysis, not to require a fully defined brief upfront."
+      },
+      {
+        question: "What kind of outcomes should we expect from a Business Intelligence engagement?",
+        answer:
+          "You should expect to move from raw data to business understanding — clarity on why results are changing, where opportunities or risks exist, and what the data means in practical business terms. The focus is on insight that supports better decisions, not simply on producing more reports or visuals."
+      },
+      {
+        question: "Is this only useful if we have a lot of data already?",
+        answer:
+          "Meaningful data is important, but the value of Business Intelligence is not determined by data volume alone. The focus is on whether the available information is relevant to the business questions being examined and whether it can support meaningful analysis and interpretation."
+      },
+      {
+        question: "How is this different from just asking someone to \"analyze the numbers\"?",
+        answer:
+          "This service connects data analysis directly to business context — strategic objectives, operational priorities, and the specific challenges you are facing — rather than analyzing numbers in isolation. The output is framed around what the findings mean for the business and how they can support a decision, not just statistical observations."
+      }
     ],
 
     cta: {
@@ -236,10 +291,30 @@ export const serviceDetails: ServiceDetail[] = [
 
     faqs: [
       {
-        question: "Can KPIs be customized to our business objectives?",
+        question: "What does Performance Analytics focus on that the other services don't?",
         answer:
-          "Absolutely. KPIs are designed around your business objectives and operational goals.",
+          "Performance Analytics focuses specifically on how well the business or its operations are performing — through KPIs, performance measures, trends, and gaps — with the goal of identifying where improvement attention is needed. Where MIS focuses on reporting structure and BI focuses on broader business insight, this service centers on operational and performance effectiveness."
       },
+      {
+        question: "How do you identify where performance gaps exist?",
+        answer:
+          "Performance gaps are identified by examining KPIs and performance measures against trends over time, highlighting where results are falling short, plateauing, or diverging from expected performance. This creates a clear picture of where operational effectiveness is strongest and where attention is required."
+      },
+      {
+        question: "Is this only relevant for operational teams, or is it useful for leadership too?",
+        answer:
+          "It is relevant to both. Operational teams gain visibility into performance gaps and trends they can act on directly, while leadership gains a clear view of where operational effectiveness stands across the business, supporting decisions about where improvement efforts should be prioritized."
+      },
+      {
+        question: "Will this tell us exactly how to fix performance issues?",
+        answer:
+          "Performance Analytics identifies where performance gaps and improvement opportunities exist based on KPIs, measures, and trends, providing an evidence-based starting point for improvement discussions. The analysis helps clarify where attention is needed, while the specific operational or process actions remain dependent on the business context."
+      },
+      {
+        question: "How is \"performance\" defined for our organization?",
+        answer:
+          "Performance is defined through the KPIs and performance measures most relevant to your business or operational context, rather than a fixed generic set. The analysis is built around the measures that genuinely reflect effectiveness and improvement in your specific environment."
+      }
     ],
 
     cta: {
