@@ -1,4 +1,9 @@
-﻿import ExecutiveSalesPerformanceIntelligencePresentation from "@/components/case-studies/ExecutiveSalesPerformanceIntelligencePresentation";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+
+import { caseStudies } from "@/data/case-studies";
+
+import ExecutiveSalesPerformanceIntelligencePresentation from "@/components/case-studies/ExecutiveSalesPerformanceIntelligencePresentation";
 import HRDecisionSupportSystemPresentation from "@/components/case-studies/HRDecisionSupportSystemPresentation";
 import CustomerExperienceDashboardPresentation from "@/components/case-studies/CustomerExperienceDashboardPresentation";
 import RealEstateDecisionIntelligencePresentation from "@/components/case-studies/RealEstateDecisionIntelligencePresentation";
@@ -14,6 +19,21 @@ interface PageProps {
   }>;
 }
 
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const project = caseStudies.find((item) => item.slug === slug);
+
+  if (!project) {
+    notFound();
+  }
+
+  return {
+    title: `${project.title} | Dashboard`,
+    description: project.excerpt,
+  };
+}
 export default async function DashboardPage({
   params,
 }: PageProps) {
