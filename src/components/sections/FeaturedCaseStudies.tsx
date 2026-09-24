@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 
 import Button from "@/components/ui/Button";
@@ -23,9 +23,9 @@ export default function FeaturedCaseStudies() {
   > = {
     "executive-sales-performance-intelligence": {
       challenge:
-        "Fragmented business data made executive reporting slow, inconsistent, and difficult to trust.",
+        "Sales, commercial, and inventory information needed to be brought together into a clearer management reporting environment across the sales lifecycle.",
       solution:
-        "Integrated sales, reservations, contracts, and financial indicators into one executive reporting platform.",
+        "Connected Leads, Meetings, Orientations, Reservations, Contracts, Cancellations, and Inventory into one executive intelligence experience.",
     },
 
     "customer-experience-operations-dashboard": {
