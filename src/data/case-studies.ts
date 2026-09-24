@@ -1,4 +1,4 @@
-﻿import { hrDecisionSupportSystem } from "@/data/hr-decision-support-system";
+import { hrDecisionSupportSystem } from "@/data/hr-decision-support-system";
 import { realEstateDecisionIntelligenceProject } from "@/data/real-estate-decision-intelligence";
 import { crmSalesIntelligenceProject } from "@/data/crm-sales-intelligence";
 import { procurementManagementProject } from "@/data/procurement-management";
@@ -379,7 +379,7 @@ export const caseStudies: CaseStudy[] = [
 
     featured: true,
 
-    title: "Executive Sales Dashboard",
+    title: "Executive Sales Performance Intelligence",
 
     excerpt:
       "Executive reporting solution designed to monitor sales performance, revenue trends, reservations, and strategic KPIs.",
