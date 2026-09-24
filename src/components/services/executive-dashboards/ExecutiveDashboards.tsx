@@ -556,7 +556,7 @@ function ServiceHero() {
                 hover:bg-[#F5F9FF]
               "
             >
-              Explore Projects
+              Explore Project
             </Link>
           </div>
         </div>
