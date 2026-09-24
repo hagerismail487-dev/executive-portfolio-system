@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -132,7 +132,7 @@ export default function HRDecisionSupportSystemPresentation() {
             className="inline-flex items-center gap-2 rounded-md border border-[#383d36] bg-[#151a17] px-3 py-2 text-[10px] text-[#b8b8ad] transition hover:border-[#8c8060] hover:text-white"
           >
             <Maximize2 size={13} />
-            <span className="hidden sm:inline">Fullscreen</span>
+            <span className="hidden sm:inline">Presentation Mode</span>
           </button>
         </header>
 
@@ -155,7 +155,7 @@ export default function HRDecisionSupportSystemPresentation() {
               </p>
 
               <p className="mt-1 text-[9px] text-[#515750]">
-                ESC to exit fullscreen
+                ESC to exit presentation mode
               </p>
             </div>
           </div>
@@ -273,7 +273,7 @@ export default function HRDecisionSupportSystemPresentation() {
             <button
               type="button"
               onClick={() => setIsFullscreen(false)}
-              aria-label="Close fullscreen"
+              aria-label="Close presentation mode"
               className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-[#4b4d45] bg-[#111412] text-[#c4c0b4] transition hover:border-[#9a8b63] hover:text-white"
             >
               <X size={18} />

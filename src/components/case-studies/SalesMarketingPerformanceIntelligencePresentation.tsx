@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
@@ -131,7 +131,7 @@ export default function SalesMarketingPerformanceIntelligencePresentation() {
                   : "rounded-full border border-border px-4 py-2 text-sm font-medium transition hover:bg-muted"
               }
             >
-              {isFullscreen ? "Exit Fullscreen" : "Fullscreen"}
+              {isFullscreen ? "Exit Presentation Mode" : "Presentation Mode"}
             </button>
           </div>
         </div>
