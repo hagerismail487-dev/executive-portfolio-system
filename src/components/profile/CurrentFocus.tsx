@@ -1,7 +1,9 @@
-﻿import {
+import {
   BarChart3,
   Database,
-  LayoutDashboard,
+  FileBarChart,
+  Gauge,
+  Network,
   TrendingUp,
   type LucideIcon,
 } from "lucide-react";
@@ -14,28 +16,35 @@ type FocusArea = {
 
 const focusAreas: FocusArea[] = [
   {
-    icon: LayoutDashboard,
-    title: "Executive Dashboards",
-    description:
-      "Creating clear executive views that turn complex business data into actionable performance insight.",
+    icon: Network,
+    title: "Scalable Business Systems",
+    description: "Designing scalable business systems.",
+  },
+  {
+    icon: FileBarChart,
+    title: "Executive Reporting Frameworks",
+    description: "Building executive reporting frameworks.",
   },
   {
     icon: Database,
-    title: "MIS Reporting Systems",
-    description:
-      "Building structured reporting environments that improve consistency, visibility, and management communication.",
+    title: "Reporting Consistency",
+    description: "Improving reporting consistency.",
   },
   {
-    icon: BarChart3,
-    title: "Business Intelligence",
-    description:
-      "Connecting business objectives, KPIs, data, and reporting into a structured intelligence environment.",
+    icon: Gauge,
+    title: "KPI-Driven Decision Environments",
+    description: "Developing KPI-driven decision environments.",
   },
   {
     icon: TrendingUp,
-    title: "Performance Analytics",
+    title: "Operational Visibility",
+    description: "Strengthening operational visibility.",
+  },
+  {
+    icon: BarChart3,
+    title: "Structured Business Transformation",
     description:
-      "Measuring business performance through meaningful KPIs, trends, and performance-focused reporting.",
+      "Supporting business transformation through structured reporting.",
   },
 ];
 
