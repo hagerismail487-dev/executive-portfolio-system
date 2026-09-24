@@ -147,7 +147,7 @@ export default function SalesMarketingPerformanceIntelligencePresentation() {
                   : "text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground"
               }
             >
-              Slide {String(currentSlide + 1).padStart(2, "0")} /{" "}
+              {String(currentSlide + 1).padStart(2, "0")} /{" "}
               {String(totalSlides).padStart(2, "0")}
             </p>
 
