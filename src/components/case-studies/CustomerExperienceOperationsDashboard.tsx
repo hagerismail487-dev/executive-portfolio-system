@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -203,7 +203,7 @@ export default function CustomerExperienceOperationsDashboard() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md bg-[#0969ed] px-4 py-2.5 text-[11px] font-semibold text-white shadow-[0_8px_28px_rgba(9,105,237,.24)] transition hover:bg-[#1777f5]"
               >
-                View Dashboard
+                View Presentation
                 <ExternalLink size={13} />
               </Link>
 
@@ -323,7 +323,7 @@ export default function CustomerExperienceOperationsDashboard() {
       hover:text-white
     "
   >
-    <span>Open Dashboard</span>
+    <span>Open Presentation</span>
     <ArrowRight size={13} className="text-[#69b9ff]" />
   </Link>
 </div>
@@ -555,13 +555,23 @@ export default function CustomerExperienceOperationsDashboard() {
               </p>
             </div>
 
-            <Link
-              href="/#contact"
-              className="inline-flex shrink-0 items-center gap-2 rounded-md bg-[#0b75f4] px-6 py-3 text-[12px] font-semibold text-white shadow-[0_10px_30px_rgba(11,117,244,.28)] transition hover:bg-[#1782ff]"
-            >
-              Let&apos;s Talk About Your Project
-              <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+  <Link
+    href="/services/performance-analytics"
+    className="inline-flex shrink-0 items-center gap-2 rounded-md bg-[#0b75f4] px-6 py-3 text-[12px] font-semibold text-white shadow-[0_10px_30px_rgba(11,117,244,.28)] transition hover:bg-[#1782ff]"
+  >
+    View Service
+    <ArrowRight size={14} />
+  </Link>
+
+  <Link
+    href="/#contact"
+    className="inline-flex shrink-0 items-center gap-2 rounded-md bg-[#0b75f4] px-6 py-3 text-[12px] font-semibold text-white shadow-[0_10px_30px_rgba(11,117,244,.28)] transition hover:bg-[#1782ff]"
+  >
+    Let&apos;s Talk About Your Project
+    <ArrowRight size={14} />
+  </Link>
+</div>
           </div>
         </section>
       </div>
@@ -684,6 +694,7 @@ function BriefcaseIcon({ size }: { size?: number }) {
     </svg>
   );
 }
+
 
 
 

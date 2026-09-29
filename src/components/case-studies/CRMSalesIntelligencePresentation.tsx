@@ -163,7 +163,7 @@ export default function CRMSalesIntelligencePresentation() {
               <div>
 
                 <p className="text-[10px] uppercase tracking-[0.18em] text-[#55b5ff]">
-                  Dashboard {String(activeSlide + 1).padStart(2, "0")}
+                  {dashboard.title === "Landing Page" ? "Overview" : dashboard.title === "Data Model" ? "Data Model" : `Dashboard ${String(activeSlide + 1).padStart(2, "0")}`}
                 </p>
 
                 <h1 className="mt-1 text-xl font-semibold tracking-tight text-white sm:text-2xl">
@@ -345,6 +345,7 @@ export default function CRMSalesIntelligencePresentation() {
     </main>
   );
 }
+
 
 
 

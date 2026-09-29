@@ -132,6 +132,19 @@ function HeroIntelligenceVisual() {
           <div>
             <span
               className="
+                mb-1
+                block
+                text-[8px]
+                font-semibold
+                uppercase
+                tracking-[0.22em]
+                text-[#64748B]
+              "
+            >
+              Illustrative Example
+            </span>
+            <span
+              className="
                 text-[9px]
                 font-semibold
                 uppercase

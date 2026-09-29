@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -220,7 +220,7 @@ export default function HRDecisionSupportSystemDashboard() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md bg-[#817553] px-4 py-2.5 text-[11px] font-semibold text-white shadow-[0_8px_28px_rgba(129,117,83,.20)] transition hover:bg-[#95865e]"
               >
-                View Dashboard
+                View Presentation
                 <ExternalLink size={13} />
               </Link>
 
@@ -309,7 +309,7 @@ export default function HRDecisionSupportSystemDashboard() {
 
             <Narrative
               icon={<Sparkles size={15} />}
-              title="The Intelligence Solution"
+              title="Our Solution"
             >
               A centralized Power BI HR Decision Support System connecting
               workforce, recruitment, learning, engagement, and compliance
@@ -336,7 +336,7 @@ export default function HRDecisionSupportSystemDashboard() {
               rel="noopener noreferrer"
               className="inline-flex shrink-0 items-center gap-2 rounded-md border border-[#494a41] bg-[#171a18] px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.12em] text-[#bdb8aa] transition hover:border-[#9a8c68] hover:text-white"
             >
-              <span>Open Dashboard</span>
+              <span>Open Presentation</span>
               <ArrowRight size={13} className="text-[#b8a97d]" />
             </Link>
           </div>
@@ -462,7 +462,7 @@ export default function HRDecisionSupportSystemDashboard() {
               <SectionLabel>EXECUTIVE HEALTH</SectionLabel>
 
               <p className="mt-2 text-[12px] leading-5 text-[#8f948d]">
-                Management attention translated from the dashboard health
+                Qualitative management assessment translated from the dashboard health
                 indicators.
               </p>
             </div>
@@ -618,13 +618,23 @@ export default function HRDecisionSupportSystemDashboard() {
               </p>
             </div>
 
-            <Link
-              href="/#contact"
-              className="inline-flex shrink-0 items-center gap-2 rounded-md bg-[#817553] px-6 py-3 text-[12px] font-semibold text-white shadow-[0_10px_30px_rgba(129,117,83,.20)] transition hover:bg-[#95865e]"
-            >
-              Let&apos;s Talk About Your Project
-              <ArrowRight size={14} />
-            </Link>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+  <Link
+    href="/services/mis-reporting-systems"
+    className="inline-flex shrink-0 items-center gap-2 rounded-md bg-[#817553] px-6 py-3 text-[12px] font-semibold text-white shadow-[0_10px_30px_rgba(129,117,83,.20)] transition hover:bg-[#95865e]"
+  >
+    View Service
+    <ArrowRight size={14} />
+  </Link>
+
+  <Link
+    href="/#contact"
+    className="inline-flex shrink-0 items-center gap-2 rounded-md bg-[#817553] px-6 py-3 text-[12px] font-semibold text-white shadow-[0_10px_30px_rgba(129,117,83,.20)] transition hover:bg-[#95865e]"
+  >
+    Let&apos;s Talk About Your Project
+    <ArrowRight size={14} />
+  </Link>
+</div>
           </div>
         </section>
       </div>
@@ -726,6 +736,10 @@ function InfoPanel({
     </div>
   );
 }
+
+
+
+
 
 
 

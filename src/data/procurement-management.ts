@@ -50,7 +50,7 @@ export const procurementManagementProject: ProcurementManagementProject = {
   tertiaryCategory: "Procurement, Inventory & Fixed Assets Intelligence",
 
   positioning:
-    "Executive Procurement Performance, Supplier & Payment Intelligence",
+    "Executive Procurement, Inventory & Fixed Assets Intelligence",
 
   description:
     "An integrated intelligence system for procurement performance, inventory visibility, and fixed asset management.",
@@ -76,10 +76,10 @@ export const procurementManagementProject: ProcurementManagementProject = {
 
   overview: {
     challenge:
-      "Procurement, inventory, and asset information require connected management visibility.",
+      "Procurement, inventory, and fixed asset information require connected management visibility across purchasing performance, stock position, movement, and asset utilization.",
 
     objective:
-      "Provide an integrated reporting system across procurement, stock, and fixed assets.",
+      "Provide an integrated reporting system that connects procurement performance, supplier and payment activity, inventory position and movement, and fixed asset utilization for management decision support.",
 
     solution:
       "An integrated management reporting environment connecting purchasing performance, supplier activity, payment status, inventory availability, stock movement, and asset utilization.",
@@ -241,3 +241,4 @@ export const procurementManagementProject: ProcurementManagementProject = {
     "Decision Support",
   ],
 };
+

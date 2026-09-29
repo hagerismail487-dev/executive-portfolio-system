@@ -43,11 +43,11 @@ Instead of simply presenting numbers, analytical models reveal trends, patterns,
 
   deliverables: [
     "Business Intelligence Framework",
-    "Interactive Analytical Dashboards",
-    "Executive Intelligence Reports",
+    "Analytical Dashboards",
+    "Business Insight Reports",
     "Business Performance Analysis",
     "Business Opportunity Analysis",
-    "KPI Intelligence Framework",
+    "Analytical KPI Framework",
     "Analytical Data Model",
     "Business Intelligence Documentation",
   ],
@@ -93,7 +93,7 @@ Instead of simply presenting numbers, analytical models reveal trends, patterns,
 
   whyWorkWithMe: {
     description:
-      "Business Intelligence should answer business questions—not simply display data. I focus on transforming information into insights that help organizations understand performance and make better strategic decisions.",
+      "Business Intelligence should answer business questionsâ€”not simply display data. I focus on transforming information into insights that help organizations understand performance and make better strategic decisions.",
 
     strengths: [
       {
@@ -127,9 +127,10 @@ Instead of simply presenting numbers, analytical models reveal trends, patterns,
 
     buttonText: "Let's Talk",
 
-    buttonHref: "https://wa.me/201023281762",
+    buttonHref: "/#contact",
   },
 };
 
 export default data;
+
 

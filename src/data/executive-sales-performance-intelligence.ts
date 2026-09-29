@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+﻿import type { ReactNode } from "react";
 
 export interface ExecutiveSalesProject {
   title: string;
@@ -50,7 +50,7 @@ export const executiveSalesProject: ExecutiveSalesProject = {
     "Executive Sales Performance & Lifecycle Reporting",
 
   description:
-    "An executive Power BI solution designed to transform real-estate sales and commercial performance data into a structured decision-support environment across the sales lifecycle.",
+    "An executive Power BI reporting solution focused on sales performance and the full commercial lifecycle, from lead activity through meetings, orientations, reservations, contracts, cancellations, and inventory.",
 
   snapshot: [
     {
@@ -170,7 +170,7 @@ export const executiveSalesProject: ExecutiveSalesProject = {
 
     {
       label: "Remaining Inventory",
-      value: "≈ 2.87bn",
+      value: "2.87bn",
       secondary: "Inventory Value",
       detail:
         "Remaining inventory is represented as approximately 2.87 billion in the documented analysis.",
@@ -235,4 +235,5 @@ export const executiveSalesProject: ExecutiveSalesProject = {
     "Decision-Oriented Insight Generation",
   ],
 };
+
 

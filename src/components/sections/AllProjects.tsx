@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 
@@ -49,7 +49,7 @@ export default function AllProjects() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-[15px] leading-7 !text-white sm:text-base">
-            A collection of Business Intelligence and Executive Reporting solutions designed to solve real business challenges and deliver measurable results.
+            A collection of Business Intelligence and Executive Reporting solutions designed to solve real business challenges and support better business decisions.
           </p>
 
         </div>
@@ -341,6 +341,7 @@ export default function AllProjects() {
     </section>
   );
 }
+
 
 
 

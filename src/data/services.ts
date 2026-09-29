@@ -1,4 +1,4 @@
-import {
+﻿import {
   BarChart3,
   FileText,
   LineChart,
@@ -11,7 +11,7 @@ export const services = [
 
     icon: LayoutDashboard,
 
-    title: "Executive Reporting",
+    title: "Executive Dashboards",
 
     description:
       "Executive reporting solutions designed to turn complex business performance into clear, decision-ready information for leadership.",
@@ -50,3 +50,5 @@ export const services = [
       "Performance analytics that measure KPIs, reveal performance gaps, and help leaders focus on opportunities for improvement.",
   },
 ] as const;
+
+

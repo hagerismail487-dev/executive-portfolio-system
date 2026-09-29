@@ -144,7 +144,7 @@ export default function WorkforceTalentIntelligencePresentation() {
               <div>
 
                 <p className="text-[11px] uppercase tracking-[0.18em] text-[#55b5ff]">
-                  Dashboard {String(activeSlide + 1).padStart(2, "0")}
+                  {dashboard.title === "Landing Page" ? "Overview" : dashboard.title === "Data Model" ? "Data Model" : `Dashboard ${String(activeSlide + 1).padStart(2, "0")}`}
                 </p>
 
                 <h1 className="mt-1 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
@@ -315,7 +315,7 @@ export default function WorkforceTalentIntelligencePresentation() {
                 <div>
 
                   <p className="text-[11px] uppercase tracking-[0.18em] text-[#55b5ff]">
-                    Dashboard {String(activeSlide + 1).padStart(2, "0")}
+                    {dashboard.title === "Landing Page" ? "Overview" : dashboard.title === "Data Model" ? "Data Model" : `Dashboard ${String(activeSlide + 1).padStart(2, "0")}`}
                   </p>
 
                   <h1 className="mt-1 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
@@ -420,5 +420,6 @@ export default function WorkforceTalentIntelligencePresentation() {
     </main>
   );
 }
+
 
 

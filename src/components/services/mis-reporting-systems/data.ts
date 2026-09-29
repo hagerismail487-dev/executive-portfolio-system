@@ -93,7 +93,7 @@ Instead of disconnected spreadsheets and inconsistent reporting formats, leaders
 
   whyWorkWithMe: {
     description:
-      "I believe MIS reporting is not about producing more reports—it's about building reporting systems that create consistency, accountability, and reliable business communication.",
+      "I believe MIS reporting is not about producing more reportsâ€”it's about building reporting systems that create consistency, accountability, and reliable business communication.",
 
     strengths: [
       {
@@ -114,7 +114,7 @@ Instead of disconnected spreadsheets and inconsistent reporting formats, leaders
       {
         title: "Built for Long-Term Adoption",
         description:
-          "The goal isn't simply delivering reports—it's creating reporting systems that remain organized, scalable, and sustainable as the business grows.",
+          "The goal isn't simply delivering reportsâ€”it's creating reporting systems that remain organized, scalable, and sustainable as the business grows.",
       },
     ],
   },
@@ -127,7 +127,7 @@ Instead of disconnected spreadsheets and inconsistent reporting formats, leaders
 
     buttonText: "Let's Talk",
 
-    buttonHref: "https://wa.me/201023281762",
+    buttonHref: "/#contact",
   },
 };
 

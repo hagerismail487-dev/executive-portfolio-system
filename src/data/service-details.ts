@@ -30,7 +30,7 @@ export const serviceDetails: ServiceDetail[] = [
   {
     slug: "executive-dashboards",
 
-    title: "Executive Reporting",
+    title: "Executive Dashboards",
 
     shortDescription:
       "Executive reporting solutions that turn complex business performance into clear, decision-ready information for leadership.",
@@ -113,7 +113,7 @@ export const serviceDetails: ServiceDetail[] = [
       "Structured MIS reporting systems that standardize business information, improve reporting consistency, and support management visibility.",
 
     heroDescription:
-      "Structured MIS reporting frameworks that establish consistent reporting standards, templates, and processes across departments.",
+      "Structured MIS reporting frameworks that organize reporting standards, templates, and processes for consistent management information.",
 
     businessValue:
       "Create a consistent reporting environment that improves information clarity, strengthens reporting discipline, and gives management a more reliable view of operations.",
@@ -291,7 +291,7 @@ export const serviceDetails: ServiceDetail[] = [
 
     faqs: [
       {
-        question: "What does Performance Analytics focus on that the other services don't?",
+        question: "What does Performance Analytics measure and help improve?",
         answer:
           "Performance Analytics focuses specifically on how well the business or its operations are performing — through KPIs, performance measures, trends, and gaps — with the goal of identifying where improvement attention is needed. Where MIS focuses on reporting structure and BI focuses on broader business insight, this service centers on operational and performance effectiveness."
       },

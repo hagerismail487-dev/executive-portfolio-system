@@ -1,4 +1,4 @@
-export interface SalesMarketingPerformanceProject {
+﻿export interface SalesMarketingPerformanceProject {
   title: string;
   category: string;
   secondaryCategory: string;
@@ -64,7 +64,7 @@ export const salesMarketingPerformanceProject: SalesMarketingPerformanceProject 
     },
     {
       label: "Core Metrics",
-      value: "Revenue · Cost · Profit · Conversion · Views",
+      value: "Revenue Â· Cost Â· Profit Â· Conversion Â· Views",
     },
     {
       label: "Dashboard Views",
@@ -172,17 +172,17 @@ export const salesMarketingPerformanceProject: SalesMarketingPerformanceProject 
       detail:
         "The dashboard displays 46K views in the selected reporting view.",
       decision:
-        "Provides visibility into the volume of recorded views.",
+        "Supports monitoring recorded view volume alongside commercial performance indicators.",
       tone: "purple",
     },
     {
-      label: "Product Performance",
-      value: "Revenue / Cost / Profit",
-      secondary: "Product-Level Analysis",
+      label: "Cost",
+      value: "$493K",
+      secondary: "Displayed Cost",
       detail:
-        "The Product Details page provides product-level visibility across revenue, cost, profit, views, stock, invoices, pricing, rating, and scoring.",
+        "The dashboard displays $493K in cost alongside $630K in revenue and $136K in profit.",
       decision:
-        "Supports detailed comparison of product performance indicators.",
+        "Supports monitoring cost levels alongside revenue and profit performance.",
       tone: "blue",
     },
   ],
@@ -204,4 +204,5 @@ export const salesMarketingPerformanceProject: SalesMarketingPerformanceProject 
     "Inventory & Stock Visibility",
   ],
 };
+
 

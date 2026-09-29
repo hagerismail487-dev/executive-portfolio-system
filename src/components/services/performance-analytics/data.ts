@@ -44,7 +44,7 @@ Performance Analytics creates a structured measurement framework that enables ex
   deliverables: [
     "Performance Analytics Framework",
     "Executive KPI Scorecards",
-    "Performance Dashboards",
+    "Performance Scorecards & Dashboards",
     "Department Performance Reports",
     "Operational KPI Tracking",
     "Trend & Variance Analysis",
@@ -71,7 +71,7 @@ Performance Analytics creates a structured measurement framework that enables ex
     {
       title: "Performance Analytics",
       description:
-        "Develop interactive performance dashboards, executive scorecards, and analytical models that provide continuous visibility into organizational performance.",
+        "Develop interactive Performance Scorecards & Dashboards, executive scorecards, and analytical models that provide continuous visibility into organizational performance.",
     },
     {
       title: "Review & Continuous Improvement",
@@ -93,7 +93,7 @@ Performance Analytics creates a structured measurement framework that enables ex
 
   whyWorkWithMe: {
     description:
-      "Performance Analytics is most valuable when it helps leaders improve results—not simply monitor numbers. I focus on designing measurement systems that create visibility, accountability, and continuous business improvement.",
+      "Performance Analytics is most valuable when it helps leaders improve resultsâ€”not simply monitor numbers. I focus on designing measurement systems that create visibility, accountability, and continuous business improvement.",
 
     strengths: [
       {
@@ -127,8 +127,9 @@ Performance Analytics creates a structured measurement framework that enables ex
 
     buttonText: "Let's Talk",
 
-    buttonHref: "https://wa.me/201023281762",
+    buttonHref: "/#contact",
   },
 };
 
 export default data;
+

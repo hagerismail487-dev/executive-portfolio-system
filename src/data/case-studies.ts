@@ -50,6 +50,8 @@ export interface CaseStudy {
 
   category: string;
 
+  serviceSlug: string;
+
   filterCategories: string[];
 
   industry: string;
@@ -101,6 +103,7 @@ const emptyContent: CaseStudyContent = {
 const hrCaseStudy: CaseStudy = {
   id: 3,
   slug: hrDecisionSupportSystem.slug,
+  serviceSlug: "mis-reporting-systems",
   featured: true,
   title: hrDecisionSupportSystem.title,
   excerpt: hrDecisionSupportSystem.description,
@@ -143,6 +146,7 @@ const hrCaseStudy: CaseStudy = {
 const workforceTalentIntelligenceCaseStudy: CaseStudy = {
   id: 9,
   slug: "workforce-talent-intelligence-dashboard",
+  serviceSlug: "executive-dashboards",
   featured: false,
   title: workforceTalentIntelligenceProject.title,
   excerpt: workforceTalentIntelligenceProject.description,
@@ -179,6 +183,7 @@ const workforceTalentIntelligenceCaseStudy: CaseStudy = {
 const crmSalesIntelligenceCaseStudy: CaseStudy = {
   id: 5,
   slug: "crm-sales-intelligence",
+  serviceSlug: "business-intelligence",
   featured: false,
   title: crmSalesIntelligenceProject.title,
   excerpt: crmSalesIntelligenceProject.description,
@@ -218,6 +223,7 @@ const crmSalesIntelligenceCaseStudy: CaseStudy = {
 const realEstateDecisionIntelligenceCaseStudy: CaseStudy = {
   id: 4,
   slug: "real-estate-decision-intelligence",
+  serviceSlug: "business-intelligence",
   featured: false,
   title: realEstateDecisionIntelligenceProject.title,
   excerpt: realEstateDecisionIntelligenceProject.description,
@@ -256,6 +262,7 @@ const realEstateDecisionIntelligenceCaseStudy: CaseStudy = {
 const procurementManagementCaseStudy: CaseStudy = {
   id: 6,
   slug: "procurement-management",
+  serviceSlug: "mis-reporting-systems",
   featured: false,
   title: procurementManagementProject.title,
   excerpt: procurementManagementProject.description,
@@ -295,6 +302,7 @@ const procurementManagementCaseStudy: CaseStudy = {
 const procurementInventoryManagementCaseStudy: CaseStudy = {
   id: 7,
   slug: "procurement-inventory-management",
+  serviceSlug: "mis-reporting-systems",
   featured: false,
   title: procurementInventoryManagementProject.title,
   excerpt: procurementInventoryManagementProject.description,
@@ -333,6 +341,7 @@ const procurementInventoryManagementCaseStudy: CaseStudy = {
 const salesMarketingPerformanceIntelligenceCaseStudy: CaseStudy = {
   id: 8,
   slug: "sales-marketing-performance-intelligence",
+  serviceSlug: "performance-analytics",
   featured: false,
   title: salesMarketingPerformanceProject.title,
   excerpt: salesMarketingPerformanceProject.description,
@@ -376,6 +385,8 @@ export const caseStudies: CaseStudy[] = [
     id: 1,
 
     slug: "executive-sales-performance-intelligence",
+
+    serviceSlug: "executive-dashboards",
 
     featured: true,
 
@@ -462,6 +473,8 @@ export const caseStudies: CaseStudy[] = [
     id: 2,
 
     slug: "customer-experience-operations-dashboard",
+
+    serviceSlug: "performance-analytics",
 
     featured: true,
 

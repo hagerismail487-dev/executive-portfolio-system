@@ -560,7 +560,7 @@ export default function Hero() {
             >
               <Image
                 src="/projects/executive-sales-performance-intelligence/02-executive-dashboard.PNG"
-                alt="Executive Sales Dashboard"
+                alt="Executive Sales Performance Intelligence"
                 width={900}
                 height={560}
                 priority
@@ -620,7 +620,7 @@ export default function Hero() {
                       sm:text-[20px]
                     "
                   >
-                    Executive Performance Dashboard
+                    Executive Sales Performance Intelligence
                   </h2>
 
                   <p
@@ -639,7 +639,7 @@ export default function Hero() {
                 </div>
 
                 <a
-                  href="/case-studies/executive-sales-performance-intelligence/dashboard"
+                  href="/case-studies/executive-sales-performance-intelligence"
                   className="
                     !text-[#4D9BFF]
                     shrink-0
@@ -649,7 +649,7 @@ export default function Hero() {
                     hover:!text-white
                   "
                 >
-                  View Dashboard&nbsp; →
+                  View Case Study&nbsp; →
                 </a>
               </div>
             </div>

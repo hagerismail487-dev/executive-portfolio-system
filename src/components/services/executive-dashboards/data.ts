@@ -5,7 +5,7 @@ import type {
 
 const data = {
   hero: {
-    title: "Executive Reporting",
+    title: "Executive Dashboards",
 
     headline:
       "Decision-Ready Reporting for Executive Performance Visibility",
@@ -90,7 +90,7 @@ Executive Reporting brings the information that matters most into a clear manage
   ],
   whyWorkWithMe: {
     description:
-      "I don't build dashboards to display data—I build reporting solutions that help leaders understand performance, make informed decisions, and create lasting business value.",
+      "I don't build dashboards to display dataâ€”I build reporting solutions that help leaders understand performance, make informed decisions, and create lasting business value.",
 
     strengths: [
       {
@@ -124,8 +124,9 @@ Executive Reporting brings the information that matters most into a clear manage
 
     buttonText: "Let's Talk",
 
-    buttonHref: "https://wa.me/201023281762",
+    buttonHref: "/#contact",
   },
 };
 
 export default data;
+

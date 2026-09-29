@@ -1,4 +1,4 @@
-export interface RealEstateDecisionIntelligenceProject {
+﻿export interface RealEstateDecisionIntelligenceProject {
   title: string;
   category: string;
   secondaryCategory: string;
@@ -55,7 +55,7 @@ export const realEstateDecisionIntelligenceProject: RealEstateDecisionIntelligen
     "Real Estate Decision Support for Sales, Inventory & Pipeline Exposure",
 
   description:
-    "An integrated Business Intelligence solution designed to provide management with a connected view of real estate sales performance, inventory position, lead pipeline, conversion, closure, and cancellation activity.",
+    "An integrated Business Intelligence and decision-support solution connecting sales performance, inventory position, and lead-pipeline exposure across real estate operations.",
 
   snapshot: [
     {
@@ -189,7 +189,7 @@ export const realEstateDecisionIntelligenceProject: RealEstateDecisionIntelligen
     {
       label: "UNIT TYPES",
       value: "655.90M",
-      secondary: "Highest Displayed Sales — Admin",
+      secondary: "Highest Displayed Sales â€” Admin",
       detail:
         "Admin generates the highest displayed sales value at approximately 655.90M, while Apartment represents the largest starting inventory value at 1.40bn and the highest displayed cancellation value at 237.31M.",
       decision:
@@ -216,5 +216,6 @@ export const realEstateDecisionIntelligenceProject: RealEstateDecisionIntelligen
     "Executive Decision Support",
   ],
 };
+
 
 
