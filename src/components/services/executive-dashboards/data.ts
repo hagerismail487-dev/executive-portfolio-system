@@ -5,7 +5,7 @@ import type {
 
 const data = {
   hero: {
-    title: "Executive Dashboards",
+    title: "Executive Reporting",
 
     headline:
       "Decision-Ready Reporting for Executive Performance Visibility",
