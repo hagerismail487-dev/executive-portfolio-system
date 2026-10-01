@@ -481,7 +481,7 @@ function ServiceHero() {
           >
             Executive
             <br />
-            Dashboards
+            Reporting
           </h1>
 
           <h2
