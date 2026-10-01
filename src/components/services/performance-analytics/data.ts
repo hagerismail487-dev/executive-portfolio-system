@@ -93,7 +93,7 @@ Performance Analytics creates a structured measurement framework that enables ex
 
   whyWorkWithMe: {
     description:
-      "Performance Analytics is most valuable when it helps leaders improve resultsâ€”not simply monitor numbers. I focus on designing measurement systems that create visibility, accountability, and continuous business improvement.",
+      "Performance Analytics is most valuable when it helps leaders improve results—not simply monitor numbers. I focus on designing measurement systems that create visibility, accountability, and continuous business improvement.",
 
     strengths: [
       {

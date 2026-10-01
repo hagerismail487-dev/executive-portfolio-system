@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -291,7 +291,7 @@ export default function ExecutiveSalesPerformanceIntelligencePresentation() {
             {String(activeSlide + 1).padStart(2, "0")}
             {" / "}
             {String(project.dashboards.length).padStart(2, "0")}
-            {" â€” "}
+            {" — "}
             {dashboard.title}
 
           </div>

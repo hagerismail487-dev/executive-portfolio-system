@@ -90,7 +90,7 @@ Executive Reporting brings the information that matters most into a clear manage
   ],
   whyWorkWithMe: {
     description:
-      "I don't build dashboards to display dataâ€”I build reporting solutions that help leaders understand performance, make informed decisions, and create lasting business value.",
+      "I don't build dashboards to display data—I build reporting solutions that help leaders understand performance, make informed decisions, and create lasting business value.",
 
     strengths: [
       {

@@ -93,7 +93,7 @@ Instead of simply presenting numbers, analytical models reveal trends, patterns,
 
   whyWorkWithMe: {
     description:
-      "Business Intelligence should answer business questionsâ€”not simply display data. I focus on transforming information into insights that help organizations understand performance and make better strategic decisions.",
+      "Business Intelligence should answer business questions—not simply display data. I focus on transforming information into insights that help organizations understand performance and make better strategic decisions.",
 
     strengths: [
       {

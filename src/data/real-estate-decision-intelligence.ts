@@ -1,4 +1,4 @@
-﻿export interface RealEstateDecisionIntelligenceProject {
+export interface RealEstateDecisionIntelligenceProject {
   title: string;
   category: string;
   secondaryCategory: string;
@@ -189,7 +189,7 @@ export const realEstateDecisionIntelligenceProject: RealEstateDecisionIntelligen
     {
       label: "UNIT TYPES",
       value: "655.90M",
-      secondary: "Highest Displayed Sales â€” Admin",
+      secondary: "Highest Displayed Sales — Admin",
       detail:
         "Admin generates the highest displayed sales value at approximately 655.90M, while Apartment represents the largest starting inventory value at 1.40bn and the highest displayed cancellation value at 237.31M.",
       decision:
