@@ -47,7 +47,7 @@
 export const salesMarketingPerformanceProject: SalesMarketingPerformanceProject = {
   title: "Sales & Marketing Performance Intelligence",
 
-  category: "Sales Intelligence",
+  category: "Sales & Commercial",
   secondaryCategory: "Marketing Performance",
   tertiaryCategory: "Product Performance",
 
@@ -204,5 +204,6 @@ export const salesMarketingPerformanceProject: SalesMarketingPerformanceProject 
     "Inventory & Stock Visibility",
   ],
 };
+
 
 

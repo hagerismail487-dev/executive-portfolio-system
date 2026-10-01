@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { ArrowRight, LayoutDashboard } from "lucide-react";
 
 import ExecutiveCard from "@/components/design-system/ExecutiveCard";
@@ -227,7 +227,7 @@ export default function CaseStudyCard({
                 text-slate-400
               "
             >
-              Business Intelligence Project
+              Business Intelligence Case Study
             </span>
 
             <div

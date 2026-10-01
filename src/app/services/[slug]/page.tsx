@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import ExecutiveDashboards from "@/components/services/executive-dashboards/ExecutiveDashboards";
@@ -35,7 +35,7 @@ export default async function ServicePage({
   const { slug } = await params;
 
   switch (slug) {
-    case "executive-dashboards":
+    case "executive-reporting":
       return <ExecutiveDashboards />;
 
     case "mis-reporting-systems":

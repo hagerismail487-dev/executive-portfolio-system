@@ -7,11 +7,11 @@
 
 export const services = [
   {
-    slug: "executive-dashboards",
+    slug: "executive-reporting",
 
     icon: LayoutDashboard,
 
-    title: "Executive Dashboards",
+    title: "Executive Reporting",
 
     description:
       "Executive reporting solutions designed to turn complex business performance into clear, decision-ready information for leadership.",
@@ -50,5 +50,6 @@ export const services = [
       "Performance analytics that measure KPIs, reveal performance gaps, and help leaders focus on opportunities for improvement.",
   },
 ] as const;
+
 
 

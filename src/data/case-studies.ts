@@ -1,4 +1,4 @@
-import { hrDecisionSupportSystem } from "@/data/hr-decision-support-system";
+﻿import { hrDecisionSupportSystem } from "@/data/hr-decision-support-system";
 import { realEstateDecisionIntelligenceProject } from "@/data/real-estate-decision-intelligence";
 import { crmSalesIntelligenceProject } from "@/data/crm-sales-intelligence";
 import { procurementManagementProject } from "@/data/procurement-management";
@@ -395,7 +395,7 @@ export const caseStudies: CaseStudy[] = [
     excerpt:
       "Executive reporting solution designed to monitor sales performance, revenue trends, reservations, and strategic KPIs.",
 
-    category: "Real Estate",
+    category: "Sales & Commercial",
 
     filterCategories: ["Sales & Commercial", "Real Estate"],
 
@@ -483,7 +483,7 @@ export const caseStudies: CaseStudy[] = [
     excerpt:
       "Executive Business Intelligence solution integrating customer service, collections, and legal case management into a unified operational intelligence environment.",
 
-    category: "Customer Experience",
+    category: "Operations & Supply Chain",
 
     filterCategories: ["Operations & Supply Chain"],
 
@@ -583,6 +583,8 @@ export const caseStudies: CaseStudy[] = [
   salesMarketingPerformanceIntelligenceCaseStudy,
   workforceTalentIntelligenceCaseStudy,
 ];
+
+
 
 
 

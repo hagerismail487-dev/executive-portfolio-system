@@ -1,4 +1,4 @@
-import FAQSection from "../FAQSection";
+﻿import FAQSection from "../FAQSection";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -645,7 +645,7 @@ function ServiceHero() {
                 hover:bg-[#F5F9FF]
               "
             >
-              Explore Project
+              Explore Case Study
             </Link>
           </div>
         </div>

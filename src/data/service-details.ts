@@ -1,4 +1,4 @@
-export interface FAQ {
+﻿export interface FAQ {
   question: string;
   answer: string;
 }
@@ -28,9 +28,9 @@ export interface ServiceDetail {
 
 export const serviceDetails: ServiceDetail[] = [
   {
-    slug: "executive-dashboards",
+    slug: "executive-reporting",
 
-    title: "Executive Dashboards",
+    title: "Executive Reporting",
 
     shortDescription:
       "Executive reporting solutions that turn complex business performance into clear, decision-ready information for leadership.",
@@ -72,7 +72,7 @@ export const serviceDetails: ServiceDetail[] = [
       {
         question: "What does \"Executive Reporting\" actually mean, and how is it different from a regular dashboard?",
         answer:
-          "Executive Reporting is the process of translating business performance into a clear, leadership-level view — the key KPIs, performance measures, and trends that matter most to decision-makers. Unlike a general dashboard built for operational staff, it is structured specifically around what leadership needs to see, understand, and act on, with the noise and detail-level data removed."
+          "Executive Reporting is the process of translating business performance into a clear, leadership-level view â€” the key KPIs, performance measures, and trends that matter most to decision-makers. Unlike a general dashboard built for operational staff, it is structured specifically around what leadership needs to see, understand, and act on, with the noise and detail-level data removed."
       },
       {
         question: "Who is this service designed for?",
@@ -85,7 +85,7 @@ export const serviceDetails: ServiceDetail[] = [
           "Deliverables typically include executive reporting views, KPI and performance views, executive summary pages, a management reporting pack, and custom executive visualizations, supported by an underlying data model. Interactive filters and drilldowns are included where relevant, along with documentation explaining how the reporting is structured and should be used."
       },
       {
-        question: "We already have reports — why would we need this?",
+        question: "We already have reports â€” why would we need this?",
         answer:
           "Many organizations have reports, but not reporting built for executive decision-making. Existing reports are often operational, fragmented, or too detailed for leadership use. This service reorganizes and presents that information into a decision-ready format focused on visibility, clarity, and the specific performance measures leadership needs."
       },
@@ -146,15 +146,15 @@ export const serviceDetails: ServiceDetail[] = [
       {
         question: "What problem does an MIS Reporting System actually solve?",
         answer:
-          "It addresses fragmented, inconsistent, or ad-hoc management information — where reports differ between teams, KPIs are defined differently across the business, or leadership receives conflicting numbers. The service establishes a structured reporting framework so management information is organized, standardized, and reliable on a recurring basis."
+          "It addresses fragmented, inconsistent, or ad-hoc management information â€” where reports differ between teams, KPIs are defined differently across the business, or leadership receives conflicting numbers. The service establishes a structured reporting framework so management information is organized, standardized, and reliable on a recurring basis."
       },
       {
         question: "How is this different from just building better reports?",
         answer:
-          "Reports are an output; an MIS is the underlying structure that governs how those reports are produced. This service focuses on defining KPIs consistently, establishing reporting structures, and setting the standards that make recurring management reporting accurate and repeatable — not on designing individual reports in isolation."
+          "Reports are an output; an MIS is the underlying structure that governs how those reports are produced. This service focuses on defining KPIs consistently, establishing reporting structures, and setting the standards that make recurring management reporting accurate and repeatable â€” not on designing individual reports in isolation."
       },
       {
-        question: "Our teams currently report numbers differently — can this be fixed?",
+        question: "Our teams currently report numbers differently â€” can this be fixed?",
         answer:
           "Yes, this is a core focus of the service. Inconsistent KPI definitions and reporting formats across teams are addressed by standardizing how management information is defined, structured, and reported, so leadership receives consistent figures regardless of which team or department they come from."
       },
@@ -230,7 +230,7 @@ export const serviceDetails: ServiceDetail[] = [
       {
         question: "What kind of outcomes should we expect from a Business Intelligence engagement?",
         answer:
-          "You should expect to move from raw data to business understanding — clarity on why results are changing, where opportunities or risks exist, and what the data means in practical business terms. The focus is on insight that supports better decisions, not simply on producing more reports or visuals."
+          "You should expect to move from raw data to business understanding â€” clarity on why results are changing, where opportunities or risks exist, and what the data means in practical business terms. The focus is on insight that supports better decisions, not simply on producing more reports or visuals."
       },
       {
         question: "Is this only useful if we have a lot of data already?",
@@ -240,7 +240,7 @@ export const serviceDetails: ServiceDetail[] = [
       {
         question: "How is this different from just asking someone to \"analyze the numbers\"?",
         answer:
-          "This service connects data analysis directly to business context — strategic objectives, operational priorities, and the specific challenges you are facing — rather than analyzing numbers in isolation. The output is framed around what the findings mean for the business and how they can support a decision, not just statistical observations."
+          "This service connects data analysis directly to business context â€” strategic objectives, operational priorities, and the specific challenges you are facing â€” rather than analyzing numbers in isolation. The output is framed around what the findings mean for the business and how they can support a decision, not just statistical observations."
       }
     ],
 
@@ -293,7 +293,7 @@ export const serviceDetails: ServiceDetail[] = [
       {
         question: "What does Performance Analytics measure and help improve?",
         answer:
-          "Performance Analytics focuses specifically on how well the business or its operations are performing — through KPIs, performance measures, trends, and gaps — with the goal of identifying where improvement attention is needed. Where MIS focuses on reporting structure and BI focuses on broader business insight, this service centers on operational and performance effectiveness."
+          "Performance Analytics focuses specifically on how well the business or its operations are performing â€” through KPIs, performance measures, trends, and gaps â€” with the goal of identifying where improvement attention is needed. Where MIS focuses on reporting structure and BI focuses on broader business insight, this service centers on operational and performance effectiveness."
       },
       {
         question: "How do you identify where performance gaps exist?",
@@ -325,3 +325,4 @@ export const serviceDetails: ServiceDetail[] = [
     },
   },
 ];
+

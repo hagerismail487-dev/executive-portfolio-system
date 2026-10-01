@@ -1,4 +1,4 @@
-export interface ProcurementInventoryManagementProject {
+﻿export interface ProcurementInventoryManagementProject {
   title: string;
   category: string;
   secondaryCategory: string;
@@ -45,7 +45,7 @@ export interface ProcurementInventoryManagementProject {
 export const procurementInventoryManagementProject: ProcurementInventoryManagementProject = {
   title: "Procurement & Inventory Management",
 
-  category: "Procurement & Inventory",
+  category: "Operations & Supply Chain",
   secondaryCategory: "Supply Orders & Inventory Movement",
   tertiaryCategory: "Procurement, Inventory & Fixed Assets",
 
@@ -244,6 +244,7 @@ export const procurementInventoryManagementProject: ProcurementInventoryManageme
     "Decision Support",
   ],
 };
+
 
 
 

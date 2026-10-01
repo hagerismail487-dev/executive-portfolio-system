@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -104,7 +104,7 @@ export default function Navbar() {
             {/* Profile */}
 
             <Link
-              href="/#profile"
+              href="/profile"
               className={`relative pb-1.5 text-[14px] transition-all duration-300 ${
                 activeSection === "profile"
                   ? "font-semibold text-[#123A63]"
@@ -330,3 +330,4 @@ export default function Navbar() {
     </header>
   );
 }
+

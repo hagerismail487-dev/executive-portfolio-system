@@ -32,7 +32,7 @@ export const hrDecisionSupportSystem: HRDecisionSupportSystemProject = {
   subtitle:
     "Transforming Workforce Data into Strategic HR Insights",
 
-  category: "Human Resources / Workforce Management",
+  category: "HR & Workforce",
 
   industry: "Human Resources",
 
@@ -125,4 +125,5 @@ export const hrDecisionSupportSystem: HRDecisionSupportSystemProject = {
     },
   ],
 };
+
 

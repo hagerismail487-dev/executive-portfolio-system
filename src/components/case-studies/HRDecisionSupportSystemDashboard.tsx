@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -220,7 +220,7 @@ export default function HRDecisionSupportSystemDashboard() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md bg-[#817553] px-4 py-2.5 text-[11px] font-semibold text-white shadow-[0_8px_28px_rgba(129,117,83,.20)] transition hover:bg-[#95865e]"
               >
-                View Presentation
+                View Dashboard
                 <ExternalLink size={13} />
               </Link>
 
@@ -266,7 +266,7 @@ export default function HRDecisionSupportSystemDashboard() {
             <SnapshotItem
               icon={<UsersRound size={16} />}
               label="Primary Focus"
-              value="Workforce · Talent · Learning · Engagement · Compliance"
+              value="Workforce Â· Talent Â· Learning Â· Engagement Â· Compliance"
             />
 
             <SnapshotItem
@@ -309,7 +309,7 @@ export default function HRDecisionSupportSystemDashboard() {
 
             <Narrative
               icon={<Sparkles size={15} />}
-              title="Our Solution"
+              title="Solution"
             >
               A centralized Power BI HR Decision Support System connecting
               workforce, recruitment, learning, engagement, and compliance
@@ -336,7 +336,7 @@ export default function HRDecisionSupportSystemDashboard() {
               rel="noopener noreferrer"
               className="inline-flex shrink-0 items-center gap-2 rounded-md border border-[#494a41] bg-[#171a18] px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.12em] text-[#bdb8aa] transition hover:border-[#9a8c68] hover:text-white"
             >
-              <span>Open Presentation</span>
+              <span>View Dashboard</span>
               <ArrowRight size={13} className="text-[#b8a97d]" />
             </Link>
           </div>
@@ -592,7 +592,7 @@ export default function HRDecisionSupportSystemDashboard() {
 
               <div>
                 <p className="text-[13px] font-semibold leading-5 text-[#e1ddd2]">
-                  Data → KPI → Health Indicator → Insight → Management Attention
+                  Data â†’ KPI â†’ Health Indicator â†’ Insight â†’ Management Attention
                 </p>
 
                 <p className="mt-2 text-[11px] leading-5 text-[#777d76]">
@@ -736,6 +736,8 @@ function InfoPanel({
     </div>
   );
 }
+
+
 
 
 

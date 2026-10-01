@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -101,7 +101,7 @@ export default function SalesMarketingPerformanceIntelligenceDashboard() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md bg-[#0969ed] px-4 py-2.5 text-[11px] font-semibold text-white shadow-[0_8px_28px_rgba(9,105,237,.24)] transition hover:bg-[#1777f5]"
               >
-                View Presentation
+                View Dashboard
                 <ExternalLink size={13} />
               </Link>
 
@@ -219,7 +219,7 @@ export default function SalesMarketingPerformanceIntelligenceDashboard() {
 
             <Narrative
               icon={<Lightbulb size={15} />}
-              title="Our Solution"
+              title="Solution"
             >
               {project.overview.solution}
             </Narrative>
@@ -251,7 +251,7 @@ export default function SalesMarketingPerformanceIntelligenceDashboard() {
               rel="noopener noreferrer"
               className="inline-flex shrink-0 items-center gap-2 rounded-md border border-[#31577d] bg-[#071525] px-4 py-2 text-[10px] font-semibold uppercase tracking-wide text-white transition hover:border-[#4d8bc2] hover:bg-[#0a2138]"
             >
-              Open Presentation
+              View Dashboard
               <ArrowRight size={13} />
             </Link>
 
@@ -705,4 +705,6 @@ function InfoPanel({
     </div>
   );
 }
+
+
 

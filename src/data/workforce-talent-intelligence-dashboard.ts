@@ -1,4 +1,4 @@
-export interface WorkforceTalentIntelligenceProject {
+﻿export interface WorkforceTalentIntelligenceProject {
   title: string;
   category: string;
   secondaryCategory: string;
@@ -40,7 +40,7 @@ export interface WorkforceTalentIntelligenceProject {
 export const workforceTalentIntelligenceProject: WorkforceTalentIntelligenceProject = {
   title: "Workforce & Talent Intelligence Dashboard",
 
-  category: "Workforce Intelligence",
+  category: "HR & Workforce",
   secondaryCategory: "Talent Analytics",
   tertiaryCategory: "Executive HR Reporting",
 
@@ -175,3 +175,4 @@ export const workforceTalentIntelligenceProject: WorkforceTalentIntelligenceProj
     "Decision-Oriented Reporting",
   ],
 };
+

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 
@@ -312,7 +312,7 @@ export default function AllProjects() {
                       "
                     >
                       <span>
-                        View Project
+                        View Case Study
                       </span>
 
                       <ArrowRight
@@ -341,6 +341,7 @@ export default function AllProjects() {
     </section>
   );
 }
+
 
 
 

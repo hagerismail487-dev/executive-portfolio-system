@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -96,7 +96,7 @@ export default function ProcurementManagementDashboard() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-md bg-[#0969ed] px-4 py-2.5 text-[11px] font-semibold text-white shadow-[0_8px_28px_rgba(9,105,237,.24)] transition hover:bg-[#1777f5]"
               >
-                View Presentation
+                View Dashboard
                 <ExternalLink size={13} />
               </Link>
 
@@ -213,7 +213,7 @@ export default function ProcurementManagementDashboard() {
 
             <Narrative
               icon={<Lightbulb size={15} />}
-              title="Our Solution"
+              title="Solution"
             >
               {project.overview.solution}
             </Narrative>
@@ -238,7 +238,7 @@ export default function ProcurementManagementDashboard() {
               rel="noopener noreferrer"
               className="inline-flex shrink-0 items-center gap-2 rounded-md border border-[#2b6597] bg-[#07192b] px-3 py-2 text-[9px] font-semibold uppercase tracking-[0.12em] text-[#aac2da] transition-all duration-300 hover:border-[#55b5ff] hover:text-white"
             >
-              <span>Open Presentation</span>
+              <span>View Dashboard</span>
               <ArrowRight size={13} className="text-[#69b9ff]" />
             </Link>
 
@@ -547,5 +547,7 @@ function InfoPanel({
     </div>
   );
 }
+
+
 
 

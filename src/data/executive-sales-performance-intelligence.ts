@@ -42,7 +42,7 @@ export interface ExecutiveSalesProject {
 export const executiveSalesProject: ExecutiveSalesProject = {
   title: "Executive Sales Performance Intelligence",
 
-  category: "Sales Intelligence",
+  category: "Sales & Commercial",
   secondaryCategory: "Executive Reporting",
   tertiaryCategory: "Real Estate Analytics",
 
@@ -235,5 +235,6 @@ export const executiveSalesProject: ExecutiveSalesProject = {
     "Decision-Oriented Insight Generation",
   ],
 };
+
 
 

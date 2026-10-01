@@ -41,7 +41,7 @@ export default function Footer() {
                   </h3>
 
                   <p className="mt-0.5 text-[10px] text-blue-100/70">
-                    Senior Data Analyst | MIS & Business Intelligence Specialist
+                    MIS & Business Intelligence | Executive Reporting
                   </p>
                 </div>
               </div>
@@ -50,7 +50,7 @@ export default function Footer() {
 
               <nav className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 lg:flex-nowrap lg:gap-4">
                 <Link
-                  href="/#profile"
+                  href="/profile"
                  className="
   relative
 
@@ -197,4 +197,6 @@ export default function Footer() {
     </footer>
   );
 }
+
+
 

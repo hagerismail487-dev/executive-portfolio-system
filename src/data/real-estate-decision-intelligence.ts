@@ -47,7 +47,7 @@
 export const realEstateDecisionIntelligenceProject: RealEstateDecisionIntelligenceProject = {
   title: "Real Estate Decision Intelligence",
 
-  category: "Real Estate Business Intelligence",
+  category: "Real Estate",
   secondaryCategory: "Decision Support System",
   tertiaryCategory: "Sales, Inventory & Pipeline Intelligence",
 
@@ -216,6 +216,7 @@ export const realEstateDecisionIntelligenceProject: RealEstateDecisionIntelligen
     "Executive Decision Support",
   ],
 };
+
 
 
 

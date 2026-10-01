@@ -45,7 +45,7 @@
 export const crmSalesIntelligenceProject: CRMSalesIntelligenceProject = {
   title: "CRM Sales Intelligence",
 
-  category: "Business Intelligence",
+  category: "Sales & Commercial",
   secondaryCategory: "Sales Performance Analytics",
   tertiaryCategory: "Decision Support",
 
@@ -252,4 +252,5 @@ export const crmSalesIntelligenceProject: CRMSalesIntelligenceProject = {
     "Interactive Power BI Reporting",
   ],
 };
+
 
