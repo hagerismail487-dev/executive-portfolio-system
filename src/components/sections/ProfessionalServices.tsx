@@ -6,7 +6,7 @@ import ServiceCard from "@/components/ui/ServiceCard";
 import { services } from "@/data/services";
 
 const serviceCapabilities: Record<string, string[]> = {
-  "executive-dashboards": [
+  "executive-reporting": [
     "Executive Reporting Views",
     "KPI & Performance Views",
     "Management Reporting Pack",
@@ -32,7 +32,7 @@ const serviceCapabilities: Record<string, string[]> = {
 };
 
 const serviceQuestions: Record<string, string> = {
-  "executive-dashboards": "What does leadership need to know?",
+  "executive-reporting": "What does leadership need to know?",
   "mis-reporting-systems": "How do we structure and standardize reporting?",
   "business-intelligence": "What does the data tell us and why?",
   "performance-analytics": "Are we performing against expectations?",

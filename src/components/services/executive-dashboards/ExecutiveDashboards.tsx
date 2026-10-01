@@ -1269,7 +1269,7 @@ export default function ExecutiveDashboards() {
 
       <WhyWorkWithMeSection />
 
-      <FAQSection serviceSlug="executive-dashboards" />
+      <FAQSection serviceSlug="executive-reporting" />
       <CTASection />
     </main>
   );
