@@ -64,7 +64,7 @@ export const salesMarketingPerformanceProject: SalesMarketingPerformanceProject 
     },
     {
       label: "Core Metrics",
-      value: "Revenue Â· Cost Â· Profit Â· Conversion Â· Views",
+      value: "Revenue · Cost · Profit · Conversion · Views",
     },
     {
       label: "Dashboard Views",

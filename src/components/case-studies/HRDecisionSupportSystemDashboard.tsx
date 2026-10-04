@@ -266,7 +266,7 @@ export default function HRDecisionSupportSystemDashboard() {
             <SnapshotItem
               icon={<UsersRound size={16} />}
               label="Primary Focus"
-              value="Workforce Â· Talent Â· Learning Â· Engagement Â· Compliance"
+              value="Workforce · Talent · Learning · Engagement · Compliance"
             />
 
             <SnapshotItem
@@ -592,7 +592,7 @@ export default function HRDecisionSupportSystemDashboard() {
 
               <div>
                 <p className="text-[13px] font-semibold leading-5 text-[#e1ddd2]">
-                  Data â†’ KPI â†’ Health Indicator â†’ Insight â†’ Management Attention
+                  Data → KPI → Health Indicator → Insight → Management Attention
                 </p>
 
                 <p className="mt-2 text-[11px] leading-5 text-[#777d76]">
