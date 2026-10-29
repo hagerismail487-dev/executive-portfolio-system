@@ -3,6 +3,10 @@ export interface SeriesArticle {
   slug: string;
   title: string;
   description?: string;
+  coverImage?: {
+    src: string;
+    alt: string;
+  };
   content: {
     en: string;
     ar: string;
@@ -14,6 +18,10 @@ const executiveMisIntroduction: SeriesArticle = {
   slug: "introduction-to-executive-mis",
   title: "Introduction to Executive MIS",
   description: "Where Business Meets Intelligence.",
+  coverImage: {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MIS-00.PNG-0ifHGC1vzncsQNVDyxjKxLgUxZz2MH.png",
+    alt: "Executive MIS series cover: Beyond Reports. Beyond Dashboards.",
+  },
   content: {
     en: String.raw`# Executive MIS
 

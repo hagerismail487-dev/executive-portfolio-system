@@ -82,7 +82,16 @@ export default function ArticleReader({ series, article, language }: ArticleRead
             <p className="mt-4 text-sm font-semibold uppercase tracking-[0.18em] text-blue-100/70">
               Article
             </p>
-            <h1 className="mt-5 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
+            {article.coverImage ? (
+              <div className="mt-8 overflow-hidden rounded-2xl border border-white/15 bg-[#061329] shadow-[0_18px_50px_rgba(0,0,0,0.22)]">
+                <img
+                  src={article.coverImage.src}
+                  alt={article.coverImage.alt}
+                  className="block h-auto max-h-[560px] w-full object-contain"
+                />
+              </div>
+            ) : null}
+            <h1 className="mt-8 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
               {article.title}
             </h1>
           </div>
