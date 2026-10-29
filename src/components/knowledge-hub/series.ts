@@ -457,8 +457,8 @@ const executiveMisBuildRulesBeforeReports: SeriesArticle = {
   title: "Build the Rules Before the Reports",
   description: "Why strong reporting begins with clear rules before beautiful reports.",
   coverImage: {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MIS-04.PNG-lJEix7MhPltmlH6oCeXYUI3mSYzjdz.png",
-    alt: "Executive MIS infographic: Build the rules first, then build the report.",
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MIS-05-9oGnMYS23YsP7P4zhjg0VZQ3Vm20IC.png",
+    alt: "Executive MIS infographic: Reporting is a business process, not just a task.",
   },
   content: {
     en: String.raw`# Build the Rules Before the Reports
