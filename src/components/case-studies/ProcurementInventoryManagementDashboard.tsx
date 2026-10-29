@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -300,6 +300,31 @@ export default function ProcurementInventoryManagementDashboard() {
 
             </div>
 
+          </div>
+
+        </section>
+
+        <section className="mt-4 rounded-[12px] border border-[#174574] bg-[#061426]/85 p-4 sm:p-5">
+
+          <SectionLabel>PROJECT WALKTHROUGH</SectionLabel>
+
+          <p className="mt-2 text-[12px] leading-5 text-[#8fa7bf]">
+            Explore the procurement and inventory management dashboard in action.
+          </p>
+
+          <div className="mt-5 overflow-hidden rounded-lg border border-[#214a72] bg-[#020812]">
+            <video
+              className="block h-auto w-full"
+              controls
+              preload="metadata"
+              playsInline
+            >
+              <source
+                src="/projects/procurement-inventory-management/procurement-inventory-management-walkthrough.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
           </div>
 
         </section>
