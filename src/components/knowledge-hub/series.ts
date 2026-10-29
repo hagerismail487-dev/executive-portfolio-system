@@ -310,6 +310,147 @@ But a Reporting Framework builds a system that continues to serve the organizati
   },
 };
 
+const executiveMisOneSourceOfTruth: SeriesArticle = {
+  id: "executive-mis-one-source-of-truth",
+  slug: "one-source-of-truth",
+  title: "One Source of Truth",
+  description: "Why trusted decisions begin with one trusted source of data.",
+  coverImage: {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MIS-03.PNG-6z1OKWhYn4EPHClg7emjHeag9PUt3H.png",
+    alt: "Executive MIS infographic: One Source of Truth.",
+  },
+  content: {
+    en: String.raw`# One Source of Truth
+
+**"What's the correct number?"**
+
+This might be one of the most common questions in any management meeting.
+
+The problem is that, too often, we have more than one number for the same KPI.
+
+The sales report shows one number.
+
+The finance report shows another.
+
+And the dashboard shows a third.
+
+And everyone is confident that their numbers are correct.
+
+At that moment, the problem is no longer about the number itself.
+
+The problem is that the organization has lost trust in its data.
+
+That is why every successful MIS system relies on one principle:
+
+**One Source of Truth.**
+
+This means having one approved source for the data behind every report, dashboard, and KPI.
+
+Every report.
+
+Every dashboard.
+
+Every KPI.
+
+Should draw from it.
+
+So when someone asks:
+
+*"What's the revenue?"*
+
+There is one answer, not three.
+
+And this is where meetings begin to change.
+
+Instead of spending the first half hour discussing:
+
+*"Which number is correct?"*
+
+We spend our time on a much more important question:
+
+**Based on this number... what should we do?**
+
+In my view, this is one of the most important roles of MIS.
+
+Not to produce more reports, but to build trust in data.
+
+Because once an organization has a single source of truth, the conversation naturally shifts from reviewing numbers to making decisions.
+
+And that is where the real impact of any Reporting System begins.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because organizations don't move faster when they have more reports... they move faster when everyone trusts the same numbers.*
+
+💬 In your opinion, what is the biggest risk when different departments rely on different data sources for the same KPI?
+
+#ExecutiveMIS #BusinessIntelligence #MIS #Reporting #DataGovernance #ExecutiveReporting #DecisionSupport #Leadership`,
+    ar: String.raw`# One source of truth
+
+**الرقم الصحيح كام؟"
+
+يمكن دي أكتر جملة اتقالت في أي اجتماع إدارة والمشكلة إن أوقات كتير بيكون قدامنا أكتر من رقم لنفس الـ KPI.
+
+تقرير المبيعات بيقول رقم.
+
+وتقرير المالية بيقول رقم تاني.
+
+والـ Dashboard بتقول رقم ثالث.
+
+وكل واحد واثق إن أرقامه هي الصح.
+
+في اللحظة دي المشكلة ما بتبقاش في الرقم.
+
+المشكلة إن الشركة فقدت الثقة في بياناتها وده السبب اللي بيخلي أي نظام MIS ناجح يعتمد على مبدأ واحد:
+
+**One Source of Truth.**
+
+يعني يبقى فيه مصدر واحد معتمد لكل البيانات.
+
+أي Report.
+
+وأي Dashboard.
+
+وأي KPI.
+
+تطلع منه.
+
+علشان أول ما حد يسأل:
+
+*"الإيرادات كام؟"*
+
+يبقى فيه إجابة واحدة مش ثلاث إجابات.
+
+ومن هنا الاجتماعات بتتغير بدل ما نقضي أول نصف ساعة بنناقش:
+
+*"أنهي رقم صح؟"*
+
+بنقضي الوقت كله في سؤال أهم:
+
+**بناءً على الرقم ده... هنعمل إيه؟**
+
+وده في رأيي...
+
+واحد من أهم أدوار الـ MIS مش إنه ينتج تقارير أكتر لكن إنه يبني الثقة في البيانات.
+
+لأن أول ما الشركة يبقى عندها مصدر واحد للحقيقة النقاش هيتحول تلقائيًا من مراجعة الأرقام إلى صناعة القرارات.
+
+وده هو المكان اللي يبدأ فيه الأثر الحقيقي لأي Reporting System.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because organizations don't move faster when they have more reports... they move faster when everyone trusts the same numbers.*
+
+💬 في رأيك... إيه أكبر ضرر ممكن يحصل لما كل إدارة تعتمد على مصدر بيانات مختلف لنفس الـ KPI؟
+
+#ExecutiveMIS #BusinessIntelligence #MIS #Reporting #DataGovernance #ExecutiveReporting #DecisionSupport #Leadership`,
+  },
+};
+
 export interface KnowledgeSeries {
   number: string;
   title: string;
@@ -329,6 +470,7 @@ export const knowledgeSeries: KnowledgeSeries[] = [
       executiveMisIntroduction,
       executiveMisReportingSystems,
       executiveMisReportingFramework,
+      executiveMisOneSourceOfTruth,
     ],
   },
   {
