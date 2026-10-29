@@ -16,16 +16,16 @@ export default function KnowledgeHub() {
   return (
     <div className="min-h-screen bg-[#FAFBFD] pt-16">
       <section className="overflow-hidden rounded-t-[28px] bg-[#102A56] text-white sm:rounded-t-[40px]">
-        <Container className="relative py-20 sm:py-28 lg:py-36">
+        <Container className="relative py-28 sm:py-36 lg:py-44">
           <div className="pointer-events-none absolute -right-32 top-0 h-72 w-72 rounded-full bg-[#D6A84F]/10 blur-3xl" />
-          <div className="relative max-w-3xl">
+          <div className="relative ml-auto max-w-3xl text-right">
             <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#D6A84F]">
               THE INSIGHT GIRL
             </p>
             <h1 className="mt-5 text-5xl font-semibold tracking-[-0.06em] sm:text-6xl lg:text-7xl">
               Knowledge Hub
             </h1>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-blue-100/75 sm:text-lg">
+            <p className="mt-6 ml-auto max-w-2xl text-base leading-8 text-blue-100/75 sm:text-lg">
               Ideas, insights, and practical thinking at the intersection of business and intelligence.
             </p>
           </div>
@@ -37,12 +37,12 @@ export default function KnowledgeHub() {
           <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#B18A3A]">
             EXPLORE BY SERIES
           </p>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:gap-6">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 sm:gap-7 lg:gap-8">
             {series.map((title, index) => (
               <article
                 key={title}
                 tabIndex={0}
-                className="group flex min-h-[148px] cursor-pointer flex-col justify-between rounded-2xl border border-[#DCE2EA] bg-white p-6 outline-none transition-all duration-300 hover:-translate-y-1 hover:border-[#C6A25A] hover:shadow-[0_18px_40px_rgba(16,42,86,0.08)] focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-4 sm:p-7"
+                className="group flex min-h-[220px] cursor-pointer flex-col justify-between rounded-2xl border border-[#DCE2EA] bg-white p-8 outline-none transition-all duration-300 hover:-translate-y-1 hover:border-[#C6A25A] hover:shadow-[0_18px_40px_rgba(16,42,86,0.08)] focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-4 sm:min-h-[240px] sm:p-10"
                 aria-label={`Series ${index + 1} - ${title}`}
               >
                 <div className="flex items-start justify-between gap-6">
