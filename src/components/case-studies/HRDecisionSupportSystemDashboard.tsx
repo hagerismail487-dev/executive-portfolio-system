@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -409,6 +409,29 @@ export default function HRDecisionSupportSystemDashboard() {
             </button>
           </div>
 
+        </section>
+
+        <section className="mt-4 rounded-[14px] border border-[#30332e] bg-[#111513]/90 p-4 sm:p-5">
+          <SectionLabel>PROJECT WALKTHROUGH</SectionLabel>
+
+          <p className="mt-2 text-[12px] leading-5 text-[#8f948d]">
+            Explore the HR decision support dashboard in action.
+          </p>
+
+          <div className="mt-5 overflow-hidden rounded-lg border border-[#4a4a3e] bg-[#080b09]">
+            <video
+              className="block h-auto w-full"
+              controls
+              preload="metadata"
+              playsInline
+            >
+              <source
+                src="/projects/hr-decision-support-system/hr-decision-support-system-walkthrough.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </section>
 
         <section className="mt-4 rounded-[14px] border border-[#30332e] bg-[#111513]/90 p-5 sm:p-6">
