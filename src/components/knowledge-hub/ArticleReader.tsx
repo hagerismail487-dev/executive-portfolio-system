@@ -91,7 +91,7 @@ export default function ArticleReader({ series, article, language }: ArticleRead
                 />
               </div>
             ) : null}
-            <h1 className="mt-8 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
+            <h1 className="mt-5 text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">
               {article.title}
             </h1>
           </div>
