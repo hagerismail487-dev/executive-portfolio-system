@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import { Mail } from "lucide-react";
@@ -104,6 +104,15 @@ export default function Footer() {
                   className="relative text-[13px] text-slate-300 transition-all duration-300 hover:text-white after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-0 after:bg-[#3B82F6] after:transition-all hover:after:w-full"
                 >
                   Case Studies
+                </Link>
+
+                <div className="h-3 w-px bg-white/15" />
+
+                <Link
+                  href="/knowledge-hub"
+                  className="relative text-[13px] text-slate-300 transition-all duration-300 hover:text-white after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-0 after:bg-[#3B82F6] after:transition-all hover:after:w-full"
+                >
+                  Knowledge Hub
                 </Link>
 
                 <div className="h-3 w-px bg-white/15" />
