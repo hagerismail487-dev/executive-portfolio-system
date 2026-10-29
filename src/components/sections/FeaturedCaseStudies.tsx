@@ -21,25 +21,32 @@ export default function FeaturedCaseStudies() {
       solution: string;
     }
   > = {
+    "integrated-real-estate-management-dashboard": {
+      challenge:
+        "Business data was spread across departmental spreadsheets, limiting connected reporting and company-wide visibility.",
+      solution:
+        "Unified sales, HR, customer experience, and procurement reporting in one Power BI management dashboard.",
+    },
+
     "executive-sales-performance-intelligence": {
       challenge:
-        "Sales, commercial, and inventory information needed to be brought together into a clearer management reporting environment across the sales lifecycle.",
+        "Sales and commercial data needed a clearer, connected view across the sales lifecycle.",
       solution:
-        "Connected Leads, Meetings, Orientations, Reservations, Contracts, Cancellations, and Inventory into one executive intelligence experience.",
+        "Connected leads, meetings, orientations, reservations, contracts, cancellations, and inventory in one executive reporting experience.",
     },
 
     "customer-experience-operations-dashboard": {
       challenge:
-        "Customer-facing data was fragmented across functions, limiting centralized management visibility.",
+        "Customer service, collections, and legal operations data was fragmented across functions.",
       solution:
-        "Integrated customer service, collections, and legal operations into one standardized intelligence environment.",
+        "Brought customer service, collections, and legal operations into one standardized reporting view.",
     },
 
     "hr-decision-support-system": {
       challenge:
-        "HR data was spread across operational spreadsheets, limiting connected workforce and compliance visibility.",
+        "HR data was spread across operational spreadsheets, limiting workforce and compliance visibility.",
       solution:
-        "Centralized workforce, recruitment, learning, engagement, and compliance data into an executive decision-support system.",
+        "Centralized workforce, recruitment, learning, engagement, and compliance reporting in one executive decision-support view.",
     },
   };
 
@@ -150,7 +157,7 @@ export default function FeaturedCaseStudies() {
               grid
               gap-5
               md:grid-cols-2
-              lg:grid-cols-3
+              lg:grid-cols-4
             "
           >
             {featuredProjects.map((project) => (
@@ -308,7 +315,6 @@ export default function FeaturedCaseStudies() {
                     className={`
                       mt-5
                       space-y-4
-                      ${project.slug === "executive-sales-performance-intelligence" ? "pt-6" : ""}
                     `}
                   >
                     {/* Business Challenge */}
