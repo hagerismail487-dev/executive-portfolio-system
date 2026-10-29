@@ -60,8 +60,8 @@ export default function IntegratedRealEstateManagementDashboard() {
             <div className="flex aspect-[16/9] items-center justify-center overflow-hidden rounded-lg border border-[#173d64] bg-[#081a2d] p-5 sm:p-7 lg:p-9">
               <div className="relative h-full w-full overflow-hidden rounded-md border border-[#214a72] bg-[#061321] shadow-[0_15px_50px_rgba(0,0,0,.35)]">
                 <Image
-                  src={project.images.cover}
-                  alt="Integrated Real Estate Management Dashboard landing page"
+                  src="/projects/integrated-real-estate-management-dashboard/02-executive-overview.png"
+                  alt="Integrated Real Estate Management Dashboard Executive Overview"
                   fill
                   priority
                   className="object-contain p-2 sm:p-3"
