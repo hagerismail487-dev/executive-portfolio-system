@@ -1,4 +1,5 @@
-﻿import Link from "next/link";
+import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, LayoutDashboard } from "lucide-react";
 
 import ExecutiveCard from "@/components/design-system/ExecutiveCard";
@@ -58,91 +59,27 @@ export default function CaseStudyCard({
           "
         >
 
-          {/* Placeholder */}
-
-          <div
-            className="
-              absolute
-              inset-0
-
-              flex
-              items-center
-              justify-center
-            "
-          >
-
-            <div className="text-center">
-
-              <div
-                className="
-                  mx-auto
-
-                  flex
-                  h-16
-                  w-16
-
-                  items-center
-                  justify-center
-
-                  rounded-2xl
-
-                  bg-[#EEF5FF]
-                "
-              >
-
-                <LayoutDashboard
-                  className="h-8 w-8 text-[#123A63]"
-                />
-
+          {image.includes("integrated-real-estate-management-dashboard") ? (
+            <Image
+              src={image}
+              alt={`${title} cover`}
+              fill
+              className="object-contain transition-transform duration-500 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-[#EEF5FF]">
+                  <LayoutDashboard className="h-8 w-8 text-[#123A63]" />
+                </div>
+                <h4 className="mt-4 text-[16px] font-semibold text-[#102A56]">
+                  Dashboard Preview
+                </h4>
+                <p className="mt-1 text-[13px] text-slate-400">Coming Soon</p>
               </div>
-                            <h4
-                className="
-                  mt-4
-
-                  text-[16px]
-                  font-semibold
-
-                  text-[#102A56]
-                "
-              >
-                Dashboard Preview
-              </h4>
-
-              <p
-                className="
-                  mt-1
-
-                  text-[13px]
-
-                  text-slate-400
-                "
-              >
-                Coming Soon
-              </p>
-
             </div>
-
-          </div>
-
-          {/* TODO:
-              Replace placeholder with the actual dashboard preview.
-          */}
-
-          {/*
-          <Image
-            src={image}
-            alt={title}
-            fill
-            className="
-              object-cover
-
-              transition-transform
-              duration-500
-
-              group-hover:scale-105
-            "
-          />
-          */}
+          )}
 
         </div>
 
