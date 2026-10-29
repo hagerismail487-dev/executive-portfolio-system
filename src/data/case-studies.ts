@@ -388,36 +388,47 @@ export const caseStudies: CaseStudy[] = [
     featured: true,
     title: "Integrated Real Estate Management Dashboard",
     excerpt:
-      "An integrated executive dashboard connecting key real estate business functions into a unified view of company performance.",
-    category: "Executive Dashboard",
+      "An integrated Power BI management dashboard bringing together operational, sales, financial, human resources, customer experience, and procurement performance.",
+    category: "Executive Dashboard & Business Intelligence",
     filterCategories: ["Real Estate"],
     industry: "Real Estate",
     year: "2026",
     client: "Confidential",
     role: "Senior Data Analyst & MIS Specialist",
     images: {
-      cover: "",
-      gallery: [],
+      cover: "/projects/integrated-real-estate-management-dashboard/01-landing-page.png",
+      gallery: [
+        "/projects/integrated-real-estate-management-dashboard/01-landing-page.png",
+        "/projects/integrated-real-estate-management-dashboard/02-executive-overview.png",
+        "/projects/integrated-real-estate-management-dashboard/03-sales-performance.png",
+        "/projects/integrated-real-estate-management-dashboard/04-human-resources.png",
+        "/projects/integrated-real-estate-management-dashboard/05-customer-experience.png",
+        "/projects/integrated-real-estate-management-dashboard/06-procurement.png",
+      ],
     },
-    tools: ["Power BI", "DAX", "Power Query", "Excel"],
+    tools: ["Microsoft Power BI", "DAX", "Power Query", "Microsoft Excel"],
     objectives: [
-      "Connect key real estate business functions into a unified management view.",
-      "Monitor sales, leads, meetings, orientations, and contract sales value.",
-      "Review cancellation value alongside operational and financial indicators.",
-      "Support data-driven management discussions.",
+      "Provide a consolidated view of business indicators across departments.",
+      "Connect operational, sales, financial, and departmental performance information.",
+      "Support trend exploration and structured management monitoring.",
+      "Create a clearer reporting foundation for management decision support.",
     ],
     content: {
       overview:
-        "An integrated executive dashboard connecting key real estate business functions into a unified view of company performance.",
+        "An integrated Power BI management dashboard designed to bring together key business functions within a real estate company, providing management with a unified view of operational, sales, financial, human resources, customer experience, and procurement performance.",
       challenge:
-        "The company relied on multiple spreadsheets distributed across departments, creating challenges in data organization, consistency, and the risk of information loss. Business data was available, but there was no unified executive view connecting departmental performance, key indicators, and the company’s direction in sales and financial performance.",
+        "The company relied on multiple spreadsheets across different departments, creating challenges in organizing business information and increasing the risk of data being misplaced or overlooked. Although data was available, it was not always presented in a clear, connected format that enabled management to understand the company's overall business direction.",
       solution:
-        "Designed and developed an integrated Real Estate Management Dashboard using Power BI to connect Sales & Real Estate Operations, Marketing & Leads, Finance & Collections, HR, Procurement & Warehouses, and Customer Relations & Brokers. The Executive Overview brings important business indicators together, while dedicated analytical pages provide deeper insights into individual functions.",
+        "Designed and developed an integrated management dashboard in Microsoft Power BI, combining a central executive overview with dedicated analytical pages for sales performance, human resources, customer experience, and procurement. The landing page provides a central navigation experience connecting the main analytical areas within one dashboard.",
       results:
-        "The dashboard provides a centralized view of business performance, making information from different departments easier to access, review, and interpret. It enables management to gain a clearer overview, monitor operational and sales indicators, connect operational activity with financial indicators, identify trends and areas requiring attention, and support data-driven management discussions.",
+        "The dashboard establishes a unified reporting view across key business functions, helping management explore operational and financial indicators within one connected environment. No quantified before-and-after business impact was supplied.",
     },
     businessImpact: [],
-    contactCTA: defaultCTA,
+    contactCTA: {
+      title: "Turning Business Data Into Executive Insight",
+      description:
+        "A connected management reporting experience begins with bringing business information together and presenting it in a structure that supports clearer analysis.",
+    },
   },
 
   {
