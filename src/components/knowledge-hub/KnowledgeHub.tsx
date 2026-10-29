@@ -18,14 +18,17 @@ export default function KnowledgeHub() {
       <section className="overflow-hidden rounded-t-[28px] bg-[#102A56] text-white sm:rounded-t-[40px]">
         <Container className="relative pt-16 pb-[13px] sm:pt-20 lg:pt-24">
           <div className="pointer-events-none absolute -right-32 top-0 h-72 w-72 rounded-full bg-[#D6A84F]/10 blur-3xl" />
-          <div className="relative ml-auto max-w-3xl text-right">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#D6A84F]">
+          <div className="relative mr-auto max-w-3xl text-left">
+            <p
+              className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#C9A56A]"
+              style={{ color: "#C9A56A" }}
+            >
               THE INSIGHT GIRL
             </p>
             <h1 className="mt-5 text-5xl font-semibold tracking-[-0.06em] sm:text-6xl lg:text-7xl">
               Knowledge Hub
             </h1>
-            <p className="mt-6 ml-auto max-w-2xl text-base leading-8 text-blue-100/75 sm:text-lg">
+            <p className="mt-6 max-w-2xl text-base leading-8 text-blue-100/75 sm:text-lg">
               Ideas, insights, and practical thinking at the intersection of business and intelligence.
             </p>
           </div>
