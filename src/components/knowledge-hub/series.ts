@@ -451,6 +451,101 @@ And that is where the real impact of any Reporting System begins.
   },
 };
 
+const executiveMisBuildRulesBeforeReports: SeriesArticle = {
+  id: "executive-mis-build-rules-before-reports",
+  slug: "build-the-rules-before-the-reports",
+  title: "Build the Rules Before the Reports",
+  description: "Why strong reporting begins with clear rules before beautiful reports.",
+  coverImage: {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MIS-04.PNG-lJEix7MhPltmlH6oCeXYUI3mSYzjdz.png",
+    alt: "Executive MIS infographic: Build the rules first, then build the report.",
+  },
+  content: {
+    en: String.raw`# Build the Rules Before the Reports
+
+**Before you build any report... build the rules first.**
+
+Many companies invest significant time in designing reports and dashboards, only to discover later that different departments produce different numbers for the same KPI.
+
+Not because someone made a mistake.
+
+But because there were no clear rules from the beginning.
+
+Before thinking about how a report should look, you need to ask:
+
+- Where does this data come from?
+- Who is responsible for it?
+- When should it be updated?
+- How will it be calculated?
+- And what is the approved definition of each KPI?
+
+When these questions are clear, all reports speak the same language, disagreements decrease, and management can trust the numbers in front of them.
+
+But if you start with the report before establishing the rules...
+
+every new dashboard will create a new discussion.
+
+In my view, this is one of the most important roles of Executive MIS.
+
+Not to build beautiful reports.
+
+But to build a system that ensures every report follows the same standards, regardless of who created it.
+
+Because reports may change.
+
+But the rules are what ensure that the truth remains consistent.
+
+**Where Business Meets Intelligence.**
+
+*Because great reports are built on great rules, not great visuals.*
+
+💬 In your opinion, what is the first rule every company should agree on before building a reporting system?
+
+#ExecutiveMIS #BusinessIntelligence #MIS #ExecutiveReporting #ReportingFramework #DataGovernance #BusinessAnalysis #Leadership`,
+    ar: String.raw`# Build the rules before the reports
+
+**قبل ما تبني أي Report... ابنِ القواعد الأول.**
+
+في شركات كتير بتستثمر وقت كبير في تصميم التقارير ولوحات المتابعة، لكن بعد فترة تكتشف إن كل إدارة بتطلع أرقام مختلفة لنفس الـ KPI.
+
+مش لأن حد غلط.
+
+لكن لأن مفيش قواعد واضحة من البداية.
+
+قبل ما تفكر في شكل التقرير، لازم تسأل:
+
+- البيانات دي جاية منين؟
+- مين المسؤول عنها؟
+- إمتى تتحدث؟
+- إزاي هتتحسب؟
+- وإيه التعريف المعتمد لكل KPI؟
+
+لما الأسئلة دي تكون واضحة، التقارير كلها هتتكلم بنفس اللغة، وهتقل الخلافات، والإدارة هتثق في الأرقام اللي قدامها.
+
+أما لو بدأت بالتقرير قبل ما تبني القواعد...
+
+فكل Dashboard جديدة هتخلق نقاش جديد.
+
+وده في رأيي واحد من أهم أدوار الـ Executive MIS.
+
+مش إنه يبني تقارير جميلة.
+
+لكن إنه يبني نظام يخلي أي تقرير يطلع بنفس المعايير، مهما اختلف الشخص اللي عمله.
+
+لأن التقارير ممكن تتغير.
+
+لكن القواعد هي اللي بتضمن إن الحقيقة تفضل واحدة.
+
+**Where Business Meets Intelligence.**
+
+*Because great reports are built on great rules, not great visuals.*
+
+💬 في رأيك، إيه أول قاعدة لازم أي شركة تتفق عليها قبل ما تبدأ تبني نظام Reporting؟
+
+#ExecutiveMIS #BusinessIntelligence #MIS #ExecutiveReporting #ReportingFramework #DataGovernance #BusinessAnalysis #Leadership`,
+  },
+};
+
 export interface KnowledgeSeries {
   number: string;
   title: string;
@@ -471,6 +566,7 @@ export const knowledgeSeries: KnowledgeSeries[] = [
       executiveMisReportingSystems,
       executiveMisReportingFramework,
       executiveMisOneSourceOfTruth,
+      executiveMisBuildRulesBeforeReports,
     ],
   },
   {
