@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -448,6 +448,29 @@ export default function CustomerExperienceOperationsDashboard() {
           </div>
 </section>
         
+
+        <section className="mt-4 rounded-[12px] border border-[#174574] bg-[#061426]/85 p-4 sm:p-5">
+          <SectionLabel>PROJECT WALKTHROUGH</SectionLabel>
+
+          <p className="mt-2 text-[12px] leading-5 text-[#8fa7bf]">
+            Explore the customer experience and operations dashboard in action.
+          </p>
+
+          <div className="mt-5 overflow-hidden rounded-lg border border-[#214a72] bg-[#020812]">
+            <video
+              className="block h-auto w-full"
+              controls
+              preload="metadata"
+              playsInline
+            >
+              <source
+                src="/projects/customer-experience-operations-dashboard/customer-experience-operations-walkthrough.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </section>
 
         <section
           id="insights"

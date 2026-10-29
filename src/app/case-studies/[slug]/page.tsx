@@ -11,6 +11,7 @@ import ProcurementManagementDashboard from "@/components/case-studies/Procuremen
 import ProcurementInventoryManagementDashboard from "@/components/case-studies/ProcurementInventoryManagementDashboard";
 import SalesMarketingPerformanceIntelligenceDashboard from "@/components/case-studies/SalesMarketingPerformanceIntelligenceDashboard";
 import WorkforceTalentIntelligenceDashboard from "@/components/case-studies/WorkforceTalentIntelligenceDashboard";
+import IntegratedRealEstateManagementDashboard from "@/components/case-studies/IntegratedRealEstateManagementDashboard";
 
 interface PageProps {
   params: Promise<{
@@ -45,6 +46,10 @@ export default async function CaseStudyPage({
 
   if (!project) {
     notFound();
+  }
+
+  if (project.slug === "integrated-real-estate-management-dashboard") {
+    return <IntegratedRealEstateManagementDashboard />;
   }
 
   if (project.slug === "executive-sales-performance-intelligence") {
