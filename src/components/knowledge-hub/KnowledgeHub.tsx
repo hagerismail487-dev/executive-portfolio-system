@@ -46,7 +46,7 @@ export default function KnowledgeHub() {
                 aria-label={`Series ${number} - ${title}`}
               >
                 <div className="flex items-start justify-between gap-6">
-                  <span className="text-3xl font-semibold tracking-[-0.05em] text-[#C6A25A]">
+                  <span className="text-[20px] font-semibold tracking-[-0.05em] text-[#C6A25A]">
                     {`Series  ${number}`}
                   </span>
                   <ArrowUpRight
@@ -54,7 +54,7 @@ export default function KnowledgeHub() {
                     className="h-5 w-5 shrink-0 text-[#B8C1CE] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#102A56]"
                   />
                 </div>
-                <h2 className="mt-8 text-lg font-semibold tracking-[-0.025em] text-[#102A56] sm:text-xl">
+                <h2 className="mt-8 text-[24px] font-semibold tracking-[-0.025em] text-[#102A56]">
                   {title}
                 </h2>
               </article>
