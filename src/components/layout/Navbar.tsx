@@ -1,6 +1,7 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,6 +10,7 @@ import Container from "../ui/Container";
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const sections = [
@@ -64,6 +66,11 @@ export default function Navbar() {
       label: "Case Studies",
       href: "/#projects",
       id: "projects",
+    },
+    {
+      label: "Knowledge Hub",
+      href: "/knowledge-hub",
+      id: "knowledge-hub",
     },
     {
       label: "Services",
@@ -179,6 +186,27 @@ export default function Navbar() {
               <span
                 className={`absolute bottom-0 left-0 h-[2px] rounded-full bg-[#2563EB] transition-all duration-300 ${
                   activeSection === "projects"
+                    ? "w-full opacity-100"
+                    : "w-0 opacity-0"
+                }`}
+              />
+            </Link>
+
+            {/* Knowledge Hub */}
+
+            <Link
+              href="/knowledge-hub"
+              className={`relative pb-1.5 text-[14px] transition-all duration-300 ${
+                pathname === "/knowledge-hub"
+                  ? "font-semibold text-[#123A63]"
+                  : "font-medium text-slate-600 hover:text-[#123A63]"
+              }`}
+            >
+              Knowledge Hub
+
+              <span
+                className={`absolute bottom-0 left-0 h-[2px] rounded-full bg-[#2563EB] transition-all duration-300 ${
+                  pathname === "/knowledge-hub"
                     ? "w-full opacity-100"
                     : "w-0 opacity-0"
                 }`}
@@ -314,7 +342,9 @@ export default function Navbar() {
                     transition-colors
                     duration-200
                     ${
-                      activeSection === item.id
+                      (item.id === "knowledge-hub"
+                        ? pathname === "/knowledge-hub"
+                        : activeSection === item.id)
                         ? "bg-[#F7FAFF] font-semibold text-[#123A63]"
                         : "font-medium text-slate-600 hover:bg-[#F7FAFF] hover:text-[#123A63]"
                     }
