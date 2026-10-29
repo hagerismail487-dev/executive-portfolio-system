@@ -16,7 +16,7 @@ export default function KnowledgeHub() {
   return (
     <div className="min-h-screen bg-[#FAFBFD] pt-16">
       <section className="overflow-hidden rounded-t-[28px] bg-[#102A56] text-white sm:rounded-t-[40px]">
-        <Container className="relative py-20 sm:py-24 lg:py-28">
+        <Container className="relative py-16 sm:py-20 lg:py-24">
           <div className="pointer-events-none absolute -right-32 top-0 h-72 w-72 rounded-full bg-[#D6A84F]/10 blur-3xl" />
           <div className="relative ml-auto max-w-3xl text-right">
             <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#D6A84F]">
@@ -32,7 +32,7 @@ export default function KnowledgeHub() {
         </Container>
       </section>
 
-      <section className="bg-white py-16 sm:py-24 lg:py-28">
+      <section className="bg-white py-12 sm:py-16 lg:py-20">
         <Container>
           <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#B18A3A]">
             EXPLORE BY SERIES
