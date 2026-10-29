@@ -35,20 +35,15 @@ export default async function ArticlePage({
   const { series: seriesSlug, article: articleSlug } = await params;
   const { lang } = await searchParams;
   const series = getKnowledgeSeries(seriesSlug);
+  const article = series?.articles.find((item) => item.slug === articleSlug);
 
-  if (!series || !articleSlug) {
+  if (!series || !article) {
     notFound();
   }
 
   const language: ArticleLanguage = lang === "ar" ? "ar" : "en";
 
-  return (
-    <ArticleReader
-      series={series}
-      articleSlug={articleSlug}
-      language={language}
-    />
-  );
+  return <ArticleReader series={series} article={article} language={language} />;
 }
 
 export function generateStaticParams() {

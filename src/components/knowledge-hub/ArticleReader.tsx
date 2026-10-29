@@ -2,34 +2,67 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 import Container from "@/components/ui/Container";
-import type { KnowledgeSeries } from "./series";
+import type { KnowledgeSeries, SeriesArticle } from "./series";
 
 export type ArticleLanguage = "en" | "ar";
 
 interface ArticleReaderProps {
   series: KnowledgeSeries;
-  articleSlug: string;
+  article: SeriesArticle;
   language: ArticleLanguage;
 }
 
-const languageCopy = {
-  en: {
-    unavailable: "This article is not available in English yet.",
-    support: "English content will appear here when the article is published.",
-  },
-  ar: {
-    unavailable: "هذا المقال غير متاح باللغة العربية بعد.",
-    support: "سيظهر المحتوى العربي هنا عند نشر المقال.",
-  },
-} satisfies Record<ArticleLanguage, { unavailable: string; support: string }>;
+function renderInline(text: string, keyPrefix: string) {
+  return text
+    .split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g)
+    .filter(Boolean)
+    .map((part, index) => {
+      const key = `${keyPrefix}-${index}`;
+      if (part.startsWith("**") && part.endsWith("**")) {
+        return <strong key={key}>{part.slice(2, -2)}</strong>;
+      }
+      if (part.startsWith("*") && part.endsWith("*")) {
+        return <em key={key}>{part.slice(1, -1)}</em>;
+      }
+      return <span key={key}>{part}</span>;
+    });
+}
 
-export default function ArticleReader({
-  series,
-  articleSlug,
-  language,
-}: ArticleReaderProps) {
-  const copy = languageCopy[language];
-  const basePath = `/knowledge-hub/${series.slug}/${articleSlug}`;
+function ArticleContent({ content, language }: { content: string; language: ArticleLanguage }) {
+  const paragraphs = content.split(/\n\n+/);
+  const isArabic = language === "ar";
+
+  return (
+    <div dir={isArabic ? "rtl" : "ltr"} lang={language} className="space-y-6 text-lg leading-9 text-[#334766]">
+      {paragraphs.map((paragraph, index) => {
+        const lines = paragraph.split("\n");
+        const firstLine = lines[0];
+        const isHeading = firstLine.startsWith("# ");
+        const cleanFirstLine = isHeading ? firstLine.slice(2) : firstLine;
+
+        return isHeading ? (
+          <h2 key={index} className="text-3xl font-semibold tracking-[-0.04em] text-[#102A56]">
+            {renderInline(cleanFirstLine, `heading-${index}`)}
+          </h2>
+        ) : (
+          <p key={index}>
+            {lines.map((line, lineIndex) => (
+              <span key={`${index}-${lineIndex}`}>
+                {lineIndex > 0 ? <br /> : null}
+                {renderInline(line, `paragraph-${index}-${lineIndex}`)}
+              </span>
+            ))}
+          </p>
+        );
+      })}
+    </div>
+  );
+}
+
+export default function ArticleReader({ series, article, language }: ArticleReaderProps) {
+  const basePath = `/knowledge-hub/${series.slug}/${article.slug}`;
+  const content = article.content[language];
+  const isArabic = language === "ar";
 
   return (
     <main className="min-h-screen bg-[#F7F9FC] text-[#102A56]">
@@ -50,7 +83,7 @@ export default function ArticleReader({
               Article
             </p>
             <h1 className="mt-5 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">
-              Article unavailable
+              {article.title}
             </h1>
           </div>
         </Container>
@@ -87,12 +120,9 @@ export default function ArticleReader({
               </Link>
             </div>
 
-            <div className="mt-10 border-t border-[#E6EAF0] pt-8">
-              <p className="text-xl font-semibold tracking-[-0.02em] text-[#102A56]">
-                {copy.unavailable}
-              </p>
-              <p className="mt-3 leading-7 text-[#6B7890]">{copy.support}</p>
-            </div>
+            <article className="mt-10 border-t border-[#E6EAF0] pt-8">
+              <ArticleContent content={content} language={language} />
+            </article>
           </div>
         </Container>
       </section>
