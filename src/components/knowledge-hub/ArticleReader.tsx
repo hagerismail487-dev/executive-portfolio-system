@@ -83,11 +83,11 @@ export default function ArticleReader({ series, article, language }: ArticleRead
               Article
             </p>
             {article.coverImage ? (
-              <div className="mt-8 overflow-hidden rounded-2xl border border-white/15 bg-[#061329] shadow-[0_18px_50px_rgba(0,0,0,0.22)]">
+              <div className="mx-auto mt-8 w-full max-w-[720px] overflow-hidden rounded-2xl border border-white/15 bg-[#061329] shadow-[0_18px_50px_rgba(0,0,0,0.22)]">
                 <img
                   src={article.coverImage.src}
                   alt={article.coverImage.alt}
-                  className="block h-auto max-h-[560px] w-full object-contain"
+                  className="mx-auto block h-auto max-h-[420px] w-full object-contain"
                 />
               </div>
             ) : null}
