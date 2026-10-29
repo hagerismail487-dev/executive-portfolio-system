@@ -1,4 +1,4 @@
-﻿import { hrDecisionSupportSystem } from "@/data/hr-decision-support-system";
+import { hrDecisionSupportSystem } from "@/data/hr-decision-support-system";
 import { realEstateDecisionIntelligenceProject } from "@/data/real-estate-decision-intelligence";
 import { crmSalesIntelligenceProject } from "@/data/crm-sales-intelligence";
 import { procurementManagementProject } from "@/data/procurement-management";
@@ -381,6 +381,45 @@ const salesMarketingPerformanceIntelligenceCaseStudy: CaseStudy = {
 };
 
 export const caseStudies: CaseStudy[] = [
+  {
+    id: 10,
+    slug: "integrated-real-estate-management-dashboard",
+    serviceSlug: "executive-dashboards",
+    featured: true,
+    title: "Integrated Real Estate Management Dashboard",
+    excerpt:
+      "An integrated executive dashboard connecting key real estate business functions into a unified view of company performance.",
+    category: "Executive Dashboard",
+    filterCategories: ["Real Estate"],
+    industry: "Real Estate",
+    year: "2026",
+    client: "Confidential",
+    role: "Senior Data Analyst & MIS Specialist",
+    images: {
+      cover: "",
+      gallery: [],
+    },
+    tools: ["Power BI", "DAX", "Power Query", "Excel"],
+    objectives: [
+      "Connect key real estate business functions into a unified management view.",
+      "Monitor sales, leads, meetings, orientations, and contract sales value.",
+      "Review cancellation value alongside operational and financial indicators.",
+      "Support data-driven management discussions.",
+    ],
+    content: {
+      overview:
+        "An integrated executive dashboard connecting key real estate business functions into a unified view of company performance.",
+      challenge:
+        "The company relied on multiple spreadsheets distributed across departments, creating challenges in data organization, consistency, and the risk of information loss. Business data was available, but there was no unified executive view connecting departmental performance, key indicators, and the company’s direction in sales and financial performance.",
+      solution:
+        "Designed and developed an integrated Real Estate Management Dashboard using Power BI to connect Sales & Real Estate Operations, Marketing & Leads, Finance & Collections, HR, Procurement & Warehouses, and Customer Relations & Brokers. The Executive Overview brings important business indicators together, while dedicated analytical pages provide deeper insights into individual functions.",
+      results:
+        "The dashboard provides a centralized view of business performance, making information from different departments easier to access, review, and interpret. It enables management to gain a clearer overview, monitor operational and sales indicators, connect operational activity with financial indicators, identify trends and areas requiring attention, and support data-driven management discussions.",
+    },
+    businessImpact: [],
+    contactCTA: defaultCTA,
+  },
+
   {
     id: 1,
 
