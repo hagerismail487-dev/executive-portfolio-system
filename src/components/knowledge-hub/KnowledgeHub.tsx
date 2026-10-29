@@ -35,7 +35,7 @@ export default function KnowledgeHub() {
         </Container>
       </section>
 
-      <section className="bg-white py-12 sm:py-16 lg:py-20">
+      <section className="bg-white pb-12 pt-12 sm:pb-16 sm:pt-11 lg:pb-20 lg:pt-[60px]">
         <Container>
           <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#B18A3A]">
             EXPLORE BY SERIES
