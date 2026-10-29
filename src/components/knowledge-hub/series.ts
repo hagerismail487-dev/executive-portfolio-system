@@ -211,6 +211,105 @@ System يضمن إن البيانات بتوصل من كل الإدارات بن
   },
 };
 
+const executiveMisReportingFramework: SeriesArticle = {
+  id: "executive-mis-reporting-framework",
+  slug: "every-organization-needs-reporting-framework",
+  title: "Every Organization Needs a Reporting Framework",
+  description: "Why trusted reporting starts with a framework everyone can rely on.",
+  coverImage: {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MIS-02.PNG-01kbTJVxzwFbi9THORw7Ueh3lfPPjp.png",
+    alt: "Executive MIS infographic: Reporting Framework — build it right, trust it always.",
+  },
+  content: {
+    en: String.raw`# Every Organization Needs a Reporting Framework
+
+**Every company needs a Reporting Framework... even if it has the best dashboard.**
+
+Some companies invest significant time and effort in building reports, yet every department operates differently.
+
+Each team calculates KPIs differently.
+
+Each report looks different.
+
+And eventually, everyone asks:
+
+*"Which one is correct?"*
+
+The problem isn't the report itself.
+
+The problem is the absence of a clear framework governing the reporting process.
+
+A successful Reporting Framework needs to answer a few simple questions:
+
+- What data needs to be collected?
+- Who is responsible for it?
+- When should it be updated?
+- How should KPIs be calculated?
+- Who will use the report?
+- And what decision is it supposed to support?
+
+When these questions are clear, reports become clearer, confidence in the numbers grows, and meetings shift from debating data accuracy to discussing decisions.
+
+In my view, that is the difference between a company that has reports...
+
+and a company that has a real Reporting System.
+
+Because a report might solve a temporary problem.
+
+But a Reporting Framework builds a system that continues to serve the organization as it grows.
+
+**Where Business Meets Intelligence.**
+
+*Because great reporting doesn't start with dashboards... it starts with a framework everyone trusts.*
+
+💬 If you were building a Reporting Framework from scratch, what would you start with?
+
+#ExecutiveMIS #BusinessIntelligence #MIS #ExecutiveReporting #ReportingFramework #DecisionSupport #BusinessAnalysis #Leadership`,
+    ar: String.raw`**كل شركة محتاجة Reporting Framework... حتى لو عندها أفضل Dashboard.**
+
+في شركات بتصرف وقت ومجهود كبير على بناء التقارير، لكن كل إدارة بتشتغل بطريقة مختلفة.
+
+كل فريق بيحسب الـ KPIs بشكل مختلف.
+
+وكل تقرير بيطلع بشكل مختلف.
+
+وفي الآخر الكل بيسأل:
+
+"مين فيهم الصح؟"
+
+المشكلة هنا مش في التقرير.
+
+المشكلة إن مفيش Framework واضح يحكم عملية الـ Reporting.
+
+أي Reporting Framework ناجح لازم يجاوب على أسئلة بسيطة:
+
+- إيه البيانات اللي هتتجمع؟
+- مين المسؤول عنها؟
+- إمتى تتحدث؟
+- إزاي تتحسب الـ KPIs؟
+- مين هيستخدم التقرير؟
+- وإيه القرار اللي المفروض يدعمه؟
+
+لما الأسئلة دي تكون واضحة، التقارير نفسها بتبقى أوضح، والثقة في الأرقام بتزيد، والاجتماعات بتتحول من مناقشة صحة البيانات إلى مناقشة القرار.
+
+وده في رأيي هو الفرق بين شركة عندها تقارير...
+
+وشركة عندها نظام Reporting حقيقي.
+
+لأن التقرير ممكن يحل مشكلة مؤقتة.
+
+لكن الـ Reporting Framework بيبني نظام يفضل يخدم الشركة وهي بتكبر.
+
+**Where Business Meets Intelligence.**
+
+*Because great reporting doesn't start with dashboards... it starts with a framework everyone trusts.*
+
+💬 لو كنت بتبني Reporting Framework من الصفر، هتبدأ بإيه؟
+
+#ExecutiveMIS #BusinessIntelligence #MIS #ExecutiveReporting #ReportingFramework #DecisionSupport #BusinessAnalysis #Leadership`,
+  },
+};
+
 export interface KnowledgeSeries {
   number: string;
   title: string;
@@ -226,7 +325,11 @@ export const knowledgeSeries: KnowledgeSeries[] = [
     slug: "executive-mis",
     description:
       "Practical perspectives on management information, reporting clarity, and the signals leaders need to move with confidence.",
-    articles: [executiveMisIntroduction, executiveMisReportingSystems],
+    articles: [
+      executiveMisIntroduction,
+      executiveMisReportingSystems,
+      executiveMisReportingFramework,
+    ],
   },
   {
     number: "02",
