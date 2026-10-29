@@ -2,14 +2,14 @@ import Container from "@/components/ui/Container";
 import { ArrowUpRight } from "lucide-react";
 
 const series = [
-  "Executive MIS",
-  "Executive Lens",
-  "The Decision Room",
-  "Business Thinking",
-  "Behind the Dashboard",
-  "Dashboard Design",
-  "The Analyst's Mind",
-  "Career Beyond Dashboards",
+  "Series 1 - Executive MIS",
+  "Series 2 - Executive Lens",
+  "Series 3 - The Decision Room",
+  "Series 4 - Business Thinking",
+  "Series 5 - Behind the Dashboard",
+  "Series 6 - Dashboard Design",
+  "Series 7 - The Analyst's Mind",
+  "Series 8 - Career Beyond Dashboards",
 ];
 
 export default function KnowledgeHub() {
@@ -43,7 +43,7 @@ export default function KnowledgeHub() {
                 key={title}
                 tabIndex={0}
                 className="group flex min-h-[220px] cursor-pointer flex-col justify-between rounded-2xl border border-[#DCE2EA] bg-white p-8 outline-none transition-all duration-300 hover:-translate-y-1 hover:border-[#C6A25A] hover:shadow-[0_18px_40px_rgba(16,42,86,0.08)] focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-4 sm:min-h-[240px] sm:p-10"
-                aria-label={`Series ${index + 1} - ${title}`}
+                aria-label={title}
               >
                 <div className="flex items-start justify-between gap-6">
                   <span className="text-3xl font-semibold tracking-[-0.05em] text-[#C6A25A]">
@@ -55,7 +55,7 @@ export default function KnowledgeHub() {
                   />
                 </div>
                 <h2 className="mt-8 text-lg font-semibold tracking-[-0.025em] text-[#102A56] sm:text-xl">
-                  Series {index + 1} - {title}
+                  {title}
                 </h2>
               </article>
             ))}
