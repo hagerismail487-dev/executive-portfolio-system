@@ -68,7 +68,21 @@ export default function IntegratedRealEstateManagementDashboard() {
             <p className="mt-4 max-w-xl text-[14px] leading-6 text-[#b7c7d9]">{project.excerpt}</p>
             <a href="#overview" className="mt-6 inline-flex w-fit items-center gap-2 rounded-md bg-[#0969ed] px-4 py-2.5 text-[11px] font-semibold text-white shadow-[0_8px_28px_rgba(9,105,237,.24)] transition hover:bg-[#1777f5]">Explore Case Study <ArrowRight size={13} /></a>
           </div>
-          <div className="relative aspect-[16/9] overflow-hidden rounded-[14px] border border-[#1c4a79] bg-[#061426] shadow-[0_30px_90px_rgba(0,65,140,.24)]"><Image src={project.images.cover} alt="Integrated Real Estate Management Dashboard landing page" fill priority className="object-contain object-top" sizes="(max-width: 1024px) 100vw, 60vw" /></div>
+          <div className="relative overflow-hidden rounded-[14px] border border-[#1c4a79] bg-[#061426] p-3 shadow-[0_30px_90px_rgba(0,65,140,.24)]">
+            <div className="absolute left-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-[#1685ff] to-transparent opacity-70" />
+            <div className="flex aspect-[16/9] items-center justify-center overflow-hidden rounded-lg border border-[#173d64] bg-[#081a2d] p-5 sm:p-7 lg:p-9">
+              <div className="relative h-full w-full overflow-hidden rounded-md border border-[#214a72] bg-[#061321] shadow-[0_15px_50px_rgba(0,0,0,.35)]">
+                <Image
+                  src={project.images.cover}
+                  alt="Integrated Real Estate Management Dashboard landing page"
+                  fill
+                  priority
+                  className="object-contain p-2 sm:p-3"
+                  sizes="(max-width: 1024px) 100vw, 70vw"
+                />
+              </div>
+            </div>
+          </div>
         </section>
 
         <section className="mt-6 rounded-[12px] border border-[#174574] bg-[#061426]/85 p-5 sm:p-6"><SectionLabel>Project Snapshot</SectionLabel><div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">{[[BriefcaseBusiness, "Client", project.client], [Layers3, "Industry", project.industry], [BarChart3, "Year", project.year], [Database, "Tools", project.tools.join(", ")]].map(([Icon, label, value]) => { const SnapshotIcon = Icon as typeof BriefcaseBusiness; return <div key={label as string} className="flex min-h-[70px] items-start gap-3 border-[#143b62] lg:border-r lg:last:border-0 lg:pr-5"><div className="mt-0.5 rounded-lg border border-[#1d5a92] bg-[#0a2340] p-2.5 text-[#64b8ff]"><SnapshotIcon size={16} /></div><div><p className="text-[13px] font-semibold text-[#d7e6f5]">{label as string}</p><p className="mt-1.5 text-[13px] leading-6 text-[#91a8bf]">{value as string}</p></div></div>; })}</div></section>
