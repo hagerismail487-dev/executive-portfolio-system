@@ -116,6 +116,101 @@ Excel؟
   },
 };
 
+const executiveMisReportingSystems: SeriesArticle = {
+  id: "executive-mis-reporting-systems-not-dashboards",
+  slug: "reporting-systems-not-dashboards",
+  title: "Reporting Systems, Not Dashboards",
+  description: "Why trusted reporting systems matter more than dashboards alone.",
+  coverImage: {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MIS-01.PNG-SL7kwFsavdZn2XTjqDMnkoZahM3wCf.png",
+    alt: "Executive MIS infographic: MIS is more than a dashboard.",
+  },
+  content: {
+    en: String.raw`# Reporting Systems, Not Dashboards
+
+When someone mentions **MIS**, the first thing that comes to many people's minds is a dashboard.
+
+But the truth is, a dashboard is only a small part of the bigger picture.
+
+When I started my career, I thought my role was to build a good report and present numbers clearly. But over time, I realized that the value of MIS is not in the report itself. It lies in the system that ensures every number in that report is accurate, up to date, and reliable.
+
+Because managers don't need a new dashboard every day. They need a **Reporting System** they can rely on.
+
+A system that ensures data arrives from every department in a consistent way, that KPIs have a single definition, and that the numbers in every report are the same numbers presented in every meeting.
+
+And that is the real difference.
+
+A **dashboard** answers a question.
+
+But a **Reporting System** ensures that every question is answered with reliable information.
+
+That is why I have come to believe that real MIS work begins before I even open Power BI.
+
+It begins with understanding the data lifecycle, organizing data, connecting departments, standardizing KPI definitions, and building a reporting process that the business can rely on every day.
+
+Because the most beautiful dashboard in the world...
+
+has no real value...
+
+if the system behind it isn't strong.
+
+Ultimately, large organizations don't rely on dashboards alone.
+
+They rely on strong **Reporting Systems**, with dashboards serving as the window through which the system's results are displayed.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because dashboards display information... but reporting systems build trust in that information.*
+
+💬 In your opinion, what matters more to a company: having a beautiful dashboard, or having a Reporting System that ensures every number can be trusted?
+
+#ExecutiveMIS #BusinessIntelligence #MIS #ExecutiveReporting #DecisionSupport #BusinessAnalysis #ReportingSystems #Leadership`,
+    ar: String.raw`# Reporting systems, not dashboards
+
+**لما حد يقول MIS أول حاجة بتيجي في بال ناس كتير هي الـ Dashboard.**
+
+لكن الحقيقة الـ Dashboard مجرد جزء صغير من الصورة.
+
+في بداية شغلي كنت فاكرة إن دوري هو إني أبني تقرير كويس، وأعرض الأرقام بشكل واضح. لكن مع الوقت اكتشفت إن قيمة الـ MIS مش في التقرير نفسه، لكن في النظام اللي بيخلي كل رقم في التقرير يكون دقيق، ومحدث، وقابل للاعتماد عليه.
+
+لأن المدير مش محتاج Dashboard جديدة كل يوم هو محتاج **Reporting System** يقدر يعتمد عليه.
+
+System يضمن إن البيانات بتوصل من كل الإدارات بنفس الطريقة، وإن الـ KPIs ليها تعريف واحد، وإن الأرقام في كل تقرير هي نفس الأرقام اللي هتطلع في أي اجتماع.
+
+وده هو الفرق الحقيقي.
+
+الـ Dashboard بتجاوب على سؤال.
+
+لكن الـ Reporting System بيضمن إن كل الأسئلة تتجاوب بإجابات موثوقة.
+
+علشان كده بقيت مؤمنة إن شغل الـ MIS الحقيقي يبدأ قبل ما أفتح Power BI.
+
+يبدأ من فهم دورة البيانات، وتنظيمها، وربط الإدارات ببعض، وتوحيد تعريفات الـ KPIs، وبناء عملية Reporting يقدر البزنس يعتمد عليها كل يوم.
+
+لأن أجمل Dashboard في العالم...
+
+مش هتكون ليها قيمة...
+
+لو النظام اللي وراها مش قوي.
+
+في النهاية، الشركات الكبيرة ما بتعتمدش على Dashboards فقط.
+
+هي بتعتمد على **Reporting Systems** قوية، والـ Dashboards مجرد نافذة بتعرض نتائج النظام ده.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because dashboards display information... but reporting systems build trust in that information.*
+
+💬 في رأيك... إيه الأهم لأي شركة: إنها تمتلك Dashboard جميلة، ولا Reporting System يضمن إن كل رقم فيها موثوق؟
+
+#ExecutiveMIS #BusinessIntelligence #MIS #ExecutiveReporting #DecisionSupport #BusinessAnalysis #ReportingSystems #Leadership`,
+  },
+};
+
 export interface KnowledgeSeries {
   number: string;
   title: string;
@@ -131,7 +226,7 @@ export const knowledgeSeries: KnowledgeSeries[] = [
     slug: "executive-mis",
     description:
       "Practical perspectives on management information, reporting clarity, and the signals leaders need to move with confidence.",
-    articles: [executiveMisIntroduction],
+    articles: [executiveMisIntroduction, executiveMisReportingSystems],
   },
   {
     number: "02",
