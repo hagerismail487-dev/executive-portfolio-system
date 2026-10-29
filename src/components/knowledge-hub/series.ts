@@ -1,5 +1,6 @@
 export interface SeriesArticle {
   id: string;
+  number: string;
   slug: string;
   title: string;
   description?: string;
@@ -15,6 +16,7 @@ export interface SeriesArticle {
 
 const executiveMisIntroduction: SeriesArticle = {
   id: "executive-mis-introduction",
+  number: "00",
   slug: "introduction-to-executive-mis",
   title: "Introduction to Executive MIS",
   description: "Where Business Meets Intelligence.",
@@ -118,6 +120,7 @@ Excel؟
 
 const executiveMisReportingSystems: SeriesArticle = {
   id: "executive-mis-reporting-systems-not-dashboards",
+  number: "01",
   slug: "reporting-systems-not-dashboards",
   title: "Reporting Systems, Not Dashboards",
   description: "Why trusted reporting systems matter more than dashboards alone.",
@@ -213,6 +216,7 @@ System يضمن إن البيانات بتوصل من كل الإدارات بن
 
 const executiveMisReportingFramework: SeriesArticle = {
   id: "executive-mis-reporting-framework",
+  number: "02",
   slug: "every-organization-needs-reporting-framework",
   title: "Every Organization Needs a Reporting Framework",
   description: "Why trusted reporting starts with a framework everyone can rely on.",
@@ -312,6 +316,7 @@ But a Reporting Framework builds a system that continues to serve the organizati
 
 const executiveMisOneSourceOfTruth: SeriesArticle = {
   id: "executive-mis-one-source-of-truth",
+  number: "03",
   slug: "one-source-of-truth",
   title: "One Source of Truth",
   description: "Why trusted decisions begin with one trusted source of data.",
@@ -453,6 +458,7 @@ And that is where the real impact of any Reporting System begins.
 
 const executiveMisBuildRulesBeforeReports: SeriesArticle = {
   id: "executive-mis-build-rules-before-reports",
+  number: "04",
   slug: "build-the-rules-before-the-reports",
   title: "Build the Rules Before the Reports",
   description: "Why strong reporting begins with clear rules before beautiful reports.",
