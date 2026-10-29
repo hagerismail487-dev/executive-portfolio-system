@@ -1,4 +1,4 @@
-﻿import { hrDecisionSupportSystem } from "@/data/hr-decision-support-system";
+import { hrDecisionSupportSystem } from "@/data/hr-decision-support-system";
 import { realEstateDecisionIntelligenceProject } from "@/data/real-estate-decision-intelligence";
 import { crmSalesIntelligenceProject } from "@/data/crm-sales-intelligence";
 import { procurementManagementProject } from "@/data/procurement-management";
@@ -381,6 +381,56 @@ const salesMarketingPerformanceIntelligenceCaseStudy: CaseStudy = {
 };
 
 export const caseStudies: CaseStudy[] = [
+  {
+    id: 10,
+    slug: "integrated-real-estate-management-dashboard",
+    serviceSlug: "executive-dashboards",
+    featured: true,
+    title: "Integrated Real Estate Management Dashboard",
+    excerpt:
+      "An integrated Power BI management dashboard bringing together operational, sales, financial, human resources, customer experience, and procurement performance.",
+    category: "Executive Dashboard & Business Intelligence",
+    filterCategories: ["Real Estate"],
+    industry: "Real Estate",
+    year: "2026",
+    client: "Confidential",
+    role: "Senior Data Analyst & MIS Specialist",
+    images: {
+      cover: "/projects/integrated-real-estate-management-dashboard/01-landing-page.png",
+      gallery: [
+        "/projects/integrated-real-estate-management-dashboard/01-landing-page.png",
+        "/projects/integrated-real-estate-management-dashboard/02-executive-overview.png",
+        "/projects/integrated-real-estate-management-dashboard/03-sales-performance.png",
+        "/projects/integrated-real-estate-management-dashboard/04-human-resources.png",
+        "/projects/integrated-real-estate-management-dashboard/05-customer-experience.png",
+        "/projects/integrated-real-estate-management-dashboard/06-procurement.png",
+      ],
+    },
+    tools: ["Microsoft Power BI", "DAX", "Power Query", "Microsoft Excel"],
+    objectives: [
+      "Provide a consolidated view of business indicators across departments.",
+      "Connect operational, sales, financial, and departmental performance information.",
+      "Support trend exploration and structured management monitoring.",
+      "Create a clearer reporting foundation for management decision support.",
+    ],
+    content: {
+      overview:
+        "An integrated Power BI management dashboard designed to bring together key business functions within a real estate company, providing management with a unified view of operational, sales, financial, human resources, customer experience, and procurement performance.",
+      challenge:
+        "The company relied on multiple spreadsheets across different departments, creating challenges in organizing business information and increasing the risk of data being misplaced or overlooked. Although data was available, it was not always presented in a clear, connected format that enabled management to understand the company's overall business direction.",
+      solution:
+        "Designed and developed an integrated management dashboard in Microsoft Power BI, combining a central executive overview with dedicated analytical pages for sales performance, human resources, customer experience, and procurement. The landing page provides a central navigation experience connecting the main analytical areas within one dashboard.",
+      results:
+        "The dashboard establishes a unified reporting view across key business functions, helping management explore operational and financial indicators within one connected environment. No quantified before-and-after business impact was supplied.",
+    },
+    businessImpact: [],
+    contactCTA: {
+      title: "Turning Business Data Into Executive Insight",
+      description:
+        "A connected management reporting experience begins with bringing business information together and presenting it in a structure that supports clearer analysis.",
+    },
+  },
+
   {
     id: 1,
 

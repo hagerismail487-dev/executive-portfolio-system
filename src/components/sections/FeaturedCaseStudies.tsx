@@ -201,24 +201,33 @@ export default function FeaturedCaseStudies() {
                       bg-transparent
                     "
                   >
-                    <Image
-                      src={project.images.cover}
-                      alt={`${project.title} dashboard preview`}
-                      fill
-                      className="
-                        object-contain
-                        object-top
-                        transition-transform
-                        duration-500
-                        ease-out
-                        group-hover/preview:scale-[1.04]
-                      "
-                      sizes="
-                        (max-width: 768px) 100vw,
-                        (max-width: 1200px) 50vw,
-                        33vw
-                      "
-                    />
+                    {project.images.cover ? (
+                      <Image
+                        src={project.images.cover}
+                        alt={`${project.title} dashboard preview`}
+                        fill
+                        priority
+                        className="
+                          object-contain
+                          object-top
+                          transition-transform
+                          duration-500
+                          ease-out
+                          group-hover/preview:scale-[1.04]
+                        "
+                        sizes="
+                          (max-width: 768px) 100vw,
+                          (max-width: 1200px) 50vw,
+                          33vw
+                        "
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center bg-[#07192B] px-6 text-center">
+                        <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#8DBBFF]">
+                          Project Preview
+                        </span>
+                      </div>
+                    )}
 
                     <div
                       className="
