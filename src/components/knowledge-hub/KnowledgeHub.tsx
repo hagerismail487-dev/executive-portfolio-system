@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const series = [
   { number: "01", title: "Executive MIS" },
+  { number: "02", title: "Executive Lens" },
   { number: "03", title: "The Decision Room" },
   { number: "04", title: "Business Thinking" },
   { number: "05", title: "Behind the Dashboard" },
