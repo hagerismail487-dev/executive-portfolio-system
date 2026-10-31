@@ -662,6 +662,118 @@ The goal is to ensure that the decision built on it is the right one.
   },
 };
 
+const executiveMisDataQualityComesFirst: SeriesArticle = {
+  id: "executive-mis-data-quality-comes-first",
+  number: "06",
+  slug: "data-quality-comes-first",
+  title: "Data Quality Comes First",
+  description: "Why trust in executive reporting begins with reliable data quality.",
+  coverImage: {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MIS-06.PNG-LfHoV5VP0a9w68pEhjzmudXKI2mVOm.png",
+    alt: "Executive MIS infographic: Trust in reports is built by data quality.",
+  },
+  content: {
+    en: String.raw`# Data Quality Comes First
+
+**No Executive Report can be stronger than the quality of the data it is built on.**
+
+You may have the best dashboard, the most accurate KPIs, and the fastest reporting process. But if the data itself has a problem, everything that follows becomes questionable.
+
+That is why the first question I have learned to ask in any project is not:
+
+*"How will we present the data?"*
+
+But:
+
+**"Can we trust it?"**
+
+Because in the world of MIS...
+
+Trust matters more than speed.
+
+A report delivered one day late is better than a report delivered on time with incorrect numbers.
+
+That is why data quality is not just one stage of a project.
+
+It is the foundation of the entire project.
+
+There must be clear rules for data entry, continuous reviews, standardized definitions, and mechanisms to detect errors before they reach management.
+
+Because every small data error can become much bigger when it turns into a decision.
+
+And this is the real role of MIS.
+
+Not simply to collect data.
+
+But to ensure that the data behind every decision is reliable.
+
+Because a manager can deal with bad news, but it is much harder to deal with a number they cannot trust.
+
+And ultimately...
+
+The value of any reporting system is not measured by the number of reports it produces.
+
+It is measured by how much management trusts every number it presents.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because in Executive MIS, trust begins long before the report is published... it begins with data quality.*
+
+💬 In your opinion, which is more dangerous: **a delayed report or an on-time report with inaccurate data?**
+
+#ExecutiveMIS #BusinessIntelligence #MIS #DataQuality #ExecutiveReporting #DataGovernance #BusinessAnalysis #DecisionSupport`,
+    ar: String.raw`# Data Quality Comes First
+
+**مفيش Executive Report تقدر تكون أقوى من جودة البيانات اللي اتبنت عليها.**
+
+ممكن يكون عندك أفضل Dashboard وأدق KPIs وأسرع Reporting Process لكن لو البيانات نفسها فيها مشكلة فكل اللي بعدها هيبقى محل شك.
+
+وده السبب إن أول سؤال بقيت أسأله في أي مشروع مش:
+
+*"هنعرض البيانات إزاي؟"*
+
+لكن:
+
+**"هل نقدر نثق فيها؟"**
+
+لأن في عالم الـ MIS...
+
+الثقة أهم من السرعة
+
+وجود تقرير يوصل متأخر يوم أفضل من تقرير يوصل في معاده لكن أرقامه غلط.
+
+علشان كده جودة البيانات مش مرحلة في المشروع.
+
+هي أساس المشروع كله لازم يكون فيه قواعد واضحة لإدخال البيانات ومراجعة مستمرة وتعريفات موحدة وآلية لاكتشاف الأخطاء قبل ما توصل للإدارة.
+
+لأن كل خطأ صغير في البيانات ممكن يكبر جدًا لما يتحول إلى قرار.
+
+وده هو الدور الحقيقي للـ MIS مش إنها تجمع البيانات فقط.
+
+لكن إنها تضمن إن البيانات اللي هيتبني عليها القرار بيانات موثوقة.
+
+لأن المدير يقدر يتعامل مع خبر سيئ لكن صعب جدًا يتعامل مع رقم مش واثق فيه.
+
+وفي النهاية...
+
+قيمة أي نظام Reporting مش بعدد التقارير اللي بيطلعها.
+
+قيمته بمدى ثقة الإدارة في كل رقم بيظهر فيها.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because in Executive MIS, trust begins long before the report is published... it begins with data quality.*
+
+💬 في رأيك... أيهما أخطر: **تقرير متأخر** أم **تقرير في موعده لكن بياناته غير دقيقة؟**
+
+#ExecutiveMIS #BusinessIntelligence #MIS #DataQuality #ExecutiveReporting #DataGovernance #BusinessAnalysis #DecisionSupport`,
+  },
+};
+
 export interface KnowledgeSeries {
   number: string;
   title: string;
@@ -684,6 +796,7 @@ export const knowledgeSeries: KnowledgeSeries[] = [
       executiveMisOneSourceOfTruth,
       executiveMisBuildRulesBeforeReports,
       executiveMisReportingIsBusinessProcess,
+      executiveMisDataQualityComesFirst,
     ],
   },
   {
