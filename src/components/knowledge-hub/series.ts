@@ -552,6 +552,116 @@ But the rules are what ensure that the truth remains consistent.
   },
 };
 
+const executiveMisReportingIsBusinessProcess: SeriesArticle = {
+  id: "executive-mis-reporting-is-a-business-process",
+  number: "05",
+  slug: "reporting-is-a-business-process",
+  title: "Reporting Is a Business Process",
+  description: "Why reporting is a complete business process, not just a task.",
+  coverImage: {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MIS-05-9Cqapkqs0Fe8v8pN8VWbQeAxDqNZ5l.png",
+    alt: "Executive MIS infographic: Reporting is a business process, not just a task.",
+  },
+  content: {
+    en: String.raw`# Reporting Is a Business Process
+
+**Many people treat Reporting as a task.**
+
+- A daily report.
+- A weekly report.
+- Or a monthly report.
+
+Something that gets prepared, sent, and that's it.
+
+But the truth is, Reporting is not just a task. It is a **Business Process**.
+
+It is a complete process that starts long before the report itself is written.
+
+It begins with collecting data, reviewing it, and ensuring its quality.
+
+Then standardizing KPI definitions, analyzing results, presenting them in the right format, and finally supporting decision-making.
+
+If any of these steps is weak, the entire report loses its value.
+
+That is why successful companies do not focus only on the report itself. They focus on the process that produces it.
+
+This is why I have come to see every report as an outcome, not a starting point.
+
+Because a good report is a reflection of a good Reporting process.
+
+And if the process has a problem, no dashboard can hide it.
+
+This is one of the most important roles of MIS:
+
+Building a clear process where everyone understands their role.
+
+Every department knows its responsibilities.
+
+And every report is produced with consistent quality, every time.
+
+Because the goal is not simply to deliver the report on time.
+
+The goal is to ensure that the decision built on it is the right one.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because reporting isn't a document you send... it's a business process that supports every important decision.*
+
+💬 From your work experience, which stage causes the most challenges in the Reporting process?
+
+#ExecutiveMIS #BusinessIntelligence #MIS #Reporting #BusinessProcess #ExecutiveReporting #DecisionSupport #BusinessAnalysis`,
+    ar: String.raw`**كتير من الناس بتتعامل مع الـ Reporting على إنها مهمة.**
+
+- تقرير يومي.
+- أو أسبوعي.
+- أو شهري.
+
+يتعمل ويتبعت وخلاص.
+
+لكن الحقيقة الـ Reporting مش مهمة هي **Business Process**.
+
+يعني عملية كاملة بتبدأ قبل ما التقرير يتكتب بوقت طويل.
+
+بتبدأ من جمع البيانات ثم مراجعتها ثم التأكد من جودتها.
+
+ثم توحيد تعريفات الـ KPIs ثم تحليل النتائج ثم عرضها بالشكل المناسب.
+
+وأخيرًا اتخاذ القرار.
+
+ولو أي خطوة من الخطوات دي ضعفت التقرير كله هيفقد قيمته.
+
+وده السبب إن الشركات الناجحة ما بتركزش على التقرير نفسه بتركز على العملية اللي بتنتجه
+
+علشان كده بقيت أشوف أي Report كنتيجة مش كبداية لأن التقرير الجيد هو انعكاس لعملية Reporting جيدة.
+
+ولو العملية فيها مشكلة مفيش Dashboard هتقدر تخفيها.
+
+وده واحد من أهم أدوار الـ MIS.
+
+إنها تبني Process واضحة كل شخص يعرف دوره فيها.
+
+وكل إدارة تعرف مسؤوليتها.
+
+وكل تقرير يطلع بنفس الجودة في كل مرة.
+
+لأن الهدف مش إن التقرير يوصل في موعده.
+
+الهدف إن القرار اللي هيُبنى عليه يكون قرارًا صحيحًا.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because reporting isn't a document you send... it's a business process that supports every important decision.*
+
+💬 من واقع شغلك، إيه أكتر مرحلة بتسبب مشاكل في الـ Reporting؟
+
+#ExecutiveMIS #BusinessIntelligence #MIS #Reporting #BusinessProcess #ExecutiveReporting #DecisionSupport #BusinessAnalysis`,
+  },
+};
+
 export interface KnowledgeSeries {
   number: string;
   title: string;
@@ -573,6 +683,7 @@ export const knowledgeSeries: KnowledgeSeries[] = [
       executiveMisReportingFramework,
       executiveMisOneSourceOfTruth,
       executiveMisBuildRulesBeforeReports,
+      executiveMisReportingIsBusinessProcess,
     ],
   },
   {
