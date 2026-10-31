@@ -188,7 +188,7 @@ System يضمن إن البيانات بتوصل من كل الإدارات بن
 
 لكن الـ Reporting System بيضمن إن كل الأسئلة تتجاوب بإجابات موثوقة.
 
-علشان كده بقيت مؤمنة إن شغل الـ MIS الحقيقي يبدأ قبل ما أفتح Power BI.
+علشان كده بقيت مؤمنة إن شغل الـ MIS ا��حقيقي يبدأ قبل ما أفتح Power BI.
 
 يبدأ من فهم دورة البيانات، وتنظيمها، وربط الإدارات ببعض، وتوحيد تعريفات الـ KPIs، وبناء عملية Reporting يقدر البزنس يعتمد عليها كل يوم.
 
@@ -793,7 +793,7 @@ const executiveMisGovernanceBuildsTrust: SeriesArticle = {
 
 لكن أول ما يحصل اختلاف في رقم محدش يعرف يرجع لمصدره.
 
-- مين عدّل البيانات؟
+- مين عدّل ��لبيانات؟
 - إمتى اتحدثت؟
 - مين مسؤول عن الـ KPI دي؟
 - وإيه تعريفها أصلًا؟
@@ -884,6 +884,104 @@ It is the one that makes anyone in the company believe the first number they see
   },
 };
 
+const executiveMisHiddenCostInconsistentData: SeriesArticle = {
+  id: "executive-mis-hidden-cost-inconsistent-data",
+  number: "08",
+  slug: "hidden-cost-of-inconsistent-data",
+  title: "The Hidden Cost of Inconsistent Data",
+  description: "Why inconsistent data creates expensive business decisions.",
+  coverImage: {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MIS-08.PNG-caRP61Kziz5fMiFrHCAX0vXRhnKXrn.png",
+    alt: "Executive MIS infographic: Inconsistent data costs decisions.",
+  },
+  content: {
+    ar: String.raw`# The Hidden Cost of Inconsistent Data
+
+**لما البيانات تكون غير متسقة المشكلة مش في التقرير المشكلة في كل قرار هيتبني عليه**
+
+تخيل إن قسم المبيعات بيحسب "العميل النشط" بطريقة وقسم خدمة العملاء بيحسبه بطريقة تانية والإدارة بتراجع تقريرين...
+
+كل واحد فيهم بيقول رقم مختلف.
+
+في اللحظة دي مفيش حد هيعرف ياخد قرار بثقة لأن السؤال هيبقى:
+
+**"أنهي رقم هو الصح؟"**
+
+والأسوأ من كده إن تكلفة عدم اتساق البيانات مش بتظهر في الـ Dashboard.
+
+بتظهر في الوقت الضائع في الاجتماعات الطويلة في إعادة مراجعة الأرقام وفي القرارات اللي بتتأجل.
+
+وأحيانًا في القرارات اللي بتتاخد بناءً على معلومة غير صحيحة.
+
+وده هو الثمن الحقيقي مش إن الرقم مختلف لكن إن الشركة تستهلك وقتها في مناقشة البيانات بدل ما تناقش البزنس.
+
+علشان كده بقيت مؤمنة إن توحيد البيانات مش مشروع تقني ده مشروع إداري لأن أول خطوة لتحسين سرعة اتخاذ القرار...
+
+مش بناء Dashboard جديدة لكن التأكد إن كل شخص في الشركة بيتكلم بنفس لغة البيانات.
+
+لأن أي نظام MIS ناجح مش بيقاس بعدد التقارير اللي بينتجها لكن بيتقاس بعدد الاجتماعات اللي بتبدأ مباشرة بالحلول...
+
+لأن محدش احتاج يناقش الأرقام.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because inconsistent data doesn't just create reporting problems... it creates expensive business decisions.*
+
+💬 في رأيك... إيه أكبر تكلفة لعدم اتساق البيانات داخل الشركات: **الوقت الضائع، فقدان الثقة، ولا القرارات الخاطئة؟**
+
+#ExecutiveMIS #BusinessIntelligence #MIS #DataQuality #DataGovernance #ExecutiveReporting #BusinessAnalysis #DecisionSupport`,
+    en: String.raw`# The Hidden Cost of Inconsistent Data
+
+**When data is inconsistent, the problem is not just the report. It is every decision built on it.**
+
+Imagine the Sales Department calculates an "Active Customer" one way, while Customer Service uses a different definition.
+
+Management reviews two reports...
+
+And each one shows a different number.
+
+At that moment, no one can make a decision with confidence, because the question becomes:
+
+**"Which number is correct?"**
+
+And the worst part is that the cost of inconsistent data does not appear on the dashboard.
+
+It appears in the time wasted in lengthy meetings, in repeatedly reviewing numbers, and in decisions that get delayed.
+
+And sometimes, in decisions made based on incorrect information.
+
+That is the real cost.
+
+It is not simply that the numbers are different. It is that the company spends its time discussing data instead of discussing the business.
+
+That is why I have come to believe that data standardization is not just a technical project. It is a management initiative.
+
+Because the first step toward improving decision-making speed...
+
+Is not building another dashboard.
+
+It is making sure that everyone in the company speaks the same data language.
+
+Because a successful MIS system should not be measured by the number of reports it produces.
+
+It should be measured by the number of meetings that can start directly with solutions...
+
+Because no one needs to spend time debating the numbers.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because inconsistent data doesn't just create reporting problems... it creates expensive business decisions.*
+
+💬 In your opinion, what is the biggest cost of inconsistent data within companies: **wasted time, loss of trust, or incorrect decisions?**
+
+#ExecutiveMIS #BusinessIntelligence #MIS #DataQuality #DataGovernance #ExecutiveReporting #BusinessAnalysis #DecisionSupport`,
+  },
+};
+
 export interface KnowledgeSeries {
   number: string;
   title: string;
@@ -908,6 +1006,7 @@ export const knowledgeSeries: KnowledgeSeries[] = [
       executiveMisReportingIsBusinessProcess,
       executiveMisDataQualityComesFirst,
       executiveMisGovernanceBuildsTrust,
+      executiveMisHiddenCostInconsistentData,
     ],
   },
   {
