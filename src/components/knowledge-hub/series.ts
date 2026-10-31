@@ -774,6 +774,116 @@ It is measured by how much management trusts every number it presents.
   },
 };
 
+const executiveMisGovernanceBuildsTrust: SeriesArticle = {
+  id: "executive-mis-governance-builds-trust",
+  number: "07",
+  slug: "governance-builds-trust",
+  title: "Governance Builds Trust",
+  description: "Why governance turns reliable data into trusted reporting.",
+  coverImage: {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MIS-07.PNG-qcm4dLxDBjxpAH7uVDdECqIadwfbVY.png",
+    alt: "Executive MIS infographic: Trust in reports is built by governance.",
+  },
+  content: {
+    ar: String.raw`# Governance Builds Trust
+
+**الثقة في التقارير ما بتتبنيش بالدقة فقط بتتبني بالـ Governance.**
+
+كتير من الشركات عندها بيانات جيدة.
+
+لكن أول ما يحصل اختلاف في رقم محدش يعرف يرجع لمصدره.
+
+- مين عدّل البيانات؟
+- إمتى اتحدثت؟
+- مين مسؤول عن الـ KPI دي؟
+- وإيه تعريفها أصلًا؟
+
+في اللحظة دي المشكلة ما بتبقاش في التقرير.
+
+المشكلة إن مفيش نظام يحكم البيانات وده هو معنى **Data Governance**.
+
+إن يبقى لكل رقم مالك ولكل KPI تعريف واضح ولكل تقرير قواعد ثابتة ولكل تعديل أثر يمكن تتبعه.
+
+لأن الـ Governance مش هدفها تعقيد الشغل.
+
+هدفها إن أي شخص يفتح التقرير يبقى واثق إن كل رقم فيه له مصدر معروف، وتعريف واضح، ومسؤولية محددة.
+
+وده اللي بيخلي الإدارة تثق في المعلومات
+
+ولما الإدارة تثق في البيانات بتاخد القرار أسرع وبثقة أكبر.
+
+علشان كده بقيت مؤمنة إن الـ Governance مش موضوع خاص بإدارة البيانات فقط.
+
+دي جزء أساسي من شغل الـ MIS لأن التقارير ممكن تتغير والـ Dashboards ممكن تتطور.
+
+لكن الثقة لازم تفضل ثابتة.
+
+وفي النهاية أفضل نظام Reporting مش هو اللي بيطلع أكبر عدد من التقارير.
+
+هو اللي يخلي أي شخص في الشركة يصدق أول رقم يشوفه لأنه عارف النظام اللي وراه.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because governance doesn't control data... it builds trust in every decision made from it.*
+
+💬 في رأيك... إيه أول خطوة لبناء الثقة في البيانات داخل أي شركة: **توحيد تعريفات الـ KPIs**، ولا **تحديد مسؤولية كل بيانات**؟
+
+#ExecutiveMIS #BusinessIntelligence #MIS #DataGovernance #ExecutiveReporting #BusinessAnalysis #DecisionSupport #Leadership`,
+    en: String.raw`# Governance Builds Trust
+
+**Trust in reporting is not built on accuracy alone. It is also built on Governance.**
+
+Many companies have good-quality data.
+
+But when a discrepancy appears in a number, no one knows how to trace it back to its source.
+
+- Who modified the data?
+- When was it updated?
+- Who is responsible for this KPI?
+- And what is its actual definition?
+
+At that moment, the problem is no longer the report itself.
+
+The problem is the absence of a system that governs the data.
+
+And that is what **Data Governance** means.
+
+Every number has an owner, every KPI has a clear definition, every report follows consistent rules, and every modification leaves a traceable record.
+
+Because Governance is not meant to make work more complicated.
+
+Its purpose is to ensure that anyone opening a report can trust that every number has a known source, a clear definition, and defined ownership.
+
+That is what builds management's trust in information.
+
+And when management trusts the data, decisions can be made faster and with greater confidence.
+
+That is why I have come to believe that Governance is not a responsibility limited to the Data Management department.
+
+It is an essential part of MIS.
+
+Reports may change, and dashboards may evolve.
+
+But trust must remain consistent.
+
+Ultimately, the best reporting system is not the one that produces the largest number of reports.
+
+It is the one that makes anyone in the company believe the first number they see, because they understand the system behind it.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because governance doesn't control data... it builds trust in every decision made from it.*
+
+💬 In your opinion, what is the first step toward building trust in data within any company: **standardizing KPI definitions** or **assigning clear ownership of every data element?**
+
+#ExecutiveMIS #BusinessIntelligence #MIS #DataGovernance #ExecutiveReporting #BusinessAnalysis #DecisionSupport #Leadership`,
+  },
+};
+
 export interface KnowledgeSeries {
   number: string;
   title: string;
@@ -797,6 +907,7 @@ export const knowledgeSeries: KnowledgeSeries[] = [
       executiveMisBuildRulesBeforeReports,
       executiveMisReportingIsBusinessProcess,
       executiveMisDataQualityComesFirst,
+      executiveMisGovernanceBuildsTrust,
     ],
   },
   {
