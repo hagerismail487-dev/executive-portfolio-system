@@ -648,7 +648,7 @@ The goal is to ensure that the decision built on it is the right one.
 
 لأن الهدف مش إن التقرير يوصل في موعده.
 
-الهدف إن القرار اللي هيُبنى عليه يكون قرارًا صحيحًا.
+الهدف إن القرار اللي هيُبن�� عليه يكون قرارًا صحيحًا.
 
 ---
 
@@ -982,6 +982,118 @@ Because no one needs to spend time debating the numbers.
   },
 };
 
+const executiveMisEveryDatasetNeedsOwner: SeriesArticle = {
+  id: "executive-mis-every-dataset-needs-an-owner",
+  number: "09",
+  slug: "every-dataset-needs-an-owner",
+  title: "Every Dataset Needs an Owner",
+  description: "Why every dataset needs clear ownership for trusted reporting.",
+  coverImage: {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MIS-09.PNG-1EFN8yOMkPXRr0o7CRX1Pcf4KQcg9Z.png",
+    alt: "Executive MIS infographic: Every dataset needs an owner.",
+  },
+  content: {
+    ar: String.raw`**لما تلاقي مشكلة في البيانات...**
+
+أول سؤال لازم يتسأل مش:
+
+*"إيه الخطأ؟"*
+
+لكن:
+
+**مين مسؤول عن البيانات دي؟**
+
+لأن من أكبر أسباب ضعف أنظمة الـ MIS إن البيانات بتكون "مسؤولية الجميع".
+
+وفي الحقيقة لما كل الناس تبقى مسؤولة...
+
+محدش بيكون مسؤول.
+
+كل Dataset داخل الشركة لازم يكون ليها **Owner** شخص أو إدارة مسؤولة عنها.
+
+تعرف مصدرها وتراجع جودتها وتعتمد أي تغيير فيها وتكون المرجع الأساسي لأي استفسار يخصها.
+
+لأن وجود Data Owner مش معناه إنه هو اللي بيدخل كل البيانات.
+
+لكن معناه إن فيه شخص يتحمل مسؤولية صحتها وده بيغير طريقة الشغل بالكامل.
+
+بدل ما أي مشكلة في البيانات تفضل تدور بين الإدارات يبقى معروف مين يراجعها ومين يقرر ومين يوافق على أي تعديل.
+
+وده هو جوهر الـ **Data Governance**.
+
+إن كل معلومة داخل الشركة يبقى ليها مالك واضح.
+
+علشان لما الإدارة تعتمد على رقم تبقى عارفة إن فيه شخص مسؤول عنه مش مجرد ملف Excel بيتنقل بين الأقسام.
+
+وفي رأيي...
+
+واحدة من علامات نضج أي نظام MIS إنك تقدر تجاوب على أي سؤال عن أي Dataset بجملة واحدة:
+
+**"مين مالك البيانات دي؟"**
+
+ولو مفيش إجابة واضحة فدي أول مشكلة لازم تتحل.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because every dataset needs an owner... and every important decision needs someone accountable for the data behind it.*
+
+💬 هل كل Dataset في شركتكم ليها شخص واضح مسؤول عنها؟
+
+#ExecutiveMIS #BusinessIntelligence #MIS #DataGovernance #DataManagement #ExecutiveReporting #BusinessAnalysis #DecisionSupport`,
+    en: String.raw`# Every Dataset Needs an Owner
+
+**When you find a problem in the data...**
+
+The first question should not be:
+
+*"What's the error?"*
+
+But:
+
+**"Who is responsible for this data?"**
+
+One of the biggest reasons MIS systems become weak is that data is treated as "everyone's responsibility."
+
+But in reality, when everyone is responsible...
+
+No one is accountable.
+
+Every dataset within a company needs an **Owner** — a person or department responsible for knowing its source, reviewing its quality, approving any changes, and serving as the primary point of reference for any questions related to it.
+
+Having a Data Owner does not mean that this person is responsible for entering all the data.
+
+It means there is someone accountable for its accuracy, and that changes the way the entire organization works.
+
+Instead of data issues moving endlessly between departments, it becomes clear who reviews them, who makes decisions, and who approves any changes.
+
+And that is the essence of **Data Governance**.
+
+Making sure that every piece of information within the company has a clearly assigned owner.
+
+So when management relies on a number, they know there is someone accountable for it — not just an Excel file being passed between departments.
+
+In my opinion...
+
+One of the signs of a mature MIS system is being able to answer one question about any dataset with a single sentence:
+
+**"Who owns this data?"**
+
+And if there is no clear answer, that is the first problem that needs to be solved.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because every dataset needs an owner... and every important decision needs someone accountable for the data behind it.*
+
+💬 Does every dataset in your company have a clearly identified person responsible for it?
+
+#ExecutiveMIS #BusinessIntelligence #MIS #DataGovernance #DataManagement #ExecutiveReporting #BusinessAnalysis #DecisionSupport`,
+  },
+};
+
 export interface KnowledgeSeries {
   number: string;
   title: string;
@@ -1007,6 +1119,7 @@ export const knowledgeSeries: KnowledgeSeries[] = [
       executiveMisDataQualityComesFirst,
       executiveMisGovernanceBuildsTrust,
       executiveMisHiddenCostInconsistentData,
+      executiveMisEveryDatasetNeedsOwner,
     ],
   },
   {
