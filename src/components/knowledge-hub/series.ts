@@ -648,7 +648,7 @@ The goal is to ensure that the decision built on it is the right one.
 
 لأن الهدف مش إن التقرير يوصل في موعده.
 
-الهدف إن القرار اللي هيُبن���� عليه يكون قرارًا صحيحًا.
+الهدف إن القرار اللي هيُبن������ عليه يكون قرارًا صحيحًا.
 
 ---
 
@@ -793,7 +793,7 @@ const executiveMisGovernanceBuildsTrust: SeriesArticle = {
 
 لكن أول ما يحصل اختلاف في رقم محدش يعرف يرجع لمصدره.
 
-- مين عدّل ��لبيانات؟
+- م��ن عدّل ��لبيانات؟
 - إمتى اتحدثت؟
 - مين مسؤول عن الـ KPI دي؟
 - وإيه تعريفها أصلًا؟
@@ -1446,6 +1446,140 @@ Because when information is standardized, decisions become clearer too.
   },
 };
 
+const executiveMisCrossFunctionalReporting: SeriesArticle = {
+  id: "executive-mis-cross-functional-reporting",
+  number: "13",
+  slug: "cross-functional-reporting",
+  title: "Cross-functional Reporting",
+  description: "How connected departmental reporting creates one business story.",
+  coverImage: {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MIS-13.PNG-sMfbYl0ABPFkrdOU7PZdfLyqfOREFD.png",
+    alt: "Executive MIS infographic: One business, one story, all functions connected.",
+  },
+  content: {
+    en: String.raw`# Cross-functional Reporting
+
+**One of the biggest problems with reporting is that it sometimes presents every department as if it operates independently.**
+
+- Sales reports on revenue.
+- Finance reports on profitability.
+- Operations reports on efficiency.
+- Customer Service reports on customer satisfaction.
+
+Every report may be excellent.
+
+But which one tells the complete business story?
+
+That is where **Cross-functional Reporting** comes in.
+
+It connects data across departments, because no important business decision should be based on the numbers of just one department.
+
+If sales increase...
+
+Can Operations handle the additional demand?
+
+If profitability declines...
+
+Is the reason related to costs or pricing?
+
+And if customer satisfaction drops...
+
+Is the problem with Customer Service...
+
+Or product quality...
+
+Or delivery delays?
+
+The answers to these questions often exist across multiple departments.
+
+That is why the role of MIS is not simply to collect departmental reports and place them side by side.
+
+Its role is to connect them and help every department understand how its performance affects the rest of the organization.
+
+Because businesses do not operate in isolated silos.
+
+Every decision made by one department affects another.
+
+That is why the best Executive Reports are not the ones that show each department's performance separately.
+
+They are the ones that explain how all departments work together to achieve one common business goal.
+
+And in my opinion, when executives start seeing the relationships between numbers instead of looking at the numbers individually, that is when...
+
+A report transforms from a simple Report into a genuine decision-support tool.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because businesses don't succeed through individual departments... they succeed when every function moves in the same direction.*
+
+💬 In your opinion, which two departments should have their data connected most closely to help management make better decisions?
+
+#ExecutiveMIS #BusinessIntelligence #MIS #ExecutiveReporting #BusinessAnalysis #DecisionSupport #CrossFunctional #Leadership`,
+    ar: String.raw`# Cross-functional Reporting
+
+**أكبر مشكلة في التقارير إنها أحيانًا بتعرض كل إدارة وكأنها شغالة لوحدها.**
+
+- تقرير المبيعات بيتكلم عن الإيرادات.
+- تقرير المالية عن الأرباح.
+- تقرير التشغيل عن الكفاءة.
+- تقرير خدمة العملاء عن رضا العملاء.
+
+كل تقرير ممتاز.
+
+لكن مين بيحكي قصة البزنس كاملة؟
+
+وده هو دور **Cross-functional Reporting**.
+
+إنك تربط البيانات بين الإدارات، لأن مفيش قرار مهم بيتاخد بناءً على أرقام إدارة واحدة.
+
+لو المبيعات زادت...
+
+هل التشغيل قادر يستوعب الطلب؟
+
+ولو الأرباح قلت...
+
+هل السبب في التكلفة ولا في التسعير؟
+
+ولو رضا العملاء انخفض...
+
+هل المشكلة في خدمة العملاء...
+
+ولا في جودة المنتج...
+
+ولا في التأخير في التسليم؟
+
+كل سؤال من دول إجابته موجودة في أكتر من إدارة.
+
+علشان كده الـ MIS مش وظيفتها تجمع تقارير الإدارات جنب بعض.
+
+وظيفتها تربطهم وتخلي كل إدارة تشوف تأثيرها على باقي الإدارات.
+
+لأن البزنس ما بيشتغلش في جزر منفصلة.
+
+كل قرار في قسم بيأثر على قسم تاني.
+
+وده السبب إن أفضل Executive Reports مش اللي تعرض أداء كل إدارة لوحدها.
+
+لكن اللي توضح إزاي الإدارات كلها بتشتغل مع بعض لتحقيق هدف واحد.
+
+وفي رأيي، لما يبدأ المدير يشوف العلاقات بين الأرقام بدل ما يشوف الأرقام نفسها بشكل منفصل، ساعتها فقط...
+
+التقرير يتحول من Report إلى أداة حقيقية لدعم القرار.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because businesses don't succeed through individual departments... they succeed when every function moves in the same direction.*
+
+💬 في رأيك... إيه أكتر إدارتين لازم تكون بياناتهم مرتبطة ببعض علشان الإدارة تقدر تاخد قرارات أفضل؟
+
+#ExecutiveMIS #BusinessIntelligence #MIS #ExecutiveReporting #BusinessAnalysis #DecisionSupport #CrossFunctional #Leadership`,
+  },
+};
+
 export interface KnowledgeSeries {
   number: string;
   title: string;
@@ -1475,6 +1609,7 @@ export const knowledgeSeries: KnowledgeSeries[] = [
       executiveMisWhyExecutivesTrustReports,
       executiveMisOneKpiOneDefinition,
       executiveMisStandardizationCreatesAlignment,
+      executiveMisCrossFunctionalReporting,
     ],
   },
   {
