@@ -812,7 +812,7 @@ const executiveMisGovernanceBuildsTrust: SeriesArticle = {
 
 ولما الإدارة تثق في البيانات بتاخد القرار أسرع وبثقة أكبر.
 
-علشان كده بقيت مؤمنة إن ا��ـ Governance مش موضوع خاص بإدارة البيانات فقط.
+علشان كده بقيت م��منة إن ا��ـ Governance مش موضوع خاص بإدارة البيانات فقط.
 
 دي جزء أساسي من شغل الـ MIS لأن التقارير ممكن تتغير والـ Dashboards ممكن تتطور.
 
@@ -1135,7 +1135,7 @@ const executiveMisWhyExecutivesTrustReports: SeriesArticle = {
 
 لأن المدير مش بيدور على تقرير شكله احترافي هو بيدور على تقرير يقدر يبني عليه قرار من غير ما يشك في أي رقم.
 
-وده في رأيي أعلى مستوى ممكن يوصله أي نظام MIS.
+وده في رأيي أعلى مستوى ممكن يوصله أ�� نظام MIS.
 
 إن التقرير ما يحتاجش يدافع عن نفسه لأن الثقة فيه بقت موجودة بالفعل.
 
@@ -1580,6 +1580,86 @@ A report transforms from a simple Report into a genuine decision-support tool.
   },
 };
 
+const executiveMisReportingTemplates: SeriesArticle = {
+  id: "executive-mis-reporting-templates",
+  number: "14",
+  slug: "reporting-templates",
+  title: "Reporting Templates",
+  description: "Why good reporting templates improve focus and decision quality.",
+  coverImage: {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MIS-14.PNG-g290kzKo1YQUXLIyM2eIBIxQpSgS0g.png",
+    alt: "Executive MIS infographic: Good templates improve decisions.",
+  },
+  content: {
+    en: String.raw`# Reporting Templates
+
+**A good template doesn't just save time... it improves the quality of decisions.**
+
+When every department submits reports in a different format, the first part of any meeting is often wasted trying to understand the reports themselves.
+
+Where are the key figures?  
+Why does each department present its data differently?  
+And is it even fair to compare these reports?
+
+That's why reporting templates are more than just a way to create a consistent appearance.
+
+They help everyone speak the same language.
+
+When every report follows the same structure, information order, and KPI presentation format, managers can focus on analyzing results instead of spending time understanding how the information is presented.
+
+This doesn't mean that every report should look exactly the same.
+
+It means having a clear standard that maintains consistency, makes comparisons easier, and ensures that any report is understandable to anyone who reads it.
+
+In my opinion, the best reporting templates are the ones users barely notice.
+
+Because they help people reach the information they need quickly and effortlessly.
+
+And that is the real purpose of any successful reporting system.
+
+**Where Business Meets Intelligence.**
+
+*Because reporting templates don't standardize reports... they standardize understanding.*
+
+💬 What's the first thing that catches your attention when you open an Executive Report?
+
+#ExecutiveMIS #BusinessIntelligence #MIS #ExecutiveReporting #ReportingTemplates #BusinessAnalysis #Leadership #DataGovernance`,
+    ar: String.raw`# Reporting Templates
+
+**القالب الجيد مش بيوفر وقت... هو بيحسن جودة القرار.**
+
+لما كل إدارة تبعت تقرير بشكل مختلف، أول جزء من أي اجتماع بيضيع في محاولة فهم التقرير نفسه.
+
+فين الأرقام المهمة؟  
+وليه كل إدارة بتعرض البيانات بطريقة مختلفة؟  
+وهل المقارنة بين التقارير دي عادلة أصلًا؟
+
+علشان كده، Templates التقارير مش مجرد شكل موحد.
+
+هي وسيلة تخلي الجميع يتكلم بنفس اللغة.
+
+لما كل تقرير يكون بنفس الهيكل، ونفس ترتيب المعلومات، ونفس طريقة عرض الـ KPIs، المدير يقدر يركز على تحليل النتائج بدل ما يضيع وقته في فهم طريقة عرضها.
+
+وده مش معناه إن كل التقارير تبقى نسخة من بعض.
+
+لكن يبقى فيه Standard واضح يحافظ على الاتساق، ويسهل المقارنة، ويخلي أي تقرير مفهوم لأي شخص يقرأه.
+
+في رأيي، أفضل Reporting Templates هي اللي المستخدم ما يحسش بيها أصلًا.
+
+لأنها بتخليه يوصل للمعلومة بسرعة، ومن غير مجهود.
+
+وده هو الهدف الحقيقي من أي نظام Reporting ناجح.
+
+**Where Business Meets Intelligence.**
+
+*Because reporting templates don't standardize reports... they standardize understanding.*
+
+💬 إيه أول حاجة بتلفت انتباهك لما تفتح أي Executive Report؟
+
+#ExecutiveMIS #BusinessIntelligence #MIS #ExecutiveReporting #ReportingTemplates #BusinessAnalysis #Leadership #DataGovernance`,
+  },
+};
+
 export interface KnowledgeSeries {
   number: string;
   title: string;
@@ -1610,6 +1690,7 @@ export const knowledgeSeries: KnowledgeSeries[] = [
       executiveMisOneKpiOneDefinition,
       executiveMisStandardizationCreatesAlignment,
       executiveMisCrossFunctionalReporting,
+      executiveMisReportingTemplates,
     ],
   },
   {
