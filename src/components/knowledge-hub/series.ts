@@ -1200,6 +1200,140 @@ When a report no longer needs to defend itself, because trust in it has already 
   },
 };
 
+const executiveMisOneKpiOneDefinition: SeriesArticle = {
+  id: "executive-mis-one-kpi-one-definition",
+  number: "11",
+  slug: "one-kpi-one-definition",
+  title: "One KPI. One Definition.",
+  description: "Why every KPI needs one shared definition across the organization.",
+  coverImage: {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MIS-11.PNG-7vdgaQkbPuTkXlwHKti3A6ZoflUhaY.png",
+    alt: "Executive MIS infographic: One KPI. One Definition.",
+  },
+  content: {
+    en: String.raw`# One KPI. One Definition.
+
+**One KPI can become the source of a problem across an entire organization.**
+
+Not because the calculations are wrong, but because different people understand and define it differently.
+
+Imagine the management team reviewing a KPI called:
+
+**Customer Retention Rate**
+
+- The Sales Manager calculates it one way.
+- Marketing calculates it differently.
+- Customer Service uses a third approach.
+
+Everyone gets a different number, and everyone believes they are right.
+
+At that moment, the problem is no longer the calculation.
+
+The problem is the absence of **one shared definition**.
+
+And this is one of the most important principles of Executive MIS:
+
+**One KPI. One Definition.**
+
+Every KPI across an organization should have:
+
+- A clear, documented definition.
+- A consistent calculation methodology.
+- A known data source.
+- An assigned owner.
+
+This ensures that everyone interpreting the number understands it in exactly the same way.
+
+Because when KPI definitions differ, reports will differ, decisions will differ, and meetings will be wasted discussing calculation methods instead of understanding what the results actually mean.
+
+That is why one of the signs of a mature reporting system is having a centralized **KPI Dictionary** that serves as a single reference for every metric, documenting:
+
+- Its definition.
+- Its calculation methodology.
+- Its data source.
+- Its update frequency.
+
+With this in place, every report speaks the same language, and every dashboard presents the same reality.
+
+Because the value of a KPI is not simply in the number it displays.
+
+Its real value lies in ensuring that everyone across the organization understands that number in the same way.
+
+That is what transforms scattered data into a shared business language across all departments.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because a KPI creates alignment only when everyone defines it the same way.*
+
+💬 Does your organization have a centralized **KPI Dictionary**, or do different departments still interpret some metrics in their own ways?
+
+#ExecutiveMIS #BusinessIntelligence #MIS #KPIs #DataGovernance #ExecutiveReporting #BusinessAnalysis #DecisionSupport`,
+    ar: String.raw`# KPI واحدة. تعريف واحد.
+
+**ممكن KPI واحدة تبقى سبب مشكلة في شركة كاملة.**
+
+مش لأن الحسابات غلط، لكن لأن كل شخص فاهمها بطريقة مختلفة.
+
+تخيل إن الإدارة بتراجع KPI اسمها:
+
+**Customer Retention Rate**
+
+- مدير المبيعات بيحسبها بطريقة.
+- والتسويق بطريقة تانية.
+- وخدمة العملاء بطريقة تالتة.
+
+كلهم بيطلعوا أرقام مختلفة، وكلهم مقتنعين إنهم صح.
+
+في اللحظة دي المشكلة مش في الحساب.
+
+المشكلة إن مفيش **تعريف واحد**.
+
+وده واحد من أهم مبادئ الـ Executive MIS:
+
+**One KPI. One Definition.**
+
+كل KPI داخل الشركة لازم يكون ليها:
+
+- تعريف واضح ومكتوب.
+- طريقة حساب ثابتة.
+- مصدر بيانات معروف.
+- شخص مسؤول عنها.
+
+بحيث أي شخص يشوف الرقم يفهم معناه بنفس الطريقة.
+
+لأن لو اختلف تعريف الـ KPI، هتختلف التقارير، وهتختلف القرارات، وهتضيع الاجتماعات في مناقشة طريقة الحساب بدل مناقشة معنى النتيجة.
+
+علشان كده من علامات نضج أي نظام Reporting إن يبقى عنده **KPI Dictionary** مرجع موحد يوضح لكل مؤشر:
+
+- تعريفه.
+- طريقة حسابه.
+- مصدر بياناته.
+- وتكرار تحديثه.
+
+ساعتها...
+
+أي Report هتطلع بنفس اللغة، وأي Dashboard هتعرض نفس الحقيقة.
+
+لأن قيمة الـ KPI مش في الرقم اللي بتعرضه.
+
+قيمتها إن كل شخص في الشركة يفهم الرقم بنفس المعنى.
+
+وده هو اللي يحول البيانات من أرقام متفرقة إلى لغة مشتركة بين كل الإدارات.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because a KPI creates alignment only when everyone defines it the same way.*
+
+💬 هل عندكم في الشركة **KPI Dictionary** موحد، ولا كل إدارة بتفسر بعض المؤشرات بطريقتها؟
+
+#ExecutiveMIS #BusinessIntelligence #MIS #KPIs #DataGovernance #ExecutiveReporting #BusinessAnalysis #DecisionSupport`,
+  },
+};
+
 export interface KnowledgeSeries {
   number: string;
   title: string;
@@ -1227,6 +1361,7 @@ export const knowledgeSeries: KnowledgeSeries[] = [
       executiveMisHiddenCostInconsistentData,
       executiveMisEveryDatasetNeedsOwner,
       executiveMisWhyExecutivesTrustReports,
+      executiveMisOneKpiOneDefinition,
     ],
   },
   {
