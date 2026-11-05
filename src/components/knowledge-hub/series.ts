@@ -812,7 +812,7 @@ const executiveMisGovernanceBuildsTrust: SeriesArticle = {
 
 ولما الإدارة تثق في البيانات بتاخد القرار أسرع وبثقة أكبر.
 
-علشان كده بقيت م��منة إن ا��ـ Governance مش موضوع خاص بإدارة البيانات فقط.
+علشان كده بقيت م����منة إن ا��ـ Governance مش موضوع خاص بإدارة البيانات فقط.
 
 دي جزء أساسي من شغل الـ MIS لأن التقارير ممكن تتغير والـ Dashboards ممكن تتطور.
 
@@ -1532,7 +1532,7 @@ A report transforms from a simple Report into a genuine decision-support tool.
 
 وده هو دور **Cross-functional Reporting**.
 
-إنك تربط البيانات بين الإدارات، لأن مفيش قرار مهم بيتاخد بناءً على أرقام إدارة واحدة.
+إنك ��ربط البيانات بين الإدارات، لأن مفيش قرار مهم بيتاخد بناءً على أرقام إدارة واحدة.
 
 لو المبيعات زادت...
 
@@ -1660,6 +1660,109 @@ And that is the real purpose of any successful reporting system.
   },
 };
 
+const executiveMisReportingConsistencyScalability: SeriesArticle = {
+  id: "executive-mis-reporting-consistency-scalability",
+  number: "15",
+  slug: "reporting-consistency-scalability",
+  title: "Reporting Consistency & Scalability",
+  description: "Why consistent reporting practices help companies scale with confidence.",
+  coverImage: {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MIS-15.PNG-i2H2TP2Z03iPpWJRSKyH9DzYWSngmp.png",
+    alt: "Executive MIS infographic: Companies grow with consistency, not reports.",
+  },
+  content: {
+    en: String.raw`# Reporting Consistency & Scalability
+
+**Companies don't grow because of the number of reports they produce... they grow because of the consistency of their reporting practices.**
+
+In the early stages of a company, a manager can review the numbers personally.
+
+They can ask each department directly.  
+Understand any differences.  
+And follow up on the details.
+
+But as the company grows, adds more branches, and expands its departments, this approach is no longer practical.
+
+What allows a company to scale with confidence is having a consistent reporting system.
+
+The same KPI is calculated using the same method.
+
+The same rules are applied to everyone.
+
+And the same standards are used across every report.
+
+Because as a company grows, the cost of inconsistency grows with it.
+
+A small difference in the definition of a single KPI can lead two departments to report different results, even when they are working with the same data.
+
+Different reporting approaches can also cause meetings to focus on interpreting numbers instead of discussing decisions.
+
+That's why reporting consistency is more than just organization.
+
+It is an essential part of a company's ability to scale.
+
+Because real scalability is not simply opening a new branch.
+
+It is making sure that the new branch operates with the same quality, the same standards, and the same data language.
+
+And this is one of the most important roles of Executive MIS:
+
+Building a reporting system that remains consistent as the company grows.
+
+**Where Business Meets Intelligence.**
+
+*Because organizations don't scale through more reports... they scale through consistent reporting systems.*
+
+💬 In your opinion, what is the first thing a company should standardize before it starts scaling?
+
+#ExecutiveMIS #BusinessIntelligence #MIS #ExecutiveReporting #Reporting #BusinessAnalysis #Scalability #Leadership`,
+    ar: String.raw`# Reporting Consistency & Scalability
+
+**الشركات ما بتكبرش بسبب عدد التقارير... بتكبر بسبب ثبات طريقة التقارير.**
+
+في بداية أي شركة، المدير يقدر يراجع الأرقام بنفسه.
+
+يعرف يسأل كل إدارة.  
+ويفهم أي اختلاف.
+
+لكن مع النمو، وزيادة الفروع، وكثرة الإدارات، الطريقة دي ما بقتش عملية.
+
+اللي يسمح للشركة تكبر بثقة هو وجود نظام Reporting ثابت.
+
+نفس الـ KPI يتحسب بنفس الطريقة.
+
+ونفس القواعد تتطبق على الجميع.
+
+ونفس المعايير تستخدم في كل تقرير.
+
+لأن كل ما الشركة تكبر، تكلفة الاختلاف بتكبر معاها.
+
+اختلاف بسيط في تعريف مؤشر واحد ممكن يطلع إدارتين بنتائج مختلفة، رغم إنهم بيشتغلوا على نفس البيانات.
+
+واختلاف طريقة عرض التقارير ممكن يخلي الاجتماعات تضيع في تفسير الأرقام بدل مناقشة القرارات.
+
+علشان كده، الـ Reporting Consistency مش مجرد تنظيم.
+
+هو جزء أساسي من قابلية الشركة للتوسع.
+
+لأن التوسع الحقيقي مش إنك تفتح فرع جديد.
+
+التوسع الحقيقي إن الفرع الجديد يشتغل بنفس الجودة، ونفس المعايير، ونفس لغة البيانات.
+
+وده واحد من أهم أدوار الـ Executive MIS.
+
+إنها تبني نظام يفضل ثابت، حتى مع نمو الشركة.
+
+**Where Business Meets Intelligence.**
+
+*Because organizations don't scale through more reports... they scale through consistent reporting systems.*
+
+💬 في رأيك، إيه أول حاجة لازم تتوحد داخل أي شركة قبل ما تبدأ تتوسع؟
+
+#ExecutiveMIS #BusinessIntelligence #MIS #ExecutiveReporting #Reporting #BusinessAnalysis #Scalability #Leadership`,
+  },
+};
+
 export interface KnowledgeSeries {
   number: string;
   title: string;
@@ -1691,6 +1794,7 @@ export const knowledgeSeries: KnowledgeSeries[] = [
       executiveMisStandardizationCreatesAlignment,
       executiveMisCrossFunctionalReporting,
       executiveMisReportingTemplates,
+      executiveMisReportingConsistencyScalability,
     ],
   },
   {
