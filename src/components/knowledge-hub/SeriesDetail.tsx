@@ -4,14 +4,20 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import Container from "@/components/ui/Container";
 import type { KnowledgeSeries, SeriesArticle } from "./series";
 
-function ArticleEntry({ article, index }: { article: SeriesArticle; index: number }) {
+function ArticleEntry({
+  article,
+  seriesSlug,
+}: {
+  article: SeriesArticle;
+  seriesSlug: string;
+}) {
   return (
     <Link
-      href={`/knowledge-hub/${article.slug}`}
+      href={`/knowledge-hub/${seriesSlug}/${article.slug}`}
       className="group flex min-h-28 items-start gap-5 border-t border-[#DCE2EA] py-7 transition-colors hover:border-[#C9A56A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-4 sm:gap-8 sm:py-8"
     >
       <span className="pt-1 text-sm font-semibold tabular-nums text-[#B18A3A]">
-        {String(index + 1).padStart(2, "0")}
+        {article.number}
       </span>
       <span className="min-w-0 flex-1">
         <span className="block text-lg font-semibold tracking-[-0.025em] text-[#102A56] transition-colors group-hover:text-[#7D5B19] sm:text-xl">
@@ -74,8 +80,12 @@ export default function SeriesDetail({ series }: { series: KnowledgeSeries }) {
 
           {series.articles.length > 0 ? (
             <div className="mt-10">
-              {series.articles.map((article, index) => (
-                <ArticleEntry key={article.slug} article={article} index={index} />
+              {series.articles.map((article) => (
+                <ArticleEntry
+                  key={article.slug}
+                  article={article}
+                  seriesSlug={series.slug}
+                />
               ))}
             </div>
           ) : (
