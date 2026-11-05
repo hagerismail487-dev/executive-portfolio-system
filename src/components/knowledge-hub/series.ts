@@ -648,7 +648,7 @@ The goal is to ensure that the decision built on it is the right one.
 
 لأن الهدف مش إن التقرير يوصل في موعده.
 
-الهدف إن القرار اللي هيُبن�� عليه يكون قرارًا صحيحًا.
+الهدف إن القرار اللي هيُبن���� عليه يكون قرارًا صحيحًا.
 
 ---
 
@@ -812,7 +812,7 @@ const executiveMisGovernanceBuildsTrust: SeriesArticle = {
 
 ولما الإدارة تثق في البيانات بتاخد القرار أسرع وبثقة أكبر.
 
-علشان كده بقيت مؤمنة إن الـ Governance مش موضوع خاص بإدارة البيانات فقط.
+علشان كده بقيت مؤمنة إن ا��ـ Governance مش موضوع خاص بإدارة البيانات فقط.
 
 دي جزء أساسي من شغل الـ MIS لأن التقارير ممكن تتغير والـ Dashboards ممكن تتطور.
 
@@ -1094,6 +1094,112 @@ And if there is no clear answer, that is the first problem that needs to be solv
   },
 };
 
+const executiveMisWhyExecutivesTrustReports: SeriesArticle = {
+  id: "executive-mis-why-executives-trust-reports",
+  number: "10",
+  slug: "why-executives-trust-some-reports",
+  title: "Why Executives Trust Some Reports and Ignore Others",
+  description: "Why executives trust reports that consistently earn their confidence.",
+  coverImage: {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MIS-10.PNG-CEsuFTgtsa7sWW8HG2B9NrlG0oVS7g.png",
+    alt: "Executive MIS infographic: Why executives trust some reports and ignore others.",
+  },
+  content: {
+    ar: String.raw`**مش كل Report بتاخد نفس الاهتمام.**
+
+مع إن أوقات كتير بتكون معمولة بنفس الجودة.
+
+وده خلاني أسأل نفسي مرة:
+
+**ليه في تقارير الإدارة بتفتحها أول ما توصل... وتقارير تانية بتتجاهلها؟**
+
+واكتشفت إن الموضوع ملهوش علاقة بشكل الـ Dashboard ولا بعدد الـ KPIs ولا حتى بالألوان.
+
+الموضوع كله...
+
+**ثقة.**
+
+المدير التنفيذي بيثق في التقرير لما يعرف إن أرقامه ثابتة وإن تعريفات الـ KPIs واضحة وإن نفس السؤال هيديله نفس الإجابة...
+
+كل مرة.
+
+وبيثق فيه لما يعرف إن البيانات اتراجعت وإن مصدرها معروف وإن مفيش كل شهر رقم مختلف لنفس المؤشر.
+
+وبيثق فيه أكتر لما التقرير يساعده ياخد قرار مش لما يزوده بمعلومات أكتر.
+
+علشان كده الثقة في التقارير ما بتتبنيش يوم ما التقرير يتبعت.
+
+بتتبني قبلها بوقت طويل بتتبني من جودة البيانات ومن قواعد الـ Reporting ومن الـ Governance ومن الالتزام بنفس المنهج في كل مرة.
+
+وده هو الفرق بين Report تتفتح وReport تتحط في Folder وما حدش يرجعلها.
+
+لأن المدير مش بيدور على تقرير شكله احترافي هو بيدور على تقرير يقدر يبني عليه قرار من غير ما يشك في أي رقم.
+
+وده في رأيي أعلى مستوى ممكن يوصله أي نظام MIS.
+
+إن التقرير ما يحتاجش يدافع عن نفسه لأن الثقة فيه بقت موجودة بالفعل.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because executives don't trust reports that look professional... they trust reports that have consistently earned their confidence.*
+
+💬 في رأيك... إيه أكتر عامل بيخلي الإدارة تثق في تقرير: **دقة البيانات، ثبات الأرقام، ولا وضوح الـ KPIs؟**
+
+#ExecutiveMIS #BusinessIntelligence #MIS #ExecutiveReporting #DataGovernance #BusinessAnalysis #DecisionSupport #Leadership`,
+    en: String.raw`# Why Executives Trust Some Reports and Ignore Others
+
+**Not every report gets the same level of attention.**
+
+Even though many reports are created with the same level of quality.
+
+And that once made me ask myself:
+
+**Why do executives open some reports as soon as they arrive... while ignoring others?**
+
+I discovered that it has nothing to do with the dashboard design, the number of KPIs, or even the colors.
+
+It all comes down to one thing...
+
+**Trust.**
+
+Executives trust a report when they know its numbers are consistent, its KPI definitions are clear, and the same question will always produce the same answer...
+
+Every single time.
+
+They trust it when they know the data has been reviewed, its source is known, and the same metric does not show a different number every month.
+
+And they trust it even more when the report helps them make a decision, rather than simply giving them more information.
+
+That is why trust in reporting is not built on the day a report is delivered.
+
+It is built long before that.
+
+It comes from data quality, reporting rules, governance, and following the same methodology every time.
+
+And that is the difference between a report that gets opened and one that gets placed in a folder and never revisited.
+
+Because executives are not looking for a report that simply looks professional.
+
+They are looking for a report they can make decisions based on, without questioning any of its numbers.
+
+And in my opinion, this is the highest level any MIS system can reach.
+
+When a report no longer needs to defend itself, because trust in it has already been established.
+
+---
+
+**Where Business Meets Intelligence.**
+
+*Because executives don't trust reports that look professional... they trust reports that have consistently earned their confidence.*
+
+💬 In your opinion, what makes management trust a report the most: **data accuracy, consistency of numbers, or clear KPI definitions?**
+
+#ExecutiveMIS #BusinessIntelligence #MIS #ExecutiveReporting #DataGovernance #BusinessAnalysis #DecisionSupport #Leadership`,
+  },
+};
+
 export interface KnowledgeSeries {
   number: string;
   title: string;
@@ -1120,6 +1226,7 @@ export const knowledgeSeries: KnowledgeSeries[] = [
       executiveMisGovernanceBuildsTrust,
       executiveMisHiddenCostInconsistentData,
       executiveMisEveryDatasetNeedsOwner,
+      executiveMisWhyExecutivesTrustReports,
     ],
   },
   {
